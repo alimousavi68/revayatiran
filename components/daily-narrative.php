@@ -33,8 +33,8 @@
                         </div>
                     </div>
                     
-                    <div class="flex items-center gap-1.5 bg-white/10 backdrop-blur-md border border-white/10 px-2.5 py-1.5 rounded-sm" title="تحلیل بسیار داغ و محبوب">
-                        <i class="ph-fill ph-fire text-orange-500 text-sm animate-pulse"></i>
+                    <div class="flex items-center gap-1.5 bg-white/10 backdrop-blur-md border border-white/10 px-2.5 py-1.5 rounded-sm" title="تعداد آرای ثبت شده">
+                        <i class="ph-fill ph-thumbs-up text-emerald-400 text-xs"></i>
                         <span class="font-bold text-white text-xs num-inter">۳۴۲ رأی</span>
                     </div>
                 </div>
@@ -65,9 +65,9 @@
                             <span class="text-[11px] text-muted dark:text-gray-400 block mt-0.5">پژوهشگر رسانه</span>
                         </div>
                     </div>
-                    <div class="flex items-center gap-1.5 bg-gold/10 dark:bg-white/5 px-2.5 py-1 rounded-sm" title="تحلیل محبوب و رو به رشد">
-                        <i class="ph-fill ph-trend-up text-emerald-500 text-sm"></i>
-                        <span class="font-bold text-navy dark:text-white text-xs num-inter">۱۲۰ رأی</span>
+                    <div class="flex items-center gap-1.5 bg-emerald-50/50 dark:bg-white/5 px-2.5 py-1 rounded-sm border border-emerald-500/10 dark:border-white/5" title="تعداد آرای ثبت شده">
+                        <i class="ph-fill ph-thumbs-up text-emerald-600 dark:text-emerald-400 text-xs"></i>
+                        <span class="font-bold text-emerald-800 dark:text-white text-xs num-inter">۱۲۰ رأی</span>
                     </div>
                 </div>
 
@@ -97,9 +97,9 @@
                             <span class="text-[11px] text-muted dark:text-gray-400 block mt-0.5">تحلیلگر توسعه پایدار</span>
                         </div>
                     </div>
-                    <div class="flex items-center gap-1.5 bg-gold/10 dark:bg-white/5 px-2.5 py-1 rounded-sm" title="تحلیل مورد پسند کاربران">
-                        <i class="ph-fill ph-thumbs-up text-blue-500 text-sm"></i>
-                        <span class="font-bold text-navy dark:text-white text-xs num-inter">۸۵ رأی</span>
+                    <div class="flex items-center gap-1.5 bg-emerald-50/50 dark:bg-white/5 px-2.5 py-1 rounded-sm border border-emerald-500/10 dark:border-white/5" title="تعداد آرای ثبت شده">
+                        <i class="ph-fill ph-thumbs-up text-emerald-600 dark:text-emerald-400 text-xs"></i>
+                        <span class="font-bold text-emerald-800 dark:text-white text-xs num-inter">۸۵ رأی</span>
                     </div>
                 </div>
 
@@ -129,9 +129,9 @@
                             <span class="text-[11px] text-muted dark:text-gray-400 block mt-0.5">کارشناس اقتصاد سیاسی</span>
                         </div>
                     </div>
-                    <div class="flex items-center gap-1.5 bg-gold/10 dark:bg-white/5 px-2.5 py-1 rounded-sm" title="تحلیل با امتیاز ارزشمند">
-                        <i class="ph-fill ph-star text-gold text-sm"></i>
-                        <span class="font-bold text-navy dark:text-white text-xs num-inter">۴۸ رأی</span>
+                    <div class="flex items-center gap-1.5 bg-emerald-50/50 dark:bg-white/5 px-2.5 py-1 rounded-sm border border-emerald-500/10 dark:border-white/5" title="تعداد آرای ثبت شده">
+                        <i class="ph-fill ph-thumbs-up text-emerald-600 dark:text-emerald-400 text-xs"></i>
+                        <span class="font-bold text-emerald-800 dark:text-white text-xs num-inter">۴۸ رأی</span>
                     </div>
                 </div>
 
@@ -161,9 +161,9 @@
                             <span class="text-[11px] text-muted dark:text-gray-400 block mt-0.5">پژوهشگر حوزه آموزش</span>
                         </div>
                     </div>
-                    <div class="flex items-center gap-1.5 bg-gold/10 dark:bg-white/5 px-2.5 py-1 rounded-sm" title="تحلیل جدید و در حال رشد">
-                        <i class="ph-duotone ph-star text-gold/60 text-sm"></i>
-                        <span class="font-bold text-navy dark:text-white text-xs num-inter">۱۵ رأی</span>
+                    <div class="flex items-center gap-1.5 bg-emerald-50/50 dark:bg-white/5 px-2.5 py-1 rounded-sm border border-emerald-500/10 dark:border-white/5" title="تعداد آرای ثبت شده">
+                        <i class="ph-fill ph-thumbs-up text-emerald-600 dark:text-emerald-400 text-xs"></i>
+                        <span class="font-bold text-emerald-800 dark:text-white text-xs num-inter">۱۵ رأی</span>
                     </div>
                 </div>
 
