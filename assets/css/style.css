@@ -1,0 +1,112 @@
+/* Base styles and custom fonts */
+@font-face {
+    font-family: 'Peyda';
+    src: url('../fonts/Peyda 4 (Pro)/Peyda-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Peyda';
+    src: url('../fonts/Peyda 4 (Pro)/Peyda-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Peyda';
+    src: url('../fonts/Peyda 4 (Pro)/Peyda-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Peyda';
+    src: url('../fonts/Peyda 4 (Pro)/Peyda-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Peyda';
+    src: url('../fonts/Peyda 4 (Pro)/Peyda-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Peyda', sans-serif;
+    background-color: #FFFFFF;
+    color: #18181B; /* zinc-900 */
+}
+
+/* Hairline borders */
+.hairline-b {
+    border-bottom: 1px solid #E4E4E7;
+}
+.hairline-t {
+    border-top: 1px solid #E4E4E7;
+}
+
+/* Typography Scale as per IP */
+.text-display {
+    font-size: 28px;
+    line-height: 1.4;
+    font-weight: 800;
+}
+@media (min-width: 1024px) {
+    .text-display {
+        font-size: 40px;
+    }
+}
+.text-h1 {
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 700;
+}
+@media (min-width: 1024px) {
+    .text-h1 {
+        font-size: 32px;
+    }
+}
+.text-h2 {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 700;
+}
+@media (min-width: 1024px) {
+    .text-h2 {
+        font-size: 24px;
+    }
+}
+.text-h3 {
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 600;
+}
+@media (min-width: 1024px) {
+    .text-h3 {
+        font-size: 18px;
+    }
+}
+.text-body {
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 400;
+}
+@media (min-width: 1024px) {
+    .text-body {
+        font-size: 17px;
+    }
+}
+.text-meta {
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+@media (min-width: 1024px) {
+    .text-meta {
+        font-size: 14px;
+    }
+}
+
+/* Number font Inter */
+.num-inter {
+    font-family: 'Inter', sans-serif;
+}
