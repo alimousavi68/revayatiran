@@ -42,7 +42,6 @@
                         <div>
                             <h5 class="text-white font-extrabold text-sm flex items-center gap-1.5">
                                 دکتر علیرضا محمدی
-                                <i class="ph-fill ph-seal-check text-gold text-xs" title="تحلیلگر تایید شده"></i>
                             </h5>
                             <span class="text-[10px] text-gray-300 block">عضو هیئت علمی دانشگاه تهران</span>
                         </div>
@@ -80,7 +79,6 @@
                     <div>
                         <span class="text-[12px] font-extrabold text-main dark:text-white block hover:text-gold transition-colors flex items-center gap-1">
                             سید علی حسینی
-                            <i class="ph-fill ph-seal-check text-gold text-[10px]" title="تحلیلگر تایید شده"></i>
                         </span>
                         <span class="text-[9px] text-muted dark:text-gray-400 block leading-none mt-0.5">پژوهشگر رسانه</span>
                     </div>
@@ -116,7 +114,6 @@
                     <div>
                         <span class="text-[12px] font-extrabold text-main dark:text-white block hover:text-gold transition-colors flex items-center gap-1">
                             مریم صادقی
-                            <i class="ph-fill ph-seal-check text-gold text-[10px]" title="تحلیلگر تایید شده"></i>
                         </span>
                         <span class="text-[9px] text-muted dark:text-gray-400 block leading-none mt-0.5">تحلیلگر توسعه پایدار</span>
                     </div>
@@ -152,7 +149,6 @@
                     <div>
                         <span class="text-[12px] font-extrabold text-main dark:text-white block hover:text-gold transition-colors flex items-center gap-1">
                             احسان طاهری
-                            <i class="ph-fill ph-seal-check text-gold text-[10px]" title="تحلیلگر تایید شده"></i>
                         </span>
                         <span class="text-[9px] text-muted dark:text-gray-400 block leading-none mt-0.5">کارشناس اقتصاد سیاسی</span>
                     </div>
@@ -188,7 +184,6 @@
                     <div>
                         <span class="text-[12px] font-extrabold text-main dark:text-white block hover:text-gold transition-colors flex items-center gap-1">
                             رضا کمالی
-                            <i class="ph-fill ph-seal-check text-gold text-[10px]" title="تحلیلگر تایید شده"></i>
                         </span>
                         <span class="text-[9px] text-muted dark:text-gray-400 block leading-none mt-0.5">پژوهشگر حوزه آموزش</span>
                     </div>
