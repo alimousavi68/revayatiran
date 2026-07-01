@@ -37,13 +37,11 @@
 
                 <!-- فوتر کارت: نویسنده با تمرکز ویژه بر روی آواتار -->
                 <div class="flex items-center justify-between pt-4 border-t border-white/10">
-                    <div class="flex items-center gap-3 bg-white/5 border border-white/10 hover:border-gold/30 hover:bg-white/10 px-4 py-2 rounded-full transition-all duration-300 cursor-pointer">
-                        <img src="assets/images/daily-narrative__________________.jpg" alt="دکتر علیرضا محمدی" class="w-12 h-12 rounded-full object-cover border-2 border-gold shadow-lg ring-2 ring-gold/20 transform group-hover:scale-105 transition-transform duration-300">
+                    <div class="flex items-center gap-4">
+                        <img src="assets/images/daily-narrative__________________.jpg" alt="دکتر علیرضا محمدی" class="w-16 h-16 rounded-full object-cover border-2 border-gold shadow-lg ring-2 ring-gold/20 transform group-hover:scale-105 transition-transform duration-300">
                         <div>
-                            <h5 class="text-white font-extrabold text-sm flex items-center gap-1.5">
-                                دکتر علیرضا محمدی
-                            </h5>
-                            <span class="text-[10px] text-gray-300 block">عضو هیئت علمی دانشگاه تهران</span>
+                            <h5 class="text-white font-extrabold text-base leading-snug">دکتر علیرضا محمدی</h5>
+                            <span class="text-xs text-gray-300 block mt-0.5">عضو هیئت علمی دانشگاه تهران</span>
                         </div>
                     </div>
                     
@@ -74,13 +72,11 @@
 
             <!-- فوتر کارت با عکس نویسنده بزرگتر -->
             <div class="flex items-center justify-between mt-6 pt-4 border-t border-border/30 dark:border-white/5">
-                <div class="flex items-center gap-2.5 bg-white/50 dark:bg-white/5 hover:bg-white/80 dark:hover:bg-white/10 border border-border dark:border-white/10 hover:border-gold/40 dark:hover:border-gold/40 px-3.5 py-1.5 rounded-full transition-all duration-300 cursor-pointer">
-                    <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=1200&q=80" alt="سید علی حسینی" class="w-9 h-9 rounded-full object-cover border-2 border-gold/40 shadow-sm ring-2 ring-gold/10 transform group-hover:scale-105 transition-transform duration-300">
+                <div class="flex items-center gap-3.5">
+                    <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=1200&q=80" alt="سید علی حسینی" class="w-12 h-12 rounded-full object-cover border-2 border-gold/40 shadow-md ring-2 ring-gold/10 transform group-hover:scale-105 transition-transform duration-300">
                     <div>
-                        <span class="text-[12px] font-extrabold text-main dark:text-white block hover:text-gold transition-colors flex items-center gap-1">
-                            سید علی حسینی
-                        </span>
-                        <span class="text-[9px] text-muted dark:text-gray-400 block leading-none mt-0.5">پژوهشگر رسانه</span>
+                        <span class="text-sm font-extrabold text-main dark:text-white block hover:text-gold transition-colors">سید علی حسینی</span>
+                        <span class="text-[11px] text-muted dark:text-gray-400 block mt-0.5">پژوهشگر رسانه</span>
                     </div>
                 </div>
                 <div class="flex items-center gap-1">
@@ -109,13 +105,11 @@
 
             <!-- فوتر کارت با عکس نویسنده بزرگتر -->
             <div class="flex items-center justify-between mt-6 pt-4 border-t border-border/30 dark:border-white/5">
-                <div class="flex items-center gap-2.5 bg-white/50 dark:bg-white/5 hover:bg-white/80 dark:hover:bg-white/10 border border-border dark:border-white/10 hover:border-gold/40 dark:hover:border-gold/40 px-3.5 py-1.5 rounded-full transition-all duration-300 cursor-pointer">
-                    <img src="assets/images/daily-narrative___________.jpg" alt="مریم صادقی" class="w-9 h-9 rounded-full object-cover border-2 border-gold/40 shadow-sm ring-2 ring-gold/10 transform group-hover:scale-105 transition-transform duration-300">
+                <div class="flex items-center gap-3.5">
+                    <img src="assets/images/daily-narrative___________.jpg" alt="مریم صادقی" class="w-12 h-12 rounded-full object-cover border-2 border-gold/40 shadow-md ring-2 ring-gold/10 transform group-hover:scale-105 transition-transform duration-300">
                     <div>
-                        <span class="text-[12px] font-extrabold text-main dark:text-white block hover:text-gold transition-colors flex items-center gap-1">
-                            مریم صادقی
-                        </span>
-                        <span class="text-[9px] text-muted dark:text-gray-400 block leading-none mt-0.5">تحلیلگر توسعه پایدار</span>
+                        <span class="text-sm font-extrabold text-main dark:text-white block hover:text-gold transition-colors">مریم صادقی</span>
+                        <span class="text-[11px] text-muted dark:text-gray-400 block mt-0.5">تحلیلگر توسعه پایدار</span>
                     </div>
                 </div>
                 <div class="flex items-center gap-1">
@@ -144,13 +138,11 @@
 
             <!-- فوتر کارت با عکس نویسنده بزرگتر -->
             <div class="flex items-center justify-between mt-6 pt-4 border-t border-border/30 dark:border-white/5">
-                <div class="flex items-center gap-2.5 bg-white/50 dark:bg-white/5 hover:bg-white/80 dark:hover:bg-white/10 border border-border dark:border-white/10 hover:border-gold/40 dark:hover:border-gold/40 px-3.5 py-1.5 rounded-full transition-all duration-300 cursor-pointer">
-                    <img src="assets/images/daily-narrative____________.jpg" alt="احسان طاهری" class="w-9 h-9 rounded-full object-cover border-2 border-gold/40 shadow-sm ring-2 ring-gold/10 transform group-hover:scale-105 transition-transform duration-300">
+                <div class="flex items-center gap-3.5">
+                    <img src="assets/images/daily-narrative____________.jpg" alt="احسان طاهری" class="w-12 h-12 rounded-full object-cover border-2 border-gold/40 shadow-md ring-2 ring-gold/10 transform group-hover:scale-105 transition-transform duration-300">
                     <div>
-                        <span class="text-[12px] font-extrabold text-main dark:text-white block hover:text-gold transition-colors flex items-center gap-1">
-                            احسان طاهری
-                        </span>
-                        <span class="text-[9px] text-muted dark:text-gray-400 block leading-none mt-0.5">کارشناس اقتصاد سیاسی</span>
+                        <span class="text-sm font-extrabold text-main dark:text-white block hover:text-gold transition-colors">احسان طاهری</span>
+                        <span class="text-[11px] text-muted dark:text-gray-400 block mt-0.5">کارشناس اقتصاد سیاسی</span>
                     </div>
                 </div>
                 <div class="flex items-center gap-1">
@@ -179,13 +171,11 @@
 
             <!-- فوتر کارت با عکس نویسنده بزرگتر -->
             <div class="flex items-center justify-between mt-6 pt-4 border-t border-border/30 dark:border-white/5">
-                <div class="flex items-center gap-2.5 bg-white/50 dark:bg-white/5 hover:bg-white/80 dark:hover:bg-white/10 border border-border dark:border-white/10 hover:border-gold/40 dark:hover:border-gold/40 px-3.5 py-1.5 rounded-full transition-all duration-300 cursor-pointer">
-                    <img src="assets/images/daily-narrative__________.jpg" alt="رضا کمالی" class="w-9 h-9 rounded-full object-cover border-2 border-gold/40 shadow-sm ring-2 ring-gold/10 transform group-hover:scale-105 transition-transform duration-300">
+                <div class="flex items-center gap-3.5">
+                    <img src="assets/images/daily-narrative__________.jpg" alt="رضا کمالی" class="w-12 h-12 rounded-full object-cover border-2 border-gold/40 shadow-md ring-2 ring-gold/10 transform group-hover:scale-105 transition-transform duration-300">
                     <div>
-                        <span class="text-[12px] font-extrabold text-main dark:text-white block hover:text-gold transition-colors flex items-center gap-1">
-                            رضا کمالی
-                        </span>
-                        <span class="text-[9px] text-muted dark:text-gray-400 block leading-none mt-0.5">پژوهشگر حوزه آموزش</span>
+                        <span class="text-sm font-extrabold text-main dark:text-white block hover:text-gold transition-colors">رضا کمالی</span>
+                        <span class="text-[11px] text-muted dark:text-gray-400 block mt-0.5">پژوهشگر حوزه آموزش</span>
                     </div>
                 </div>
                 <div class="flex items-center gap-1">
