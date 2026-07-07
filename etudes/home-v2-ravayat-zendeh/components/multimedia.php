@@ -27,12 +27,6 @@
                     <div class="media-card-featured__media">
                         <img src="assets/images/posts images/2279480_168.jpg" alt="بندر گوادر" class="media-card-featured__img">
                         
-                        <!-- تگ مستند تصویری -->
-                        <div class="media-tag">
-                            <i class="ph ph-video-camera"></i>
-                            <span>مستند تصویری اختصاصی</span>
-                        </div>
-
                         <!-- آیکون پلی مرکزی مدرن -->
                         <div class="play-overlay">
                             <div class="play-icon-standard">
@@ -51,14 +45,11 @@
                                     <div class="waveform-bar"></div>
                                     <div class="waveform-bar"></div>
                                 </div>
-                                <span style="color: rgba(255,255,255,0.4); font-size: 12px; font-weight: 700;" class="num-inter">۱۰ تیر ۱۴۰۵</span>
+                                <span style="color: rgba(255,255,255,0.4); font-size: 12px; font-weight: 700;">۱۰ تیر ۱۴۰۵</span>
                             </div>
                             <h3 class="media-card-featured__title">
                                 مستند تصویری: بندر گوادر؛ گلوگاه ژئوپلیتیک و رقابت‌های قدرت در دریای عمان
                             </h3>
-                            <p class="media-card-featured__desc">
-                                بررسی ابعاد راهبردی توسعه بندر گوادر در پاکستان و تأثیر آن بر موازنه قدرت بین هند، چین و ایران در منطقه استراتژیک جنوب آسیا.
-                            </p>
                         </div>
                     </div>
                 </article>
@@ -79,14 +70,20 @@
                     </div>
                     <div class="media-card-podcast__body">
                         <div>
+                            <span class="media-card-podcast__author">اقتصاد بین‌الملل</span>
                             <h4 class="media-card-podcast__title">
                                 تحلیل سناریوهای اقتصادی منطقه در پساکرونا؛ فرصت‌ها و تهدیدهای جدید
                             </h4>
                         </div>
                         <div class="media-card-podcast__meta">
-                            <div class="flex items-center gap-1">
+                            <div class="flex items-center gap-1" dir="rtl">
                                 <i class="ph ph-clock"></i>
-                                <span class="num-inter">۲۴:۱۵</span>
+                                <span>۲۴:۱۵</span>
+                            </div>
+                            <span style="opacity: 0.3;">•</span>
+                            <div class="flex items-center gap-1" dir="rtl">
+                                <i class="ph ph-calendar-blank"></i>
+                                <span>۹ تیر ۱۴۰۵</span>
                             </div>
                         </div>
                     </div>
@@ -107,14 +104,20 @@
                     </div>
                     <div class="media-card-podcast__body">
                         <div>
+                            <span class="media-card-podcast__author">دیپلماسی انرژی</span>
                             <h4 class="media-card-podcast__title">
                                 دیپلماسی انرژی و نقش ایران در تأمین امنیت سوخت بازارهای جهانی
                             </h4>
                         </div>
                         <div class="media-card-podcast__meta">
-                            <div class="flex items-center gap-1">
+                            <div class="flex items-center gap-1" dir="rtl">
                                 <i class="ph ph-clock"></i>
-                                <span class="num-inter">۱۸:۴۰</span>
+                                <span>۱۸:۴۰</span>
+                            </div>
+                            <span style="opacity: 0.3;">•</span>
+                            <div class="flex items-center gap-1" dir="rtl">
+                                <i class="ph ph-calendar-blank"></i>
+                                <span>۷ تیر ۱۴۰۵</span>
                             </div>
                         </div>
                     </div>
@@ -135,14 +138,20 @@
                     </div>
                     <div class="media-card-podcast__body">
                         <div>
+                            <span class="media-card-podcast__author">روایت رسانه</span>
                             <h4 class="media-card-podcast__title">
                                 بررسی روایت‌های رسانه‌ای از تقابل قدرت‌های بزرگ در آسیای مرکزی
                             </h4>
                         </div>
                         <div class="media-card-podcast__meta">
-                            <div class="flex items-center gap-1">
+                            <div class="flex items-center gap-1" dir="rtl">
                                 <i class="ph ph-clock"></i>
-                                <span class="num-inter">۳۲:۱۰</span>
+                                <span>۳۲:۱۰</span>
+                            </div>
+                            <span style="opacity: 0.3;">•</span>
+                            <div class="flex items-center gap-1" dir="rtl">
+                                <i class="ph ph-calendar-blank"></i>
+                                <span>۵ تیر ۱۴۰۵</span>
                             </div>
                         </div>
                     </div>
@@ -163,48 +172,25 @@
                     </div>
                     <div class="media-card-podcast__body">
                         <div>
+                            <span class="media-card-podcast__author">امنیت ملی</span>
                             <h4 class="media-card-podcast__title">
                                 هوشمندسازی پایش مرزها؛ دستاوردها و چالش‌های تکنولوژیک در شرق کشور
                             </h4>
                         </div>
                         <div class="media-card-podcast__meta">
-                            <div class="flex items-center gap-1">
+                            <div class="flex items-center gap-1" dir="rtl">
                                 <i class="ph ph-clock"></i>
-                                <span class="num-inter">۴۵:۲۰</span>
+                                <span>۴۵:۲۰</span>
+                            </div>
+                            <span style="opacity: 0.3;">•</span>
+                            <div class="flex items-center gap-1" dir="rtl">
+                                <i class="ph ph-calendar-blank"></i>
+                                <span>۲ تیر ۱۴۰۵</span>
                             </div>
                         </div>
                     </div>
                     <div class="media-card-podcast__watermark">
                         <i class="ph-fill ph-waveform"></i>
-                    </div>
-                </article>
-
-                <!-- پادکست ۵ -->
-                <article class="media-card-podcast">
-                    <div class="media-card-podcast__thumb">
-                        <img src="assets/images/posts images/images (3).jpeg" alt="پادکست ۵" class="media-card-podcast__img">
-                        <div class="podcast-play-icon">
-                            <div class="icon-wrap">
-                                <i class="ph-fill ph-play" style="font-size: 18px;"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="media-card-podcast__body">
-                        <div>
-                            <span class="media-card-podcast__author">فرهنگ و رسانه</span>
-                            <h4 class="media-card-podcast__title">
-                                تأثیر پلتفرم‌های اجتماعی بر شکل‌گیری افکار عمومی در بزنگاه‌های سیاسی
-                            </h4>
-                        </div>
-                        <div class="media-card-podcast__meta">
-                            <div class="flex items-center gap-1">
-                                <i class="ph ph-clock"></i>
-                                <span class="num-inter">۵۸:۱۵</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="media-card-podcast__watermark">
-                        <i class="ph-fill ph-microphone-stage"></i>
                     </div>
                 </article>
 
