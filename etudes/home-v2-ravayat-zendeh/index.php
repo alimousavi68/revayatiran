@@ -14,7 +14,7 @@ require_once __DIR__ . '/components/header.php';
     require_once __DIR__ . '/components/special-dossiers.php';
     require_once __DIR__ . '/components/media-observatory.php';
     require_once __DIR__ . '/components/multimedia.php';
-    require_once __DIR__ . '/components/analysts-network.php';
+    // require_once __DIR__ . '/components/analysts-network.php';
     require_once __DIR__ . '/components/situation-room.php';
     ?>
 </main>
