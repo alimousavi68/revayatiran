@@ -1,0 +1,20 @@
+0 verbose cli /Users/user/.nvm/versions/node/v22.9.0/bin/node /Users/user/.nvm/versions/node/v22.9.0/bin/npm
+1 info using npm@10.8.3
+2 info using node@v22.9.0
+3 silly config load:file:/Users/user/.nvm/versions/node/v22.9.0/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/user/Sites/localhost/revayatiran/etudes/home-v2-ravayat-zendeh/.npmrc
+5 silly config load:file:/Users/user/.npmrc
+6 silly config load:file:/Users/user/.nvm/versions/node/v22.9.0/etc/npmrc
+7 verbose title npm install tailwindcss @tailwindcss/cli
+8 verbose argv "install" "--save-dev" "tailwindcss" "@tailwindcss/cli" "--cache" "./npm-cache" "--no-audit" "--no-fund"
+9 verbose logfile logs-max:10 dir:/Users/user/Sites/localhost/revayatiran/etudes/home-v2-ravayat-zendeh/npm-cache/_logs/2026-07-04T18_34_42_985Z-
+10 verbose logfile /Users/user/Sites/localhost/revayatiran/etudes/home-v2-ravayat-zendeh/npm-cache/_logs/2026-07-04T18_34_42_985Z-debug-0.log
+11 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+12 silly logfile done cleaning log files
+13 http fetch GET https://registry.npmjs.org/npm attempt 1 failed with HPE_INVALID_VERSION
+14 silly idealTree buildDeps
+15 silly fetch manifest tailwindcss@*
+16 silly packumentCache full:https://registry.npmjs.org/tailwindcss cache-miss
+17 http fetch GET https://registry.npmjs.org/tailwindcss attempt 1 failed with HPE_INVALID_VERSION
+18 http fetch GET https://registry.npmjs.org/npm attempt 2 failed with HPE_INVALID_VERSION
+19 http fetch GET https://registry.npmjs.org/tailwindcss attempt 2 failed with HPE_INVALID_VERSION
