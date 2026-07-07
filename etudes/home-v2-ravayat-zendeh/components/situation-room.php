@@ -1,9 +1,34 @@
 <section class="section-shell section-shell--dark" id="situation-room">
     <div class="container">
         <!-- هدر بخش -->
-        <div class="section-head section-head--dark" data-reveal="up">
-            <div class="section-head__content">
+        <div class="section-head section-head--etude-b section-head--dark" data-reveal="up">
+            <div class="etude-b__leading">
+                <div class="etude-b__icon-badge">
+                    <i class="ph ph-shield-warning"></i>
+                </div>
                 <h2>اتاق وضعیت</h2>
+                <p class="section-summary">برآوردهای راهبردی و تحلیل‌های پدافندی</p>
+            </div>
+            <div class="etude-b__actions">
+                <?php if ($user_level === 'guest'): ?>
+                    <a href="#" class="button--compact button--primary button--glow">
+                        <i class="ph-fill ph-user-plus"></i>
+                        <span>ثبت‌نام و احراز هویت</span>
+                    </a>
+                    <a href="#" class="button--compact button--soft">
+                        <i class="ph-fill ph-sign-in"></i>
+                        <span>ورود به حساب</span>
+                    </a>
+                <?php else: ?>
+                    <div class="user-status-badge">
+                        <i class="ph-fill ph-shield-check"></i>
+                        <span>صلاحیت تایید شده: <?php 
+                            if ($user_level === 'high') echo 'سطح ۱ (عالی)';
+                            else if ($user_level === 'normal') echo 'سطح ۳ (پایه)';
+                            else echo 'سطح ۲ (متوسط)';
+                        ?></span>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
 
@@ -24,11 +49,11 @@
                 <div class="lock-card__content">
                     <div class="secure-badge">
                         <i class="ph-fill ph-shield-warning"></i>
-                        <span>ارتباط رمزگذاری شده (AES-256)</span>
+                        <span>سامانه تحلیل‌های راهبردی کشور</span>
                     </div>
                     <h3>محتوای قفل شده؛ ویژه اعضای تایید صلاحیت شده</h3>
                     <p>
-                        اتاق وضعیت حاوی اسناد محرمانه و برآوردهای آنلاین از مسائل کلان و راهبردی کشور است. دسترسی به این بخش تنها پس از عضویت در شبکه تحلیلگران و تایید سطح صلاحیت امکان‌پذیر است.
+                        اتاق وضعیت حاوی برآوردهای تحلیلی آنلاین از مسائل کلان و راهبردی کشور است. دسترسی به این بخش تنها پس از عضویت در شبکه تحلیلگران و تایید سطح صلاحیت امکان‌پذیر است.
                     </p>
                     
                     <div class="lock-card__benefits">
@@ -42,7 +67,7 @@
                         <div class="benefit-item">
                             <i class="ph-fill ph-eye-closed"></i>
                             <div class="benefit-info">
-                                <strong>برآوردهای محرمانه</strong>
+                                <strong>برآوردهای راهبردی</strong>
                                 <span>پیش‌بینی رویدادها و سناریوهای پدافندی</span>
                             </div>
                         </div>
@@ -53,17 +78,6 @@
                                 <span>رصد میدانی مرزها و زیرساخت‌های حساس</span>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="lock-card__actions">
-                        <a href="#" class="button button--primary button--glow">
-                            <i class="ph-fill ph-user-plus"></i>
-                            <span>ثبت‌نام و احراز هویت اعضا</span>
-                        </a>
-                        <a href="#" class="button button--ghost-light">
-                            <i class="ph-fill ph-sign-in"></i>
-                            <span>ورود به حساب کاربری</span>
-                        </a>
                     </div>
                 </div>
             </div>
@@ -179,7 +193,7 @@
                     <?php endif; ?>
                 </div>
                 <div class="item-header">
-                    <span class="chip chip--tactical chip--danger">فوق محرمانه</span>
+                    <span class="chip chip--tactical chip--danger">ویژه سطح عالی</span>
                     <span class="item-date">
                         <i class="ph ph-calendar-blank"></i>
                         <span>۰۸ تیر ۱۴۰۵</span>
@@ -191,7 +205,7 @@
                     <?php if ($user_level !== 'high'): ?>
                     <!-- حالت قفل شده گزارش ۳ -->
                     <div class="tactical-lock-block level-1-lock">
-                        <p class="lock-msg">دسترسی به اسناد فوق‌محرمانه پدافند انرژی تنها با گواهینامه احراز هویت سطح ۱ امکان‌پذیر است.</p>
+                        <p class="lock-msg">دسترسی به اسناد راهبردی پدافند انرژی تنها با گواهینامه احراز هویت سطح ۱ امکان‌پذیر است.</p>
                         <a href="#" class="upgrade-action-btn danger-upgrade">
                             <i class="ph ph-fingerprint"></i>
                             <span>تایید هویت دو مرحله‌ای و ارتقا</span>

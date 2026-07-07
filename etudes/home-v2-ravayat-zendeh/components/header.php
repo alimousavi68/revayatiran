@@ -53,11 +53,6 @@ $user_level = 'guest';
 
                 <!-- Live Pulse + Date -->
                 <div class="top-bar__meta">
-                    <span class="live-badge">
-                        <span class="live-badge__dot"></span>
-                        <span>زنده</span>
-                    </span>
-                    <span class="top-bar__divider"></span>
                     <i class="ph ph-calendar-blank" style="font-size:13px;opacity:.7;"></i>
                     <span id="top-bar-date">پنج‌شنبه ۱۲ تیر ۱۴۰۵</span>
                     <span class="top-bar__divider"></span>
@@ -98,10 +93,6 @@ $user_level = 'guest';
                         <i class="ph ph-users-three"></i>
                         <span>تحلیلگران</span>
                     </a>
-                    <a href="#multimedia" class="top-bar__link">
-                        <i class="ph ph-play-circle"></i>
-                        <span>رسانه‌نگار</span>
-                    </a>
                 </div>
 
             </div>
@@ -113,7 +104,7 @@ $user_level = 'guest';
             <!-- Brand Lockup -->
             <div class="brand-lockup">
                 <a href="#" class="brand-mark" aria-label="روایت ایران">
-                    <img src="./assets/images/logo.webp" alt="لوگوی روایت ایران" class="brand-mark__logo" width="auto" height="63px">
+                    <img src="./assets/images/logo4.webp" alt="لوگوی روایت ایران" class="brand-mark__logo" width="auto" height="63px">
                 </a>
             </div>
 

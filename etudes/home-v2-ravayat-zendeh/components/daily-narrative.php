@@ -23,7 +23,7 @@
             <div class="daily-main-col" data-reveal="up">
                 <article class="featured-analysis-card">
                     <div class="analysis-card__visual">
-                        <img src="assets/images/posts images/images (2).jpeg" alt="تحلیل برتر روز">
+                        <img src="assets/images/posts images/1404092612513063035069134.jpg" alt="تحلیل برتر روز">
 
                       
                     </div>

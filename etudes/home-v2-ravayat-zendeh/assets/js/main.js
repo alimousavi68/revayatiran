@@ -251,4 +251,40 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
+
+    // Back to Top functionality
+    const backToTopBtn = document.getElementById("back-to-top");
+    const progressCircle = document.querySelector(".back-to-top__circle-progress");
+    const circleCircumference = 132; // 2 * PI * 21
+
+    if (backToTopBtn && progressCircle) {
+        const updateScrollProgress = () => {
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = window.scrollY;
+
+            // Show or hide button
+            if (scrolled > 300) {
+                backToTopBtn.classList.add("is-visible");
+            } else {
+                backToTopBtn.classList.remove("is-visible");
+            }
+
+            // Calculate progress and update circle path length
+            const progress = scrollHeight > 0 ? scrolled / scrollHeight : 0;
+            const offset = circleCircumference - (progress * circleCircumference);
+            progressCircle.style.strokeDashoffset = Math.max(0, Math.min(offset, circleCircumference));
+        };
+
+        // Scroll to top smoothly
+        backToTopBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+        // Initialize and bind events
+        updateScrollProgress();
+        window.addEventListener("scroll", updateScrollProgress, { passive: true });
+    }
 });
