@@ -6,9 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const storedTheme = localStorage.getItem("revayat-theme");
     const menuToggle = document.getElementById("menu-toggle");
     const mobileMenu = document.getElementById("mobile-menu");
+    const mobileClose = document.getElementById("mobile-close");
     const mediaRail = document.getElementById("media-rail");
     const mediaPrev = document.getElementById("media-prev");
     const mediaNext = document.getElementById("media-next");
+    const topBarTime = document.getElementById("top-bar-time");
 
     const syncThemeToggle = (theme) => {
         if (!themeToggle) {
@@ -36,26 +38,36 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const toggleHeaderState = () => {
-        const isScrolled = window.scrollY > 24;
-
-        if (header) {
-            header.classList.toggle("is-scrolled", isScrolled);
-        }
-
         if (progressBar) {
             const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
             const progress = scrollableHeight > 0 ? (window.scrollY / scrollableHeight) * 100 : 0;
             progressBar.style.width = `${Math.min(progress, 100)}%`;
+        }
+        // Add scrolled class for glassmorphism effect
+        if (header) {
+            header.classList.toggle("is-scrolled", window.scrollY > 20);
         }
     };
 
     toggleHeaderState();
     window.addEventListener("scroll", toggleHeaderState, { passive: true });
 
+    // Top bar live clock
+    const updateClock = () => {
+        if (!topBarTime) return;
+        const now = new Date();
+        const h = String(now.getHours()).padStart(2, "0");
+        const m = String(now.getMinutes()).padStart(2, "0");
+        topBarTime.textContent = `${h}:${m}`;
+    };
+    updateClock();
+    setInterval(updateClock, 30000);
+
     if (menuToggle && mobileMenu) {
         const setMenuState = (isOpen) => {
             mobileMenu.classList.toggle("is-open", isOpen);
             menuToggle.setAttribute("aria-expanded", String(isOpen));
+            mobileMenu.setAttribute("aria-hidden", String(!isOpen));
             document.body.style.overflow = isOpen ? "hidden" : "";
         };
 
@@ -64,8 +76,26 @@ document.addEventListener("DOMContentLoaded", () => {
             setMenuState(!isOpen);
         });
 
+        // Close via backdrop click
         mobileMenu.addEventListener("click", (event) => {
-            if (event.target === mobileMenu || event.target.closest("a")) {
+            if (event.target === mobileMenu) {
+                setMenuState(false);
+            }
+        });
+
+        // Close via X button inside panel
+        if (mobileClose) {
+            mobileClose.addEventListener("click", () => setMenuState(false));
+        }
+
+        // Close when nav link is clicked
+        mobileMenu.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => setMenuState(false));
+        });
+
+        // Close on Escape
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
                 setMenuState(false);
             }
         });
@@ -175,6 +205,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
         mediaNext.addEventListener("click", () => {
             mediaRail.scrollBy({ left: -step(), behavior: "smooth" });
+        });
+    }
+
+    // Search Overlay Logic
+    const searchTrigger = document.getElementById('search-trigger');
+    const searchClose = document.getElementById('search-close');
+    const searchOverlay = document.getElementById('search-overlay');
+    const searchInput = document.getElementById('search-input');
+
+    const openSearch = () => {
+        if (!searchOverlay) return;
+        searchOverlay.classList.add('is-active');
+        document.body.style.overflow = 'hidden';
+        if (searchInput) setTimeout(() => searchInput.focus(), 120);
+    };
+
+    const closeSearch = () => {
+        if (!searchOverlay) return;
+        searchOverlay.classList.remove('is-active');
+        document.body.style.overflow = '';
+    };
+
+    if (searchTrigger) searchTrigger.addEventListener('click', openSearch);
+    if (searchClose) searchClose.addEventListener('click', closeSearch);
+
+    if (searchOverlay) {
+        searchOverlay.addEventListener('click', (e) => {
+            if (e.target === searchOverlay) closeSearch();
+        });
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeSearch();
+    });
+
+    // Leaderboard Tabs logic
+    const leaderboardTabs = document.querySelectorAll('.leaderboard-tabs .tab-item');
+    if (leaderboardTabs.length) {
+        leaderboardTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                leaderboardTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                // In a real app, you would filter or fetch data here
+            });
         });
     }
 });
