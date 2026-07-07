@@ -294,15 +294,18 @@ a,
 ═══════════════════════════════════════════ */
 .site-header {
     z-index: 200;
+    position: relative; /* Set to relative so top-bar scrolls naturally */
+}
+
+/* Make header-shell sticky instead of the entire site-header */
+.header-shell {
     position: sticky;
-    top: 0;
-    backdrop-filter: blur(0px);
-    transition: backdrop-filter 400ms var(--ease-out), box-shadow 400ms var(--ease-out);
+    top: 10px; /* Floating sticky layout with vertical space */
+    z-index: 200;
 }
 
 .site-header.is-scrolled {
-    backdrop-filter: blur(20px);
-    box-shadow: 0 1px 0 var(--border), 0 4px 32px rgba(0, 0, 0, 0.06);
+    box-shadow: none;
 }
 
 /* ─── TOP BAR ───────────────────────────────────────── */
@@ -312,7 +315,6 @@ a,
     background: linear-gradient(135deg, #12233d 0%, #1a2f50 50%, #0d1b2d 100%);
     border-bottom: 1px solid rgba(255, 255, 255, 0.07);
     position: relative;
-    transition: height 300ms var(--ease-out), opacity 300ms var(--ease-out);
 }
 
 .top-bar::before {
@@ -574,6 +576,9 @@ html[data-theme="light"] .top-bar {
 
 /* ─── HEADER SHELL ──────────────────────────────────── */
 .header-shell {
+    position: sticky;
+    top: 10px; /* Floating sticky layout with vertical space */
+    z-index: 200;
     min-height: var(--header-height);
     justify-content: space-between;
     gap: 20px;
@@ -581,10 +586,7 @@ html[data-theme="light"] .top-bar {
     padding: 3px 20px;
     border: 1px solid var(--border);
     border-radius: 18px;
-    background: color-mix(in srgb, var(--surface) 97%, transparent);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    position: relative;
+    background: var(--surface);
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.8);
     transition:
         margin 300ms var(--ease-out),
@@ -596,25 +598,18 @@ html[data-theme="light"] .top-bar {
 }
 
 html[data-theme="dark"] .header-shell {
-    background: rgba(18, 35, 61, 0.82);
+    background: #12233d;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.06);
     border-color: rgba(255, 255, 255, 0.08);
 }
 
-/* Subtle gradient line at bottom of shell */
+/* Removed subtle gradient line at bottom of shell */
 .header-shell::after {
-    content: '';
-    position: absolute;
-    inset: auto 20px -1px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(var(--accent-rgb), 0.3), transparent);
-    border-radius: 999px;
-    opacity: 0;
-    transition: opacity 400ms;
+    display: none;
 }
 
 .site-header.is-scrolled .header-shell::after {
-    opacity: 1;
+    display: none;
 }
 
 /* ─── BRAND MARK ────────────────────────────────────── */
@@ -706,7 +701,7 @@ html[data-theme="dark"] .header-shell {
     flex-shrink: 0;
 }
 
-.main-nav > a {
+.main-nav>a {
     position: relative;
     padding: 7px 14px;
     border-radius: 10px;
@@ -714,7 +709,7 @@ html[data-theme="dark"] .header-shell {
     transition: color 200ms, background 200ms;
 }
 
-.main-nav > a::before,
+.main-nav>a::before,
 .dropdown-trigger::before {
     content: '';
     position: absolute;
@@ -725,17 +720,17 @@ html[data-theme="dark"] .header-shell {
     transition: opacity 200ms;
 }
 
-.main-nav > a:hover,
+.main-nav>a:hover,
 .dropdown-trigger:hover {
     color: var(--accent);
 }
 
-.main-nav > a:hover::before,
+.main-nav>a:hover::before,
 .dropdown-trigger:hover::before {
     opacity: 1;
 }
 
-.main-nav > a::after,
+.main-nav>a::after,
 .dropdown-trigger::after {
     content: "";
     position: absolute;
@@ -748,13 +743,13 @@ html[data-theme="dark"] .header-shell {
     transition: transform 240ms var(--ease-out);
 }
 
-.main-nav > a:hover::after,
-.main-nav > a.is-active::after,
+.main-nav>a:hover::after,
+.main-nav>a.is-active::after,
 .dropdown-trigger:hover::after {
     transform: scaleX(1);
 }
 
-.main-nav > a.is-active,
+.main-nav>a.is-active,
 .dropdown-trigger.is-active {
     color: var(--text);
     font-weight: 700;
@@ -803,6 +798,17 @@ html[data-theme="dark"] .header-shell {
     transition: transform 250ms var(--ease-out), opacity 250ms var(--ease-out), visibility 250ms;
 }
 
+/* Invisible bridge to prevent closing on hover traversal */
+.dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -14px;
+    left: 0;
+    right: 0;
+    height: 14px;
+    background: transparent;
+}
+
 /* Luxury blurred background for dark/light themes */
 html[data-theme="dark"] .dropdown-menu {
     background: rgba(22, 33, 54, 0.95);
@@ -842,7 +848,8 @@ html[data-theme="dark"] .dropdown-menu {
 .dropdown-item:hover {
     background: rgba(var(--accent-rgb), 0.08);
     color: var(--accent);
-    transform: translateX(-3px); /* RTL slide-in direction */
+    transform: translateX(-3px);
+    /* RTL slide-in direction */
 }
 
 .dropdown-item-icon {
