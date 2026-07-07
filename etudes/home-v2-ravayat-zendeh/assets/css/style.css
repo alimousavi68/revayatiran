@@ -2026,18 +2026,23 @@ html[data-theme="dark"] .media-card-podcast__title {
 
 .section-link {
     white-space: nowrap;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: 600;
     color: var(--text-muted);
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    opacity: 0.75;
+}
+
+.section-link:hover {
+    opacity: 1;
 }
 
 .section-link i {
-    font-size: 16px;
+    font-size: 13px;
     transition: transform 0.3s var(--ease-out);
 }
 
@@ -4650,15 +4655,15 @@ html[data-theme="dark"] .cta-title {
 }
 
 .score-analyses {
-    font-size: 11px;
-    font-weight: 700;
-    color: var(--accent) !important;
-}
-
-.score-votes {
     font-size: 10px;
     font-weight: 500;
     color: var(--text-muted) !important;
+}
+
+.score-votes {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent) !important;
 }
 
 .trend-up {
