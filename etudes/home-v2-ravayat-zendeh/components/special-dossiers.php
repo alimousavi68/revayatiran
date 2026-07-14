@@ -20,7 +20,7 @@
         <div class="dossier-redesign" data-reveal="up">
             <div class="dossier-main-card">
                 <div class="dossier-visual">
-                    <img src="assets/images/posts images/1404041822335791233405404.jpg" alt="پروژه نفوذ شناختی">
+                    <img src="assets/images/posts images/troja.jpeg" alt="پروژه نفوذ شناختی">
                     <div class="dossier-visual__overlay">
                         <span class="badge-live">پرونده جاری</span>
                     </div>
