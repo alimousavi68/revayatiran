@@ -1,172 +1,304 @@
-<section class="max-w-7xl mx-auto px-4 lg:px-8 py-12">
-    
-    <!-- Title & Tabs -->
-    <div class="flex flex-col md:flex-row md:items-center gap-4 mb-8">
-        <h2 class="text-navy text-h1 whitespace-nowrap flex items-center gap-2">
-            <i class="ph-duotone ph-rss text-gold"></i> رصد اخبار
-        </h2>
-        
-        <div class="h-px bg-border flex-grow hidden md:block"></div>
-        
-        <div class="flex items-center overflow-x-auto hide-scrollbar gap-4 text-sm font-medium">
-            <button class="bg-navy text-white px-4 py-1.5 rounded-full whitespace-nowrap shadow-sm">همه اخبار</button>
-            <button class="text-muted hover:text-navy hover:bg-surface-offset px-4 py-1.5 rounded-full transition-colors whitespace-nowrap">سیاست داخلی</button>
-            <button class="text-muted hover:text-navy hover:bg-surface-offset px-4 py-1.5 rounded-full transition-colors whitespace-nowrap">سیاست خارجی</button>
-            <button class="text-muted hover:text-navy hover:bg-surface-offset px-4 py-1.5 rounded-full transition-colors whitespace-nowrap">اقتصاد سیاسی</button>
-        </div>
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        
-        <!-- سایدبار پربازدیدترین اخبار (Left Sidebar in RTL = Right visually, wait, the design says: سایدبار سمت چپ. Let's make it col-span-3 on the left (which is visually left in RTL) -> order-last or just put it after in DOM) -->
-        
-        <!-- ستون اصلی کارت‌های خبری -->
-        <div class="lg:col-span-9">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- کارت خبر ۱ (با یادداشت سردبیر) -->
-                <article class="relative rounded-sm overflow-hidden group cursor-pointer aspect-[4/5]">
-                    <img src="https://images.unsplash.com/photo-1574515548684-28b3353b3fbb?q=80&w=600&auto=format&fit=crop" alt="خبر ۱" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/50 to-transparent"></div>
-                    
-                    <!-- تگ دسته بندی و یادداشت -->
-                    <div class="absolute top-4 right-4 flex gap-2">
-                        <span class="bg-white/20 backdrop-blur-sm text-white text-[10px] px-2 py-1 rounded-sm">سیاست خارجی</span>
-                    </div>
-                    <div class="absolute top-4 left-4">
-                        <div class="bg-gold text-white text-xs p-1.5 rounded-full shadow-lg" title="دارای یادداشت سردبیر">
-                            <i class="ph-fill ph-pencil-simple"></i>
-                        </div>
-                    </div>
-
-                    <div class="absolute bottom-0 w-full p-5">
-                        <h3 class="text-white text-h3 leading-snug mb-2 group-hover:text-gold transition-colors">
-                            دیدار وزرای خارجه در ژنو و احتمال از سرگیری مذاکرات صلح
-                        </h3>
-                        <p class="text-white/70 text-xs line-clamp-2">
-                            گزارش‌ها حاکی از آن است که پس از وقفه‌ای شش ماهه، دیپلمات‌های ارشد برای...
-                        </p>
-                    </div>
-                </article>
-
-                <!-- کارت خبر ۲ -->
-                <article class="relative rounded-sm overflow-hidden group cursor-pointer aspect-[4/5]">
-                    <img src="https://images.unsplash.com/photo-1526470608159-92274fcce77e?q=80&w=600&auto=format&fit=crop" alt="خبر ۲" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/50 to-transparent"></div>
-                    
-                    <div class="absolute top-4 right-4 flex gap-2">
-                        <span class="bg-white/20 backdrop-blur-sm text-white text-[10px] px-2 py-1 rounded-sm">اقتصاد سیاسی</span>
-                    </div>
-
-                    <div class="absolute bottom-0 w-full p-5">
-                        <h3 class="text-white text-h3 leading-snug mb-2 group-hover:text-gold transition-colors">
-                            لایحه جدید مالیاتی روی میز مجلس؛ واکنش بازار سرمایه چه خواهد بود؟
-                        </h3>
-                        <p class="text-white/70 text-xs line-clamp-2">
-                            با ارسال لایحه جدید مالیات بر عایدی سرمایه به مجلس، گمانه‌زنی‌ها درباره خروج نقدینگی افزایش یافت.
-                        </p>
-                    </div>
-                </article>
-
-                <!-- کارت خبر ۳ -->
-                <article class="relative rounded-sm overflow-hidden group cursor-pointer aspect-[4/5]">
-                    <img src="https://images.unsplash.com/photo-1432821596592-e2c18b78144f?q=80&w=600&auto=format&fit=crop" alt="خبر ۳" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/50 to-transparent"></div>
-                    
-                    <div class="absolute top-4 right-4 flex gap-2">
-                        <span class="bg-white/20 backdrop-blur-sm text-white text-[10px] px-2 py-1 rounded-sm">سیاست داخلی</span>
-                    </div>
-
-                    <div class="absolute bottom-0 w-full p-5">
-                        <h3 class="text-white text-h3 leading-snug mb-2 group-hover:text-gold transition-colors">
-                            تغییرات گسترده در سطح مدیران ارشد اجرایی استان‌ها کلید خورد
-                        </h3>
-                        <p class="text-white/70 text-xs line-clamp-2">
-                            بر اساس احکام جدید صادر شده، بیش از پنج استاندار در روزهای آینده جابجا خواهند شد.
-                        </p>
-                    </div>
-                </article>
-                
-                <!-- کارت خبر ۴ -->
-                <article class="relative rounded-sm overflow-hidden group cursor-pointer aspect-[4/5]">
-                    <img src="https://images.unsplash.com/photo-1532187655075-89bdf11f4228?q=80&w=600&auto=format&fit=crop" alt="خبر ۴" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/50 to-transparent"></div>
-                    <div class="absolute top-4 right-4 flex gap-2">
-                        <span class="bg-white/20 backdrop-blur-sm text-white text-[10px] px-2 py-1 rounded-sm">امنیت</span>
-                    </div>
-                    <div class="absolute bottom-0 w-full p-5">
-                        <h3 class="text-white text-h3 leading-snug mb-2 group-hover:text-gold transition-colors">تقویت تجهیزات راداری در مناطق مرزی شرق کشور</h3>
-                    </div>
-                </article>
-
-                <!-- کارت خبر ۵ -->
-                <article class="relative rounded-sm overflow-hidden group cursor-pointer aspect-[4/5]">
-                    <img src="https://images.unsplash.com/photo-1555848962-6e79363ec58f?q=80&w=600&auto=format&fit=crop" alt="خبر ۵" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/50 to-transparent"></div>
-                    <div class="absolute top-4 right-4 flex gap-2">
-                        <span class="bg-white/20 backdrop-blur-sm text-white text-[10px] px-2 py-1 rounded-sm">بین‌الملل</span>
-                    </div>
-                    <div class="absolute bottom-0 w-full p-5">
-                        <h3 class="text-white text-h3 leading-snug mb-2 group-hover:text-gold transition-colors">بحران کمبود غلات جهانی؛ هشدار سازمان ملل</h3>
-                    </div>
-                </article>
-
-                <!-- کارت خبر ۶ -->
-                <article class="relative rounded-sm overflow-hidden group cursor-pointer aspect-[4/5]">
-                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=600&auto=format&fit=crop" alt="خبر ۶" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-navy/95 via-navy/50 to-transparent"></div>
-                    <div class="absolute top-4 right-4 flex gap-2">
-                        <span class="bg-white/20 backdrop-blur-sm text-white text-[10px] px-2 py-1 rounded-sm">اقتصاد سیاسی</span>
-                    </div>
-                    <div class="absolute bottom-0 w-full p-5">
-                        <h3 class="text-white text-h3 leading-snug mb-2 group-hover:text-gold transition-colors">نوسانات ارزی و پیش‌بینی کارشناسان از بازار سه ماهه آینده</h3>
-                    </div>
-                </article>
+<section class="section-shell section-shell--warm" id="news-monitoring">
+    <div class="container">
+        <div class="section-head section-head--etude-b" data-reveal="up">
+            <div class="etude-b__leading">
+                <div class="etude-b__icon-badge">
+                    <i class="ph ph-broadcast"></i>
+                </div>
+                <h2>رصد اخبار</h2>
+                <p class="section-summary">پایش مستمر منابع خبری و کشف روایت‌های نوظهور</p>
+            </div>
+            <div class="etude-b__actions">
+                <div class="tabs" role="tablist" aria-label="دسته‌بندی اخبار">
+                    <button class="tab-button is-active" type="button" role="tab" aria-selected="true" data-news-tab="all">همه</button>
+                    <button class="tab-button" type="button" role="tab" aria-selected="false" data-news-tab="politics">سیاست</button>
+                    <button class="tab-button" type="button" role="tab" aria-selected="false" data-news-tab="economy">اقتصاد</button>
+                    <button class="tab-button" type="button" role="tab" aria-selected="false" data-news-tab="security">امنیت</button>
+                </div>
+                <a href="#" class="section-link">
+                    <span>آرشیو</span>
+                    <i class="ph ph-arrow-left"></i>
+                </a>
             </div>
         </div>
 
-        <!-- سایدبار اخبار پربازدید -->
-        <div class="lg:col-span-3">
-            <div class="bg-surface-offset/50 dark:bg-navy/20 p-6 rounded-md h-full border border-border/50 dark:border-white/5 relative overflow-hidden">
-                <div class="absolute top-0 right-0 w-24 h-24 bg-gold/5 rounded-bl-full z-0"></div>
-                <h4 class="text-navy dark:text-white font-bold text-lg mb-8 flex items-center gap-2 relative z-10 border-b-2 border-gold inline-block pb-2">
-                    <i class="ph-duotone ph-push-pin text-gold"></i> اخبار پربازدید
-                </h4>
-                
-                <div class="flex flex-col gap-6 relative z-10">
-                    <article class="relative group cursor-pointer border-b border-border/40 dark:border-white/10 pb-6 last:border-0 last:pb-0">
-                        <span class="absolute -right-2 top-0 text-6xl font-black text-border/40 dark:text-white/5 select-none z-0 group-hover:text-gold/20 transition-colors leading-none num-inter">۱</span>
-                        <div class="relative z-10 pr-6">
-                            <h5 class="text-main dark:text-gray-200 font-semibold text-sm leading-relaxed group-hover:text-navy dark:group-hover:text-gold transition-colors">جزئیات توافق‌نامه استراتژیک جدید؛ کدام بندها محرمانه ماندند؟</h5>
-                            <span class="text-muted dark:text-gray-400 text-[10px] mt-2 flex items-center gap-1"><i class="ph-duotone ph-clock"></i> ۲ ساعت پیش</span>
-                        </div>
-                    </article>
+        <div class="news-layout">
+            <div class="news-panels">
+                <div class="news-panel is-active" data-news-panel="all">
+                    <div class="news-bento">
+                        <article class="news-card" data-reveal="up">
+                            <img src="assets/images/posts images/جنگ+ایران+آمریکا+مذاکرات+پاکستان.webp" alt="خبر ویژه سیاست خارجی">
+                            <div class="news-card__overlay">
+                                <div class="news-card__meta">
+                                    <span class="chip">سیاست خارجی</span>
+                                    <span class="source-badge">خبرگزاری ایرنا</span>
+                                </div>
+                                <h3>بازگشت بازیگران به میزهای چندمرحله‌ای؛ دیپلماسی زیر فشار زمان</h3>
+                            </div>
+                        </article>
+                        <article class="news-card" data-reveal="up">
+                            <img src="assets/images/posts images/اقتصادایران-ak1549-ak3280-1200x800-1024x683.webp" alt="خبر اقتصادی">
+                            <div class="news-card__overlay">
+                                <div class="news-card__meta">
+                                    <span class="chip">اقتصاد سیاسی</span>
+                                    <span class="source-badge">دنیای اقتصاد</span>
+                                </div>
+                                <h3>بازارها در انتظار بسته جدید تصمیم‌سازی مالی</h3>
+                            </div>
+                        </article>
+                        <article class="news-card" data-reveal="up">
+                            <img src="assets/images/posts images/27738882_1_0_799_449_1920x0_80_0_0_5c1b2e4e4887372d25d2ddaca10d8bb0.jpg.webp" alt="خبر امنیتی">
+                            <div class="news-card__overlay">
+                                <div class="news-card__meta">
+                                    <span class="chip">امنیت</span>
+                                    <span class="source-badge">تسنیم</span>
+                                </div>
+                                <h3>رصد تحرکات مرزی و پیامدهای رسانه‌ای آن در افکار عمومی</h3>
+                            </div>
+                        </article>
+                        <article class="news-card" data-reveal="up">
+                            <img src="assets/images/posts images/images (3).jpeg" alt="خبر فرهنگی">
+                            <div class="news-card__overlay">
+                                <div class="news-card__meta">
+                                    <span class="chip">جامعه</span>
+                                    <span class="source-badge">ایسنا</span>
+                                </div>
+                                <h3>تغییر الگوهای مصرف رسانه‌ای در بین نسل جدید</h3>
+                            </div>
+                        </article>
+                        <article class="news-card" data-reveal="up">
+                            <img src="assets/images/posts images/219-os5jc-1-ak32467-800x534.webp" alt="خبر بین‌الملل">
+                            <div class="news-card__overlay">
+                                <div class="news-card__meta">
+                                    <span class="chip">بین‌الملل</span>
+                                    <span class="source-badge">فارس</span>
+                                </div>
+                                <h3>تحولات جدید در شرق اروپا و اثر آن بر امنیت انرژی</h3>
+                            </div>
+                        </article>
+                        <article class="news-card" data-reveal="up">
+                            <img src="assets/images/posts images/images (5).jpeg" alt="خبر تکنولوژی">
+                            <div class="news-card__overlay">
+                                <div class="news-card__meta">
+                                    <span class="chip">فناوری</span>
+                                    <span class="source-badge">مهر</span>
+                                </div>
+                                <h3>هوش مصنوعی و چالش‌های بازشناسی روایت‌های جعلی</h3>
+                            </div>
+                        </article>
+                        <article class="news-card" data-reveal="up">
+                            <img src="assets/images/posts images/images (2) 2.jpeg" alt="خبر سیاسی">
+                            <div class="news-card__overlay">
+                                <div class="news-card__meta">
+                                    <span class="chip">سیاست داخلی</span>
+                                    <span class="source-badge">اعتماد</span>
+                                </div>
+                                <h3>آرایش جدید جناح‌های سیاسی در آستانه تصمیمات مهم</h3>
+                            </div>
+                        </article>
+                        <article class="news-card" data-reveal="up">
+                            <img src="assets/images/posts images/muCE4NJA7dFf.jpg" alt="خبر ورزشی">
+                            <div class="news-card__overlay">
+                                <div class="news-card__meta">
+                                    <span class="chip">دیپلماسی</span>
+                                    <span class="source-badge">ایرنا</span>
+                                </div>
+                                <h3>نقش ورزش در بهبود روابط دیپلماتیک منطقه‌ای</h3>
+                            </div>
+                        </article>
+                        <article class="news-card" data-reveal="up">
+                            <img src="assets/images/posts images/اقتصاد-ایران-ak3539-1024x683.webp" alt="خبر محیط زیست">
+                            <div class="news-card__overlay">
+                                <div class="news-card__meta">
+                                    <span class="chip">محیط زیست</span>
+                                    <span class="source-badge">ایلنا</span>
+                                </div>
+                                <h3>بحران آب و ضرورت بازنگری در سیاست‌های کلان توسعه</h3>
+                            </div>
+                        </article>
+                    </div>
+                </div>
 
-                    <article class="relative group cursor-pointer border-b border-border/40 dark:border-white/10 pb-6 last:border-0 last:pb-0">
-                        <span class="absolute -right-2 top-0 text-6xl font-black text-border/40 dark:text-white/5 select-none z-0 group-hover:text-gold/20 transition-colors leading-none num-inter">۲</span>
-                        <div class="relative z-10 pr-6">
-                            <h5 class="text-main dark:text-gray-200 font-semibold text-sm leading-relaxed group-hover:text-navy dark:group-hover:text-gold transition-colors">واکنش تند احزاب مخالف به طرح ساماندهی فضای مجازی</h5>
-                            <span class="text-muted dark:text-gray-400 text-[10px] mt-2 flex items-center gap-1"><i class="ph-duotone ph-clock"></i> ۵ ساعت پیش</span>
-                        </div>
-                    </article>
+                <div class="news-panel" data-news-panel="politics" hidden>
+                    <div class="news-bento">
+                        <article class="news-card" data-reveal="up">
+                            <img src="assets/images/posts images/2279480_168.jpg" alt="سیاست داخلی">
+                            <div class="news-card__overlay">
+                                <div class="news-card__meta">
+                                    <span class="chip">سیاست داخلی</span>
+                                    <span class="source-badge">اعتماد</span>
+                                </div>
+                                <h3>بازآرایی بلوک‌های سیاسی پیش از فصل تصمیم‌های بزرگ</h3>
+                            </div>
+                        </article>
+                        <article class="news-card" data-reveal="up">
+                            <img src="assets/images/posts images/جنگ+ایران+آمریکا+مذاکرات+پاکستان.webp" alt="سیاست خارجی">
+                            <div class="news-card__overlay">
+                                <div class="news-card__meta">
+                                    <span class="chip">سیاست خارجی</span>
+                                    <span class="source-badge">ایرنا</span>
+                                </div>
+                                <h3>مذاکرات فشرده، واژه‌های محافظه‌کار و پیام‌های چندلایه</h3>
+                            </div>
+                        </article>
+                        <article class="news-card" data-reveal="up">
+                            <img src="assets/images/posts images/27738882_1_0_799_449_1920x0_80_0_0_5c1b2e4e4887372d25d2ddaca10d8bb0.jpg.webp" alt="تحلیل سریع">
+                            <div class="news-card__overlay">
+                                <div class="news-card__meta">
+                                    <span class="chip">تحلیل سریع</span>
+                                    <span class="source-badge">روایت ایران</span>
+                                </div>
+                                <h3>واکنش افکار عمومی به لحن تازه مقام‌ها در قبال پرونده منطقه</h3>
+                            </div>
+                        </article>
+                    </div>
+                </div>
 
-                    <article class="relative group cursor-pointer border-b border-border/40 dark:border-white/10 pb-6 last:border-0 last:pb-0">
-                        <span class="absolute -right-2 top-0 text-6xl font-black text-border/40 dark:text-white/5 select-none z-0 group-hover:text-gold/20 transition-colors leading-none num-inter">۳</span>
-                        <div class="relative z-10 pr-6">
-                            <h5 class="text-main dark:text-gray-200 font-semibold text-sm leading-relaxed group-hover:text-navy dark:group-hover:text-gold transition-colors">سقوط آزاد شاخص بورس در پی اخبار تنش‌های مرزی</h5>
-                            <span class="text-muted dark:text-gray-400 text-[10px] mt-2 flex items-center gap-1"><i class="ph-duotone ph-clock"></i> دیروز</span>
-                        </div>
-                    </article>
-                    
-                    <article class="relative group cursor-pointer border-b border-border/40 dark:border-white/10 pb-6 last:border-0 last:pb-0">
-                        <span class="absolute -right-2 top-0 text-6xl font-black text-border/40 dark:text-white/5 select-none z-0 group-hover:text-gold/20 transition-colors leading-none num-inter">۴</span>
-                        <div class="relative z-10 pr-6">
-                            <h5 class="text-main dark:text-gray-200 font-semibold text-sm leading-relaxed group-hover:text-navy dark:group-hover:text-gold transition-colors">پشت پرده استعفای ناگهانی وزیر چه بود؟</h5>
-                            <span class="text-muted dark:text-gray-400 text-[10px] mt-2 flex items-center gap-1"><i class="ph-duotone ph-clock"></i> دیروز</span>
-                        </div>
-                    </article>
+                <div class="news-panel" data-news-panel="economy" hidden>
+                    <div class="news-bento">
+                        <article class="news-card" data-reveal="up">
+                            <img src="assets/images/posts images/اقتصادایران-ak1549-ak3280-1200x800-1024x683.webp" alt="اقتصاد">
+                            <div class="news-card__overlay">
+                                <div class="news-card__meta">
+                                    <span class="chip">اقتصاد</span>
+                                    <span class="source-badge">دنیای اقتصاد</span>
+                                </div>
+                                <h3>سناریوهای بازار ارز پس از بسته تازه بانک مرکزی</h3>
+                            </div>
+                        </article>
+                        <article class="news-card" data-reveal="up">
+                            <img src="assets/images/posts images/اقتصاد-ایران-ak3539-1024x683.webp" alt="بودجه">
+                            <div class="news-card__overlay">
+                                <div class="news-card__meta">
+                                    <span class="chip">بودجه</span>
+                                    <span class="source-badge">فارس</span>
+                                </div>
+                                <h3>بودجه انقباضی یا بازتوزیع خاموش؟</h3>
+                            </div>
+                        </article>
+                        <article class="news-card" data-reveal="up">
+                            <img src="assets/images/posts images/شاخص-بورس-ak5259-ak4687-1200x800-1024x683.webp" alt="بازار سرمایه">
+                            <div class="news-card__overlay">
+                                <div class="news-card__meta">
+                                    <span class="chip">بازار سرمایه</span>
+                                    <span class="source-badge">ایسنا</span>
+                                </div>
+                                <h3>سرمایه‌گذار خسته؛ چه چیزی هنوز به بازار سیگنال می‌دهد؟</h3>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="news-panel" data-news-panel="security" hidden>
+                    <div class="news-bento">
+                        <article class="news-card" data-reveal="up">
+                            <img src="assets/images/posts images/27738882_1_0_799_449_1920x0_80_0_0_5c1b2e4e4887372d25d2ddaca10d8bb0.jpg.webp" alt="امنیت">
+                            <div class="news-card__overlay">
+                                <div class="news-card__meta">
+                                    <span class="chip">امنیت</span>
+                                    <span class="source-badge">تسنیم</span>
+                                </div>
+                                <h3>امنیت مرز فقط مسئله میدان نیست، مسئله روایت هم هست</h3>
+                            </div>
+                        </article>
+                        <article class="news-card" data-reveal="up">
+                            <img src="assets/images/posts images/troja.jpeg" alt="دفاعی">
+                            <div class="news-card__overlay">
+                                <div class="news-card__meta">
+                                    <span class="chip">دفاعی</span>
+                                    <span class="source-badge">مهر</span>
+                                </div>
+                                <h3>چرا برخی رزمایش‌ها بیشتر از آنکه نظامی باشند رسانه‌ای‌اند؟</h3>
+                            </div>
+                        </article>
+                        <article class="news-card" data-reveal="up">
+                            <img src="assets/images/posts images/images (3).jpeg" alt="هشدار">
+                            <div class="news-card__overlay">
+                                <div class="news-card__meta">
+                                    <span class="chip">هشدار</span>
+                                    <span class="source-badge">ایرنا</span>
+                                </div>
+                                <h3>ریسک خطای برداشت در روایت‌های سریع درباره تهدید</h3>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </div>
-        </div>
 
+            <aside class="trending-column panel-card" data-reveal="left">
+                <div class="trending-column__head">
+                    <div class="trending-column__head-title">
+                        <i class="ph ph-trend-up"></i>
+                        <h3>پربازدیدهای اخبار رصد شده</h3>
+                    </div>
+                </div>
+                <ol class="trending-list">
+                    <li>
+                        <span>۱</span>
+                        <div class="trending-item__content">
+                            <a href="#" class="trending-item__title">چرا تغییر لحن رسانه‌ای دولت از تغییر سیاست مهم‌تر دیده شد؟</a>
+                            <span class="trending-item__source">خبرگزاری ایرنا</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span>۲</span>
+                        <div class="trending-item__content">
+                            <a href="#" class="trending-item__title">پشت‌صحنه آرامش بازار؛ مهار واقعی یا تاخیر در شوک؟</a>
+                            <span class="trending-item__source">روزنامه دنیای اقتصاد</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span>۳</span>
+                        <div class="trending-item__content">
+                            <a href="#" class="trending-item__title">سه روایت رقیب درباره رخداد مرزی اخیر چگونه ساخته شدند؟</a>
+                            <span class="trending-item__source">خبرگزاری تسنیم</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span>۴</span>
+                        <div class="trending-item__content">
+                            <a href="#" class="trending-item__title">پرونده ویژه جدید چگونه در کمتر از ۲۴ ساعت ترند شد؟</a>
+                            <span class="trending-item__source">روایت ایران</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span>۵</span>
+                        <div class="trending-item__content">
+                            <a href="#" class="trending-item__title">تحلیل آماری از نوسانات اخیر بازار سرمایه و پیش‌بینی روندها</a>
+                            <span class="trending-item__source">خبرگزاری فارس</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span>۶</span>
+                        <div class="trending-item__content">
+                            <a href="#" class="trending-item__title">نقش شبکه‌های اجتماعی در شکل‌گیری روایت‌های اقتصادی نوظهور</a>
+                            <span class="trending-item__source">ایسنا</span>
+                        </div>
+                    </li>
+                </ol>
+
+                <div class="cta-social-box">
+                    <h4><i class="ph ph-share-network"></i>همگام با روایت زنده در شبکه‌های اجتماعی</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link social-link--telegram">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.11.02-1.93 1.23-5.46 3.62-.51.35-.98.52-1.4.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.45-.42-1.39-.89.03-.24.36-.49.99-.75 3.88-1.69 6.47-2.8 7.76-3.34 3.69-1.54 4.45-1.81 4.95-1.82.11 0 .35.03.5.16.13.1.17.24.18.33.01.06.02.19.01.26z"/></svg>
+                            <span>تلگرام</span>
+                        </a>
+                        <a href="#" class="social-link social-link--bale">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                            <span>بله</span>
+                        </a>
+                        <a href="#" class="social-link social-link--eitaa">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.5 13h-9v-1.5l2-2v-4h5v4l2 2V15z"/></svg>
+                            <span>ایتا</span>
+                        </a>
+                        <a href="#" class="social-link social-link--twitter">
+                            <svg viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                            <span>توییتر</span>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+        </div>
     </div>
 </section>

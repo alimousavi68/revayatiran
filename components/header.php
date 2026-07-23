@@ -8,20 +8,18 @@ $user_level = 'guest';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>روایت ایران | اتود دوم صفحه اصلی</title>
-    <meta name="description" content="اتود جایگزین صفحه اصلی روایت ایران با اتمسفر گرم، پویا و معاصر">
+    <title>روایت ایران | آژانس تحلیلی روایت ایران </title>
+    <meta name="description" content="">
     <meta name="robots" content="index, follow">
     <?php if ($user_level !== 'guest'): ?>
     <!-- جلوگیری از ایندکس بخش‌های حساس در صورت ورود کاربر -->
     <meta name="robots" content="noindex, nofollow">
     <?php endif; ?>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css?v=1.2">
 </head>
 <body>
     <div class="page-progress" aria-hidden="true">
@@ -47,7 +45,7 @@ $user_level = 'guest';
 
     <header class="site-header" id="site-header">
 
-        <!-- Top Bar -->
+        <!-- Top Bar (White Clean Design) -->
         <div class="top-bar" id="top-bar">
             <div class="container top-bar__inner">
 
@@ -60,51 +58,32 @@ $user_level = 'guest';
                     <span id="top-bar-time">--:--</span>
                 </div>
 
-                <!-- Ticker Tape -->
-                <div class="top-bar__ticker">
-                    <span class="ticker-label">
-                        <i class="ph ph-broadcast"></i>
-                        <span>خبر فوری</span>
-                    </span>
-                    <div class="ticker-track" aria-live="polite">
-                        <div class="ticker-items" id="ticker-items">
-                            <a href="#" class="ticker-item">نشست اضطراری شورای امنیت درباره منطقه خاورمیانه برگزار شد</a>
-                            <span class="ticker-sep">◆</span>
-                            <a href="#" class="ticker-item">بازار سرمایه با رشد ۲.۴ درصدی بسته شد</a>
-                            <span class="ticker-sep">◆</span>
-                            <a href="#" class="ticker-item">گزارش ویژه روایت ایران از مذاکرات وین</a>
-                            <span class="ticker-sep">◆</span>
-                            <a href="#" class="ticker-item">نشست اضطراری شورای امنیت درباره منطقه خاورمیانه برگزار شد</a>
-                            <span class="ticker-sep">◆</span>
-                            <a href="#" class="ticker-item">بازار سرمایه با رشد ۲.۴ درصدی بسته شد</a>
-                            <span class="ticker-sep">◆</span>
-                            <a href="#" class="ticker-item">گزارش ویژه روایت ایران از مذاکرات وین</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Quick Links -->
-                <div class="top-bar__links">
-                    <a href="#situation-room" class="top-bar__link">
-                        <i class="ph ph-shield-check"></i>
-                        <span>اتاق وضعیت</span>
-                    </a>
-                    <a href="#analysts-network" class="top-bar__link">
-                        <i class="ph ph-users-three"></i>
-                        <span>تحلیلگران</span>
+                <!-- Top Bar Actions (Search, Theme, Login) -->
+                <div class="top-bar__actions">
+                    <button class="top-bar__icon-btn search-trigger" type="button" aria-label="جستجو" id="search-trigger" title="جستجو">
+                        <i class="ph ph-magnifying-glass"></i>
+                    </button>
+                    <button class="top-bar__icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="تغییر حالت رنگی" title="تغییر پوسته">
+                        <i class="ph ph-sun theme-icon-light"></i>
+                        <i class="ph ph-moon theme-icon-dark"></i>
+                    </button>
+                    <span class="top-bar__divider"></span>
+                    <a href="#" class="top-bar__cta" aria-label="ورود">
+                        <i class="ph ph-user-circle-plus"></i>
+                        <span>ورود</span>
                     </a>
                 </div>
 
             </div>
         </div>
 
-        <!-- Main Header Shell -->
+        <!-- Main Header Shell (Red Premium Styling) -->
         <div class="container header-shell" id="header-shell">
 
             <!-- Brand Lockup -->
             <div class="brand-lockup">
                 <a href="#" class="brand-mark" aria-label="روایت ایران">
-                    <img src="./assets/images/logo4.webp" alt="لوگوی روایت ایران" class="brand-mark__logo" width="auto" height="63px">
+                    <img src="./assets/images/logo-revayat.webp" alt="لوگوی روایت ایران" class="brand-mark__logo" width="auto" height="63px">
                 </a>
             </div>
 
@@ -142,22 +121,13 @@ $user_level = 'guest';
                 <span class="nav-divider" aria-hidden="true"></span>
                 <a href="#media-observatory">دیدبان رسانه</a>
                 <span class="nav-divider" aria-hidden="true"></span>
-                <a href="#analysts-network">تحلیلگران</a>
+                <a href="#situation-room">اتاق وضعیت</a>
+                <span class="nav-divider" aria-hidden="true"></span>
+                <a href="#analysts-network">شبکه تحلیلگران</a>
             </nav>
 
-            <!-- Header Actions -->
+            <!-- Mobile Toggle -->
             <div class="header-actions">
-                <button class="icon-button theme-toggle" id="theme-toggle" type="button" aria-label="تغییر حالت رنگی">
-                    <i class="ph ph-sun theme-icon-light"></i>
-                    <i class="ph ph-moon theme-icon-dark"></i>
-                </button>
-                <button class="icon-button search-trigger" type="button" aria-label="جستجو" id="search-trigger">
-                    <i class="ph ph-magnifying-glass"></i>
-                </button>
-                <a href="#" class="header-cta" aria-label="ورود">
-                    <i class="ph ph-user-circle-plus"></i>
-                    <span>ورود</span>
-                </a>
                 <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="منو">
                     <span class="menu-toggle__line"></span>
                     <span class="menu-toggle__line"></span>

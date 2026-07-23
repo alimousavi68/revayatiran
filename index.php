@@ -1,33 +1,24 @@
 <?php
-// Layout Header
-include 'layout/header.php';
+// شبیه‌سازی سطح دسترسی کاربر برای نمایش بخش اتاق وضعیت
+// سطوح: 'guest' (مهمان), 'normal' (عادی), 'medium' (متوسط), 'high' (عالی)
+$user_level = 'guest'; 
+
+require_once __DIR__ . '/components/header.php';
 ?>
 
-<!-- ویترین اصلی (هیرو) -->
-<?php include 'components/hero.php'; ?>
-
-<!-- روایت روز (تحلیل‌های برتر) -->
-<?php include 'components/daily-narrative.php'; ?>
-
-<!-- رصد اخبار -->
-<?php include 'components/news-monitoring.php'; ?>
-
-<!-- پرونده ویژه -->
-<?php include 'components/special-dossiers.php'; ?>
-
-<!-- دیدبان رسانه -->
-<?php include 'components/media-observatory.php'; ?>
-
-<!-- اتاق وضعیت VIP -->
-<?php include 'components/situation-room.php'; ?>
-
-<!-- رسانه نگار (چندرسانه‌ای) -->
-<?php include 'components/multimedia.php'; ?>
-
-<!-- شبکه تحلیلگران -->
-<?php include 'components/analysts-network.php'; ?>
+<main>
+    <?php
+    require_once __DIR__ . '/components/hero.php';
+    require_once __DIR__ . '/components/daily-narrative.php';
+    require_once __DIR__ . '/components/news-monitoring.php';
+    require_once __DIR__ . '/components/special-dossiers.php';
+    require_once __DIR__ . '/components/media-observatory.php';
+    require_once __DIR__ . '/components/situation-room.php';
+    require_once __DIR__ . '/components/multimedia.php';
+    // require_once __DIR__ . '/components/analysts-network.php';
+    ?>
+</main>
 
 <?php
-// Layout Footer
-include 'layout/footer.php';
+require_once __DIR__ . '/components/footer.php';
 ?>

@@ -1,185 +1,247 @@
-<section class="max-w-7xl mx-auto px-4 lg:px-8 py-12">
-    <!-- هدر بخش (همسو با سایر سکشن‌ها) -->
-    <div class="flex items-center gap-4 mb-8">
-        <h2 class="text-navy text-h1 whitespace-nowrap flex items-center gap-2">
-            <i class="ph-duotone ph-sun text-gold"></i> روایت <span class="text-gold">روز</span>
-        </h2>
-        <div class="h-px bg-gold/30 flex-grow"></div>
-        <a href="#" class="text-gold text-sm font-bold flex items-center gap-1 hover:text-navy transition-colors">
-            نمایش همه <i class="ph ph-arrow-left"></i>
-        </a>
-    </div>
+<section class="section-shell section-shell--offwhite" id="daily-narrative">
+    <div class="container">
+        <!-- ═══ اتود B: پیل‌های داده‌محور (الهام از Bloomberg / Axios) ═══ -->
+        <!-- UX: [• عنوان + بج تعداد] ............ [تگ‌های فیلتر | آرشیو] -->
+        <div class="section-head section-head--etude-b is-visible" data-reveal="up">
+                <div class="etude-b__leading">
+                    <div class="etude-b__icon-badge">
+                        <i class="ph ph-newspaper"></i>
+                    </div>
+                    <h2>روایت روز</h2>
+                    <p class="section-summary">تحلیل‌های برتر نخبگان و پژوهشگران</p>
+                </div>
+            <div class="etude-b__actions">
+                <a href="#" class="section-link">
+                    <span>آرشیو</span>
+                    <i class="ph ph-arrow-left"></i>
+                </a>
+            </div>
+        </div>
 
-    <!-- Bento Grid Layout -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <!-- کارت بزرگ اصلی (Featured Dynamic Card) - دو برابر ارتفاع معمولی در دسکتاپ -->
-        <div class="lg:row-span-2 group relative overflow-hidden rounded-sm border border-border/60 dark:border-white/5 bg-navy flex flex-col justify-end min-h-[500px] p-6 shadow-md transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
-            <!-- تصویر پس‌زمینه با افکت تیره کننده -->
-            <div class="absolute inset-0 z-0">
-                <img src="assets/images/daily-narrative__________.jpg" alt="سیاست‌های یارانه‌ای" class="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-1000">
-                <div class="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-transparent"></div>
+        <div class="daily-grid">
+            <!-- Right Main Content: Featured Analysis -->
+            <div class="daily-main-col is-visible" data-reveal="up">
+                <article class="featured-analysis-card">
+                    <div class="analysis-card__visual">
+                        <img src="assets/images/posts images/1404092612513063035069134.jpg" alt="تحلیل برتر روز">
+
+                      
+                    </div>
+                    <div class="analysis-card__content">
+                        <div class="analysis-card__header">
+                            <div class="author-info">
+                                <img class="author-avatar" src="assets/images/user Avatar/8fc8b30f66b4489aaeb92b686a386cdc.png" alt="پیمان شریفی">
+                                <div class="author-details">
+                                    <div class="author-name-row">
+                                        <span class="author-name">پیمان شریفی</span>
+                                        <span class="author-badge">پژوهشگر ارشد</span>
+                                    </div>
+                                    <span class="author-title">دکترای سیاست عمومی</span>
+                                </div>
+                            </div>
+                            <div class="analysis-meta-left">
+                                <div class="tag-rating-inline">
+                                    <span>امتیاز تحلیل: ۴.۸</span>
+                                </div>
+                                <div class="publish-date">۱۲ تیر ۱۴۰۵</div>
+                            </div>
+                        </div>
+                        <div class="analysis-card__body">
+                            <h2 class="analysis-title">یارانه پنهان و فرسایش اعتماد عمومی؛ اقتصاد سیاسی یک نابرابری مزمن</h2>
+                            <p class="analysis-excerpt" style="margin-bottom: 0;">
+                                این تحلیل، نسبت میان تصمیم‌های بودجه‌ای، تورم فرساینده و ادراک عمومی از عدالت توزیعی را بررسی می‌کند و نشان می‌دهد چرا برخی اصلاحات بدون بازطراحی روایت عمومی شکست می‌خورند.
+                            </p>
+                        </div>
+                    </div>
+                </article>
             </div>
 
-            <!-- محتوای کارت (بر روی تصویر) -->
-            <div class="relative z-10 flex flex-col justify-end h-full">
-                <!-- هدر کارت: نویسنده و امتیاز در بالا -->
-                <div class="flex items-center justify-between gap-4 mb-6 pb-4 border-b border-white/10">
-                    <div class="flex items-center gap-3">
-                        <img src="assets/images/daily-narrative__________________.jpg" alt="دکتر علیرضا محمدی" class="w-14 h-14 rounded-full object-cover border-2 border-gold shadow-lg ring-2 ring-gold/20 transform group-hover:scale-105 transition-transform duration-300">
-                        <div>
-                            <h5 class="text-white font-extrabold text-sm leading-snug">دکتر علیرضا محمدی</h5>
-                            <span class="text-[11px] text-gray-300 block mt-0.5">عضو هیئت علمی دانشگاه تهران</span>
+            <!-- Left Sidebar: Hot Analyses -->
+            <div class="daily-side-col">
+                <!-- Card 1: Top List Card -->
+                <div class="sidebar-card top-list-card is-visible" data-reveal="up">
+                    <div class="popular-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+                        <h3 class="card-title" style="margin: 0;">تحلیل‌های پرمخاطب هفته</h3>
+                        <!-- CSS Tooltip for rules -->
+                        <div class="rules-tooltip-container">
+                            <i class="ph ph-info rules-tooltip-icon"></i>
+                            <div class="rules-tooltip-popover">
+                                تحلیل‌ها پس از بررسی تحریریه، بر اساس صحت‌سنجی، مستند بودن و بازخورد مخاطبان رتبه‌بندی می‌شوند.
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="flex items-center gap-1.5 bg-white/10 backdrop-blur-md border border-white/10 px-2.5 py-1.5 rounded-sm" title="تعداد آرای ثبت شده">
-                        <i class="ph-fill ph-thumbs-up text-emerald-400 text-xs"></i>
-                        <span class="font-bold text-white text-xs num-inter">۳۴۲ رأی</span>
+                    <div class="mini-list">
+                        <article class="mini-item">
+                            <div class="mini-author-column">
+                                <img src="assets/images/user Avatar/a9d7f2cbb32944f1bcd60800dda1d236.png" alt="بابک صادقی" class="mini-avatar">
+                                <span class="mini-likes">
+                                    <i class="ph ph-thumbs-up"></i>
+                                    <span>۲۴۵</span>
+                                </span>
+                            </div>
+                            <div class="mini-content">
+                                <span class="mini-author">بابک صادقی</span>
+                                <h4 class="mini-title">چرا افکار عمومی دیگر با تیترهای خطی قانع نمی‌شود؟</h4>
+                                <div class="mini-content-footer">
+                                    <span class="mini-tag">جامعه سیاسی</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="mini-item">
+                            <div class="mini-author-column">
+                                <img src="assets/images/user Avatar/0f1b74871a3e46e7ae950c05c65e6d2d.png" alt="مریم هوشمندی" class="mini-avatar">
+                                <span class="mini-likes">
+                                    <i class="ph ph-thumbs-up"></i>
+                                    <span>۱۸۲</span>
+                                </span>
+                            </div>
+                            <div class="mini-content">
+                                <span class="mini-author">مریم هوشمندی</span>
+                                <h4 class="mini-title">آیا اتحادهای موقت منطقه‌ای به بازدارندگی پایدار تبدیل می‌شوند؟</h4>
+                                <div class="mini-content-footer">
+                                    <span class="mini-tag">امنیت ملی</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="mini-item">
+                            <div class="mini-author-column">
+                                <img src="assets/images/user Avatar/56d604c11de44ed4b583e8f8b81626b3.png" alt="احسان طاهری" class="mini-avatar">
+                                <span class="mini-likes">
+                                    <i class="ph ph-thumbs-up"></i>
+                                    <span>۱۵۶</span>
+                                </span>
+                            </div>
+                            <div class="mini-content">
+                                <span class="mini-author">احسان طاهری</span>
+                                <h4 class="mini-title">تنش‌های ارزی و سناریوهای پیش‌روی بازارهای مالی در فصل جدید</h4>
+                                <div class="mini-content-footer">
+                                    <span class="mini-tag">اقتصاد سیاسی</span>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="mini-item">
+                            <div class="mini-author-column">
+                                <img src="assets/images/user Avatar/a9d7f2cbb32944f1bcd60800dda1d236.png" alt="مریم علوی" class="mini-avatar">
+                                <span class="mini-likes">
+                                    <i class="ph ph-thumbs-up"></i>
+                                    <span>۱۲۵</span>
+                                </span>
+                            </div>
+                            <div class="mini-content">
+                                <span class="mini-author">مریم علوی</span>
+                                <h4 class="mini-title">حکمرانی الگوریتم‌ها؛ چالش‌های حقوقی و فنی در مدیریت داده‌های ملی</h4>
+                                <div class="mini-content-footer">
+                                    <span class="mini-tag">رسانه و فناوری</span>
+                                </div>
+                            </div>
+                        </article>
                     </div>
                 </div>
 
-                <span class="self-start inline-flex items-center gap-1.5 bg-gold/90 text-navy font-bold text-[10px] px-2.5 py-1 rounded-sm mb-4">
-                    <i class="ph-fill ph-flashlight"></i> تحلیل برگزیده هفته
-                </span>
-                
-                <h3 class="text-white text-2xl font-extrabold leading-snug mb-3 hover:text-gold cursor-pointer transition-colors duration-300">
-                    کالبدشکافی سیاست‌های یارانه‌ای پنهان؛ چه کسی هزینه تورم را می‌پردازد؟
-                </h3>
-                
-                <p class="text-gray-300 text-sm leading-relaxed mb-2 line-clamp-3">
-                    در حالی که آمارهای رسمی خبر از مهار نسبی تورم می‌دهند، بررسی بودجه عمومی و تخصیص منابع نشان‌دهنده جریان پنهان یارانه‌هایی است که نه تنها به دست دهک‌های پایین نمی‌رسد، بلکه موجب کسری بودجه مزمن در ساختار اقتصاد کلان کشور شده است...
-                </p>
             </div>
-        </div>
 
-        <!-- کارت متوسط اول (Medium Card A) -->
-        <div class="group bg-surface-offset dark:bg-navy/35 border border-border/50 dark:border-white/5 rounded-sm p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:border-gold/30 hover:-translate-y-1">
-            <div>
-                <!-- هدر کارت: نویسنده و امتیاز -->
-                <div class="flex items-center justify-between gap-3 pb-4 mb-4 border-b border-border/45 dark:border-white/5">
-                    <div class="flex items-center gap-3.5">
-                        <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=1200&q=80" alt="سید علی حسینی" class="w-12 h-12 rounded-full object-cover border-2 border-gold/40 shadow-md ring-2 ring-gold/10 transform group-hover:scale-105 transition-transform duration-300">
-                        <div>
-                            <span class="text-sm font-extrabold text-main dark:text-white block hover:text-gold transition-colors">سید علی حسینی</span>
-                            <span class="text-[11px] text-muted dark:text-gray-400 block mt-0.5">پژوهشگر رسانه</span>
+            <!-- Column 3: Elite Network & Leaderboard -->
+            <div class="daily-network-col is-visible" data-reveal="up">
+                <!-- Leaderboard (integrated from analysts-network) -->
+                <div class="ranking-leaderboard panel-card">
+                    <div class="leaderboard-header">
+                        <h4 class="leaderboard-title" style="margin: 0;">برترین تحلیلگران</h4>
+                        <div class="leaderboard-header-left" style="display: flex; align-items: center; gap: 10px;">
+                            <div class="leaderboard-tabs">
+                                <span class="tab-item active">ماهانه</span>
+                                <span class="tab-item">فصلی</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="flex items-center gap-1.5 bg-emerald-50/50 dark:bg-white/5 px-2.5 py-1 rounded-sm border border-emerald-500/10 dark:border-white/5" title="تعداد آرای ثبت شده">
-                        <i class="ph-fill ph-thumbs-up text-emerald-600 dark:text-emerald-400 text-xs"></i>
-                        <span class="font-bold text-emerald-800 dark:text-white text-xs num-inter">۱۲۰ رأی</span>
+                    <div class="leaderboard-list">
+                        <a href="analyst-archive.php?id=narges-ahmadi" class="leaderboard-row top-three">
+                            <div class="user-avatar">
+                                <img src="assets/images/user Avatar/14eeb1b8dc3a4bbd905999e407a01725.png" alt="نرگس احمدی">
+                            </div>
+                            <div class="user-info">
+                                <strong>نرگس احمدی</strong>
+                                <span>ژئوپلیتیک</span>
+                            </div>
+                            <div class="user-score">
+                                <span class="score-votes">۴۸۰ رای</span>
+                                <span class="score-analyses">۱۲ تحلیل</span>
+                            </div>
+                        </a>
+                        <a href="analyst-archive.php?id=ehsan-taheri" class="leaderboard-row top-three">
+                            <div class="user-avatar">
+                                <img src="assets/images/user Avatar/56d604c11de44ed4b583e8f8b81626b3.png" alt="احسان طاهری">
+                            </div>
+                            <div class="user-info">
+                                <strong>احسان طاهری</strong>
+                                <span>اقتصاد سیاسی</span>
+                            </div>
+                            <div class="user-score">
+                                <span class="score-votes">۳۵۲ رای</span>
+                                <span class="score-analyses">۹ تحلیل</span>
+                            </div>
+                        </a>
+                        <a href="analyst-archive.php?id=elham-sharifi" class="leaderboard-row top-three">
+                            <div class="user-avatar">
+                                <img src="assets/images/user Avatar/634eb20869b740fdbc5b7c8427a8f674.png" alt="الهام شریفی">
+                            </div>
+                            <div class="user-info">
+                                <strong>الهام شریفی</strong>
+                                <span>جامعه‌شناسی</span>
+                            </div>
+                            <div class="user-score">
+                                <span class="score-votes">۲۹۰ رای</span>
+                                <span class="score-analyses">۸ تحلیل</span>
+                            </div>
+                        </a>
+                        <a href="analyst-archive.php?id=reza-kamali" class="leaderboard-row">
+                            <div class="user-avatar">
+                                <img src="assets/images/user Avatar/8fc8b30f66b4489aaeb92b686a386cdc.png" alt="رضا کمالی">
+                            </div>
+                            <div class="user-info">
+                                <strong>رضا کمالی</strong>
+                                <span>رسانه</span>
+                            </div>
+                            <div class="user-score">
+                                <span class="score-votes">۱۸۴ رای</span>
+                                <span class="score-analyses">۶ تحلیل</span>
+                            </div>
+                        </a>
+                        <a href="analyst-archive.php?id=maryam-alavi" class="leaderboard-row">
+                            <div class="user-avatar">
+                                <img src="assets/images/user Avatar/a9d7f2cbb32944f1bcd60800dda1d236.png" alt="مریم علوی">
+                            </div>
+                            <div class="user-info">
+                                <strong>مریم علوی</strong>
+                                <span>IT</span>
+                            </div>
+                            <div class="user-score">
+                                <span class="score-votes">۱۲۵ رای</span>
+                                <span class="score-analyses">۵ تحلیل</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="leaderboard-footer">
+                        <a href="analysts.php" class="view-all-ranking">مشاهده شبکه تحلیلگران روایت</a>
                     </div>
                 </div>
 
-                <div class="flex items-center justify-between mb-3">
-                    <span class="text-xs font-bold text-gold bg-gold/10 px-2 py-1 rounded-sm">جامعه شناسی سیاسی</span>
+                <!-- Scenario 3: Minimal Registration Widget (V2 Compact) -->
+                <div class="register-cta-widget">
+                    <div class="cta-widget-glow"></div>
+                    <div class="cta-widget-content">
+                        <h4 class="cta-title">
+                            <i class="ph ph-note-pencil" style="color: var(--accent); font-size: 16px; margin-inline-end: 6px;"></i>
+                            ورود به جمع تحلیل‌گران
+                        </h4>
+                        <p class="cta-desc">شما هم می‌توانید به عنوان تحلیلگر، نوشته‌های خود را ثبت و منتشر کنید.</p>
+                        <a href="#register" class="btn-register-cta">
+                            <span>درخواست پنل تحلیلگر</span>
+                            <i class="ph ph-arrow-left"></i>
+                        </a>
+                    </div>
                 </div>
-                
-                <h4 class="text-main dark:text-white font-bold text-lg leading-relaxed mb-3 group-hover:text-navy dark:group-hover:text-gold transition-colors duration-300">
-                    نقش شبکه‌های اجتماعی در شکل‌دهی به افکار عمومی و انتخابات پیش‌رو
-                </h4>
-                
-                <p class="text-muted dark:text-gray-400 text-xs leading-relaxed line-clamp-2">
-                    بررسی رفتار کاربران در پلتفرم‌های اجتماعی نشان می‌دهد که جریان‌سازی‌های مجازی تا چه میزان قادر است بر انتخاب‌های سیاسی جامعه اثر بگذارد...
-                </p>
             </div>
         </div>
-
-        <!-- کارت متوسط دوم (Medium Card B) -->
-        <div class="group bg-surface-offset dark:bg-navy/35 border border-border/50 dark:border-white/5 rounded-sm p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:border-gold/30 hover:-translate-y-1">
-            <div>
-                <!-- هدر کارت: نویسنده و امتیاز -->
-                <div class="flex items-center justify-between gap-3 pb-4 mb-4 border-b border-border/45 dark:border-white/5">
-                    <div class="flex items-center gap-3.5">
-                        <img src="assets/images/daily-narrative___________.jpg" alt="مریم صادقی" class="w-12 h-12 rounded-full object-cover border-2 border-gold/40 shadow-md ring-2 ring-gold/10 transform group-hover:scale-105 transition-transform duration-300">
-                        <div>
-                            <span class="text-sm font-extrabold text-main dark:text-white block hover:text-gold transition-colors">مریم صادقی</span>
-                            <span class="text-[11px] text-muted dark:text-gray-400 block mt-0.5">تحلیلگر توسعه پایدار</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-1.5 bg-emerald-50/50 dark:bg-white/5 px-2.5 py-1 rounded-sm border border-emerald-500/10 dark:border-white/5" title="تعداد آرای ثبت شده">
-                        <i class="ph-fill ph-thumbs-up text-emerald-600 dark:text-emerald-400 text-xs"></i>
-                        <span class="font-bold text-emerald-800 dark:text-white text-xs num-inter">۸۵ رأی</span>
-                    </div>
-                </div>
-
-                <div class="flex items-center justify-between mb-3">
-                    <span class="text-xs font-bold text-gold bg-gold/10 px-2 py-1 rounded-sm">محیط زیست و توسعه</span>
-                </div>
-                
-                <h4 class="text-main dark:text-white font-bold text-lg leading-relaxed mb-3 group-hover:text-navy dark:group-hover:text-gold transition-colors duration-300">
-                    بررسی تحلیلی بحران آب در فلات مرکزی و پیامدهای اجتماعی آن
-                </h4>
-                
-                <p class="text-muted dark:text-gray-400 text-xs leading-relaxed line-clamp-2">
-                    کاهش ذخایر استراتژیک زیرزمینی و سیاست‌های انتقال آب با چالش‌های اجتماعی و منطقه‌ای فزاینده‌ای همراه شده است...
-                </p>
-            </div>
-        </div>
-
-        <!-- کارت متوسط سوم (Medium Card C) -->
-        <div class="group bg-surface-offset dark:bg-navy/35 border border-border/50 dark:border-white/5 rounded-sm p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:border-gold/30 hover:-translate-y-1">
-            <div>
-                <!-- هدر کارت: نویسنده و امتیاز -->
-                <div class="flex items-center justify-between gap-3 pb-4 mb-4 border-b border-border/45 dark:border-white/5">
-                    <div class="flex items-center gap-3.5">
-                        <img src="assets/images/daily-narrative____________.jpg" alt="احسان طاهری" class="w-12 h-12 rounded-full object-cover border-2 border-gold/40 shadow-md ring-2 ring-gold/10 transform group-hover:scale-105 transition-transform duration-300">
-                        <div>
-                            <span class="text-sm font-extrabold text-main dark:text-white block hover:text-gold transition-colors">احسان طاهری</span>
-                            <span class="text-[11px] text-muted dark:text-gray-400 block mt-0.5">کارشناس اقتصاد سیاسی</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-1.5 bg-emerald-50/50 dark:bg-white/5 px-2.5 py-1 rounded-sm border border-emerald-500/10 dark:border-white/5" title="تعداد آرای ثبت شده">
-                        <i class="ph-fill ph-thumbs-up text-emerald-600 dark:text-emerald-400 text-xs"></i>
-                        <span class="font-bold text-emerald-800 dark:text-white text-xs num-inter">۴۸ رأی</span>
-                    </div>
-                </div>
-
-                <div class="flex items-center justify-between mb-3">
-                    <span class="text-xs font-bold text-gold bg-gold/10 px-2 py-1 rounded-sm">اقتصاد و دیپلماسی</span>
-                </div>
-                
-                <h4 class="text-main dark:text-white font-bold text-lg leading-relaxed mb-3 group-hover:text-navy dark:group-hover:text-gold transition-colors duration-300">
-                    چشم‌انداز روابط تجاری با کشورهای همسایه در سایه تحریم‌های جدید
-                </h4>
-                
-                <p class="text-muted dark:text-gray-400 text-xs leading-relaxed line-clamp-2">
-                    بررسی فرصت‌های ترانزیتی و معاهدات دوجانبه بانکی به عنوان راهکارهای میان‌بر در کاهش اثرات تحریمی بر اقتصاد ایران...
-                </p>
-            </div>
-        </div>
-
-        <!-- کارت متوسط چهارم (Medium Card D) -->
-        <div class="group bg-surface-offset dark:bg-navy/35 border border-border/50 dark:border-white/5 rounded-sm p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:border-gold/30 hover:-translate-y-1">
-            <div>
-                <!-- هدر کارت: نویسنده و امتیاز -->
-                <div class="flex items-center justify-between gap-3 pb-4 mb-4 border-b border-border/45 dark:border-white/5">
-                    <div class="flex items-center gap-3.5">
-                        <img src="assets/images/daily-narrative__________.jpg" alt="رضا کمالی" class="w-12 h-12 rounded-full object-cover border-2 border-gold/40 shadow-md ring-2 ring-gold/10 transform group-hover:scale-105 transition-transform duration-300">
-                        <div>
-                            <span class="text-sm font-extrabold text-main dark:text-white block hover:text-gold transition-colors">رضا کمالی</span>
-                            <span class="text-[11px] text-muted dark:text-gray-400 block mt-0.5">پژوهشگر حوزه آموزش</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-1.5 bg-emerald-50/50 dark:bg-white/5 px-2.5 py-1 rounded-sm border border-emerald-500/10 dark:border-white/5" title="تعداد آرای ثبت شده">
-                        <i class="ph-fill ph-thumbs-up text-emerald-600 dark:text-emerald-400 text-xs"></i>
-                        <span class="font-bold text-emerald-800 dark:text-white text-xs num-inter">۱۵ رأی</span>
-                    </div>
-                </div>
-
-                <div class="flex items-center justify-between mb-3">
-                    <span class="text-xs font-bold text-gold bg-gold/10 px-2 py-1 rounded-sm">توسعه و آموزش</span>
-                </div>
-                
-                <h4 class="text-main dark:text-white font-bold text-lg leading-relaxed mb-3 group-hover:text-navy dark:group-hover:text-gold transition-colors duration-300">
-                    تحول در ساختار آموزشی کشور؛ الزام یا انتخاب؟
-                </h4>
-                
-                <p class="text-muted dark:text-gray-400 text-xs leading-relaxed line-clamp-2">
-                    چرا الگوهای تدریس نوین و مهارت‌محور در مدارس ما نهادینه نمی‌شوند و چه گام‌های تحولی برای خروج از بحران مدرک‌گرایی لازم است؟
-                </p>
-            </div>
-        </div>
-
     </div>
 </section>

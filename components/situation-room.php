@@ -1,76 +1,241 @@
-<section class="max-w-7xl mx-auto px-4 lg:px-8 py-12">
-    <div class="bg-navy rounded-sm overflow-hidden relative">
-        <!-- پس زمینه گرافیکی و خطوط طلایی -->
-        <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: repeating-linear-gradient(45deg, #B89053 0, #B89053 1px, transparent 1px, transparent 20px);"></div>
-        <div class="absolute top-0 right-0 w-full h-1 bg-gradient-to-l from-gold to-transparent"></div>
-
-        <div class="p-8 md:p-12 relative z-10">
-            <div class="flex flex-col items-center justify-center mb-10 text-center">
-                <div class="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center border border-gold/30 mb-4">
-                    <i class="ph-fill ph-lock-key text-gold text-3xl"></i>
+<section class="section-shell section-shell--dark" id="situation-room">
+    <div class="container">
+        <!-- هدر بخش -->
+        <div class="section-head section-head--etude-b section-head--dark" data-reveal="up">
+            <div class="etude-b__leading">
+                <div class="etude-b__icon-badge">
+                    <i class="ph ph-shield-warning"></i>
                 </div>
-                <h2 class="text-white text-h1 mb-3">اتاق وضعیت</h2>
-                <p class="text-white/60 text-sm max-w-lg">
-                    دسترسی به بولتن‌های ویژه، گزارش‌های آماری و محتوای طبقه‌بندی شده، صرفاً برای پژوهشگران و اعضای تایید شده VIP امکان‌پذیر است.
-                </p>
+                <h2>اتاق وضعیت</h2>
+                <p class="section-summary">برآوردهای راهبردی و تحلیل‌های پدافندی</p>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                <!-- کارت محرمانه ۱ -->
-                <div class="bg-white/5 border border-white/10 rounded-sm p-6 backdrop-blur-sm relative overflow-hidden group">
-                    <div class="absolute inset-0 bg-navy/80 backdrop-blur-[2px] z-10 flex flex-col items-center justify-center opacity-100 transition-opacity">
-                        <i class="ph-fill ph-lock text-white/50 text-4xl mb-3"></i>
-                        <span class="text-white/70 text-xs font-bold px-3 py-1 bg-white/10 rounded-full">دسترسی محدود</span>
+            <div class="etude-b__actions">
+                <?php if ($user_level === 'guest'): ?>
+                    <a href="#" class="button--compact button--primary button--glow">
+                        <i class="ph-fill ph-user-plus"></i>
+                        <span>ثبت‌نام و احراز هویت</span>
+                    </a>
+                    <a href="#" class="button--compact button--soft">
+                        <i class="ph-fill ph-sign-in"></i>
+                        <span>ورود به حساب</span>
+                    </a>
+                <?php else: ?>
+                    <div class="user-status-badge">
+                        <i class="ph-fill ph-shield-check"></i>
+                        <span>صلاحیت تایید شده: <?php 
+                            if ($user_level === 'high') echo 'سطح ۱ (عالی)';
+                            else if ($user_level === 'normal') echo 'سطح ۳ (پایه)';
+                            else echo 'سطح ۲ (متوسط)';
+                        ?></span>
                     </div>
-                    <!-- محتوای زیر قفل (فقط نمایشی گرافیکی) -->
-                    <div class="opacity-30 blur-[2px] select-none pointer-events-none">
-                        <span class="text-gold text-[10px] font-bold mb-2 block">بولتن محرمانه</span>
-                        <h3 class="text-white text-lg font-bold mb-4">گزارش راهبردی پیامدهای اقتصادی تحریم‌های ثانویه</h3>
-                        <div class="h-20 bg-white/10 rounded-sm w-full mb-2"></div>
-                        <div class="h-4 bg-white/10 rounded-sm w-3/4"></div>
-                    </div>
-                </div>
-
-                <!-- کارت محرمانه ۲ -->
-                <div class="bg-white/5 border border-white/10 rounded-sm p-6 backdrop-blur-sm relative overflow-hidden group">
-                    <div class="absolute inset-0 bg-navy/80 backdrop-blur-[2px] z-10 flex flex-col items-center justify-center opacity-100 transition-opacity">
-                        <i class="ph-fill ph-lock text-white/50 text-4xl mb-3"></i>
-                        <span class="text-white/70 text-xs font-bold px-3 py-1 bg-white/10 rounded-full">دسترسی محدود</span>
-                    </div>
-                    <div class="opacity-30 blur-[2px] select-none pointer-events-none">
-                        <span class="text-gold text-[10px] font-bold mb-2 block">داده‌های آماری</span>
-                        <h3 class="text-white text-lg font-bold mb-4">پایش افکارسنجی ماهانه پیرامون رضایت عمومی</h3>
-                        <div class="h-20 bg-white/10 rounded-sm w-full mb-2 flex items-end gap-2 p-2">
-                            <div class="w-1/3 h-full bg-gold/50 rounded-t-sm"></div>
-                            <div class="w-1/3 h-1/2 bg-white/50 rounded-t-sm"></div>
-                            <div class="w-1/3 h-3/4 bg-gold/30 rounded-t-sm"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- کارت محرمانه ۳ -->
-                <div class="bg-white/5 border border-white/10 rounded-sm p-6 backdrop-blur-sm relative overflow-hidden group hidden md:block">
-                    <div class="absolute inset-0 bg-navy/80 backdrop-blur-[2px] z-10 flex flex-col items-center justify-center opacity-100 transition-opacity">
-                        <i class="ph-fill ph-lock text-white/50 text-4xl mb-3"></i>
-                        <span class="text-white/70 text-xs font-bold px-3 py-1 bg-white/10 rounded-full">دسترسی محدود</span>
-                    </div>
-                    <div class="opacity-30 blur-[2px] select-none pointer-events-none">
-                        <span class="text-gold text-[10px] font-bold mb-2 block">گزارش نظارتی</span>
-                        <h3 class="text-white text-lg font-bold mb-4">بررسی عملکرد نهادهای نظارتی در پرونده‌های کلان</h3>
-                        <div class="space-y-2">
-                            <div class="h-3 bg-white/10 rounded-sm w-full"></div>
-                            <div class="h-3 bg-white/10 rounded-sm w-full"></div>
-                            <div class="h-3 bg-white/10 rounded-sm w-5/6"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex justify-center">
-                <button class="bg-gold hover:bg-yellow-600 text-white px-8 py-3.5 rounded-sm font-bold text-sm transition-colors shadow-lg flex items-center gap-2 border border-gold/50 hover:border-white/50">
-                    <i class="ph-fill ph-key"></i> درخواست دسترسی ویژه به اتاق وضعیت
-                </button>
+                <?php endif; ?>
             </div>
         </div>
+
+        <?php if ($user_level === 'guest'): ?>
+        <!-- نمای مهمان (کارت شیشه‌ای قفل شده با رادار اسکنر) -->
+        <div class="situation-lock-overlay" data-reveal="up">
+            <div class="situation-lock-card">
+                <div class="radar-container">
+                    <div class="radar-circle circle-1"></div>
+                    <div class="radar-circle circle-2"></div>
+                    <div class="radar-circle circle-3"></div>
+                    <div class="radar-scanner"></div>
+                    <div class="lock-card__icon">
+                        <i class="ph-fill ph-lock-key"></i>
+                    </div>
+                </div>
+                
+                <div class="lock-card__content">
+                    <div class="secure-badge">
+                        <i class="ph-fill ph-shield-warning"></i>
+                        <span>سامانه تحلیل‌های راهبردی کشور</span>
+                    </div>
+                    <h3>محتوای قفل شده؛ ویژه اعضای تایید صلاحیت شده</h3>
+                    <p>
+                        اتاق وضعیت حاوی برآوردهای تحلیلی آنلاین از مسائل کلان و راهبردی کشور است. دسترسی به این بخش تنها پس از عضویت در شبکه تحلیلگران و تایید سطح صلاحیت امکان‌پذیر است.
+                    </p>
+                    
+                    <div class="lock-card__benefits">
+                        <div class="benefit-item">
+                            <i class="ph-fill ph-file-text"></i>
+                            <div class="benefit-info">
+                                <strong>بولتن‌های داده‌محور</strong>
+                                <span>گزارش‌های دوره‌ای اقتصادی و سیاسی</span>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="ph-fill ph-eye-closed"></i>
+                            <div class="benefit-info">
+                                <strong>برآوردهای راهبردی</strong>
+                                <span>پیش‌بینی رویدادها و سناریوهای پدافندی</span>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="ph-fill ph-chart-bar"></i>
+                            <div class="benefit-info">
+                                <strong>تحلیل‌های چند لایه</strong>
+                                <span>رصد میدانی مرزها و زیرساخت‌های حساس</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php else: ?>
+        <!-- نمای کاربر عضو: نمایش شبکه کارت‌های تاکتیکال -->
+        <div class="situation-grid">
+            
+            <!-- گزارش ۱: متنی + PDF (قابل دسترسی برای همه اعضا) -->
+            <article class="situation-item panel-card--dark" data-reveal="up">
+                <div class="card-status-bar">
+                    <span class="security-tag tag-level-3">سطح ۳</span>
+                    <div class="terminal-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+                <div class="item-header">
+                    <span class="chip chip--tactical">بولتن آماری</span>
+                    <span class="item-date">
+                        <i class="ph ph-calendar-blank"></i>
+                        <span>۱۲ تیر ۱۴۰۵</span>
+                    </span>
+                </div>
+                <div class="item-body">
+                    <h3>پایش شاخص‌های حساس در بازارهای موازی</h3>
+                    <p class="tactical-desc">تحلیل تغییرات معنادار در الگوهای رفتاری بازیگران کلیدی و پیش‌بینی گام‌های بعدی در حوزه اقتصاد سیاسی.</p>
+                    
+                    <!-- بخش فایل‌های ضمیمه -->
+                    <div class="attachments-list">
+                        <div class="attachment-file file-downloadable">
+                            <div class="file-info">
+                                <div class="file-icon pdf-type">
+                                    <i class="ph-fill ph-file-pdf"></i>
+                                </div>
+                                <div class="file-text">
+                                    <span class="file-name">گزارش آماری خردادماه</span>
+                                    <span class="file-size">PDF | ۴.۲ مگابایت</span>
+                                </div>
+                            </div>
+                            <a href="#" class="download-btn-modern" title="دانلود مستقیم سند">
+                                <i class="ph-bold ph-download-simple"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- گزارش ۲: متنی + گالری (دسترسی سطح متوسط و عالی) -->
+            <article class="situation-item panel-card--dark <?php echo ($user_level === 'normal') ? 'item--locked' : ''; ?>" data-reveal="up">
+                <div class="card-status-bar">
+                    <span class="security-tag tag-level-2">سطح ۲</span>
+                    <?php if ($user_level === 'normal'): ?>
+                        <span class="lock-indicator"><i class="ph-fill ph-lock"></i> محدود شده</span>
+                    <?php else: ?>
+                        <span class="lock-indicator unlock"><i class="ph-fill ph-lock-key-open"></i> تایید شده</span>
+                    <?php endif; ?>
+                </div>
+                <div class="item-header">
+                    <span class="chip chip--tactical">مستند تصویری</span>
+                    <span class="item-date">
+                        <i class="ph ph-calendar-blank"></i>
+                        <span>۱۰ تیر ۱۴۰۵</span>
+                    </span>
+                </div>
+                <div class="item-body">
+                    <h3>رصد میدانی تحرکات در مرزهای شرقی</h3>
+                    
+                    <?php if ($user_level === 'normal'): ?>
+                    <!-- حالت قفل شده گزارش ۲ -->
+                    <div class="tactical-lock-block">
+                        <p class="lock-msg">این گزارش تصویری رادار تنها برای کاربران سطح ۲ (متوسط) و بالاتر قابل دسترسی است.</p>
+                        <a href="#" class="upgrade-action-btn">
+                            <i class="ph ph-arrows-clockwise"></i>
+                            <span>درخواست ارتقای سطح دسترسی</span>
+                        </a>
+                    </div>
+                    <?php else: ?>
+                    <!-- حالت باز شده گزارش ۲ -->
+                    <p class="tactical-desc">تصاویر ماهواره‌ای و رصد مستمر زیرساخت‌های جدید پایش مرزی به همراه جدول ثبت ترددها.</p>
+                    
+                    <div class="tactical-gallery">
+                        <div class="gallery-wrapper">
+                            <div class="gallery-item-tactical">
+                                <img src="assets/images/user Avatar/56d604c11de44ed4b583e8f8b81626b3.png" alt="تصویر ماهواره‌ای ۱">
+                                <span class="img-sensor">SENSOR: 01A</span>
+                            </div>
+                            <div class="gallery-item-tactical">
+                                <img src="assets/images/user Avatar/0f1b74871a3e46e7ae950c05c65e6d2d.png" alt="رصد حرارتی ۲">
+                                <span class="img-sensor">THERMAL</span>
+                            </div>
+                            <div class="gallery-item-tactical">
+                                <img src="assets/images/user Avatar/رضانصری.webp" alt="تصویر میدانی ۳">
+                                <span class="img-sensor">FIELD_3</span>
+                            </div>
+                            <div class="gallery-more-tactical">
+                                <span class="more-number">+۵</span>
+                                <span class="more-label">تصویر دیگر</span>
+                            </div>
+                        </div>
+                    </div>
+                    <?php endif; ?>
+                </div>
+            </article>
+
+            <!-- گزارش ۳: گزارش راهبردی (فقط سطح عالی) -->
+            <article class="situation-item panel-card--dark <?php echo ($user_level !== 'high') ? 'item--locked' : ''; ?>" data-reveal="up">
+                <div class="card-status-bar">
+                    <span class="security-tag tag-level-1">سطح ۱</span>
+                    <?php if ($user_level !== 'high'): ?>
+                        <span class="lock-indicator alert-lock"><i class="ph-fill ph-shield-warning"></i> غیرمجاز</span>
+                    <?php else: ?>
+                        <span class="lock-indicator unlock"><i class="ph-fill ph-lock-key-open"></i> تایید شده</span>
+                    <?php endif; ?>
+                </div>
+                <div class="item-header">
+                    <span class="chip chip--tactical chip--danger">ویژه سطح عالی</span>
+                    <span class="item-date">
+                        <i class="ph ph-calendar-blank"></i>
+                        <span>۰۸ تیر ۱۴۰۵</span>
+                    </span>
+                </div>
+                <div class="item-body">
+                    <h3>برآورد سناریوهای تقابل در امنیت انرژی</h3>
+                    
+                    <?php if ($user_level !== 'high'): ?>
+                    <!-- حالت قفل شده گزارش ۳ -->
+                    <div class="tactical-lock-block level-1-lock">
+                        <p class="lock-msg">دسترسی به اسناد راهبردی پدافند انرژی تنها با گواهینامه احراز هویت سطح ۱ امکان‌پذیر است.</p>
+                        <a href="#" class="upgrade-action-btn danger-upgrade">
+                            <i class="ph ph-fingerprint"></i>
+                            <span>تایید هویت دو مرحله‌ای و ارتقا</span>
+                        </a>
+                    </div>
+                    <?php else: ?>
+                    <!-- حالت باز شده گزارش ۳ -->
+                    <p class="tactical-desc">تحلیل نقاط کلیدی آسیب‌پذیر در زیرساخت‌های توزیع سوخت به همراه پیوست‌های ایمن‌سازی شبکه‌های ابری.</p>
+                    
+                    <div class="attachments-list">
+                        <div class="attachment-file file-view-only">
+                            <div class="file-info">
+                                <div class="file-icon warning-type">
+                                    <i class="ph-fill ph-shield-alert"></i>
+                                </div>
+                                <div class="file-text">
+                                    <span class="file-name">سند راهبردی امنیت توزیع.pdf</span>
+                                    <span class="file-security-note">فقط مشاهده برخط (واترمارک شده)</span>
+                                </div>
+                            </div>
+                            <span class="view-only-badge" title="دانلود به دلایل امنیتی غیرفعال است">
+                                <i class="ph-bold ph-eye"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <?php endif; ?>
+                </div>
+            </article>
+            
+        </div>
+        <?php endif; ?>
     </div>
 </section>
