@@ -3991,7 +3991,7 @@ html[data-theme="dark"] .tab-button.is-active {
     align-items: center;
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    box-shadow: none;
     position: relative;
     overflow: hidden;
 }
@@ -4200,7 +4200,7 @@ html[data-theme="dark"] .tab-button.is-active {
     background: linear-gradient(180deg, rgba(18, 35, 61, 0.42), rgba(8, 17, 29, 0.58));
     border-color: rgba(255, 255, 255, 0.12);
     transform: translateY(-3px);
-    box-shadow: var(--shadow-medium);
+    box-shadow: none;
 }
 
 .card-status-bar {
@@ -5917,7 +5917,7 @@ html[data-theme="dark"] .section-head--etude-b .etude-b__actions .section-link {
     border-color: rgba(255, 255, 255, 0.25) !important;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: none !important;
 }
 
 .section-head--dark.section-head--etude-b h2 {
