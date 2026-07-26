@@ -3809,6 +3809,119 @@ html[data-theme="dark"] .tab-button.is-active {
     color: var(--white);
 }
 
+.observatory-list--full {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+}
+
+@media (max-width: 992px) {
+    .observatory-list--full {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* چیدمان موازی سایدبای‌ساید اتاق وضعیت و کلیدواژه‌های داغ */
+.situation-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.situation-main {
+    min-width: 0;
+}
+
+.situation-sidebar {
+    min-width: 0;
+    display: flex;
+}
+
+@media (max-width: 1024px) {
+    .situation-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ارتقای استایل کلیدواژه‌های داغ برای ستون کناری اتاق وضعیت */
+.hot-trends-card--dark {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: none;
+}
+
+.hot-trends-card--dark:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.22);
+    transform: translateY(-2px);
+}
+
+.hot-trends-card--dark .hot-trends-card__header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 16px;
+}
+
+.hot-trends-card--dark .hot-trends-card__icon-badge {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    font-size: 22px;
+    box-shadow: none;
+}
+
+.hot-trends-card--dark .hot-trends-card__title-group strong {
+    color: var(--white);
+    font-size: 15.5px;
+}
+
+.hot-trends-card--dark .hot-trends-card__title-group span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 11.5px;
+}
+
+.hot-trends-card--dark .hot-trends-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-content: flex-start;
+}
+
+.hot-trends-card--dark .trend-tag {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: #ffffff;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: none;
+}
+
+.hot-trends-card--dark .trend-tag:hover {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: rgba(255, 255, 255, 0.35);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: none;
+}
+
+.hot-trends-card--dark .hashtag-prefix {
+    color: #ffffff;
+    font-weight: 900;
+    text-shadow: none;
+}
+
 .situation-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
