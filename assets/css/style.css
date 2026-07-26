@@ -7169,431 +7169,611 @@ html[data-theme="dark"] .etude-c__archive-link {
 }
 
 /* ───────────────────────────────────────────────────────────── */
-/* STANDALONE ANALYSTS NETWORK (شبکه تحلیل‌گران)                 */
+
+
 /* ───────────────────────────────────────────────────────────── */
 
-.analysts-grid {
+
+/* ───────────────────────────────────────────────────────────── */
+/* ANALYSTS NETWORK — شبکه تحلیل‌گران (نسخه ۳.۱ - یکپارچه)       */
+/* ───────────────────────────────────────────────────────────── */
+
+/* ═══ چیدمان گرید و ساختار کلی ═══ */
+.an-middle {
     display: grid;
-    grid-template-columns: 1.2fr 1fr 300px;
-    gap: 24px;
+    grid-template-columns: 1fr 360px;
+    gap: 32px;
     align-items: stretch;
+    margin-bottom: 36px;
 }
 
-.analysts-card {
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 24px;
-    border: 1px solid var(--border-light);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+@media (max-width: 1024px) {
+    .an-middle {
+        grid-template-columns: 1fr;
+    }
 }
 
-/* کارت تحلیل پیشنهادی */
-.analysts-recommended-card {
-    background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 100%);
-    color: #ffffff;
-    border: none;
+/* ═══ ردیف ۱: تحلیل ویژه هفته (Glassmorphism Hero) ═══ */
+.an-hero--editorial {
     position: relative;
+    border-radius: 24px;
     overflow: hidden;
-    margin-bottom: 20px;
+    min-height: 480px;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 36px;
+    border: 1px solid var(--border);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.05);
 }
 
-.recommended-badge {
+.an-hero__bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: transform 0.6s ease;
+}
+
+.an-hero--editorial:hover .an-hero__bg-img {
+    transform: scale(1.03);
+}
+
+.an-hero__overlay-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(13, 27, 42, 0) 0%, rgba(13, 27, 42, 0.5) 40%, rgba(13, 27, 42, 0.95) 100%);
+    z-index: 2;
+}
+
+.an-hero__glass-panel {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.an-hero__badge--accent {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    background: rgba(245, 197, 24, 0.15);
-    color: #f5c518;
-    border: 1px solid rgba(245, 197, 24, 0.3);
-    padding: 4px 12px;
+    background: var(--accent);
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 4px 12px rgba(var(--accent-rgb), 0.3);
+    padding: 6px 14px;
     border-radius: 20px;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 800;
     margin-bottom: 16px;
 }
 
-.recommended-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 16px;
-}
-
-.recommended-avatar {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    border: 2px solid #f5c518;
-    object-fit: cover;
-}
-
-.recommended-author strong {
-    display: block;
-    font-size: 13.5px;
-    color: #ffffff;
-    font-weight: 800;
-}
-
-.recommended-author span {
-    display: block;
-    font-size: 10.5px;
-    color: rgba(255, 255, 255, 0.65);
-}
-
-/* سیستم امتیازدهی IMDb */
-.imdb-score-badge {
-    margin-inline-start: auto;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    background: #f5c518;
-    color: #000000;
-    padding: 6px 12px;
-    border-radius: 10px;
-    box-shadow: 0 4px 14px rgba(245, 197, 24, 0.4);
-}
-
-.imdb-score-badge i {
-    font-size: 18px;
-}
-
-.imdb-score-num strong {
-    font-size: 16px;
+.an-hero--editorial .an-hero__title {
+    font-size: 24px;
     font-weight: 900;
-}
-
-.imdb-score-num span {
-    font-size: 10px;
-    font-weight: 700;
-    opacity: 0.8;
-}
-
-.recommended-title {
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 1.5;
-    margin: 0 0 10px;
-}
-
-.recommended-title a {
     color: #ffffff;
-}
-
-.recommended-title a:hover {
-    color: #f5c518;
-}
-
-.recommended-desc {
-    font-size: 12.5px;
-    color: rgba(255, 255, 255, 0.75);
+    margin: 0 0 12px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
     line-height: 1.6;
-    margin: 0 0 16px;
 }
 
-.recommended-footer {
+.an-hero--editorial .an-hero__title a {
+    color: inherit;
+}
+
+.an-hero--editorial .an-hero__desc {
+    font-size: 14.5px;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 700px;
+    margin: 0 0 24px;
+    line-height: 1.7;
+}
+
+.an-hero__author-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 14px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 11px;
-    color: rgba(255, 255, 255, 0.6);
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.recommended-link {
-    color: #f5c518;
+.an-hero--editorial .an-hero__author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.an-hero--editorial .an-hero__avatar {
+    border: 2px solid var(--accent);
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.an-hero--editorial .an-hero__author-info strong {
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
     font-weight: 800;
+}
+
+.an-hero--editorial .an-hero__author-info span {
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 11.5px;
+}
+
+.an-hero__meta-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.an-hero--editorial .an-hero__score {
     display: flex;
     align-items: center;
     gap: 4px;
+    background: rgba(var(--accent-rgb), 0.15);
+    color: var(--accent);
+    border: 1px solid rgba(var(--accent-rgb), 0.3);
+    padding: 6px 14px;
+    border-radius: 10px;
+    font-weight: 800;
+}
+.an-hero--editorial .an-hero__score i {
+    color: var(--accent);
 }
 
-/* لیست تحلیل‌های پرامتیار مخاطبان */
-.card-head-simple h4 {
-    font-size: 14px;
+.an-hero--editorial .an-hero__score strong { font-size: 16px; }
+.an-hero--editorial .an-hero__score span { font-size: 11px; opacity: 0.8; }
+
+.an-hero__read-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #ffffff;
+    color: #0d1b2a;
+    padding: 8px 20px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+.an-hero__read-btn:hover {
+    background: var(--accent);
+    color: #ffffff;
+    transform: translateX(-4px);
+}
+
+
+/* ═══ ردیف ۲: تحلیل‌های برتر (دارای پس‌زمینه و مرزبندی) ═══ */
+.an-top-analyses--elegant {
+    background: var(--surface-strong);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 24px 28px;
+}
+
+.an-top-analyses__header {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px dashed var(--border);
+}
+
+.an-top-analyses__header h4 {
+    font-size: 16px;
     font-weight: 800;
     color: var(--text-dark);
-    margin: 0 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+}
+
+.an-top-analyses__header h4 i {
+    color: var(--accent);
+    font-size: 20px;
+}
+
+.an-top-analyses__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.an-top-analyses--elegant .an-top-item {
+    position: relative;
+    background: var(--surface-subtle);
+    border-radius: 14px;
+    padding: 14px 16px;
+    border: 1px solid var(--border-light);
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.25s ease;
+}
+
+.an-top-analyses--elegant .an-top-item:hover {
+    background: rgba(var(--accent-rgb), 0.03);
+    border-color: rgba(var(--accent-rgb), 0.15);
+}
+
+.an-top-item__watermark {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    font-size: 64px;
+    font-weight: 900;
+    color: var(--text-dark);
+    opacity: 0.04;
+    z-index: -1;
+    pointer-events: none;
+    font-family: serif;
+}
+
+.an-top-item__img {
+    width: 80px;
+    height: 60px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.an-top-item__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.an-top-item__content {
+    flex: 1;
+    min-width: 0;
+}
+
+.an-top-analyses--elegant .an-top-item__content h5 {
+    font-size: 14px;
+    font-weight: 800;
+    margin: 0 0 6px;
+    line-height: 1.6;
+}
+
+.an-top-item__content h5 a {
+    color: var(--text-dark);
+    transition: color 0.2s ease;
+}
+
+.an-top-item__content h5 a:hover {
+    color: var(--accent);
+}
+
+.an-top-item__meta {
+    font-size: 11.5px;
+    color: var(--text-muted);
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.card-head-simple i {
-    color: var(--accent);
+.an-top-analyses--elegant .divider {
+    width: 4px;
+    height: 4px;
+    background: var(--border);
+    border-radius: 50%;
 }
 
-.top-rated-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.top-rated-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 10px 12px;
-    background: var(--surface-subtle);
-    border-radius: 12px;
-    transition: background 0.2s ease;
-}
-
-.top-rated-item:hover {
-    background: rgba(204, 48, 51, 0.04);
-}
-
-.imdb-rank-badge {
-    width: 28px;
-    height: 28px;
-    border-radius: 8px;
-    background: var(--text-dark);
-    color: #ffffff;
-    font-size: 12px;
-    font-weight: 900;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.top-rated-item:nth-child(1) .imdb-rank-badge {
-    background: #f5c518;
-    color: #000000;
-}
-
-.top-rated-content {
-    flex-grow: 1;
-    overflow: hidden;
-}
-
-.top-rated-title {
-    font-size: 12px;
-    font-weight: 800;
-    margin: 0 0 4px;
-    line-height: 1.4;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.top-rated-title a {
-    color: var(--text-dark);
-}
-
-.top-rated-title a:hover {
-    color: var(--accent);
-}
-
-.top-rated-meta {
-    font-size: 10.5px;
-    color: var(--text-muted);
-    display: flex;
-    gap: 6px;
-}
-
-.imdb-mini-rating {
+.an-top-item__score-minimal {
     display: flex;
     align-items: center;
     gap: 4px;
-    background: rgba(245, 197, 24, 0.15);
-    color: #b89100;
-    padding: 3px 8px;
-    border-radius: 6px;
-    font-size: 11px;
-    font-weight: 800;
+    background: rgba(var(--accent-rgb), 0.08);
+    color: var(--accent);
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 900;
     flex-shrink: 0;
 }
 
-/* ستون ۲: تالار تحلیل‌گران برتر */
-.analysts-profile-list {
+.an-top-item__score-minimal i {
+    color: var(--accent);
+    font-size: 16px;
+}
+
+
+/* ═══ CTA: ورود به شبکه تحلیل‌گران ═══ */
+.an-cta--vip {
+    background: var(--surface-strong);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.an-cta__header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.an-cta--vip .an-cta__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+    background: rgba(var(--accent-rgb), 0.1);
+    color: var(--accent);
+}
+
+.an-cta--vip .an-cta__title {
+    color: var(--text-dark);
+    font-size: 16px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.an-cta--vip .an-cta__desc {
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 0 0 20px;
+}
+
+.an-cta__features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
     display: flex;
     flex-direction: column;
     gap: 14px;
-    margin: 16px 0;
 }
 
-.analyst-profile-row {
+.an-cta__features li {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 10px;
-    border-radius: 14px;
+    gap: 10px;
+}
+
+.an-cta--vip .an-cta__features li i {
+    color: var(--accent);
+    font-size: 18px;
+}
+
+.an-cta--vip .an-cta__features li strong {
+    color: var(--text-dark);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.an-cta__btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.button--accent-solid {
+    background: var(--accent);
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 800;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.button--accent-solid:hover {
+    background: var(--text-dark);
+    color: #ffffff;
+}
+
+
+/* ═══ ردیف ۳: برترین تحلیل‌گران (کارت‌های مینیمال اما با مرزبندی) ═══ */
+.an-showcase--premium {
+    background: var(--surface-strong);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 24px 28px;
+}
+
+.an-showcase__header {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px dashed var(--border);
+}
+
+.an-showcase--premium .an-showcase__header h4 {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+}
+
+.an-showcase--premium .an-showcase__header h4 i {
+    color: var(--accent);
+    font-size: 20px;
+}
+
+.an-showcase__track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 12px;
+}
+
+.an-showcase__track::-webkit-scrollbar {
+    display: none;
+}
+
+.an-analyst-card {
+    flex: 0 0 170px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    border-radius: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
     background: var(--surface-subtle);
-    border: 1px solid var(--border-light);
-    transition: transform 0.2s ease;
+    border: 1px solid transparent;
+    padding: 20px 16px;
 }
 
-.analyst-profile-row:hover {
-    transform: translateX(-4px);
-    border-color: rgba(245, 197, 24, 0.5);
+
+.an-showcase--premium .an-analyst-card:hover {
+    border-color: rgba(var(--accent-rgb), 0.2);
+    background: rgba(var(--accent-rgb), 0.02);
+    transform: translateY(-4px);
 }
 
-.analyst-profile__avatar-wrap {
+.an-analyst-card__avatar-wrap {
     position: relative;
-    width: 44px;
-    height: 44px;
-    flex-shrink: 0;
+    width: 72px;
+    height: 72px;
+    margin-bottom: 8px;
 }
 
-.analyst-profile__avatar {
+.an-analyst-card__avatar-wrap img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+    border: 2px solid var(--border);
 }
 
-.analyst-profile__rank {
+.an-showcase--premium .an-analyst-card:hover .an-analyst-card__avatar-wrap img {
+    border-color: var(--accent);
+}
+
+.an-analyst-card__medal {
     position: absolute;
     bottom: -2px;
     right: -2px;
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11.5px;
+    font-weight: 900;
+    border: 2px solid #ffffff;
     background: var(--text-dark);
     color: #ffffff;
-    font-size: 9.5px;
-    font-weight: 900;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.analyst-profile-row:nth-child(1) .analyst-profile__rank {
-    background: #f5c518;
-    color: #000000;
+.an-analyst-card__medal--primary {
+    background: var(--accent);
 }
 
-.analyst-profile__info {
-    flex-grow: 1;
-    overflow: hidden;
-}
 
-.analyst-profile__info strong {
-    display: block;
-    font-size: 12.5px;
+.an-analyst-card__name {
+    font-size: 13.5px;
     font-weight: 800;
     color: var(--text-dark);
-}
-
-.analyst-profile__spec {
-    display: block;
-    font-size: 10.5px;
-    color: var(--accent);
-    font-weight: 700;
-}
-
-.analyst-profile__stats {
-    font-size: 10px;
-    color: var(--text-muted);
-}
-
-.analyst-profile__imdb {
-    flex-shrink: 0;
-}
-
-.imdb-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    background: #f5c518;
-    color: #000000;
-    padding: 3px 8px;
-    border-radius: 8px;
-    font-size: 11px;
-    font-weight: 900;
-}
-
-/* ستون ۳: CTA کارت درخواست تحلیل‌گر */
-.analysts-cta-card {
-    background: linear-gradient(180deg, #111a28 0%, #08111d 100%);
-    color: #ffffff;
-    border-radius: 20px;
-    padding: 28px 22px;
-    position: relative;
+    white-space: nowrap;
     overflow: hidden;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+    text-overflow: ellipsis;
+    max-width: 100%;
 }
 
-.cta-glow-bg {
-    position: absolute;
-    top: -50px;
-    right: -50px;
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    background: rgba(204, 48, 51, 0.35);
-    filter: blur(40px);
+.an-analyst-card__spec {
+    font-size: 11.5px;
+    color: var(--text-muted);
+    white-space: nowrap;
 }
 
-.cta-content-wrap {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.cta-icon-box {
-    width: 48px;
-    height: 48px;
-    border-radius: 14px;
-    background: rgba(204, 48, 51, 0.2);
-    color: var(--accent);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    margin-bottom: 16px;
-}
-
-.cta-title {
-    font-size: 16px;
-    font-weight: 800;
-    color: #ffffff;
-    margin: 0 0 10px;
-}
-
-.cta-desc {
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.7);
-    line-height: 1.6;
-    margin: 0 0 20px;
-}
-
-.cta-features {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 24px;
-}
-
-.cta-feature-item {
+.an-analyst-card__stats-minimal {
     display: flex;
     align-items: center;
     gap: 8px;
     font-size: 11.5px;
-    color: rgba(255, 255, 255, 0.85);
+    color: var(--text-muted);
+    margin-top: 4px;
 }
 
-.cta-feature-item i {
-    color: #22c55e;
-    font-size: 14px;
+.an-analyst-card__stats-minimal .dot {
+    width: 3px;
+    height: 3px;
+    background: var(--border);
+    border-radius: 50%;
 }
 
-.cta-btn-full {
-    margin-top: auto;
-    width: 100%;
-    justify-content: center;
+.an-analyst-card__score {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(var(--accent-rgb), 0.08);
+    color: var(--accent);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 800;
+    margin-top: 8px;
 }
 
-@media (max-width: 1024px) {
-    .daily-hero-layout {
-        grid-template-columns: 1fr;
+.an-analyst-card__score i {
+    font-size: 12px;
+}
+
+
+/* ═══ ریسپانسیو ═══ */
+@media (max-width: 768px) {
+    .an-hero--editorial {
+        min-height: 400px;
     }
-    .analysts-grid {
-        grid-template-columns: 1fr;
+    .an-hero__glass-panel {
+        padding: 24px;
+    }
+    .an-hero--editorial .an-hero__title {
+        font-size: 20px;
+    }
+    .an-hero__author-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .an-top-item__watermark {
+        font-size: 48px;
+    }
+    .an-analyst-card {
+        flex: 0 0 160px;
+    }
+    .an-top-item__img {
+        display: none;
     }
 }

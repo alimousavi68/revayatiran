@@ -501,7 +501,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const interactiveThumbItems = document.querySelectorAll(".interactive-thumb-item");
 
     if (infoPanelInner && interactiveThumbItems.length) {
-        const updateInfoPanel = (thumb) => {
+        let currentIndex = 0;
+        let autoplayInterval;
+
+        const updateInfoPanel = (thumb, index) => {
+            if (index !== undefined) {
+                currentIndex = index;
+            } else {
+                // Find index if not provided
+                currentIndex = Array.from(interactiveThumbItems).indexOf(thumb);
+            }
+
             interactiveThumbItems.forEach(item => item.classList.remove("is-active"));
             thumb.classList.add("is-active");
 
@@ -528,10 +538,32 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 180);
         };
 
-        interactiveThumbItems.forEach(thumb => {
-            thumb.addEventListener("mouseenter", () => updateInfoPanel(thumb));
-            thumb.addEventListener("click", () => updateInfoPanel(thumb));
+        const startAutoplay = () => {
+            autoplayInterval = setInterval(() => {
+                const nextIndex = (currentIndex + 1) % interactiveThumbItems.length;
+                updateInfoPanel(interactiveThumbItems[nextIndex], nextIndex);
+            }, 4000); // 4 ثانیه تاخیر برای هر اسلاید
+        };
+
+        const stopAutoplay = () => {
+            clearInterval(autoplayInterval);
+        };
+
+        interactiveThumbItems.forEach((thumb, index) => {
+            thumb.addEventListener("mouseenter", () => {
+                updateInfoPanel(thumb, index);
+                stopAutoplay();
+            });
+            thumb.addEventListener("mouseleave", startAutoplay);
+            thumb.addEventListener("click", () => updateInfoPanel(thumb, index));
         });
+
+        // توقف پخش خودکار هنگام هاور روی پنل اطلاعات
+        infoPanelInner.addEventListener("mouseenter", stopAutoplay);
+        infoPanelInner.addEventListener("mouseleave", startAutoplay);
+
+        // شروع پخش خودکار
+        startAutoplay();
     }
 });
 
