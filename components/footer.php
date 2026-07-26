@@ -9,10 +9,10 @@
             <!-- ─ Brand + Newsletter column ───────────────── -->
             <div class="footer-brand">
                 <a href="/" class="footer-logo-link" aria-label="روایت ایران - صفحه اصلی">
-                    <img src="./assets/images/logo.webp"
+                    <img src="./assets/images/logo-revayat.webp"
                          alt="روایت ایران"
                          class="footer-logo"
-                         width="52" height="52"
+                         width="auto" height="52"
                          loading="lazy">
                 </a>
                 <p class="footer-brand__desc">
