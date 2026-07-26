@@ -488,5 +488,51 @@ document.addEventListener("DOMContentLoaded", () => {
             if (e.key === "ArrowRight") nextStory();
         });
     }
+
+    // ─── DAILY NARRATIVE INTERACTIVE INFO PANEL ────────────
+    const infoPanelInner = document.querySelector(".info-panel__inner");
+    const infoPanelTag = document.getElementById("info-panel-tag");
+    const infoPanelTitle = document.getElementById("info-panel-title");
+    const infoPanelExcerpt = document.getElementById("info-panel-excerpt");
+    const infoPanelAvatar = document.getElementById("info-panel-avatar");
+    const infoPanelAuthor = document.getElementById("info-panel-author");
+    const infoPanelDate = document.getElementById("info-panel-date");
+    const infoPanelLink = document.getElementById("info-panel-link");
+    const interactiveThumbItems = document.querySelectorAll(".interactive-thumb-item");
+
+    if (infoPanelInner && interactiveThumbItems.length) {
+        const updateInfoPanel = (thumb) => {
+            interactiveThumbItems.forEach(item => item.classList.remove("is-active"));
+            thumb.classList.add("is-active");
+
+            infoPanelInner.classList.add("is-updating");
+
+            setTimeout(() => {
+                const tag = thumb.getAttribute("data-tag");
+                const avatar = thumb.getAttribute("data-avatar");
+                const author = thumb.getAttribute("data-author");
+                const date = thumb.getAttribute("data-date");
+                const title = thumb.getAttribute("data-title");
+                const excerpt = thumb.getAttribute("data-excerpt");
+                const link = thumb.getAttribute("data-link");
+
+                if (infoPanelTag) infoPanelTag.textContent = tag;
+                if (infoPanelAvatar) infoPanelAvatar.src = avatar;
+                if (infoPanelAuthor) infoPanelAuthor.textContent = author;
+                if (infoPanelDate) infoPanelDate.textContent = date;
+                if (infoPanelTitle) infoPanelTitle.textContent = title;
+                if (infoPanelExcerpt) infoPanelExcerpt.textContent = excerpt;
+                if (infoPanelLink) infoPanelLink.href = link;
+
+                infoPanelInner.classList.remove("is-updating");
+            }, 180);
+        };
+
+        interactiveThumbItems.forEach(thumb => {
+            thumb.addEventListener("mouseenter", () => updateInfoPanel(thumb));
+            thumb.addEventListener("click", () => updateInfoPanel(thumb));
+        });
+    }
 });
+
 

@@ -1,247 +1,129 @@
 <section class="section-shell section-shell--offwhite" id="daily-narrative">
     <div class="container">
-        <!-- ═══ اتود B: پیل‌های داده‌محور (الهام از Bloomberg / Axios) ═══ -->
-        <!-- UX: [• عنوان + بج تعداد] ............ [تگ‌های فیلتر | آرشیو] -->
-        <div class="section-head section-head--etude-b is-visible" data-reveal="up">
-                <div class="etude-b__leading">
-                    <div class="etude-b__icon-badge">
-                        <i class="ph ph-newspaper"></i>
-                    </div>
-                    <h2>روایت روز</h2>
-                    <p class="section-summary">تحلیل‌های برتر نخبگان و پژوهشگران</p>
+        <!-- هدر بخش روایت روز -->
+        <div class="section-head section-head--etude-b" data-reveal="up">
+            <div class="etude-b__leading">
+                <div class="etude-b__icon-badge">
+                    <i class="ph ph-newspaper"></i>
                 </div>
+                <h2>روایت روز</h2>
+                <p class="section-summary">برگزیده مهم‌ترین تحلیل‌ها و روایت‌های راهبردی روز</p>
+            </div>
             <div class="etude-b__actions">
-                <a href="#" class="section-link">
-                    <span>آرشیو</span>
+                <a href="archive.php" class="section-link">
+                    <span>آرشیو روایت‌ها</span>
                     <i class="ph ph-arrow-left"></i>
                 </a>
             </div>
         </div>
 
-        <div class="daily-grid">
-            <!-- Right Main Content: Featured Analysis -->
-            <div class="daily-main-col is-visible" data-reveal="up">
-                <article class="featured-analysis-card">
-                    <div class="analysis-card__visual">
-                        <img src="assets/images/posts images/1404092612513063035069134.jpg" alt="تحلیل برتر روز">
-
-                      
+        <!-- چیدمان ساید‌بای‌ساید: اسلایدر اصلی (راست) + تامبنیل‌ها (چپ) -->
+        <div class="daily-hero-layout" data-reveal="up">
+            
+            <!-- ستون راست (۷۰٪): اسلایدر / نمایشگر اصلی پست منتخب -->
+            <div class="daily-hero-main">
+                <article class="daily-featured-card" id="daily-main-card">
+                    <div class="daily-featured__visual">
+                        <img src="assets/images/posts images/1404092612513063035069134.jpg" alt="تحلیل برتر روز" class="daily-featured__img" id="daily-main-img">
+                        <div class="daily-featured__overlay"></div>
+                        <span class="daily-featured__tag" id="daily-main-tag">سیاست اقتصادی</span>
                     </div>
-                    <div class="analysis-card__content">
-                        <div class="analysis-card__header">
-                            <div class="author-info">
-                                <img class="author-avatar" src="assets/images/user Avatar/8fc8b30f66b4489aaeb92b686a386cdc.png" alt="پیمان شریفی">
-                                <div class="author-details">
-                                    <div class="author-name-row">
-                                        <span class="author-name">پیمان شریفی</span>
-                                        <span class="author-badge">پژوهشگر ارشد</span>
-                                    </div>
-                                    <span class="author-title">دکترای سیاست عمومی</span>
+
+                    <div class="daily-featured__content">
+                        <div class="daily-featured__author-row">
+                            <div class="daily-author__profile">
+                                <img src="assets/images/user Avatar/8fc8b30f66b4489aaeb92b686a386cdc.png" alt="پیمان شریفی" class="daily-author__avatar" id="daily-main-avatar">
+                                <div class="daily-author__info">
+                                    <strong id="daily-main-author-name">دکتر پیمان شریفی</strong>
+                                    <span class="daily-author__role" id="daily-main-author-role">دکترای سیاست عمومی</span>
                                 </div>
                             </div>
-                            <div class="analysis-meta-left">
-                                <div class="tag-rating-inline">
-                                    <span>امتیاز تحلیل: ۴.۸</span>
-                                </div>
-                                <div class="publish-date">۱۲ تیر ۱۴۰۵</div>
+                            <div class="daily-author__stats">
+                                <span class="daily-author__score" id="daily-main-score">امتیاز تحلیل: ۴.۸</span>
+                                <span class="daily-featured__date" id="daily-main-date">۱۲ تیر ۱۴۰۵</span>
                             </div>
                         </div>
-                        <div class="analysis-card__body">
-                            <h2 class="analysis-title">یارانه پنهان و فرسایش اعتماد عمومی؛ اقتصاد سیاسی یک نابرابری مزمن</h2>
-                            <p class="analysis-excerpt" style="margin-bottom: 0;">
-                                این تحلیل، نسبت میان تصمیم‌های بودجه‌ای، تورم فرساینده و ادراک عمومی از عدالت توزیعی را بررسی می‌کند و نشان می‌دهد چرا برخی اصلاحات بدون بازطراحی روایت عمومی شکست می‌خورند.
-                            </p>
-                        </div>
+
+                        <h2 class="daily-featured__title" id="daily-main-title">
+                            یارانه پنهان و فرسایش اعتماد عمومی؛ اقتصاد سیاسی یک نابرابری مزمن
+                        </h2>
+
+                        <p class="daily-featured__excerpt" id="daily-main-excerpt">
+                            این تحلیل، نسبت میان تصمیم‌های بودجه‌ای، تورم فرساینده و ادراک عمومی از عدالت توزیعی را بررسی می‌کند و نشان می‌دهد چرا برخی اصلاحات بدون بازطراحی روایت عمومی شکست می‌خورند.
+                        </p>
                     </div>
                 </article>
             </div>
 
-            <!-- Left Sidebar: Hot Analyses -->
-            <div class="daily-side-col">
-                <!-- Card 1: Top List Card -->
-                <div class="sidebar-card top-list-card is-visible" data-reveal="up">
-                    <div class="popular-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
-                        <h3 class="card-title" style="margin: 0;">تحلیل‌های پرمخاطب هفته</h3>
-                        <!-- CSS Tooltip for rules -->
-                        <div class="rules-tooltip-container">
-                            <i class="ph ph-info rules-tooltip-icon"></i>
-                            <div class="rules-tooltip-popover">
-                                تحلیل‌ها پس از بررسی تحریریه، بر اساس صحت‌سنجی، مستند بودن و بازخورد مخاطبان رتبه‌بندی می‌شوند.
-                            </div>
-                        </div>
+            <!-- ستون وسط: لیست عکس‌های تعاملی -->
+            <div class="daily-interactive-thumbs">
+                <div class="interactive-thumb-list" id="interactive-thumb-list">
+                    <!-- عکس ۱ -->
+                    <div class="interactive-thumb-item is-active" data-index="0"
+                         data-img="assets/images/posts images/1404092612513063035069134.jpg"
+                         data-title="یارانه پنهان و فرسایش اعتماد عمومی؛ اقتصاد سیاسی یک نابرابری مزمن"
+                         data-excerpt="این تحلیل، نسبت میان تصمیم‌های بودجه‌ای، تورم فرساینده و ادراک عمومی از عدالت توزیعی را بررسی می‌کند و نشان می‌دهد چرا برخی اصلاحات بدون بازطراحی روایت عمومی شکست می‌خورند."
+                         data-author="دکتر پیمان شریفی"
+                         data-avatar="assets/images/user Avatar/8fc8b30f66b4489aaeb92b686a386cdc.png"
+                         data-tag="سیاست اقتصادی"
+                         data-date="۱۲ تیر ۱۴۰۵"
+                         data-link="single.php?id=1">
+                        <img src="assets/images/posts images/1404092612513063035069134.jpg" alt="عکس ۱">
                     </div>
+
+                    <!-- عکس ۲ -->
+                    <div class="interactive-thumb-item" data-index="1"
+                         data-img="assets/images/posts images/1404041822335791233405404.jpg"
+                         data-title="چرا افکار عمومی دیگر با تیترهای خطی و یک‌طرفه قانع نمی‌شود؟"
+                         data-excerpt="کاهش مرجعیت رسانه‌های رسمی و تکثر منابع خبری، الگوریتم‌های ذهنی مخاطبان را تغییر داده است. در این نوشتار مدل واکنش جامعه به روایت‌های متناقض تحلیل می‌شود."
+                         data-author="بابک صادقی"
+                         data-avatar="assets/images/user Avatar/a9d7f2cbb32944f1bcd60800dda1d236.png"
+                         data-tag="جامعه‌شناسی رسانه"
+                         data-date="۱۰ تیر ۱۴۰۵"
+                         data-link="single.php?id=2">
+                        <img src="assets/images/posts images/1404041822335791233405404.jpg" alt="عکس ۲">
+                    </div>
+
+                    <!-- عکس ۳ -->
+                    <div class="interactive-thumb-item" data-index="2"
+                         data-img="assets/images/posts images/219-os5jc-1-ak32467-800x534.webp"
+                         data-title="آیا اتحادهای موقت منطقه‌ای به بازدارندگی پایدار تبدیل می‌شوند؟"
+                         data-excerpt="بررسی نقش پیمان‌های چندجانبه ترانزیتی و امنیتی در آسیای مرکزی و خلیج فارس، و موازنه قوا میان قدرت‌های منطقه‌ای و فرامنطقه‌ای."
+                         data-author="مریم هوشمندی"
+                         data-avatar="assets/images/user Avatar/0f1b74871a3e46e7ae950c05c65e6d2d.png"
+                         data-tag="دیپلماسی و امنیت"
+                         data-date="۰۸ تیر ۱۴۰۵"
+                         data-link="single.php?id=3">
+                        <img src="assets/images/posts images/219-os5jc-1-ak32467-800x534.webp" alt="عکس ۳">
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- ستون چپ: پنل اطلاعات داینامیک -->
+            <div class="daily-interactive-info" id="interactive-info-panel">
+                <div class="info-panel__inner">
+                    <span class="info-panel__tag" id="info-panel-tag">سیاست اقتصادی</span>
+                    <h3 class="info-panel__title" id="info-panel-title">یارانه پنهان و فرسایش اعتماد عمومی؛ اقتصاد سیاسی یک نابرابری مزمن</h3>
+                    <p class="info-panel__excerpt" id="info-panel-excerpt">این تحلیل، نسبت میان تصمیم‌های بودجه‌ای، تورم فرساینده و ادراک عمومی از عدالت توزیعی را بررسی می‌کند و نشان می‌دهد چرا برخی اصلاحات بدون بازطراحی روایت عمومی شکست می‌خورند.</p>
                     
-                    <div class="mini-list">
-                        <article class="mini-item">
-                            <div class="mini-author-column">
-                                <img src="assets/images/user Avatar/a9d7f2cbb32944f1bcd60800dda1d236.png" alt="بابک صادقی" class="mini-avatar">
-                                <span class="mini-likes">
-                                    <i class="ph ph-thumbs-up"></i>
-                                    <span>۲۴۵</span>
-                                </span>
-                            </div>
-                            <div class="mini-content">
-                                <span class="mini-author">بابک صادقی</span>
-                                <h4 class="mini-title">چرا افکار عمومی دیگر با تیترهای خطی قانع نمی‌شود؟</h4>
-                                <div class="mini-content-footer">
-                                    <span class="mini-tag">جامعه سیاسی</span>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="mini-item">
-                            <div class="mini-author-column">
-                                <img src="assets/images/user Avatar/0f1b74871a3e46e7ae950c05c65e6d2d.png" alt="مریم هوشمندی" class="mini-avatar">
-                                <span class="mini-likes">
-                                    <i class="ph ph-thumbs-up"></i>
-                                    <span>۱۸۲</span>
-                                </span>
-                            </div>
-                            <div class="mini-content">
-                                <span class="mini-author">مریم هوشمندی</span>
-                                <h4 class="mini-title">آیا اتحادهای موقت منطقه‌ای به بازدارندگی پایدار تبدیل می‌شوند؟</h4>
-                                <div class="mini-content-footer">
-                                    <span class="mini-tag">امنیت ملی</span>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="mini-item">
-                            <div class="mini-author-column">
-                                <img src="assets/images/user Avatar/56d604c11de44ed4b583e8f8b81626b3.png" alt="احسان طاهری" class="mini-avatar">
-                                <span class="mini-likes">
-                                    <i class="ph ph-thumbs-up"></i>
-                                    <span>۱۵۶</span>
-                                </span>
-                            </div>
-                            <div class="mini-content">
-                                <span class="mini-author">احسان طاهری</span>
-                                <h4 class="mini-title">تنش‌های ارزی و سناریوهای پیش‌روی بازارهای مالی در فصل جدید</h4>
-                                <div class="mini-content-footer">
-                                    <span class="mini-tag">اقتصاد سیاسی</span>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="mini-item">
-                            <div class="mini-author-column">
-                                <img src="assets/images/user Avatar/a9d7f2cbb32944f1bcd60800dda1d236.png" alt="مریم علوی" class="mini-avatar">
-                                <span class="mini-likes">
-                                    <i class="ph ph-thumbs-up"></i>
-                                    <span>۱۲۵</span>
-                                </span>
-                            </div>
-                            <div class="mini-content">
-                                <span class="mini-author">مریم علوی</span>
-                                <h4 class="mini-title">حکمرانی الگوریتم‌ها؛ چالش‌های حقوقی و فنی در مدیریت داده‌های ملی</h4>
-                                <div class="mini-content-footer">
-                                    <span class="mini-tag">رسانه و فناوری</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Column 3: Elite Network & Leaderboard -->
-            <div class="daily-network-col is-visible" data-reveal="up">
-                <!-- Leaderboard (integrated from analysts-network) -->
-                <div class="ranking-leaderboard panel-card">
-                    <div class="leaderboard-header">
-                        <h4 class="leaderboard-title" style="margin: 0;">برترین تحلیلگران</h4>
-                        <div class="leaderboard-header-left" style="display: flex; align-items: center; gap: 10px;">
-                            <div class="leaderboard-tabs">
-                                <span class="tab-item active">ماهانه</span>
-                                <span class="tab-item">فصلی</span>
-                            </div>
+                    <div class="info-panel__meta">
+                        <div class="info-panel__author">
+                            <img src="assets/images/user Avatar/8fc8b30f66b4489aaeb92b686a386cdc.png" id="info-panel-avatar" alt="آواتار نویسنده">
+                            <span id="info-panel-author">دکتر پیمان شریفی</span>
                         </div>
+                        <span class="info-panel__date" id="info-panel-date">۱۲ تیر ۱۴۰۵</span>
                     </div>
-                    <div class="leaderboard-list">
-                        <a href="analyst-archive.php?id=narges-ahmadi" class="leaderboard-row top-three">
-                            <div class="user-avatar">
-                                <img src="assets/images/user Avatar/14eeb1b8dc3a4bbd905999e407a01725.png" alt="نرگس احمدی">
-                            </div>
-                            <div class="user-info">
-                                <strong>نرگس احمدی</strong>
-                                <span>ژئوپلیتیک</span>
-                            </div>
-                            <div class="user-score">
-                                <span class="score-votes">۴۸۰ رای</span>
-                                <span class="score-analyses">۱۲ تحلیل</span>
-                            </div>
-                        </a>
-                        <a href="analyst-archive.php?id=ehsan-taheri" class="leaderboard-row top-three">
-                            <div class="user-avatar">
-                                <img src="assets/images/user Avatar/56d604c11de44ed4b583e8f8b81626b3.png" alt="احسان طاهری">
-                            </div>
-                            <div class="user-info">
-                                <strong>احسان طاهری</strong>
-                                <span>اقتصاد سیاسی</span>
-                            </div>
-                            <div class="user-score">
-                                <span class="score-votes">۳۵۲ رای</span>
-                                <span class="score-analyses">۹ تحلیل</span>
-                            </div>
-                        </a>
-                        <a href="analyst-archive.php?id=elham-sharifi" class="leaderboard-row top-three">
-                            <div class="user-avatar">
-                                <img src="assets/images/user Avatar/634eb20869b740fdbc5b7c8427a8f674.png" alt="الهام شریفی">
-                            </div>
-                            <div class="user-info">
-                                <strong>الهام شریفی</strong>
-                                <span>جامعه‌شناسی</span>
-                            </div>
-                            <div class="user-score">
-                                <span class="score-votes">۲۹۰ رای</span>
-                                <span class="score-analyses">۸ تحلیل</span>
-                            </div>
-                        </a>
-                        <a href="analyst-archive.php?id=reza-kamali" class="leaderboard-row">
-                            <div class="user-avatar">
-                                <img src="assets/images/user Avatar/8fc8b30f66b4489aaeb92b686a386cdc.png" alt="رضا کمالی">
-                            </div>
-                            <div class="user-info">
-                                <strong>رضا کمالی</strong>
-                                <span>رسانه</span>
-                            </div>
-                            <div class="user-score">
-                                <span class="score-votes">۱۸۴ رای</span>
-                                <span class="score-analyses">۶ تحلیل</span>
-                            </div>
-                        </a>
-                        <a href="analyst-archive.php?id=maryam-alavi" class="leaderboard-row">
-                            <div class="user-avatar">
-                                <img src="assets/images/user Avatar/a9d7f2cbb32944f1bcd60800dda1d236.png" alt="مریم علوی">
-                            </div>
-                            <div class="user-info">
-                                <strong>مریم علوی</strong>
-                                <span>IT</span>
-                            </div>
-                            <div class="user-score">
-                                <span class="score-votes">۱۲۵ رای</span>
-                                <span class="score-analyses">۵ تحلیل</span>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="leaderboard-footer">
-                        <a href="analysts.php" class="view-all-ranking">مشاهده شبکه تحلیلگران روایت</a>
-                    </div>
-                </div>
 
-                <!-- Scenario 3: Minimal Registration Widget (V2 Compact) -->
-                <div class="register-cta-widget">
-                    <div class="cta-widget-glow"></div>
-                    <div class="cta-widget-content">
-                        <h4 class="cta-title">
-                            <i class="ph ph-note-pencil" style="color: var(--accent); font-size: 16px; margin-inline-end: 6px;"></i>
-                            ورود به جمع تحلیل‌گران
-                        </h4>
-                        <p class="cta-desc">شما هم می‌توانید به عنوان تحلیلگر، نوشته‌های خود را ثبت و منتشر کنید.</p>
-                        <a href="#register" class="btn-register-cta">
-                            <span>درخواست پنل تحلیلگر</span>
-                            <i class="ph ph-arrow-left"></i>
-                        </a>
-                    </div>
+                    <a href="single.php?id=1" class="button--compact button--accent info-panel__link" id="info-panel-link">
+                        <span>ادامه تحلیل</span>
+                        <i class="ph ph-arrow-left"></i>
+                    </a>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
+

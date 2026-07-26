@@ -6868,3 +6868,732 @@ html[data-theme="dark"] .etude-c__archive-link {
         left: 8px;
     }
 }
+
+/* ───────────────────────────────────────────────────────────── */
+/* DAILY NARRATIVE HERO LAYOUT (روایت روز)                        */
+/* ───────────────────────────────────────────────────────────── */
+
+.daily-hero-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) 220px 320px;
+    gap: 32px;
+    align-items: stretch;
+}
+
+/* کارت اصلی هیرو نمایشگر (ستون راست) */
+.daily-featured-card {
+    position: relative;
+    background: #17202a;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+    border: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.daily-featured-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.15);
+}
+
+.daily-featured-card.is-updating {
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+.daily-featured__visual {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.daily-featured__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.daily-featured-card:hover .daily-featured__img {
+    transform: scale(1.05);
+}
+
+.daily-featured__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(23, 32, 42, 0) 50%, #17202a 100%);
+    pointer-events: none;
+}
+
+.daily-featured__tag {
+    display: none; /* مخفی شده بر اساس تصویر 2 */
+}
+
+.daily-featured__content {
+    padding: 24px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: #17202a;
+}
+
+.daily-featured__author-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+}
+
+.daily-author__profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.daily-author__avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.daily-author__info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.daily-author__info strong {
+    font-size: 16px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.daily-author__role {
+    font-size: 11px;
+    color: #a0aec0;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 3px 10px;
+    border-radius: 12px;
+    display: inline-block;
+    align-self: flex-start;
+}
+
+.daily-author__stats {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.daily-author__score {
+    font-size: 13px;
+    font-weight: 800;
+    color: #ffb300;
+}
+
+.daily-featured__date {
+    font-size: 12px;
+    color: #718096;
+    font-weight: 500;
+}
+
+.daily-featured__title {
+    font-size: 24px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.5;
+    margin: 0 0 16px;
+    transition: color 0.2s ease;
+    letter-spacing: -0.5px;
+    text-align: right;
+}
+
+.daily-featured__excerpt {
+    font-size: 14.5px;
+    color: #a0aec0;
+    line-height: 1.8;
+    margin: 0;
+    text-align: right;
+}
+
+.daily-featured__footer {
+    display: none; /* مخفی شده بر اساس تصویر 2 */
+}
+
+/* ستون وسط: لیست عکس‌ها */
+.daily-interactive-thumbs {
+    display: flex;
+    flex-direction: column;
+}
+
+.interactive-thumb-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.interactive-thumb-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.interactive-thumb-item:hover {
+    transform: scale(1.05);
+}
+
+.interactive-thumb-item.is-active {
+    border-color: var(--accent);
+    transform: scale(1.08);
+    box-shadow: 0 12px 24px rgba(204, 48, 51, 0.2);
+    z-index: 2;
+}
+
+.interactive-thumb-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.interactive-thumb-item.is-active img {
+    transform: scale(1.1);
+}
+
+/* ستون چپ: پنل اطلاعات داینامیک */
+.daily-interactive-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.info-panel__inner {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 32px 28px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0,0,0,0.03);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.info-panel__inner.is-updating {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.info-panel__tag {
+    font-size: 11.5px;
+    font-weight: 800;
+    color: var(--accent);
+    margin-bottom: 16px;
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(204, 48, 51, 0.05);
+    border-radius: 20px;
+}
+
+.info-panel__title {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--text-dark);
+    line-height: 1.5;
+    margin: 0 0 16px;
+    letter-spacing: -0.5px;
+}
+
+.info-panel__excerpt {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin: 0 0 24px;
+    flex-grow: 1;
+}
+
+.info-panel__meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed rgba(0,0,0,0.08);
+}
+
+.info-panel__author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.info-panel__author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.info-panel__author span {
+    font-size: 13.5px;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.info-panel__date {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.info-panel__link {
+    width: 100%;
+    justify-content: center;
+}
+
+/* ───────────────────────────────────────────────────────────── */
+/* STANDALONE ANALYSTS NETWORK (شبکه تحلیل‌گران)                 */
+/* ───────────────────────────────────────────────────────────── */
+
+.analysts-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 300px;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.analysts-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    border: 1px solid var(--border-light);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+}
+
+/* کارت تحلیل پیشنهادی */
+.analysts-recommended-card {
+    background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 100%);
+    color: #ffffff;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.recommended-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(245, 197, 24, 0.15);
+    color: #f5c518;
+    border: 1px solid rgba(245, 197, 24, 0.3);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.recommended-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.recommended-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid #f5c518;
+    object-fit: cover;
+}
+
+.recommended-author strong {
+    display: block;
+    font-size: 13.5px;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.recommended-author span {
+    display: block;
+    font-size: 10.5px;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+/* سیستم امتیازدهی IMDb */
+.imdb-score-badge {
+    margin-inline-start: auto;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #f5c518;
+    color: #000000;
+    padding: 6px 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(245, 197, 24, 0.4);
+}
+
+.imdb-score-badge i {
+    font-size: 18px;
+}
+
+.imdb-score-num strong {
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.imdb-score-num span {
+    font-size: 10px;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.recommended-title {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.5;
+    margin: 0 0 10px;
+}
+
+.recommended-title a {
+    color: #ffffff;
+}
+
+.recommended-title a:hover {
+    color: #f5c518;
+}
+
+.recommended-desc {
+    font-size: 12.5px;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.6;
+    margin: 0 0 16px;
+}
+
+.recommended-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.recommended-link {
+    color: #f5c518;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* لیست تحلیل‌های پرامتیار مخاطبان */
+.card-head-simple h4 {
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin: 0 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-head-simple i {
+    color: var(--accent);
+}
+
+.top-rated-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.top-rated-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    background: var(--surface-subtle);
+    border-radius: 12px;
+    transition: background 0.2s ease;
+}
+
+.top-rated-item:hover {
+    background: rgba(204, 48, 51, 0.04);
+}
+
+.imdb-rank-badge {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: var(--text-dark);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.top-rated-item:nth-child(1) .imdb-rank-badge {
+    background: #f5c518;
+    color: #000000;
+}
+
+.top-rated-content {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.top-rated-title {
+    font-size: 12px;
+    font-weight: 800;
+    margin: 0 0 4px;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.top-rated-title a {
+    color: var(--text-dark);
+}
+
+.top-rated-title a:hover {
+    color: var(--accent);
+}
+
+.top-rated-meta {
+    font-size: 10.5px;
+    color: var(--text-muted);
+    display: flex;
+    gap: 6px;
+}
+
+.imdb-mini-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(245, 197, 24, 0.15);
+    color: #b89100;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+/* ستون ۲: تالار تحلیل‌گران برتر */
+.analysts-profile-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 16px 0;
+}
+
+.analyst-profile-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    border-radius: 14px;
+    background: var(--surface-subtle);
+    border: 1px solid var(--border-light);
+    transition: transform 0.2s ease;
+}
+
+.analyst-profile-row:hover {
+    transform: translateX(-4px);
+    border-color: rgba(245, 197, 24, 0.5);
+}
+
+.analyst-profile__avatar-wrap {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+}
+
+.analyst-profile__avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.analyst-profile__rank {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--text-dark);
+    color: #ffffff;
+    font-size: 9.5px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ffffff;
+}
+
+.analyst-profile-row:nth-child(1) .analyst-profile__rank {
+    background: #f5c518;
+    color: #000000;
+}
+
+.analyst-profile__info {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.analyst-profile__info strong {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.analyst-profile__spec {
+    display: block;
+    font-size: 10.5px;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.analyst-profile__stats {
+    font-size: 10px;
+    color: var(--text-muted);
+}
+
+.analyst-profile__imdb {
+    flex-shrink: 0;
+}
+
+.imdb-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #f5c518;
+    color: #000000;
+    padding: 3px 8px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 900;
+}
+
+/* ستون ۳: CTA کارت درخواست تحلیل‌گر */
+.analysts-cta-card {
+    background: linear-gradient(180deg, #111a28 0%, #08111d 100%);
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 28px 22px;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cta-glow-bg {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: rgba(204, 48, 51, 0.35);
+    filter: blur(40px);
+}
+
+.cta-content-wrap {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cta-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: rgba(204, 48, 51, 0.2);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.cta-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 10px;
+}
+
+.cta-desc {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin: 0 0 20px;
+}
+
+.cta-features {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.cta-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11.5px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.cta-feature-item i {
+    color: #22c55e;
+    font-size: 14px;
+}
+
+.cta-btn-full {
+    margin-top: auto;
+    width: 100%;
+    justify-content: center;
+}
+
+@media (max-width: 1024px) {
+    .daily-hero-layout {
+        grid-template-columns: 1fr;
+    }
+    .analysts-grid {
+        grid-template-columns: 1fr;
+    }
+}
