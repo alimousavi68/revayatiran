@@ -1855,7 +1855,13 @@ html[data-theme="dark"] .media-card-podcast__title {
 }
 
 .section-shell {
-    padding: 28px 0;
+    padding: 36px 0;
+}
+
+@media (max-width: 768px) {
+    .section-shell {
+        padding: 28px 0;
+    }
 }
 
 .section-shell--warm {
@@ -1889,6 +1895,16 @@ html[data-theme="dark"] .section-shell--warm {
         radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.15), transparent 25%),
         linear-gradient(135deg, #e03639 0%, #d32f2f 50%, #b71c1c 100%);
     overflow: hidden;
+}
+
+#situation-room.section-shell {
+    padding: 50px 0;
+}
+
+@media (max-width: 768px) {
+    #situation-room.section-shell {
+        padding: 36px 0;
+    }
 }
 
 .section-shell--dark::after {
@@ -3856,8 +3872,6 @@ html[data-theme="dark"] .tab-button.is-active {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     box-shadow: none;
 }
@@ -3939,7 +3953,6 @@ html[data-theme="dark"] .tab-button.is-active {
     margin-bottom: 24px;
     position: relative;
     overflow: hidden;
-    backdrop-filter: blur(16px);
 }
 
 .panel-glitch-border {
@@ -4102,8 +4115,6 @@ html[data-theme="dark"] .tab-button.is-active {
     border-radius: 20px;
     padding: 28px 36px;
     align-items: center;
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
     box-shadow: none;
     position: relative;
     overflow: hidden;
@@ -4297,7 +4308,6 @@ html[data-theme="dark"] .tab-button.is-active {
     gap: 12px;
     position: relative;
     overflow: hidden;
-    backdrop-filter: blur(12px);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
@@ -6025,11 +6035,16 @@ html[data-theme="dark"] .section-head--etude-b .etude-b__actions .section-link {
 }
 
 /* Situation Room Dark Header & Badge Custom Styling */
+#situation-room *,
+#situation-room *::before,
+#situation-room *::after {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
 .section-head--dark.section-head--etude-b {
     background: rgba(255, 255, 255, 0.08) !important;
     border-color: rgba(255, 255, 255, 0.25) !important;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
     box-shadow: none !important;
 }
 
