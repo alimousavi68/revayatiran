@@ -1,7 +1,7 @@
-<section class="section-shell section-shell--offwhite" id="daily-narrative">
+<section class="section-shell section-shell--offwhite pt-8 pb-24" id="daily-narrative">
     <div class="container">
         <!-- هدر بخش روایت روز -->
-        <div class="section-head section-head--etude-b" data-reveal="up">
+        <div class="section-head section-head--etude-b">
             <div class="etude-b__leading">
                 <div class="etude-b__icon-badge">
                     <i class="ph ph-newspaper"></i>
@@ -18,7 +18,7 @@
         </div>
 
         <!-- چیدمان ساید‌بای‌ساید: اسلایدر اصلی (راست) + تامبنیل‌ها (چپ) -->
-        <div class="daily-hero-layout" data-reveal="up">
+        <div class="daily-hero-layout gap-12">
             
             <!-- ستون راست (۷۰٪): اسلایدر / نمایشگر اصلی پست منتخب -->
             <div class="daily-hero-main">
@@ -57,7 +57,7 @@
 
             <!-- ستون وسط: لیست عکس‌های تعاملی -->
             <div class="daily-interactive-thumbs">
-                <div class="interactive-thumb-list" id="interactive-thumb-list">
+                <div class="interactive-thumb-list gap-6" id="interactive-thumb-list">
                     <!-- عکس ۱ -->
                     <div class="interactive-thumb-item is-active" data-index="0"
                          data-img="assets/images/posts images/1404092612513063035069134.jpg"
@@ -103,7 +103,7 @@
 
             <!-- ستون چپ: پنل اطلاعات داینامیک -->
             <div class="daily-interactive-info" id="interactive-info-panel">
-                <div class="info-panel__inner">
+                <div class="info-panel__inner p-6">
                     <span class="info-panel__tag" id="info-panel-tag">سیاست اقتصادی</span>
                     <h3 class="info-panel__title" id="info-panel-title">یارانه پنهان و فرسایش اعتماد عمومی؛ اقتصاد سیاسی یک نابرابری مزمن</h3>
                     <p class="info-panel__excerpt" id="info-panel-excerpt">این تحلیل، نسبت میان تصمیم‌های بودجه‌ای، تورم فرساینده و ادراک عمومی از عدالت توزیعی را بررسی می‌کند و نشان می‌دهد چرا برخی اصلاحات بدون بازطراحی روایت عمومی شکست می‌خورند.</p>

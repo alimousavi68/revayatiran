@@ -53,12 +53,17 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", toggleHeaderState, { passive: true });
 
     // Top bar live clock
+    const toPersianDigits = (str) => {
+        const persianDigits = ["۰", "۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹"];
+        return String(str).replace(/[0-9]/g, (w) => persianDigits[parseInt(w, 10)]);
+    };
+
     const updateClock = () => {
         if (!topBarTime) return;
         const now = new Date();
         const h = String(now.getHours()).padStart(2, "0");
         const m = String(now.getMinutes()).padStart(2, "0");
-        topBarTime.textContent = `${h}:${m}`;
+        topBarTime.textContent = toPersianDigits(`${h}:${m}`);
     };
     updateClock();
     setInterval(updateClock, 30000);

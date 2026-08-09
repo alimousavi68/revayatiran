@@ -1,7 +1,7 @@
-<section class="section-shell section-shell--dark" id="situation-room">
+<section class="section-shell py-24" id="situation-room">
     <div class="container">
         <!-- هدر بخش -->
-        <div class="section-head section-head--etude-b section-head--dark" data-reveal="up">
+        <div class="section-head section-head--etude-b" data-reveal="up">
             <div class="etude-b__leading">
                 <div class="etude-b__icon-badge">
                     <i class="ph ph-shield-warning"></i>
@@ -32,7 +32,7 @@
             </div>
         </div>
 
-        <div class="situation-layout">
+        <div class="situation-layout gap-12">
             <div class="situation-main">
                 <?php if ($user_level === 'guest'): ?>
                 <!-- نمای مهمان (کارت شیشه‌ای قفل شده با رادار اسکنر) -->
@@ -67,7 +67,7 @@
                                     </div>
                                 </div>
                                 <div class="benefit-item">
-                                    <i class="ph-fill ph-eye-closed"></i>
+                                    <i class="ph-fill ph-target"></i>
                                     <div class="benefit-info">
                                         <strong>برآوردهای راهبردی</strong>
                                         <span>پیش‌بینی رویدادها و سناریوهای پدافندی</span>
@@ -86,10 +86,10 @@
                 </div>
                 <?php else: ?>
                 <!-- نمای کاربر عضو: نمایش شبکه کارت‌های تاکتیکال -->
-                <div class="situation-grid">
+                <div class="situation-grid gap-8">
                     
                     <!-- گزارش ۱: متنی + PDF (قابل دسترسی برای همه اعضا) -->
-                    <article class="situation-item panel-card--dark" data-reveal="up">
+                    <article class="situation-item panel-card--dark p-6" data-reveal="up">
                         <div class="card-status-bar">
                             <span class="security-tag tag-level-3">سطح ۳</span>
                             <div class="terminal-dots">
@@ -128,7 +128,7 @@
                     </article>
 
                     <!-- گزارش ۲: متنی + گالری (دسترسی سطح متوسط و عالی) -->
-                    <article class="situation-item panel-card--dark <?php echo ($user_level === 'normal') ? 'item--locked' : ''; ?>" data-reveal="up">
+                    <article class="situation-item panel-card--dark p-6 <?php echo ($user_level === 'normal') ? 'item--locked' : ''; ?>" data-reveal="up">
                         <div class="card-status-bar">
                             <span class="security-tag tag-level-2">سطح ۲</span>
                             <?php if ($user_level === 'normal'): ?>
@@ -185,7 +185,7 @@
                     </article>
 
                     <!-- گزارش ۳: گزارش راهبردی (فقط سطح عالی) -->
-                    <article class="situation-item panel-card--dark <?php echo ($user_level !== 'high') ? 'item--locked' : ''; ?>" data-reveal="up">
+                    <article class="situation-item panel-card--dark p-6 <?php echo ($user_level !== 'high') ? 'item--locked' : ''; ?>" data-reveal="up">
                         <div class="card-status-bar">
                             <span class="security-tag tag-level-1">سطح ۱</span>
                             <?php if ($user_level !== 'high'): ?>
@@ -243,7 +243,7 @@
 
             <!-- ستون کلیدواژه‌های داغ در کنار اتاق وضعیت -->
             <aside class="situation-sidebar" data-reveal="up">
-                <article class="hot-trends-card hot-trends-card--dark">
+                <article class="hot-trends-card hot-trends-card--dark p-6">
                     <div class="hot-trends-card__header">
                         <div class="hot-trends-card__title-group">
                             <div class="hot-trends-card__icon-badge">

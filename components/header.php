@@ -16,8 +16,8 @@ $user_level = 'guest';
     <meta name="robots" content="noindex, nofollow">
     <?php endif; ?>
     
-    <!-- Phosphor Icons -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Phosphor Icons (Local) -->
+    <script src="./assets/js/phosphor-icons.js"></script>
     
     <link rel="stylesheet" href="./assets/css/style.css?v=1.2">
 </head>
@@ -67,10 +67,8 @@ $user_level = 'guest';
                         <i class="ph ph-sun theme-icon-light"></i>
                         <i class="ph ph-moon theme-icon-dark"></i>
                     </button>
-                    <span class="top-bar__divider"></span>
-                    <a href="#" class="top-bar__cta" aria-label="ورود">
+                    <a href="#" class="top-bar__icon-btn" aria-label="ورود" title="ورود">
                         <i class="ph ph-user-circle-plus"></i>
-                        <span>ورود</span>
                     </a>
                 </div>
 
@@ -83,7 +81,7 @@ $user_level = 'guest';
             <!-- Brand Lockup -->
             <div class="brand-lockup">
                 <a href="#" class="brand-mark" aria-label="روایت ایران">
-                    <img src="./assets/images/logo-revayat.webp" alt="لوگوی روایت ایران" class="brand-mark__logo" width="auto" height="63px">
+                    <img src="./assets/images/logo-revayat.webp" alt="لوگوی روایت ایران" class="brand-mark__logo" width="auto" height="54px">
                 </a>
             </div>
 

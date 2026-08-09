@@ -1,4 +1,4 @@
-<section class="section-shell section-shell--warm" id="news-monitoring">
+<section class="section-shell section-shell--warm py-24" id="news-monitoring">
     <div class="container">
         <div class="section-head section-head--etude-b" data-reveal="up">
             <div class="etude-b__leading">
@@ -22,10 +22,10 @@
             </div>
         </div>
 
-        <div class="news-layout">
+        <div class="news-layout gap-12">
             <div class="news-panels">
                 <div class="news-panel is-active" data-news-panel="all">
-                    <div class="news-bento">
+                    <div class="news-bento gap-6">
                         <article class="news-card" data-reveal="up">
                             <img src="assets/images/posts images/جنگ+ایران+آمریکا+مذاکرات+پاکستان.webp" alt="خبر ویژه سیاست خارجی">
                             <div class="news-card__overlay">
@@ -120,7 +120,7 @@
                 </div>
 
                 <div class="news-panel" data-news-panel="politics" hidden>
-                    <div class="news-bento">
+                    <div class="news-bento gap-6">
                         <article class="news-card" data-reveal="up">
                             <img src="assets/images/posts images/2279480_168.jpg" alt="سیاست داخلی">
                             <div class="news-card__overlay">
@@ -155,7 +155,7 @@
                 </div>
 
                 <div class="news-panel" data-news-panel="economy" hidden>
-                    <div class="news-bento">
+                    <div class="news-bento gap-6">
                         <article class="news-card" data-reveal="up">
                             <img src="assets/images/posts images/اقتصادایران-ak1549-ak3280-1200x800-1024x683.webp" alt="اقتصاد">
                             <div class="news-card__overlay">
@@ -190,7 +190,7 @@
                 </div>
 
                 <div class="news-panel" data-news-panel="security" hidden>
-                    <div class="news-bento">
+                    <div class="news-bento gap-6">
                         <article class="news-card" data-reveal="up">
                             <img src="assets/images/posts images/27738882_1_0_799_449_1920x0_80_0_0_5c1b2e4e4887372d25d2ddaca10d8bb0.jpg.webp" alt="امنیت">
                             <div class="news-card__overlay">
@@ -225,7 +225,7 @@
                 </div>
             </div>
 
-            <aside class="trending-column panel-card" data-reveal="left">
+            <aside class="trending-column panel-card p-6" data-reveal="left">
                 <div class="trending-column__head">
                     <div class="trending-column__head-title">
                         <i class="ph ph-trend-up"></i>

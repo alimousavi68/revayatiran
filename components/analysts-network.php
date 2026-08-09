@@ -1,4 +1,4 @@
-<section class="section-shell" id="analysts-network">
+<section class="section-shell py-24" id="analysts-network">
     <div class="container">
         <!-- هدر بخش شبکه تحلیل‌گران -->
         <div class="section-head section-head--etude-b" data-reveal="up">
@@ -17,7 +17,7 @@
             </div>
         </div>
 
-        <div class="an-grid-layout" data-reveal="up">
+        <div class="an-grid-layout gap-12" data-reveal="up">
             
             <!-- ═══ ستون اصلی (محتوا - ۶۵٪) ═══ -->
             <div class="an-main-column">
@@ -27,7 +27,7 @@
                     <img src="assets/images/posts images/اقتصادایران-ak1549-ak3280-1200x800-1024x683.webp" alt="تحلیل پیشنهادی هفته" class="an-hero__bg-img">
                     <div class="an-hero__overlay-gradient"></div>
 
-                    <div class="an-hero__content-panel">
+                    <div class="an-hero__content-panel p-6">
                         <div class="an-hero__badge--accent">
                             <i class="ph-fill ph-star"></i>
                             <span>تحلیل ویژه هفته</span>
@@ -71,7 +71,7 @@
                         <a href="analyses.php" class="an-sub-header__link">آرشیو تحلیل‌ها <i class="ph ph-caret-left"></i></a>
                     </div>
                     
-                    <div class="an-top-analyses__grid">
+                    <div class="an-top-analyses__grid gap-6">
 
                         <article class="an-overlay-card">
                             <div class="an-overlay-card__bg">
@@ -80,20 +80,16 @@
                             <div class="an-overlay-card__gradient"></div>
                             
                             <div class="an-overlay-card__content">
-                                <div class="an-overlay-card__header">
-                                    <div class="an-overlay-card__score">
-                                        <strong>۹.۴</strong>
-                                        <i class="ph-fill ph-star"></i>
-                                    </div>
-                                </div>
                                 <h5><a href="single.php?id=2">چرا افکار عمومی دیگر با تیترهای خطی قانع نمی‌شود؟</a></h5>
                                 <div class="an-overlay-card__meta">
                                     <div class="an-author-with-avatar">
                                         <img src="assets/images/user Avatar/a9d7f2cbb32944f1bcd60800dda1d236.png" alt="بابک صادقی">
                                         <span class="an-author">بابک صادقی</span>
                                     </div>
-                                    <span class="an-dot"></span>
-                                    <span class="an-date">۲۲ تیر</span>
+                                    <div class="an-overlay-card__score">
+                                        <strong>۹.۴</strong>
+                                        <i class="ph-fill ph-star"></i>
+                                    </div>
                                 </div>
                             </div>
                         </article>
@@ -105,20 +101,16 @@
                             <div class="an-overlay-card__gradient"></div>
                             
                             <div class="an-overlay-card__content">
-                                <div class="an-overlay-card__header">
-                                    <div class="an-overlay-card__score">
-                                        <strong>۹.۱</strong>
-                                        <i class="ph-fill ph-star"></i>
-                                    </div>
-                                </div>
                                 <h5><a href="single.php?id=3">آیا اتحادهای موقت منطقه‌ای به بازدارندگی تبدیل می‌شوند؟</a></h5>
                                 <div class="an-overlay-card__meta">
                                     <div class="an-author-with-avatar">
                                         <img src="assets/images/user Avatar/0f1b74871a3e46e7ae950c05c65e6d2d.png" alt="مریم هوشمندی">
                                         <span class="an-author">مریم هوشمندی</span>
                                     </div>
-                                    <span class="an-dot"></span>
-                                    <span class="an-date">۲۰ تیر</span>
+                                    <div class="an-overlay-card__score">
+                                        <strong>۹.۱</strong>
+                                        <i class="ph-fill ph-star"></i>
+                                    </div>
                                 </div>
                             </div>
                         </article>
@@ -130,20 +122,16 @@
                             <div class="an-overlay-card__gradient"></div>
                             
                             <div class="an-overlay-card__content">
-                                <div class="an-overlay-card__header">
-                                    <div class="an-overlay-card__score">
-                                        <strong>۸.۸</strong>
-                                        <i class="ph-fill ph-star"></i>
-                                    </div>
-                                </div>
                                 <h5><a href="single.php?id=4">تنش‌های ارزی و سناریوهای بازارهای مالی در فصل جدید</a></h5>
                                 <div class="an-overlay-card__meta">
                                     <div class="an-author-with-avatar">
                                         <img src="assets/images/user Avatar/56d604c11de44ed4b583e8f8b81626b3.png" alt="احسان طاهری">
                                         <span class="an-author">احسان طاهری</span>
                                     </div>
-                                    <span class="an-dot"></span>
-                                    <span class="an-date">۱۸ تیر</span>
+                                    <div class="an-overlay-card__score">
+                                        <strong>۸.۸</strong>
+                                        <i class="ph-fill ph-star"></i>
+                                    </div>
                                 </div>
                             </div>
                         </article>
@@ -155,20 +143,16 @@
                             <div class="an-overlay-card__gradient"></div>
                             
                             <div class="an-overlay-card__content">
-                                <div class="an-overlay-card__header">
-                                    <div class="an-overlay-card__score">
-                                        <strong>۸.۶</strong>
-                                        <i class="ph-fill ph-star"></i>
-                                    </div>
-                                </div>
                                 <h5><a href="single.php?id=5">تحولات بازار بورس و تاثیر سیاست‌های پولی بر شاخص‌ها</a></h5>
                                 <div class="an-overlay-card__meta">
                                     <div class="an-author-with-avatar">
                                         <img src="assets/images/user Avatar/634eb20869b740fdbc5b7c8427a8f674.png" alt="الهام شریفی">
                                         <span class="an-author">الهام شریفی</span>
                                     </div>
-                                    <span class="an-dot"></span>
-                                    <span class="an-date">۱۶ تیر</span>
+                                    <div class="an-overlay-card__score">
+                                        <strong>۸.۶</strong>
+                                        <i class="ph-fill ph-star"></i>
+                                    </div>
                                 </div>
                             </div>
                         </article>
@@ -180,20 +164,16 @@
                             <div class="an-overlay-card__gradient"></div>
                             
                             <div class="an-overlay-card__content">
-                                <div class="an-overlay-card__header">
-                                    <div class="an-overlay-card__score">
-                                        <strong>۸.۴</strong>
-                                        <i class="ph-fill ph-star"></i>
-                                    </div>
-                                </div>
                                 <h5><a href="single.php?id=6">پیامدهای رزمایش‌های مشترک در تعادل قدرت منطقه‌ای</a></h5>
                                 <div class="an-overlay-card__meta">
                                     <div class="an-author-with-avatar">
                                         <img src="assets/images/user Avatar/14eeb1b8dc3a4bbd905999e407a01725.png" alt="نرگس احمدی">
                                         <span class="an-author">نرگس احمدی</span>
                                     </div>
-                                    <span class="an-dot"></span>
-                                    <span class="an-date">۱۴ تیر</span>
+                                    <div class="an-overlay-card__score">
+                                        <strong>۸.۴</strong>
+                                        <i class="ph-fill ph-star"></i>
+                                    </div>
                                 </div>
                             </div>
                         </article>
@@ -205,20 +185,16 @@
                             <div class="an-overlay-card__gradient"></div>
                             
                             <div class="an-overlay-card__content">
-                                <div class="an-overlay-card__header">
-                                    <div class="an-overlay-card__score">
-                                        <strong>۸.۲</strong>
-                                        <i class="ph-fill ph-star"></i>
-                                    </div>
-                                </div>
                                 <h5><a href="single.php?id=7">تحلیل الگوهای انتخاباتی و پیش‌بینی روند قانون‌گذاری</a></h5>
                                 <div class="an-overlay-card__meta">
                                     <div class="an-author-with-avatar">
                                         <img src="assets/images/user Avatar/8fc8b30f66b4489aaeb92b686a386cdc.png" alt="دکتر پیمان شریفی">
                                         <span class="an-author">پیمان شریفی</span>
                                     </div>
-                                    <span class="an-dot"></span>
-                                    <span class="an-date">۱۲ تیر</span>
+                                    <div class="an-overlay-card__score">
+                                        <strong>۸.۲</strong>
+                                        <i class="ph-fill ph-star"></i>
+                                    </div>
                                 </div>
                             </div>
                         </article>
@@ -232,10 +208,10 @@
             <div class="an-sidebar-column">
                 
                 <!-- برترین تحلیل‌گران -->
-                <div class="an-showcase--premium">
+                <div class="an-showcase--premium p-6">
                     <div class="an-sub-header">
                         <h4><i class="ph ph-medal"></i> برترین تحلیل‌گران</h4>
-                        <a href="analysts.php" class="an-sub-header__link">لیست کامل <i class="ph ph-caret-left"></i></a>
+                        <a href="analysts.php" class="an-sub-header__link">همه <i class="ph ph-caret-left"></i></a>
                     </div>
 
                     <div class="an-showcase__list">
@@ -346,18 +322,29 @@
                     </div>
                 </div>
 
-                <!-- درخواست عضویت VIP (Compact) -->
-                <div class="an-cta--compact">
-                    <div class="an-cta-compact__info">
-                        <i class="ph-fill ph-users-three"></i>
-                        <div>
-                            <h4>عضویت در شبکه تحلیل‌گران</h4>
-                            <p>یادداشت‌های راهبردی خود را مستقیماً منتشر کنید.</p>
+                <!-- درخواست عضویت VIP (Premium) -->
+                <div class="an-cta--premium">
+                    <div class="an-cta-premium__info">
+                        <div style="display:flex; align-items:center; gap: 8px;">
+                            <i class="ph-fill ph-users-three" style="font-size: 24px; color: rgba(255,255,255,0.9);"></i>
+                            <h4 style="margin:0; font-size: 16px; color: #fff;">عضویت در شبکه تحلیل‌گران</h4>
                         </div>
+                        <p style="color: rgba(255,255,255,0.85); font-size: 13px; line-height: 1.6; margin: 0;">با پیوستن به شبکه تحلیلگران اختصاصی روایت ایران، یادداشت‌های راهبردی خود را مستقیماً منتشر کنید و با دیگر پژوهشگران در ارتباط باشید.</p>
+                        <ul style="list-style: none; padding: 0; margin: 8px 0 0 0; display: flex; flex-direction: column; gap: 6px;">
+                            <li style="display:flex; align-items:center; gap: 6px; color: rgba(255,255,255,0.9); font-size: 12px;"><i class="ph ph-check-circle" style="color: #fff;"></i> دسترسی به اتاق وضعیت</li>
+                            <li style="display:flex; align-items:center; gap: 6px; color: rgba(255,255,255,0.9); font-size: 12px;"><i class="ph ph-check-circle" style="color: #fff;"></i> انتشار مقالات تحلیلی</li>
+                        </ul>
                     </div>
-                    <a href="#register-analyst" class="button--premium-outline button--sm">
-                        <span>ثبت نام</span>
-                    </a>
+                    <div class="an-cta-actions">
+                        <a href="#register-analyst" class="an-cta-btn--primary">
+                            <i class="ph ph-user-plus"></i>
+                            <span>ثبت نام</span>
+                        </a>
+                        <a href="#login-analyst" class="an-cta-btn--secondary">
+                            <i class="ph ph-sign-in"></i>
+                            <span>ورود</span>
+                        </a>
+                    </div>
                 </div>
 
             </div>

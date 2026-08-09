@@ -1,4 +1,4 @@
-<section class="section-shell" id="special-dossiers">
+<section class="section-shell py-24" id="special-dossiers">
     <div class="container">
         <div class="section-head section-head--etude-b" data-reveal="up">
             <div class="etude-b__leading">
@@ -26,7 +26,7 @@
                     </div>
                 </div>
                 
-                <div class="dossier-content">
+                <div class="dossier-content p-6">
                     <div class="dossier-top-meta">
                         <span class="dossier-category">تحلیل راهبردی</span>
                         <div class="live-indicator">
