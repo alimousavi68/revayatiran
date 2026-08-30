@@ -1,4 +1,4 @@
-<section class="section-shell section-shell--gradient py-24" id="media-observatory">
+<section class="section-shell section-shell--gradient" id="media-observatory">
     <div class="container">
         <div class="section-head section-head--etude-b" data-reveal="up">
             <div class="etude-b__leading">
@@ -22,7 +22,7 @@
             <article class="observatory-card">
                 <div class="observatory-card__header">
                     <span class="obs-badge obs-badge--discourse">تحلیل گفتمان</span>
-                    <span class="obs-date"><i class="ph ph-clock"></i> ۲ روز پیش</span>
+                    
                 </div>
 
                 <h3 class="observatory-card__title">
@@ -57,7 +57,7 @@
             <article class="observatory-card">
                 <div class="observatory-card__header">
                     <span class="obs-badge obs-badge--framing">مقایسه فریمینگ</span>
-                    <span class="obs-date"><i class="ph ph-clock"></i> ۴ روز پیش</span>
+                    
                 </div>
 
                 <h3 class="observatory-card__title">
@@ -92,7 +92,7 @@
             <article class="observatory-card">
                 <div class="observatory-card__header">
                     <span class="obs-badge obs-badge--campaign">کمپین‌شناسی</span>
-                    <span class="obs-date"><i class="ph ph-clock"></i> ۱ هفته پیش</span>
+                    
                 </div>
 
                 <h3 class="observatory-card__title">

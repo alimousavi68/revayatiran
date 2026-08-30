@@ -621,8 +621,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 dynamicBullets: true,
             },
             breakpoints: {
-                520:  { slidesPerView: 2, spaceBetween: 14 },
-                768:  { slidesPerView: 2.5, spaceBetween: 16 },
+                520: { slidesPerView: 2, spaceBetween: 14 },
+                768: { slidesPerView: 2.5, spaceBetween: 16 },
                 1024: { slidesPerView: 3, spaceBetween: 18 },
                 1280: { slidesPerView: 3.5, spaceBetween: 20 },
             },
@@ -679,7 +679,7 @@ document.addEventListener("DOMContentLoaded", () => {
         panel.setAttribute("aria-hidden", "false");
         try {
             localStorage.setItem("revayat_social_seen", "true");
-        } catch (e) {}
+        } catch (e) { }
     };
 
     const closeFab = () => {

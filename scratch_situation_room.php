@@ -1,124 +1,124 @@
 <section class="section-shell py-24" id="situation-room">
     <div class="container">
-        <!-- لی‌آوت دو ستونه: سایدبار هدر + محتوای اصلی -->
-        <div class="sr-layout" data-reveal="up">
-
-            <!-- ستون راست: سایدبار هدر عمودی -->
-            <aside class="sr-sidebar sr-sidebar--red">
-                <div class="sr-sidebar__top">
-                    <div class="sr-sidebar__icon-wrapper">
-                        <i class="ph-fill ph-crosshair"></i>
+        <!-- هدر بخش -->
+        <div class="section-head section-head--etude-b" data-reveal="up">
+            <div class="etude-b__leading">
+                <div class="etude-b__icon-badge">
+                    <i class="ph ph-shield-warning"></i>
+                </div>
+                <h2>اتاق وضعیت</h2>
+                <p class="section-summary">برآوردهای راهبردی و تحلیل‌های پدافندی</p>
+            </div>
+            <div class="etude-b__actions">
+                <?php if ($user_level !== 'guest'): ?>
+                    <div class="user-status-badge">
+                        <i class="ph-fill ph-shield-check"></i>
+                        <span>صلاحیت تایید شده: <?php 
+                            if ($user_level === 'high') echo 'سطح ۱ (عالی)';
+                            else if ($user_level === 'normal') echo 'سطح ۳ (پایه)';
+                            else echo 'سطح ۲ (متوسط)';
+                        ?></span>
                     </div>
-                </div>
-                
-                <h2 class="sr-sidebar__title">اتاق وضعیت</h2>
-                <p class="sr-sidebar__desc">برآوردهای راهبردی و تحلیل‌های پدافندی</p>
-                
-                <div class="sr-sidebar__footer">
-                    <p class="sr-security-notice">
-                        <i class="ph-fill ph-lock-key"></i> محتوای طبقه‌بندی شده
-                    </p>
-                </div>
-            </aside>
+                <?php endif; ?>
+            </div>
+        </div>
 
-            <!-- ستون چپ: محتوای اصلی -->
-            <div class="sr-content">
-                <?php if ($user_level === 'guest'): ?>
-                <!-- نمای مهمان: لیست گیت‌شده Soft Paywall -->
-                <div class="sr-gated-wrapper">
+        <div class="situation-main">
+            <?php if ($user_level === 'guest'): ?>
+            <!-- نمای مهمان: لیست گیت‌شده Soft Paywall -->
+            <div class="sr-gated-wrapper" data-reveal="up">
 
-                    <!-- لیست آیتم‌های قفل‌شده -->
-                    <ol class="sr-gated-list">
+                <!-- لیست آیتم‌های قفل‌شده -->
+                <ol class="sr-gated-list">
+
+                    <li class="sr-gated-item">
+                        <div class="sr-gated-item__lock">
+                            <i class="ph-fill ph-lock"></i>
+                        </div>
+                        <div class="sr-gated-item__body">
+                            <h4 class="sr-gated-item__title">پایش شاخص‌های حساس در بازارهای موازی</h4>
+                            <p class="sr-gated-item__excerpt sr-gated-item__excerpt--blurred">تحلیل تغییرات معنادار در الگوهای رفتاری بازیگران کلیدی و پیش‌بینی گام‌های بعدی در حوزه اقتصاد سیاسی و اثرگذاری آن بر معادلات قدرت داخلی.</p>
+                        </div>
+                    </li>
+
+                    <li class="sr-gated-item">
+                        <div class="sr-gated-item__lock">
+                            <i class="ph-fill ph-lock"></i>
+                        </div>
+                        <div class="sr-gated-item__body">
+                            <h4 class="sr-gated-item__title">رصد میدانی تحرکات در مرزهای شرقی</h4>
+                            <p class="sr-gated-item__excerpt sr-gated-item__excerpt--blurred">تصاویر ماهواره‌ای و رصد مستمر زیرساخت‌های جدید پایش مرزی به همراه جدول ثبت ترددها و تحلیل الگوهای جابه‌جایی نیروها.</p>
+                        </div>
+                    </li>
+
+                    <li class="sr-gated-item">
+                        <div class="sr-gated-item__lock">
+                            <i class="ph-fill ph-lock"></i>
+                        </div>
+                        <div class="sr-gated-item__body">
+                            <h4 class="sr-gated-item__title">برآورد سناریوهای تقابل در امنیت انرژی</h4>
+                            <p class="sr-gated-item__excerpt sr-gated-item__excerpt--blurred">تحلیل نقاط کلیدی آسیب‌پذیر در زیرساخت‌های توزیع سوخت به همراه پیوست‌های ایمن‌سازی شبکه‌های ابری و سناریوهای احتمالی تقابل.</p>
+                        </div>
+                    </li>
+
+                    <li class="sr-gated-item">
+                        <div class="sr-gated-item__lock">
+                            <i class="ph-fill ph-lock"></i>
+                        </div>
+                        <div class="sr-gated-item__body">
+                            <h4 class="sr-gated-item__title">تحلیل ابعاد ژئوپلیتیک بحران آب منطقه‌ای</h4>
+                            <p class="sr-gated-item__excerpt sr-gated-item__excerpt--blurred">بررسی اثر تنش‌های آبی بر معادلات سیاسی همسایگان و سناریوهای بلندمدت امنیت منابع حیاتی در فلات ایران.</p>
+                        </div>
+                    </li>
+
+                </ol>
+
+                <!-- Gradient curtain + CTA -->
+                <div class="sr-gated-curtain">
+                    <ol class="sr-gated-list sr-gated-list--faded">
 
                         <li class="sr-gated-item">
-                            <div class="sr-gated-item__bullet"></div>
-                            <div class="sr-gated-item__body">
-                                <h4 class="sr-gated-item__title">پایش شاخص‌های حساس در بازارهای موازی</h4>
-                                <div class="sr-gated-item__meta">
-                                    <span><i class="ph ph-calendar-blank"></i> ۱۲ خرداد ۱۴۰۳</span>
-                                    <span class="sr-meta-divider"></span>
-                                    <span><i class="ph ph-briefcase"></i> اقتصاد سیاسی</span>
-                                </div>
-                            </div>
                             <div class="sr-gated-item__lock">
                                 <i class="ph-fill ph-lock"></i>
                             </div>
+                            <div class="sr-gated-item__body">
+                                <h4 class="sr-gated-item__title">ارزیابی ریسک زنجیره تأمین صنایع حساس</h4>
+                                <p class="sr-gated-item__excerpt sr-gated-item__excerpt--blurred">پایش وابستگی‌های کلیدی صنایع دفاعی و انرژی به واردات و سناریوهای جایگزین تأمین داخلی.</p>
+                            </div>
                         </li>
 
+                        <li class="sr-gated-item">
+                            <div class="sr-gated-item__lock">
+                                <i class="ph-fill ph-lock"></i>
+                            </div>
+                            <div class="sr-gated-item__body">
+                                <h4 class="sr-gated-item__title">رصد تحولات فضای سایبری و زیرساخت‌های حیاتی</h4>
+                                <p class="sr-gated-item__excerpt sr-gated-item__excerpt--blurred">تهدیدسنجی و پایش حملات به شبکه‌های حساس ملی و ارزیابی سطح آمادگی پدافند غیرعامل.</p>
+                            </div>
+                        </li>
 
                     </ol>
 
-                    <!-- Gradient curtain + CTA -->
-                    <div class="sr-gated-curtain">
-                        <ol class="sr-gated-list sr-gated-list--faded">
-
-                            <li class="sr-gated-item">
-                                <div class="sr-gated-item__bullet"></div>
-                                <div class="sr-gated-item__body">
-                                    <h4 class="sr-gated-item__title">تحلیل ابعاد ژئوپلیتیک بحران آب منطقه‌ای</h4>
-                                    <div class="sr-gated-item__meta">
-                                        <span><i class="ph ph-calendar-blank"></i> ۱۰ خرداد ۱۴۰۳</span>
-                                        <span class="sr-meta-divider"></span>
-                                        <span><i class="ph ph-drop"></i> امنیت منابع</span>
-                                    </div>
-                                </div>
-                                <div class="sr-gated-item__lock">
-                                    <i class="ph-fill ph-lock"></i>
-                                </div>
-                            </li>
-
-                            <li class="sr-gated-item">
-                                <div class="sr-gated-item__bullet"></div>
-                                <div class="sr-gated-item__body">
-                                    <h4 class="sr-gated-item__title">ارزیابی ریسک زنجیره تأمین صنایع حساس</h4>
-                                    <div class="sr-gated-item__meta">
-                                        <span><i class="ph ph-calendar-blank"></i> ۹ خرداد ۱۴۰۳</span>
-                                        <span class="sr-meta-divider"></span>
-                                        <span><i class="ph ph-factory"></i> زیرساخت</span>
-                                    </div>
-                                </div>
-                                <div class="sr-gated-item__lock">
-                                    <i class="ph-fill ph-lock"></i>
-                                </div>
-                            </li>
-
-                            <li class="sr-gated-item">
-                                <div class="sr-gated-item__bullet"></div>
-                                <div class="sr-gated-item__body">
-                                    <h4 class="sr-gated-item__title">رصد تحولات فضای سایبری و زیرساخت‌های حیاتی</h4>
-                                    <div class="sr-gated-item__meta">
-                                        <span><i class="ph ph-calendar-blank"></i> ۸ خرداد ۱۴۰۳</span>
-                                        <span class="sr-meta-divider"></span>
-                                        <span><i class="ph ph-shield-check"></i> سایبری</span>
-                                    </div>
-                                </div>
-                                <div class="sr-gated-item__lock">
-                                    <i class="ph-fill ph-lock"></i>
-                                </div>
-                            </li>
-
-                        </ol>
-
-                        <!-- CTA overlay -->
-                        <div class="sr-gated-cta">
-                            <div class="sr-gated-cta__inner">
-                                <i class="ph-fill ph-lock-key sr-gated-cta__icon"></i>
-                                <p class="sr-gated-cta__text">برای مشاهده محتوای اتاق وضعیت، عضویت و احراز هویت الزامی است.</p>
-                                <div class="sr-gated-cta__actions">
-                                    <a href="#" class="button--compact button--primary button--glow" id="sr-cta-register">
-                                        <i class="ph-fill ph-user-plus"></i>
-                                        <span>ثبت‌نام رایگان</span>
-                                    </a>
-                                    <a href="#" class="button--compact button--soft" id="sr-cta-login">
-                                        <i class="ph-fill ph-sign-in"></i>
-                                        <span>ورود به حساب</span>
-                                    </a>
-                                </div>
+                    <!-- CTA overlay -->
+                    <div class="sr-gated-cta">
+                        <div class="sr-gated-cta__inner">
+                            <i class="ph-fill ph-lock-key sr-gated-cta__icon"></i>
+                            <p class="sr-gated-cta__text">برای مشاهده محتوای اتاق وضعیت، عضویت و احراز هویت الزامی است.</p>
+                            <div class="sr-gated-cta__actions">
+                                <a href="#" class="button--compact button--primary button--glow" id="sr-cta-register">
+                                    <i class="ph-fill ph-user-plus"></i>
+                                    <span>ثبت‌نام رایگان</span>
+                                </a>
+                                <a href="#" class="button--compact button--soft" id="sr-cta-login">
+                                    <i class="ph-fill ph-sign-in"></i>
+                                    <span>ورود به حساب</span>
+                                </a>
                             </div>
                         </div>
                     </div>
-
                 </div>
+
+            </div>
             <?php else: ?>
             <!-- نمای کاربر عضو: نمایش شبکه کارت‌های تاکتیکال -->
             <div class="situation-grid gap-8">
@@ -259,8 +259,6 @@
                 
             </div>
             <?php endif; ?>
-            </div>
-
         </div>
     </div>
 </section>
