@@ -1,0 +1,70 @@
+@import "./main-custom.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* ═══════════════════════════════════════════════════════════
+     1. TYPOGRAPHY SEMANTIC ABSTRACTIONS (@apply)
+     ═══════════════════════════════════════════════════════════ */
+  
+  /* تیتر خبر شاخص ویترین / هیرو */
+  .hero-feature-title {
+    @apply font-bold leading-normal text-2xl md:text-3xl;
+    text-wrap: balance;
+  }
+
+  /* تیتر کارت‌های خبری مختصر هیرو */
+  .hero-brief-title,
+  .card-brief-title {
+    @apply font-semibold leading-normal text-sm md:text-base;
+    text-wrap: balance;
+  }
+
+  /* تیتر کارت‌های استاندارد تحلیلی */
+  .card-title-standard {
+    @apply font-bold leading-snug text-base md:text-lg;
+    text-wrap: balance;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     2. SPACING & LAYOUT ABSTRACTIONS (@apply)
+     ═══════════════════════════════════════════════════════════ */
+  
+  /* فاصله عمودی استاندارد سکشن‌ها */
+  .section-spacing {
+    @apply py-16 md:py-24;
+  }
+
+  /* فاصله عمودی سکشن‌های بالایی (با هدر کم‌فاصله) */
+  .section-spacing-top {
+    @apply pt-8 pb-16 md:pb-24;
+  }
+
+  /* فاصله‌های ستونی و گرید */
+  .layout-gap-lg {
+    @apply gap-8 md:gap-12;
+  }
+
+  .layout-gap-md {
+    @apply gap-4 md:gap-6;
+  }
+
+  /* پدینگ ماژولار پنل‌ها و کارت‌ها */
+  .panel-pad {
+    @apply p-4 md:p-6;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     3. UI COMPONENTS & BADGES (@apply)
+     ═══════════════════════════════════════════════════════════ */
+  
+  .ui-meta-item {
+    @apply inline-flex items-center gap-1.5 text-xs text-text-muted;
+  }
+
+  .join-card-list-item {
+    @apply flex items-center gap-1.5 text-xs text-white/90;
+  }
+}

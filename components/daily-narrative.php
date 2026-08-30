@@ -1,4 +1,4 @@
-<section class="section-shell section-shell--offwhite pt-8 pb-24" id="daily-narrative">
+<section class="section-shell section-shell--offwhite section-spacing-top" id="daily-narrative">
     <div class="container">
         <!-- هدر بخش روایت روز -->
         <div class="section-head section-head--etude-b">
@@ -18,7 +18,7 @@
         </div>
 
         <!-- چیدمان ساید‌بای‌ساید: اسلایدر اصلی (راست) + تامبنیل‌ها (چپ) -->
-        <div class="daily-hero-layout gap-12">
+        <div class="daily-hero-layout layout-gap-lg">
             
             <!-- ستون راست (۷۰٪): اسلایدر / نمایشگر اصلی پست منتخب -->
             <div class="daily-hero-main">
@@ -57,7 +57,7 @@
 
             <!-- ستون وسط: لیست عکس‌های تعاملی -->
             <div class="daily-interactive-thumbs">
-                <div class="interactive-thumb-list gap-6" id="interactive-thumb-list">
+                <div class="interactive-thumb-list layout-gap-md" id="interactive-thumb-list">
                     <!-- عکس ۱ -->
                     <div class="interactive-thumb-item is-active" data-index="0"
                          data-img="assets/images/posts images/1404092612513063035069134.jpg"
@@ -73,25 +73,25 @@
 
                     <!-- عکس ۲ -->
                     <div class="interactive-thumb-item" data-index="1"
-                         data-img="assets/images/posts images/1404041822335791233405404.jpg"
-                         data-title="چرا افکار عمومی دیگر با تیترهای خطی و یک‌طرفه قانع نمی‌شود؟"
-                         data-excerpt="کاهش مرجعیت رسانه‌های رسمی و تکثر منابع خبری، الگوریتم‌های ذهنی مخاطبان را تغییر داده است. در این نوشتار مدل واکنش جامعه به روایت‌های متناقض تحلیل می‌شود."
-                         data-author="بابک صادقی"
-                         data-avatar="assets/images/user Avatar/a9d7f2cbb32944f1bcd60800dda1d236.png"
-                         data-tag="جامعه‌شناسی رسانه"
+                         data-img="assets/images/posts images/شاخص-بورس-ak5259-ak4687-1200x800-1024x683.webp"
+                         data-title="سایه تصمیمات پولی بر مهار تورم ساختاری و رفتار بازارها"
+                         data-excerpt="بررسی روندهای متغیرهای کلان پولی نشان می‌دهد کنترل انتظارات تورمی نیازمند هماهنگی میان سیاست ارزی و ساختار تسهیلات‌دهی شبکه بانکی است."
+                         data-author="مهندس سارا راد"
+                         data-avatar="assets/images/user Avatar/11494541_1000.jpg"
+                         data-tag="اقتصاد کلان"
                          data-date="۱۰ تیر ۱۴۰۵"
                          data-link="single.php?id=2">
-                        <img src="assets/images/posts images/1404041822335791233405404.jpg" alt="عکس ۲">
+                        <img src="assets/images/posts images/شاخص-بورس-ak5259-ak4687-1200x800-1024x683.webp" alt="عکس ۲">
                     </div>
 
                     <!-- عکس ۳ -->
                     <div class="interactive-thumb-item" data-index="2"
                          data-img="assets/images/posts images/219-os5jc-1-ak32467-800x534.webp"
-                         data-title="آیا اتحادهای موقت منطقه‌ای به بازدارندگی پایدار تبدیل می‌شوند؟"
-                         data-excerpt="بررسی نقش پیمان‌های چندجانبه ترانزیتی و امنیتی در آسیای مرکزی و خلیج فارس، و موازنه قوا میان قدرت‌های منطقه‌ای و فرامنطقه‌ای."
-                         data-author="مریم هوشمندی"
-                         data-avatar="assets/images/user Avatar/0f1b74871a3e46e7ae950c05c65e6d2d.png"
-                         data-tag="دیپلماسی و امنیت"
+                         data-title="پیامدهای ژئوپلیتیک نوسان انرژی بر توازن قدرت منطقه‌ای"
+                         data-excerpt="تغییر در الگوهای مصرف و خطوط ترانزیت انرژی، بازیگران منطقه‌ای را به سمت ائتلاف‌های جدید راهبردی و تعریف کریدورهای جایگزین سوق داده است."
+                         data-author="دکتر علی موسوی"
+                         data-avatar="assets/images/user Avatar/images.jpeg"
+                         data-tag="روابط بین‌الملل"
                          data-date="۰۸ تیر ۱۴۰۵"
                          data-link="single.php?id=3">
                         <img src="assets/images/posts images/219-os5jc-1-ak32467-800x534.webp" alt="عکس ۳">
@@ -103,7 +103,7 @@
 
             <!-- ستون چپ: پنل اطلاعات داینامیک -->
             <div class="daily-interactive-info" id="interactive-info-panel">
-                <div class="info-panel__inner p-6">
+                <div class="info-panel__inner panel-pad">
                     <span class="info-panel__tag" id="info-panel-tag">سیاست اقتصادی</span>
                     <h3 class="info-panel__title" id="info-panel-title">یارانه پنهان و فرسایش اعتماد عمومی؛ اقتصاد سیاسی یک نابرابری مزمن</h3>
                     <p class="info-panel__excerpt" id="info-panel-excerpt">این تحلیل، نسبت میان تصمیم‌های بودجه‌ای، تورم فرساینده و ادراک عمومی از عدالت توزیعی را بررسی می‌کند و نشان می‌دهد چرا برخی اصلاحات بدون بازطراحی روایت عمومی شکست می‌خورند.</p>

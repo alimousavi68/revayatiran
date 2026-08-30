@@ -1,82 +1,82 @@
-    <footer class="site-footer" id="site-footer">
+    <footer class="relative overflow-hidden bg-primary text-white/90 dark:bg-[#73101E]" id="site-footer">
 
         <!-- ── Top divider ──────────────────────────────── -->
-        <div class="footer-top-rule"></div>
+        <div class="h-[1px] bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
 
         <!-- ── Main Grid (3 col: brand · services · access) -->
-        <div class="container footer-grid">
+        <div class="container relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.8fr_1fr_1fr] gap-8 md:gap-14 py-10 md:py-16">
 
             <!-- ─ Brand + Newsletter column ───────────────── -->
-            <div class="footer-brand">
-                <a href="/" class="footer-logo-link" aria-label="روایت ایران - صفحه اصلی">
+            <div class="flex flex-col gap-5 sm:col-span-2 lg:col-span-1">
+                <a href="/" class="inline-flex transition-opacity duration-240 hover:opacity-90 w-fit" aria-label="روایت ایران - صفحه اصلی">
                     <img src="./assets/images/logo-revayat.webp"
                          alt="روایت ایران"
-                         class="footer-logo"
+                         class="h-[52px] w-auto object-contain"
                          width="auto" height="52"
                          loading="lazy">
                 </a>
-                <p class="footer-brand__desc">
+                <p class="text-[13.5px] leading-[1.8] text-white/85 m-0 max-w-[38ch]">
                     رسانه‌ای تحلیلی، زنده و داده‌محور برای هدایت هوشمند مخاطب؛ با پیوند میان خبر، تحلیل، پرونده و شبکه تحلیلگران.
                 </p>
 
                 <!-- Social links -->
-                <div class="footer-social">
-                    <a href="#" class="footer-social__link" aria-label="تلگرام">
+                <div class="flex items-center gap-2 mt-1">
+                    <a href="#" class="grid place-items-center w-9 h-9 rounded-xl border border-white/25 bg-white/10 text-white text-lg transition-all duration-200 hover:bg-white hover:border-white hover:text-primary hover:-translate-y-0.5 no-underline" aria-label="تلگرام">
                         <i class="ph ph-telegram-logo"></i>
                     </a>
-                    <a href="#" class="footer-social__link" aria-label="اینستاگرام">
+                    <a href="#" class="grid place-items-center w-9 h-9 rounded-xl border border-white/25 bg-white/10 text-white text-lg transition-all duration-200 hover:bg-white hover:border-white hover:text-primary hover:-translate-y-0.5 no-underline" aria-label="اینستاگرام">
                         <i class="ph ph-instagram-logo"></i>
                     </a>
-                    <a href="#" class="footer-social__link" aria-label="توییتر / ایکس">
+                    <a href="#" class="grid place-items-center w-9 h-9 rounded-xl border border-white/25 bg-white/10 text-white text-lg transition-all duration-200 hover:bg-white hover:border-white hover:text-primary hover:-translate-y-0.5 no-underline" aria-label="توییتر / ایکس">
                         <i class="ph ph-x-logo"></i>
                     </a>
-                    <a href="#" class="footer-social__link" aria-label="یوتیوب">
+                    <a href="#" class="grid place-items-center w-9 h-9 rounded-xl border border-white/25 bg-white/10 text-white text-lg transition-all duration-200 hover:bg-white hover:border-white hover:text-primary hover:-translate-y-0.5 no-underline" aria-label="یوتیوب">
                         <i class="ph ph-youtube-logo"></i>
                     </a>
                 </div>
             </div>
 
             <!-- ─ Nav: Services ────────────────────────────── -->
-            <div class="footer-col">
-                <h3 class="footer-col__title">سرویس‌ها</h3>
-                <nav class="footer-col__nav">
-                    <a href="#daily-narrative" class="footer-col__link">
-                        <i class="ph ph-newspaper"></i>
+            <div class="flex flex-col gap-0">
+                <h3 class="font-sans text-sm font-extrabold text-white uppercase tracking-wider m-0 mb-5 pb-3 border-b border-white/20 leading-snug">سرویس‌ها</h3>
+                <nav class="flex flex-col gap-0.5">
+                    <a href="#daily-narrative" class="group inline-flex items-center gap-2.5 py-1.5 px-2.5 rounded-lg text-sm font-semibold text-white/85 no-underline transition-all duration-200 -ms-2.5 hover:text-white hover:bg-white/15 hover:pe-1.5 rtl:hover:pr-1.5 rtl:hover:pl-2.5">
+                        <i class="ph ph-newspaper text-base opacity-90 transition-all duration-200 shrink-0 group-hover:opacity-100 group-hover:text-white"></i>
                         روایت روز
                     </a>
-                    <a href="#news-monitoring" class="footer-col__link">
-                        <i class="ph ph-radar"></i>
+                    <a href="#news-monitoring" class="group inline-flex items-center gap-2.5 py-1.5 px-2.5 rounded-lg text-sm font-semibold text-white/85 no-underline transition-all duration-200 -ms-2.5 hover:text-white hover:bg-white/15 hover:pe-1.5 rtl:hover:pr-1.5 rtl:hover:pl-2.5">
+                        <i class="ph ph-radar text-base opacity-90 transition-all duration-200 shrink-0 group-hover:opacity-100 group-hover:text-white"></i>
                         رصد اخبار
                     </a>
-                    <a href="#special-dossiers" class="footer-col__link">
-                        <i class="ph ph-folder-open"></i>
+                    <a href="#special-dossiers" class="group inline-flex items-center gap-2.5 py-1.5 px-2.5 rounded-lg text-sm font-semibold text-white/85 no-underline transition-all duration-200 -ms-2.5 hover:text-white hover:bg-white/15 hover:pe-1.5 rtl:hover:pr-1.5 rtl:hover:pl-2.5">
+                        <i class="ph ph-folder-open text-base opacity-90 transition-all duration-200 shrink-0 group-hover:opacity-100 group-hover:text-white"></i>
                         پرونده ویژه
                     </a>
-                    <a href="#media-observatory" class="footer-col__link">
-                        <i class="ph ph-binoculars"></i>
+                    <a href="#media-observatory" class="group inline-flex items-center gap-2.5 py-1.5 px-2.5 rounded-lg text-sm font-semibold text-white/85 no-underline transition-all duration-200 -ms-2.5 hover:text-white hover:bg-white/15 hover:pe-1.5 rtl:hover:pr-1.5 rtl:hover:pl-2.5">
+                        <i class="ph ph-binoculars text-base opacity-90 transition-all duration-200 shrink-0 group-hover:opacity-100 group-hover:text-white"></i>
                         دیدبان رسانه
                     </a>
                 </nav>
             </div>
 
             <!-- ─ Nav: Access ──────────────────────────────── -->
-            <div class="footer-col">
-                <h3 class="footer-col__title">درباره رسانه</h3>
-                <nav class="footer-col__nav">
-                    <a href="#" class="footer-col__link">
-                        <i class="ph ph-info"></i>
+            <div class="flex flex-col gap-0">
+                <h3 class="font-sans text-sm font-extrabold text-white uppercase tracking-wider m-0 mb-5 pb-3 border-b border-white/20 leading-snug">درباره رسانه</h3>
+                <nav class="flex flex-col gap-0.5">
+                    <a href="#" class="group inline-flex items-center gap-2.5 py-1.5 px-2.5 rounded-lg text-sm font-semibold text-white/85 no-underline transition-all duration-200 -ms-2.5 hover:text-white hover:bg-white/15 hover:pe-1.5 rtl:hover:pr-1.5 rtl:hover:pl-2.5">
+                        <i class="ph ph-info text-base opacity-90 transition-all duration-200 shrink-0 group-hover:opacity-100 group-hover:text-white"></i>
                         درباره ما
                     </a>
-                    <a href="#" class="footer-col__link">
-                        <i class="ph ph-envelope"></i>
+                    <a href="#" class="group inline-flex items-center gap-2.5 py-1.5 px-2.5 rounded-lg text-sm font-semibold text-white/85 no-underline transition-all duration-200 -ms-2.5 hover:text-white hover:bg-white/15 hover:pe-1.5 rtl:hover:pr-1.5 rtl:hover:pl-2.5">
+                        <i class="ph ph-envelope text-base opacity-90 transition-all duration-200 shrink-0 group-hover:opacity-100 group-hover:text-white"></i>
                         تماس با ما
                     </a>
-                    <a href="#situation-room" class="footer-col__link">
-                        <i class="ph ph-activity"></i>
+                    <a href="#situation-room" class="group inline-flex items-center gap-2.5 py-1.5 px-2.5 rounded-lg text-sm font-semibold text-white/85 no-underline transition-all duration-200 -ms-2.5 hover:text-white hover:bg-white/15 hover:pe-1.5 rtl:hover:pr-1.5 rtl:hover:pl-2.5">
+                        <i class="ph ph-activity text-base opacity-90 transition-all duration-200 shrink-0 group-hover:opacity-100 group-hover:text-white"></i>
                         اتاق وضعیت
                     </a>
-                    <a href="#analysts-network" class="footer-col__link">
-                        <i class="ph ph-users-three"></i>
+                    <a href="#analysts-network" class="group inline-flex items-center gap-2.5 py-1.5 px-2.5 rounded-lg text-sm font-semibold text-white/85 no-underline transition-all duration-200 -ms-2.5 hover:text-white hover:bg-white/15 hover:pe-1.5 rtl:hover:pr-1.5 rtl:hover:pl-2.5">
+                        <i class="ph ph-users-three text-base opacity-90 transition-all duration-200 shrink-0 group-hover:opacity-100 group-hover:text-white"></i>
                         شبکه تحلیلگران
                     </a>
                 </nav>
@@ -85,14 +85,14 @@
         </div>
 
         <!-- ── Bottom bar ────────────────────────────────── -->
-        <div class="footer-bottom">
-            <div class="container footer-bottom__inner">
-                <span class="footer-bottom__copy">
+        <div class="relative z-10 border-t border-white/20">
+            <div class="container flex flex-col md:flex-row items-center justify-center md:justify-between gap-2 md:gap-4 py-4.5 text-center">
+                <span class="text-[12.5px] text-white/75 font-medium">
                     © ۱۴۰۴ روایت ایران. تمامی حقوق محفوظ است.
                 </span>
-                <a href="http://ihasht.ir/" class="footer-credit" target="_blank" rel="noopener noreferrer" aria-label="وبسایت طراح">
-                    <span class="footer-credit__label">طراحی و توسعه توسط</span>
-                    <span class="footer-credit__name">هشت بهشت</span>
+                <a href="http://ihasht.ir/" class="group inline-flex items-center justify-center gap-1.5 no-underline opacity-85 transition-opacity duration-200 hover:opacity-100" target="_blank" rel="noopener noreferrer" aria-label="وبسایت طراح">
+                    <span class="text-[11.5px] text-white/80 font-normal whitespace-nowrap">طراحی و توسعه توسط</span>
+                    <span class="relative font-sans text-xs font-extrabold text-white tracking-normal whitespace-nowrap pb-px after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[1px] after:bg-white/35 after:rounded-[1px] after:scale-x-0 after:origin-right after:transition-transform after:duration-240 group-hover:after:scale-x-100">هشت بهشت</span>
                 </a>
             </div>
         </div>

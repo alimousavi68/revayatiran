@@ -24,53 +24,53 @@ $user_level = 'guest';
 
     <link rel="stylesheet" href="./assets/css/style.css?v=4.0">
 </head>
-<body>
-    <div class="page-progress" aria-hidden="true">
-        <span id="page-progress-bar"></span>
+<body class="bg-bg text-text min-h-screen font-sans leading-relaxed transition-colors duration-300 antialiased selection:bg-accent selection:text-white">
+    <div class="fixed top-0 left-0 right-0 h-[3px] z-[9999] pointer-events-none" aria-hidden="true">
+        <span id="page-progress-bar" class="block h-full w-0 bg-gradient-to-r from-accent via-[#D13247] to-accent-strong shadow-[0_0_12px_rgba(var(--accent-rgb),0.5)] transition-all duration-100 ease-linear"></span>
     </div>
 
     <!-- Search Overlay -->
-    <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="جستجو">
-        <button class="search-overlay__close" id="search-close" aria-label="بستن جستجو">
-            <i class="ph ph-x"></i>
+    <div class="search-overlay group fixed inset-0 z-[1000] flex flex-col items-center justify-center bg-gradient-to-b from-[#080E1A]/95 to-[#0D1626]/95 backdrop-blur-xl opacity-0 invisible transition-all duration-300 [&.is-active]:opacity-100 [&.is-active]:visible" id="search-overlay" role="dialog" aria-modal="true" aria-label="جستجو">
+        <button class="absolute top-6 left-6 w-11 h-11 rounded-xl border border-white/10 bg-white/5 text-white/50 grid place-items-center cursor-pointer transition-all hover:bg-primary/15 hover:text-white/90 hover:border-primary/30" id="search-close" aria-label="بستن جستجو">
+            <i class="ph ph-x text-xl"></i>
         </button>
-        <div class="search-form">
-            <p class="search-eyebrow">جستجو در روایت ایران</p>
-            <input type="text" class="search-input" placeholder="چه چیزی دنبال می‌کنید؟" id="search-input" autocomplete="off">
-            <div class="search-hints">
-                <span class="search-hint-tag">آخرین اخبار</span>
-                <span class="search-hint-tag">تحلیل سیاسی</span>
-                <span class="search-hint-tag">پرونده ویژه</span>
+        <div class="w-[min(calc(100%-40px),760px)] text-center translate-y-6 transition-transform duration-500 group-[.is-active]:translate-y-0">
+            <p class="text-white/35 text-xs font-bold tracking-[0.12em] uppercase mb-7">جستجو در روایت ایران</p>
+            <input type="text" class="w-full bg-transparent border-none border-b-2 border-primary/60 text-white text-[clamp(1.5rem,3vw,2.5rem)] font-extrabold py-4 text-center transition-colors focus:outline-none focus:border-primary placeholder:text-white/15" placeholder="چه چیزی دنبال می‌کنید؟" id="search-input" autocomplete="off">
+            <div class="flex items-center justify-center gap-2 mt-5 flex-wrap">
+                <span class="py-1 px-3.5 rounded-full bg-white/5 border border-white/10 text-white/50 text-xs font-semibold cursor-pointer transition-colors hover:bg-primary/15 hover:border-primary/30 hover:text-white/90">آخرین اخبار</span>
+                <span class="py-1 px-3.5 rounded-full bg-white/5 border border-white/10 text-white/50 text-xs font-semibold cursor-pointer transition-colors hover:bg-primary/15 hover:border-primary/30 hover:text-white/90">تحلیل سیاسی</span>
+                <span class="py-1 px-3.5 rounded-full bg-white/5 border border-white/10 text-white/50 text-xs font-semibold cursor-pointer transition-colors hover:bg-primary/15 hover:border-primary/30 hover:text-white/90">پرونده ویژه</span>
             </div>
-            <p class="search-esc-hint"><kbd>Esc</kbd> برای بستن</p>
+            <p class="text-white/25 text-xs mt-7"><kbd class="inline-block py-0.5 px-2 rounded-md border border-white/15 bg-white/5 font-sans text-[11px]">Esc</kbd> برای بستن</p>
         </div>
     </div>
 
-    <header class="site-header" id="site-header">
+    <header class="relative z-50 transition-shadow duration-300 [&.is-scrolled]:shadow-none" id="site-header">
 
         <!-- Top Bar (White Clean Design) -->
-        <div class="top-bar" id="top-bar">
-            <div class="container top-bar__inner">
+        <div class="relative h-[42px] overflow-hidden bg-transparent border-none" id="top-bar">
+            <div class="container flex items-center justify-between h-[42px] px-2">
 
                 <!-- Live Pulse + Date -->
-                <div class="top-bar__meta">
-                    <i class="ph ph-calendar-blank" style="font-size:13px;opacity:.7;"></i>
+                <div class="flex items-center gap-2 text-[#6b7280] text-xs font-normal whitespace-nowrap shrink-0 dark:text-white/65">
+                    <i class="ph ph-calendar-blank text-[13px] opacity-70"></i>
                     <span id="top-bar-date">پنج‌شنبه ۱۲ تیر ۱۴۰۵</span>
-                    <span class="top-bar__divider"></span>
-                    <i class="ph ph-clock" style="font-size:13px;opacity:.7;"></i>
+                    <span class="w-[1px] h-[14px] bg-[#e5e7eb] rounded-[1px] mx-1.5 shrink-0 dark:bg-white/15"></span>
+                    <i class="ph ph-clock text-[13px] opacity-70"></i>
                     <span id="top-bar-time">--:--</span>
                 </div>
 
                 <!-- Top Bar Actions (Search, Theme, Login) -->
-                <div class="top-bar__actions">
-                    <button class="top-bar__icon-btn search-trigger" type="button" aria-label="جستجو" id="search-trigger" title="جستجو">
+                <div class="flex items-center gap-2 shrink-0">
+                    <button class="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-[#d1d5db] bg-white text-[#4b5563] text-base cursor-pointer transition-all duration-200 hover:text-primary hover:border-primary hover:bg-primary/5 dark:bg-white/5 dark:border-white/15 dark:text-white/85" type="button" aria-label="جستجو" id="search-trigger" title="جستجو">
                         <i class="ph ph-magnifying-glass"></i>
                     </button>
-                    <button class="top-bar__icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="تغییر حالت رنگی" title="تغییر پوسته">
-                        <i class="ph ph-sun theme-icon-light"></i>
-                        <i class="ph ph-moon theme-icon-dark"></i>
+                    <button class="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-[#d1d5db] bg-white text-[#4b5563] text-base cursor-pointer transition-all duration-200 hover:text-primary hover:border-primary hover:bg-primary/5 dark:bg-white/5 dark:border-white/15 dark:text-white/85" id="theme-toggle" type="button" aria-label="تغییر حالت رنگی" title="تغییر پوسته">
+                        <i class="ph ph-sun dark:hidden"></i>
+                        <i class="ph ph-moon hidden dark:block"></i>
                     </button>
-                    <a href="#" class="top-bar__icon-btn" aria-label="ورود" title="ورود">
+                    <a href="#" class="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-[#d1d5db] bg-white text-[#4b5563] text-base cursor-pointer transition-all duration-200 hover:text-primary hover:border-primary hover:bg-primary/5 dark:bg-white/5 dark:border-white/15 dark:text-white/85" aria-label="ورود" title="ورود">
                         <i class="ph ph-user-circle-plus"></i>
                     </a>
                 </div>
@@ -79,69 +79,69 @@ $user_level = 'guest';
         </div>
 
         <!-- Main Header Shell (Red Premium Styling) -->
-        <div class="container header-shell" id="header-shell">
+        <div class="container sticky top-[10px] z-[200] min-h-[76px] flex justify-between items-center gap-5 mx-auto my-[2px] mb-4 py-[3px] px-5 border border-white/20 rounded-lg bg-primary shadow-[0_4px_16px_rgba(var(--accent-rgb),0.18)] transition-all duration-300 dark:bg-[#73101E] dark:border-white/10 dark:shadow-black/40" id="header-shell">
 
             <!-- Brand Lockup -->
-            <div class="brand-lockup">
-                <a href="#" class="brand-mark" aria-label="روایت ایران">
-                    <img src="./assets/images/logo-revayat.webp" alt="لوگوی روایت ایران" class="brand-mark__logo" width="auto" height="64px">
+            <div class="shrink-0 flex items-center">
+                <a href="#" class="flex items-center gap-3.5 no-underline" aria-label="روایت ایران">
+                    <img src="./assets/images/logo-revayat.webp" alt="لوگوی روایت ایران" class="h-[64px] w-auto object-contain shrink-0" width="auto" height="64px">
                 </a>
             </div>
 
             <!-- Header Brand Divider -->
-            <div class="header-brand-divider" aria-hidden="true"></div>
+            <div class="w-[1px] h-8 bg-white/25 opacity-80 shrink-0" aria-hidden="true"></div>
 
             <!-- Main Navigation -->
-            <nav class="main-nav" aria-label="ناوبری اصلی">
-                <a href="#hero" class="is-active">صفحه اصلی</a>
-                <span class="nav-divider" aria-hidden="true"></span>
-                <a href="#daily-narrative">روایت روز</a>
-                <span class="nav-divider" aria-hidden="true"></span>
-                <a href="#news-monitoring">رصد اخبار</a>
-                <span class="nav-divider" aria-hidden="true"></span>
-                <div class="nav-item-dropdown">
-                    <a href="#special-dossiers" class="dropdown-trigger">
+            <nav class="flex-1 hidden xl:flex justify-start items-center gap-1 ms-3 text-sm font-bold font-sans" aria-label="ناوبری اصلی">
+                <a href="#hero" class="relative py-1.5 px-3.5 rounded-lg text-white/90 hover:text-white transition-colors duration-200 before:absolute before:inset-0 before:rounded-lg before:bg-white/10 before:opacity-0 hover:before:opacity-100 [&.is-active]:text-white [&.is-active]:bg-white/20">صفحه اصلی</a>
+                <span class="w-[1px] h-[10px] bg-white/25 mx-0.5 shrink-0" aria-hidden="true"></span>
+                <a href="#daily-narrative" class="relative py-1.5 px-3.5 rounded-lg text-white/90 hover:text-white transition-colors duration-200 before:absolute before:inset-0 before:rounded-lg before:bg-white/10 before:opacity-0 hover:before:opacity-100">روایت روز</a>
+                <span class="w-[1px] h-[10px] bg-white/25 mx-0.5 shrink-0" aria-hidden="true"></span>
+                <a href="#news-monitoring" class="relative py-1.5 px-3.5 rounded-lg text-white/90 hover:text-white transition-colors duration-200 before:absolute before:inset-0 before:rounded-lg before:bg-white/10 before:opacity-0 hover:before:opacity-100">رصد اخبار</a>
+                <span class="w-[1px] h-[10px] bg-white/25 mx-0.5 shrink-0" aria-hidden="true"></span>
+                <div class="relative inline-flex items-center group">
+                    <a href="#special-dossiers" class="inline-flex items-center gap-1.5 no-underline cursor-pointer relative py-1.5 px-3.5 rounded-lg text-white/90 hover:text-white transition-colors duration-200 before:absolute before:inset-0 before:rounded-lg before:bg-white/10 before:opacity-0 hover:before:opacity-100">
                         <span>پرونده ویژه</span>
-                        <i class="ph ph-caret-down dropdown-caret"></i>
+                        <i class="ph ph-caret-down text-[11px] opacity-75 transition-transform duration-300 group-hover:rotate-180 group-hover:text-white"></i>
                     </a>
-                    <div class="dropdown-menu">
-                        <a href="#special-dossiers-1" class="dropdown-item">
-                            <i class="ph ph-hash dropdown-item-icon"></i>
+                    <div class="absolute top-[calc(100%+12px)] right-1/2 translate-x-1/2 translate-y-2.5 bg-white border border-border rounded-xl p-2 min-w-[170px] flex flex-col gap-0.5 z-[250] opacity-0 invisible pointer-events-none transition-all duration-300 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto group-hover:translate-y-0 shadow-xl dark:bg-[#162136]/95 dark:backdrop-blur-md dark:border-white/10 dark:shadow-black/30 before:absolute before:top-[-14px] before:left-0 before:right-0 before:h-[14px] before:bg-transparent">
+                        <a href="#special-dossiers-1" class="flex items-center gap-2 py-2 px-3 text-text-soft text-[13px] font-medium no-underline rounded-lg transition-all duration-200 hover:bg-primary/10 hover:text-primary hover:-translate-x-1 rtl:hover:translate-x-1">
+                            <i class="ph ph-hash text-[14px] opacity-65 transition-colors duration-200"></i>
                             <span>پرونده انتخابات</span>
                         </a>
-                        <a href="#special-dossiers-2" class="dropdown-item">
-                            <i class="ph ph-hash dropdown-item-icon"></i>
+                        <a href="#special-dossiers-2" class="flex items-center gap-2 py-2 px-3 text-text-soft text-[13px] font-medium no-underline rounded-lg transition-all duration-200 hover:bg-primary/10 hover:text-primary hover:-translate-x-1 rtl:hover:translate-x-1">
+                            <i class="ph ph-hash text-[14px] opacity-65 transition-colors duration-200"></i>
                             <span>توسعه منطقه‌ای</span>
                         </a>
-                        <a href="#special-dossiers-3" class="dropdown-item">
-                            <i class="ph ph-hash dropdown-item-icon"></i>
+                        <a href="#special-dossiers-3" class="flex items-center gap-2 py-2 px-3 text-text-soft text-[13px] font-medium no-underline rounded-lg transition-all duration-200 hover:bg-primary/10 hover:text-primary hover:-translate-x-1 rtl:hover:translate-x-1">
+                            <i class="ph ph-hash text-[14px] opacity-65 transition-colors duration-200"></i>
                             <span>اقتصاد داده‌محور</span>
                         </a>
                     </div>
                 </div>
-                <span class="nav-divider" aria-hidden="true"></span>
-                <a href="#media-observatory">دیدبان رسانه</a>
-                <span class="nav-divider" aria-hidden="true"></span>
-                <a href="#situation-room">اتاق وضعیت</a>
-                <span class="nav-divider" aria-hidden="true"></span>
-                <a href="#analysts-network">شبکه تحلیلگران</a>
-                <span class="nav-divider" aria-hidden="true"></span>
-                <a href="#editors-pick">پیشنهاد سردبیر</a>
+                <span class="w-[1px] h-[10px] bg-white/25 mx-0.5 shrink-0" aria-hidden="true"></span>
+                <a href="#media-observatory" class="relative py-1.5 px-3.5 rounded-lg text-white/90 hover:text-white transition-colors duration-200 before:absolute before:inset-0 before:rounded-lg before:bg-white/10 before:opacity-0 hover:before:opacity-100">دیدبان رسانه</a>
+                <span class="w-[1px] h-[10px] bg-white/25 mx-0.5 shrink-0" aria-hidden="true"></span>
+                <a href="#situation-room" class="relative py-1.5 px-3.5 rounded-lg text-white/90 hover:text-white transition-colors duration-200 before:absolute before:inset-0 before:rounded-lg before:bg-white/10 before:opacity-0 hover:before:opacity-100">اتاق وضعیت</a>
+                <span class="w-[1px] h-[10px] bg-white/25 mx-0.5 shrink-0" aria-hidden="true"></span>
+                <a href="#analysts-network" class="relative py-1.5 px-3.5 rounded-lg text-white/90 hover:text-white transition-colors duration-200 before:absolute before:inset-0 before:rounded-lg before:bg-white/10 before:opacity-0 hover:before:opacity-100">شبکه تحلیلگران</a>
+                <span class="w-[1px] h-[10px] bg-white/25 mx-0.5 shrink-0" aria-hidden="true"></span>
+                <a href="#editors-pick" class="relative py-1.5 px-3.5 rounded-lg text-white/90 hover:text-white transition-colors duration-200 before:absolute before:inset-0 before:rounded-lg before:bg-white/10 before:opacity-0 hover:before:opacity-100">پیشنهاد سردبیر</a>
             </nav>
 
             <!-- Mobile Toggle -->
-            <div class="header-actions">
-                <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="منو">
-                    <span class="menu-toggle__line"></span>
-                    <span class="menu-toggle__line"></span>
-                    <span class="menu-toggle__line"></span>
+            <div class="flex items-center gap-2 xl:hidden">
+                <button class="menu-toggle group flex flex-col items-center justify-center gap-[5px] w-10 h-10 rounded-lg border border-white/20 text-white cursor-pointer transition-colors duration-200 hover:bg-white/10 hover:border-white/40 [&[aria-expanded='true']_span:nth-child(1)]:translate-y-[6.5px] [&[aria-expanded='true']_span:nth-child(1)]:-rotate-45 [&[aria-expanded='true']_span:nth-child(2)]:opacity-0 [&[aria-expanded='true']_span:nth-child(2)]:w-0 [&[aria-expanded='true']_span:nth-child(3)]:-translate-y-[6.5px] [&[aria-expanded='true']_span:nth-child(3)]:rotate-45" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="منو">
+                    <span class="block w-[18px] h-[1.5px] bg-current rounded-full transition-all duration-300 origin-center"></span>
+                    <span class="block w-[18px] h-[1.5px] bg-current rounded-full transition-all duration-300 origin-center"></span>
+                    <span class="block w-[18px] h-[1.5px] bg-current rounded-full transition-all duration-300 origin-center"></span>
                 </button>
             </div>
 
         </div>
 
-        <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <!-- Mobile Menu (Tailwind rewrite to keep it standard) -->
+        <div class="mobile-menu hidden" id="mobile-menu" aria-hidden="true">
             <div class="mobile-menu__panel">
                 <div class="mobile-menu__header">
                     <span class="mobile-menu__title">منو</span>

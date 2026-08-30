@@ -1,4 +1,4 @@
-<section class="section-shell" id="multimedia">
+<section class="section-shell section-spacing" id="multimedia">
     <div class="container">
         <!-- هدر بخش رسانه‌نگار -->
         <div class="section-head section-head--etude-b" data-reveal="up">

@@ -1,4 +1,4 @@
-<section class="section-shell py-24" id="analysts-network">
+<section class="section-shell section-spacing" id="analysts-network">
     <div class="container">
         <!-- هدر بخش شبکه تحلیل‌گران -->
         <div class="section-head section-head--etude-b" data-reveal="up">
@@ -17,7 +17,7 @@
             </div>
         </div>
 
-        <div class="an-grid-layout gap-12" data-reveal="up">
+        <div class="an-grid-layout layout-gap-lg" data-reveal="up">
             
             <!-- ═══ ستون اصلی (محتوا - ۶۵٪) ═══ -->
             <div class="an-main-column">
@@ -27,7 +27,7 @@
                     <img src="assets/images/posts images/اقتصادایران-ak1549-ak3280-1200x800-1024x683.webp" alt="تحلیل پیشنهادی هفته" class="an-hero__bg-img">
                     <div class="an-hero__overlay-gradient"></div>
 
-                    <div class="an-hero__content-panel p-6">
+                    <div class="an-hero__content-panel panel-pad">
                         <div class="an-hero__badge--accent">
                             <i class="ph-fill ph-star"></i>
                             <span>تحلیل ویژه هفته</span>
@@ -71,7 +71,7 @@
                         <a href="analyses.php" class="an-sub-header__link">آرشیو تحلیل‌ها <i class="ph ph-caret-left"></i></a>
                     </div>
                     
-                    <div class="an-top-analyses__grid gap-6">
+                    <div class="an-top-analyses__grid layout-gap-md">
 
                         <!-- تحلیل برتر ۱ -->
                         <article class="an-text-card">
@@ -208,7 +208,7 @@
             <div class="an-sidebar-column">
                 
                 <!-- برترین تحلیل‌گران -->
-                <div class="an-showcase--premium p-6">
+                <div class="an-showcase--premium panel-pad">
                     <div class="an-sub-header">
                         <h4><i class="ph ph-medal"></i> برترین تحلیل‌گران</h4>
                         <a href="analysts.php" class="an-sub-header__link">همه <i class="ph ph-caret-left"></i></a>

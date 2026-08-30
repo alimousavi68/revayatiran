@@ -1,4 +1,4 @@
-<section class="section-shell section-shell--warm py-24" id="news-monitoring">
+<section class="section-shell section-shell--warm section-spacing" id="news-monitoring">
     <div class="container">
         <div class="section-head section-head--etude-b" data-reveal="up">
             <div class="etude-b__leading">
@@ -22,7 +22,7 @@
             </div>
         </div>
 
-        <div class="news-layout gap-12">
+        <div class="news-layout layout-gap-lg">
             <div class="news-panels">
 
                 <!-- ── تب همه ─────────────────────────────────── -->
@@ -288,7 +288,7 @@
 
             </div>
 
-            <aside class="trending-column panel-card p-6" data-reveal="left">
+            <aside class="trending-column panel-card panel-pad" data-reveal="left">
                 <div class="trending-column__head">
                     <div class="trending-column__head-title">
                         <i class="ph ph-trend-up"></i>

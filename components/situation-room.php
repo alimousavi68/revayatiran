@@ -1,4 +1,4 @@
-<section class="section-shell py-24" id="situation-room">
+<section class="section-shell section-spacing" id="situation-room">
     <div class="container">
         <!-- لی‌آوت دو ستونه: سایدبار هدر + محتوای اصلی -->
         <div class="sr-layout" data-reveal="up">
@@ -121,10 +121,10 @@
                 </div>
             <?php else: ?>
             <!-- نمای کاربر عضو: نمایش شبکه کارت‌های تاکتیکال -->
-            <div class="situation-grid gap-8">
+            <div class="situation-grid layout-gap-lg">
                 
                 <!-- گزارش ۱: متنی + PDF (قابل دسترسی برای همه اعضا) -->
-                <article class="situation-item panel-card--dark p-6" data-reveal="up">
+                <article class="situation-item panel-card--dark panel-pad" data-reveal="up">
                     <div class="card-status-bar">
                         <div class="terminal-dots">
                             <span></span><span></span><span></span>
@@ -158,7 +158,7 @@
                 </article>
 
                 <!-- گزارش ۲: متنی + گالری (دسترسی سطح متوسط و عالی) -->
-                <article class="situation-item panel-card--dark p-6 <?php echo ($user_level === 'normal') ? 'item--locked' : ''; ?>" data-reveal="up">
+                <article class="situation-item panel-card--dark panel-pad <?php echo ($user_level === 'normal') ? 'item--locked' : ''; ?>" data-reveal="up">
                     <div class="card-status-bar">
                         <?php if ($user_level === 'normal'): ?>
                             <span class="lock-indicator"><i class="ph-fill ph-lock"></i> محدود شده</span>
@@ -210,7 +210,7 @@
                 </article>
 
                 <!-- گزارش ۳: گزارش راهبردی (فقط سطح عالی) -->
-                <article class="situation-item panel-card--dark p-6 <?php echo ($user_level !== 'high') ? 'item--locked' : ''; ?>" data-reveal="up">
+                <article class="situation-item panel-card--dark panel-pad <?php echo ($user_level !== 'high') ? 'item--locked' : ''; ?>" data-reveal="up">
                     <div class="card-status-bar">
                         <?php if ($user_level !== 'high'): ?>
                             <span class="lock-indicator alert-lock"><i class="ph-fill ph-shield-warning"></i> غیرمجاز</span>

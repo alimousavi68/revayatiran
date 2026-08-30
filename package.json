@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "dev:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/style.css --watch",
+    "build:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/style.css --minify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,5 +13,8 @@
   "description": "",
   "dependencies": {
     "@phosphor-icons/web": "^2.1.2"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
   }
 }

@@ -1,4 +1,4 @@
-<section class="section-shell" id="special-dossiers">
+<section class="section-shell section-spacing" id="special-dossiers">
     <div class="container">
         <div class="section-head section-head--etude-b" data-reveal="up">
             <div class="etude-b__leading">

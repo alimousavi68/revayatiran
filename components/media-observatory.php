@@ -1,4 +1,4 @@
-<section class="section-shell section-shell--gradient" id="media-observatory">
+<section class="section-shell section-shell--gradient section-spacing" id="media-observatory">
     <div class="container">
         <div class="section-head section-head--etude-b" data-reveal="up">
             <div class="etude-b__leading">
