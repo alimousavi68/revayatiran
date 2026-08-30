@@ -503,6 +503,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const infoPanelAuthor = document.getElementById("info-panel-author");
     const infoPanelDate = document.getElementById("info-panel-date");
     const infoPanelLink = document.getElementById("info-panel-link");
+    const dailyMainCard = document.getElementById("daily-main-card");
+    const dailyMainImg = document.getElementById("daily-main-img");
+    const dailyMainTag = document.getElementById("daily-main-tag");
+    const dailyMainTitle = document.getElementById("daily-main-title");
+    const dailyMainExcerpt = document.getElementById("daily-main-excerpt");
+    const dailyMainAvatar = document.getElementById("daily-main-avatar");
+    const dailyMainAuthor = document.getElementById("daily-main-author-name");
+    const dailyMainDate = document.getElementById("daily-main-date");
     const interactiveThumbItems = document.querySelectorAll(".interactive-thumb-item");
 
     if (infoPanelInner && interactiveThumbItems.length) {
@@ -521,8 +529,10 @@ document.addEventListener("DOMContentLoaded", () => {
             thumb.classList.add("is-active");
 
             infoPanelInner.classList.add("is-updating");
+            if (dailyMainCard) dailyMainCard.classList.add("is-updating");
 
             setTimeout(() => {
+                const img = thumb.getAttribute("data-img");
                 const tag = thumb.getAttribute("data-tag");
                 const avatar = thumb.getAttribute("data-avatar");
                 const author = thumb.getAttribute("data-author");
@@ -531,15 +541,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 const excerpt = thumb.getAttribute("data-excerpt");
                 const link = thumb.getAttribute("data-link");
 
-                if (infoPanelTag) infoPanelTag.textContent = tag;
-                if (infoPanelAvatar) infoPanelAvatar.src = avatar;
-                if (infoPanelAuthor) infoPanelAuthor.textContent = author;
-                if (infoPanelDate) infoPanelDate.textContent = date;
-                if (infoPanelTitle) infoPanelTitle.textContent = title;
-                if (infoPanelExcerpt) infoPanelExcerpt.textContent = excerpt;
-                if (infoPanelLink) infoPanelLink.href = link;
+                if (infoPanelTag && tag) infoPanelTag.textContent = tag;
+                if (infoPanelAvatar && avatar) infoPanelAvatar.src = avatar;
+                if (infoPanelAuthor && author) infoPanelAuthor.textContent = author;
+                if (infoPanelDate && date) infoPanelDate.textContent = date;
+                if (infoPanelTitle && title) infoPanelTitle.textContent = title;
+                if (infoPanelExcerpt && excerpt) infoPanelExcerpt.textContent = excerpt;
+                if (infoPanelLink && link) infoPanelLink.href = link;
+
+                if (dailyMainImg && img) dailyMainImg.src = img;
+                if (dailyMainTag && tag) dailyMainTag.textContent = tag;
+                if (dailyMainTitle && title) dailyMainTitle.textContent = title;
+                if (dailyMainExcerpt && excerpt) dailyMainExcerpt.textContent = excerpt;
+                if (dailyMainAvatar && avatar) dailyMainAvatar.src = avatar;
+                if (dailyMainAuthor && author) dailyMainAuthor.textContent = author;
+                if (dailyMainDate && date) dailyMainDate.textContent = date;
 
                 infoPanelInner.classList.remove("is-updating");
+                if (dailyMainCard) dailyMainCard.classList.remove("is-updating");
             }, 180);
         };
 

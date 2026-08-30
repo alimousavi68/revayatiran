@@ -123,10 +123,7 @@ $user_level = 'guest';
                 <span class="nav-divider" aria-hidden="true"></span>
                 <a href="#analysts-network">شبکه تحلیلگران</a>
                 <span class="nav-divider" aria-hidden="true"></span>
-                <a href="#editors-pick" class="nav-featured">
-                    <i class="ph-fill ph-star"></i>
-                    <span>پیشنهاد سردبیر</span>
-                </a>
+                <a href="#editors-pick">پیشنهاد سردبیر</a>
             </nav>
 
             <!-- Mobile Toggle -->
@@ -182,8 +179,8 @@ $user_level = 'guest';
                         <span class="mobile-nav-item__icon"><i class="ph ph-users-three"></i></span>
                         <span>شبکه تحلیلگران</span>
                     </a>
-                    <a href="#editors-pick" class="mobile-nav-item mobile-nav-item--featured">
-                        <span class="mobile-nav-item__icon"><i class="ph-fill ph-star"></i></span>
+                    <a href="#editors-pick" class="mobile-nav-item">
+                        <span class="mobile-nav-item__icon"><i class="ph ph-star"></i></span>
                         <span>پیشنهاد سردبیر</span>
                     </a>
                 </nav>
