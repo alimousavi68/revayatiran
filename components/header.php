@@ -92,7 +92,7 @@ $user_level = 'guest';
             <div class="w-[1px] h-8 bg-white/25 opacity-80 shrink-0" aria-hidden="true"></div>
 
             <!-- Main Navigation -->
-            <nav class="flex-1 hidden xl:flex justify-start items-center gap-1 ms-3 text-sm font-bold font-sans" aria-label="ناوبری اصلی">
+            <nav class="flex-1 hidden xl:flex justify-start items-center gap-1 ms-3 text-sm font-normal font-sans" aria-label="ناوبری اصلی">
                 <a href="#hero" class="relative py-1.5 px-3.5 rounded-lg text-white/90 hover:text-white transition-colors duration-200 before:absolute before:inset-0 before:rounded-lg before:bg-white/10 before:opacity-0 hover:before:opacity-100 [&.is-active]:text-white [&.is-active]:bg-white/20">صفحه اصلی</a>
                 <span class="w-[1px] h-[10px] bg-white/25 mx-0.5 shrink-0" aria-hidden="true"></span>
                 <a href="#daily-narrative" class="relative py-1.5 px-3.5 rounded-lg text-white/90 hover:text-white transition-colors duration-200 before:absolute before:inset-0 before:rounded-lg before:bg-white/10 before:opacity-0 hover:before:opacity-100">روایت روز</a>

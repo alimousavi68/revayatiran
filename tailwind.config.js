@@ -3,10 +3,22 @@ module.exports = {
   content: [
     "./components/**/*.php",
     "./*.php",
+    "./*.html",
     "./assets/js/**/*.js"
   ],
   darkMode: ['class', '[data-theme="dark"]'],
   theme: {
+    container: {
+      center: true,
+      padding: '16px',
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1300px',
+      }
+    },
     extend: {
       fontFamily: {
         sans: ['IRANYekanX', 'sans-serif'],

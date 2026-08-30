@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هدر جدید | روایت ایران</title>
+    <script src="./assets/js/phosphor-icons.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <style>
+        body {
+            background: #0B1120;
+            font-family: "IRANYekanX", sans-serif;
+            margin: 0;
+        }
+
+        /* ─── Live Pulse Animation ─── */
+        @keyframes livePulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50%       { opacity: 0.4; transform: scale(0.85); }
+        }
+        .live-dot { animation: livePulse 1.6s ease-in-out infinite; }
+
+        /* ─── Top Ticker Scroll ─── */
+        @keyframes tickerScroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(50%); }
+        }
+        .ticker-track {
+            display: flex;
+            gap: 0;
+            animation: tickerScroll 40s linear infinite;
+            white-space: nowrap;
+        }
+        .ticker-track:hover { animation-play-state: paused; }
+
+        /* ─── Nav underline draw ─── */
+        .nav-link {
+            position: relative;
+            padding: 6px 14px;
+            border-radius: 8px;
+            color: rgba(203, 213, 225, 0.85);
+            font-size: 13.5px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 200ms ease, background 200ms ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -1px; left: 50%; right: 50%;
+            height: 2px;
+            background: #8B1A1A;
+            border-radius: 2px;
+            transition: left 220ms ease, right 220ms ease;
+        }
+        .nav-link:hover { color: #fff; background: rgba(255,255,255,0.05); }
+        .nav-link:hover::after { left: 14px; right: 14px; }
+        .nav-link.is-active { color: #fff; }
+        .nav-link.is-active::after { left: 14px; right: 14px; background: #8B1A1A; }
+
+        /* ─── Dropdown ─── */
+        .has-dropdown { position: relative; }
+        .has-dropdown:hover .dropdown { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; }
+        .has-dropdown:hover .caret { transform: rotate(180deg); color: #fff; }
+        .dropdown {
+            position: absolute;
+            top: calc(100% + 10px);
+            right: 0;
+            min-width: 190px;
+            background: #1b2537;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 14px;
+            padding: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            box-shadow: 0 16px 48px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.04);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            transition: opacity 220ms ease, transform 220ms ease, visibility 220ms;
+            z-index: 300;
+        }
+        /* hover bridge */
+        .dropdown::before {
+            content: '';
+            position: absolute;
+            top: -12px; left: 0; right: 0; height: 12px;
+        }
+        .dropdown a {
+            display: flex; align-items: center; gap: 10px;
+            padding: 9px 12px;
+            border-radius: 9px;
+            font-size: 13px;
+            font-weight: 600;
+            color: rgba(203,213,225,0.85);
+            text-decoration: none;
+            transition: background 180ms, color 180ms;
+        }
+        .dropdown a:hover { background: rgba(139,26,26,0.15); color: #fff; }
+        .dropdown a i { font-size: 15px; color: rgba(139,26,26,0.8); }
+
+        /* ─── CTA Button ─── */
+        .btn-login {
+            display: inline-flex; align-items: center; gap: 6px;
+            height: 36px; padding: 0 16px;
+            background: #8B1A1A;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 200ms, box-shadow 200ms, transform 200ms;
+            box-shadow: 0 2px 12px rgba(139,26,26,0.3);
+        }
+        .btn-login:hover {
+            background: #6B1414;
+            box-shadow: 0 4px 20px rgba(139,26,26,0.45);
+            transform: translateY(-1px);
+        }
+
+        /* ─── Icon Buttons ─── */
+        .icon-btn {
+            width: 36px; height: 36px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 9px;
+            border: 1px solid transparent;
+            background: transparent;
+            color: rgba(203,213,225,0.7);
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 180ms, border-color 180ms, color 180ms;
+        }
+        .icon-btn:hover {
+            background: rgba(255,255,255,0.06);
+            border-color: rgba(255,255,255,0.1);
+            color: #fff;
+        }
+
+        /* ─── Mobile Menu ─── */
+        .mobile-nav { display: none; }
+
+        /* ─── Demo page background ─── */
+        .demo-body {
+            background: linear-gradient(180deg, #0B1120 0%, #111827 100%);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.12);
+            font-size: 13px;
+            letter-spacing: 0.08em;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="site-header">
+
+        <!-- ── Ticker / Info Bar ──────────────────────────────────────────── -->
+        <div style="background: #0D1525; border-bottom: 1px solid rgba(255,255,255,0.06); height: 36px; overflow: hidden; display: flex; align-items: center;">
+            <div style="display:flex; align-items:center; gap:10px; padding: 0 20px; flex-shrink:0; border-left: 1px solid rgba(255,255,255,0.06);">
+                <span class="live-dot" style="width:7px; height:7px; background:#8B1A1A; border-radius:50%; display:inline-block;"></span>
+                <span style="font-size:11px; font-weight:800; color:#8B1A1A; letter-spacing:.06em; text-transform:uppercase;">گزارش زنده</span>
+            </div>
+            <!-- Ticker content -->
+            <div style="flex:1; overflow:hidden; position:relative; mask-image: linear-gradient(to left, transparent 0, black 60px, black calc(100% - 60px), transparent 100%);">
+                <div class="ticker-track" style="color:rgba(203,213,225,0.65); font-size:12.5px; font-weight:500;">
+                    <span style="padding-left:48px">تحلیل: جبهه‌بندی قدرت در غرب آسیا و آینده توافقات منطقه‌ای&nbsp;&nbsp;&nbsp;▪&nbsp;&nbsp;&nbsp;</span>
+                    <span style="padding-left:48px">گزارش ویژه: چرخش استراتژیک ترکیه و پیامدهای آن برای ایران&nbsp;&nbsp;&nbsp;▪&nbsp;&nbsp;&nbsp;</span>
+                    <span style="padding-left:48px">پرونده: دینامیک‌های جدید انرژی در خاورمیانه&nbsp;&nbsp;&nbsp;▪&nbsp;&nbsp;&nbsp;</span>
+                    <span style="padding-left:48px">تحلیل: جبهه‌بندی قدرت در غرب آسیا و آینده توافقات منطقه‌ای&nbsp;&nbsp;&nbsp;▪&nbsp;&nbsp;&nbsp;</span>
+                    <span style="padding-left:48px">گزارش ویژه: چرخش استراتژیک ترکیه و پیامدهای آن برای ایران&nbsp;&nbsp;&nbsp;▪&nbsp;&nbsp;&nbsp;</span>
+                </div>
+            </div>
+            <div style="padding: 0 16px; display:flex; align-items:center; gap:14px; flex-shrink:0; border-right: 1px solid rgba(255,255,255,0.06); font-size: 11.5px; color: rgba(203,213,225,0.5);">
+                <span id="header-date">۱۲ تیر ۱۴۰۵</span>
+                <span style="width:1px; height:12px; background:rgba(255,255,255,0.1);"></span>
+                <span id="header-time">--:--</span>
+            </div>
+        </div>
+
+        <!-- ── Main Shell ─────────────────────────────────────────────────── -->
+        <div style="background: linear-gradient(180deg, #131F35 0%, #0F1929 100%); border-bottom: 1px solid rgba(255,255,255,0.07); box-shadow: 0 4px 32px rgba(0,0,0,0.3);">
+            <div style="max-width:1300px; margin:0 auto; height:76px; display:flex; align-items:center; justify-content:space-between; padding:0 20px; gap:24px;">
+
+                <!-- Logo -->
+                <a href="#" style="flex-shrink:0; display:flex; align-items:center; transition: opacity 200ms;" aria-label="روایت ایران">
+                    <img src="./assets/images/logo-revayat.webp" alt="روایت ایران" style="height:58px; width:auto; object-fit:contain; filter: brightness(0) invert(1); opacity:.92;">
+                </a>
+
+                <!-- Divider -->
+                <div style="width:1px; height:36px; background:rgba(255,255,255,0.1); flex-shrink:0;"></div>
+
+                <!-- Nav -->
+                <nav style="flex:1; display:flex; align-items:center; gap:2px; overflow-x:auto;">
+                    <a href="#" class="nav-link is-active">صفحه اصلی</a>
+                    <a href="#" class="nav-link">روایت روز</a>
+                    <a href="#" class="nav-link">رصد اخبار</a>
+
+                    <!-- Dropdown -->
+                    <div class="has-dropdown">
+                        <a href="#" class="nav-link" style="display:inline-flex; align-items:center; gap:5px;">
+                            پرونده ویژه
+                            <i class="ph ph-caret-down caret" style="font-size:11px; opacity:0.6; transition: transform 220ms ease, color 200ms;"></i>
+                        </a>
+                        <div class="dropdown">
+                            <a href="#"><i class="ph ph-file-text"></i> پرونده انتخابات</a>
+                            <a href="#"><i class="ph ph-globe"></i> توسعه منطقه‌ای</a>
+                            <a href="#"><i class="ph ph-chart-bar"></i> اقتصاد داده‌محور</a>
+                        </div>
+                    </div>
+
+                    <a href="#" class="nav-link">دیدبان رسانه</a>
+                    <a href="#" class="nav-link">اتاق وضعیت</a>
+                    <a href="#" class="nav-link">شبکه تحلیلگران</a>
+                    <a href="#" class="nav-link">پیشنهاد سردبیر</a>
+                </nav>
+
+                <!-- Actions -->
+                <div style="display:flex; align-items:center; gap:6px; flex-shrink:0;">
+                    <button class="icon-btn" aria-label="جستجو">
+                        <i class="ph ph-magnifying-glass"></i>
+                    </button>
+                    <button class="icon-btn" id="theme-toggle" aria-label="تغییر تم">
+                        <i class="ph ph-sun"></i>
+                    </button>
+                    <div style="width:1px; height:22px; background:rgba(255,255,255,0.1); margin:0 4px;"></div>
+                    <a href="#" class="btn-login">
+                        <i class="ph ph-user-circle-plus" style="font-size:16px;"></i>
+                        ورود
+                    </a>
+                    <button class="icon-btn" style="display:none;" id="menu-toggle" aria-label="منو">
+                        <i class="ph ph-list" style="font-size:20px;"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Demo body -->
+    <div class="demo-body">محتوای صفحه اصلی اینجا قرار می‌گیرد</div>
+
+    <script>
+        // Live clock
+        function updateClock() {
+            const now = new Date();
+            const h = String(now.getHours()).padStart(2,'0');
+            const m = String(now.getMinutes()).padStart(2,'0');
+            const el = document.getElementById('header-time');
+            if (el) el.textContent = h + ':' + m;
+        }
+        updateClock();
+        setInterval(updateClock, 30000);
+    </script>
+</body>
+</html>
