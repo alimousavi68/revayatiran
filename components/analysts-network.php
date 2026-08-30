@@ -217,7 +217,7 @@
                     <div class="an-showcase__list">
                         <!-- تحلیل‌گر ۱ -->
                         <a href="#" class="an-analyst-card an-analyst-card--ranked">
-                            <div class="an-analyst-card__rank">۰۱</div>
+                            <div class="an-analyst-card__rank">۱</div>
                             <div class="an-analyst-card__avatar-wrap an-analyst-card__avatar-wrap--authority">
                                 <img src="assets/images/user Avatar/14eeb1b8dc3a4bbd905999e407a01725.png" alt="نرگس احمدی">
                             </div>
@@ -238,7 +238,7 @@
 
                         <!-- تحلیل‌گر ۲ -->
                         <a href="#" class="an-analyst-card an-analyst-card--ranked">
-                            <div class="an-analyst-card__rank">۰۲</div>
+                            <div class="an-analyst-card__rank">۲</div>
                             <div class="an-analyst-card__avatar-wrap an-analyst-card__avatar-wrap--authority">
                                 <img src="assets/images/user Avatar/56d604c11de44ed4b583e8f8b81626b3.png" alt="احسان طاهری">
                             </div>
@@ -259,7 +259,7 @@
 
                         <!-- تحلیل‌گر ۳ -->
                         <a href="#" class="an-analyst-card an-analyst-card--ranked">
-                            <div class="an-analyst-card__rank">۰۳</div>
+                            <div class="an-analyst-card__rank">۳</div>
                             <div class="an-analyst-card__avatar-wrap an-analyst-card__avatar-wrap--authority">
                                 <img src="assets/images/user Avatar/634eb20869b740fdbc5b7c8427a8f674.png" alt="الهام شریفی">
                             </div>
@@ -280,7 +280,7 @@
                         
                         <!-- تحلیل‌گر ۴ -->
                         <a href="#" class="an-analyst-card an-analyst-card--ranked">
-                            <div class="an-analyst-card__rank">۰۴</div>
+                            <div class="an-analyst-card__rank">۴</div>
                             <div class="an-analyst-card__avatar-wrap an-analyst-card__avatar-wrap--authority">
                                 <img src="assets/images/user Avatar/8fc8b30f66b4489aaeb92b686a386cdc.png" alt="رضا کمالی">
                             </div>
@@ -301,7 +301,7 @@
 
                         <!-- تحلیل‌گر ۵ -->
                         <a href="#" class="an-analyst-card an-analyst-card--ranked">
-                            <div class="an-analyst-card__rank">۰۵</div>
+                            <div class="an-analyst-card__rank">۵</div>
                             <div class="an-analyst-card__avatar-wrap an-analyst-card__avatar-wrap--authority">
                                 <img src="assets/images/user Avatar/0f1b74871a3e46e7ae950c05c65e6d2d.png" alt="مریم هوشمندی">
                             </div>

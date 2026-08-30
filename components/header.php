@@ -19,7 +19,7 @@ $user_level = 'guest';
     <!-- Phosphor Icons (Local) -->
     <script src="./assets/js/phosphor-icons.js"></script>
     
-    <link rel="stylesheet" href="./assets/css/style.css?v=1.2">
+    <link rel="stylesheet" href="./assets/css/style.css?v=2.0">
 </head>
 <body>
     <div class="page-progress" aria-hidden="true">
@@ -81,7 +81,7 @@ $user_level = 'guest';
             <!-- Brand Lockup -->
             <div class="brand-lockup">
                 <a href="#" class="brand-mark" aria-label="روایت ایران">
-                    <img src="./assets/images/logo-revayat.webp" alt="لوگوی روایت ایران" class="brand-mark__logo" width="auto" height="54px">
+                    <img src="./assets/images/logo-revayat.webp" alt="لوگوی روایت ایران" class="brand-mark__logo" width="auto" height="64px">
                 </a>
             </div>
 
@@ -122,6 +122,11 @@ $user_level = 'guest';
                 <a href="#situation-room">اتاق وضعیت</a>
                 <span class="nav-divider" aria-hidden="true"></span>
                 <a href="#analysts-network">شبکه تحلیلگران</a>
+                <span class="nav-divider" aria-hidden="true"></span>
+                <a href="#editors-pick" class="nav-featured">
+                    <i class="ph-fill ph-star"></i>
+                    <span>پیشنهاد سردبیر</span>
+                </a>
             </nav>
 
             <!-- Mobile Toggle -->
@@ -176,6 +181,10 @@ $user_level = 'guest';
                     <a href="#analysts-network" class="mobile-nav-item">
                         <span class="mobile-nav-item__icon"><i class="ph ph-users-three"></i></span>
                         <span>شبکه تحلیلگران</span>
+                    </a>
+                    <a href="#editors-pick" class="mobile-nav-item mobile-nav-item--featured">
+                        <span class="mobile-nav-item__icon"><i class="ph-fill ph-star"></i></span>
+                        <span>پیشنهاد سردبیر</span>
                     </a>
                 </nav>
                 <div class="mobile-menu__footer">

@@ -1,12 +1,4 @@
 @font-face {
-    font-family: "Peyda";
-    src: url("../fonts/Peyda 4 (Pro)/02 Web Font/Variable Webfont/PeydaWebVF.woff2") format("woff2");
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
     font-family: "IRANSansX";
     src: url("../fonts/IranSansX(Pro)/Variable/webfont/IRANSansXV.woff2") format("woff2");
     font-weight: 100 900;
@@ -15,7 +7,7 @@
 }
 
 :root {
-    --primary: #cc3033;
+    --primary: #8B1A1A;
     --bg: #f0f5f9;
     --bg-elevated: #ffffff;
     --bg-soft: #f1f5f9;
@@ -29,8 +21,8 @@
     --border: #dce3ec;
     --border-strong: #c8d2df;
     --accent: var(--primary);
-    --accent-rgb: 204, 48, 51;
-    --accent-strong: #a82729;
+    --accent-rgb: 139, 26, 26;
+    --accent-strong: #6B1414;
     --accent-deep: #1e5f74;
     --accent-alt: #66758a;
     --alert: var(--primary);
@@ -44,7 +36,7 @@
     --radius-pill: 999px;
     --container: 1280px;
     --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-    --header-height: 70px;
+    --header-height: 76px;
 }
 
 html[data-theme="dark"] {
@@ -61,8 +53,8 @@ html[data-theme="dark"] {
     --border: rgba(188, 199, 213, 0.16);
     --border-strong: rgba(188, 199, 213, 0.24);
     --accent: var(--primary);
-    --accent-rgb: 204, 48, 51;
-    --accent-strong: #a82729;
+    --accent-rgb: 139, 26, 26;
+    --accent-strong: #6B1414;
     --accent-deep: #edf2f8;
     --accent-alt: #94a3b7;
     --alert: var(--primary);
@@ -83,12 +75,50 @@ html {
 
 body {
     margin: 0;
-    font-family: "Peyda", "IRANSansX", sans-serif;
+    font-family: "IRANSansX", sans-serif;
     background: var(--bg);
     color: var(--text);
     min-height: 100vh;
-    line-height: 1.7;
+    line-height: 1.75;
     transition: background 280ms var(--ease-out), color 280ms var(--ease-out);
+}
+
+/* Headings Typography Standardization */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "IRANSansX", sans-serif;
+    line-height: 1.55;
+    letter-spacing: 0;
+}
+
+/* Safe Persian Justification */
+p,
+.article-body p,
+.tactical-desc,
+.daily-featured__excerpt,
+.info-panel__excerpt,
+.dossier-excerpt,
+.observatory-item__excerpt,
+.analysis-excerpt,
+.hero-feature__content p {
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: right;
+    word-spacing: 0.5px;
+}
+
+@media (max-width: 480px) {
+    p,
+    .article-body p,
+    .tactical-desc,
+    .daily-featured__excerpt,
+    .info-panel__excerpt,
+    .dossier-excerpt,
+    .observatory-item__excerpt,
+    .analysis-excerpt,
+    .hero-feature__content p {
+        text-align: right;
+        text-align-last: auto;
+    }
 }
 
 html[data-theme="dark"] .an-cta--premium {
@@ -219,7 +249,7 @@ a,
     font-weight: 800;
     padding: 16px 0;
     text-align: center;
-    font-family: "Peyda", sans-serif;
+    font-family: "IRANSansX", sans-serif;
     transition: border-color 200ms;
 }
 
@@ -533,7 +563,7 @@ html[data-theme="dark"] .header-shell {
 }
 
 .brand-mark__logo {
-    height: 54px;
+    height: 64px;
     object-fit: contain;
     transition: transform 300ms var(--ease-out);
     flex-shrink: 0;
@@ -544,7 +574,7 @@ html[data-theme="dark"] .header-shell {
 }
 
 .brand-mark__letter {
-    font-family: "Peyda", sans-serif;
+    font-family: "IRANSansX", sans-serif;
     font-size: 24px;
     font-weight: 900;
     color: #fff;
@@ -568,12 +598,12 @@ html[data-theme="dark"] .header-shell {
 }
 
 .brand-mark__text strong {
-    font-family: "Peyda", "IRANSansX", sans-serif;
+    font-family: "IRANSansX", sans-serif;
     font-size: 20px;
     font-weight: 900;
     color: var(--text);
     line-height: 1;
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
 }
 
 .brand-mark__text small {
@@ -588,7 +618,7 @@ html[data-theme="dark"] .header-shell {
     gap: 4px;
     font-size: 14px;
     font-weight: 700;
-    font-family: "Peyda", sans-serif;
+    font-family: "IRANSansX", sans-serif;
     justify-content: flex-start;
     flex: 1;
     margin-inline-start: 12px;
@@ -644,6 +674,38 @@ html[data-theme="dark"] .header-shell {
 .dropdown-trigger.is-active {
     color: #ffffff;
     background: rgba(255, 255, 255, 0.18);
+}
+
+.nav-featured {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #fff !important;
+    font-weight: 800 !important;
+}
+
+.nav-featured i {
+    color: #fbbf24;
+    font-size: 15px;
+}
+
+.nav-featured:hover {
+    background: rgba(255, 255, 255, 0.25) !important;
+    border-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 14px rgba(251, 191, 36, 0.25);
+}
+
+.mobile-nav-item--featured {
+    background: rgba(var(--accent-rgb), 0.08) !important;
+    border: 1px solid rgba(var(--accent-rgb), 0.2) !important;
+    color: var(--accent) !important;
+    font-weight: 700;
+}
+
+.mobile-nav-item--featured .mobile-nav-item__icon i {
+    color: #fbbf24;
 }
 
 /* ─── NAV DROPDOWN ────────────────────────────────────── */
@@ -1053,10 +1115,10 @@ html[data-theme="dark"] .section-kicker {
 .featured-narrative h3,
 .dossier-band h3,
 .data-stage strong {
-    font-family: "Peyda", "IRANSansX", sans-serif;
+    font-family: "IRANSansX", sans-serif;
     font-weight: 900;
-    line-height: 1.1;
-    letter-spacing: -0.03em;
+    line-height: 1.55;
+    letter-spacing: 0;
     margin: 0;
 }
 
@@ -1863,17 +1925,17 @@ html[data-theme="dark"] .media-card-podcast__title {
     min-height: 28px;
     padding: 0 10px;
     border-radius: var(--radius-pill);
-    background: rgba(197, 22, 46, 0.07);
+    background: rgba(var(--accent-rgb), 0.07);
     color: var(--accent-deep);
-    border: 1px solid rgba(197, 22, 46, 0.12);
+    border: 1px solid rgba(var(--accent-rgb), 0.12);
     font-size: 11px;
     font-weight: 800;
 }
 
 .chip--alert {
-    background: rgba(197, 22, 46, 0.12);
+    background: rgba(var(--accent-rgb), 0.12);
     color: var(--alert);
-    border-color: rgba(197, 22, 46, 0.22);
+    border-color: rgba(var(--accent-rgb), 0.22);
 }
 
 .chip--soft {
@@ -1889,12 +1951,12 @@ html[data-theme="dark"] .media-card-podcast__title {
 }
 
 .section-shell {
-    padding: 36px 0;
+    padding: 28px 0;
 }
 
 @media (max-width: 768px) {
     .section-shell {
-        padding: 28px 0;
+        padding: 20px 0;
     }
 }
 
@@ -1930,12 +1992,12 @@ html[data-theme="dark"] .section-shell--warm {
 }
 
 #situation-room.section-shell {
-    padding: 50px 0;
+    padding: 36px 0;
 }
 
 @media (max-width: 768px) {
     #situation-room.section-shell {
-        padding: 36px 0;
+        padding: 28px 0;
     }
 }
 
@@ -1946,7 +2008,7 @@ html[data-theme="dark"] .section-shell--warm {
 .section-head {
     justify-content: space-between;
     gap: 16px;
-    margin-bottom: 22px;
+    margin-bottom: 18px;
 }
 
 .section-head h2 {
@@ -2018,7 +2080,7 @@ html[data-theme="dark"] .section-shell--warm {
     font-weight: 800;
     margin-bottom: 8px;
     color: var(--text);
-    font-family: "Peyda", sans-serif;
+    font-family: "IRANSansX", sans-serif;
 }
 
 .section-head--center .section-summary {
@@ -2055,7 +2117,7 @@ html[data-theme="dark"] .section-shell--warm {
     color: var(--white);
     border-color: var(--accent);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(197, 22, 46, 0.25);
+    box-shadow: 0 4px 12px rgba(var(--accent-rgb), 0.25);
 }
 
 .archive-btn-modern:hover i {
@@ -2181,7 +2243,7 @@ html[data-theme="dark"] .section-shell--warm {
 .author-name {
     font-weight: 700;
     font-size: 17px;
-    font-family: "Peyda", sans-serif;
+    font-family: "IRANSansX", sans-serif;
 }
 
 .author-badge {
@@ -2209,9 +2271,9 @@ html[data-theme="dark"] .section-shell--warm {
     font-weight: 800;
     /* Reduced from 900 for visual harmony */
     margin-bottom: 14px;
-    line-height: 1.4;
+    line-height: 1.5;
     color: var(--white);
-    font-family: "Peyda", sans-serif;
+    font-family: "IRANSansX", sans-serif;
 }
 
 .analysis-card__body .analysis-excerpt {
@@ -2303,7 +2365,7 @@ html[data-theme="dark"] .section-shell--warm {
     font-weight: 900;
     margin-bottom: 24px;
     color: var(--text);
-    font-family: "Peyda", sans-serif;
+    font-family: "IRANSansX", sans-serif;
 }
 
 .mini-list {
@@ -2357,9 +2419,9 @@ html[data-theme="dark"] .section-shell--warm {
     font-size: 14px;
     font-weight: 800;
     color: var(--text);
-    line-height: 1.5;
+    line-height: 1.55;
     margin: 0;
-    font-family: "Peyda", sans-serif;
+    font-family: "IRANSansX", sans-serif;
 }
 
 .mini-footer {
@@ -2445,7 +2507,7 @@ html[data-theme="dark"] .section-shell--warm {
     color: var(--text);
     font-size: 15px;
     font-weight: 800;
-    font-family: "Peyda", sans-serif;
+    font-family: "IRANSansX", sans-serif;
 }
 
 .info-text {
@@ -2620,9 +2682,9 @@ html[data-theme="dark"] .section-shell--warm {
 
 /* Scenario 3: Compact Registration Widget with safe background contrast */
 .register-cta-widget {
-    background: rgba(204, 48, 51, 0.03);
+    background: rgba(var(--accent-rgb), 0.03);
     /* Light red brand tint */
-    border: 1px solid rgba(204, 48, 51, 0.12);
+    border: 1px solid rgba(var(--accent-rgb), 0.12);
     border-radius: 16px;
     padding: 16px;
     display: flex;
@@ -2635,9 +2697,9 @@ html[data-theme="dark"] .section-shell--warm {
 }
 
 html[data-theme="dark"] .register-cta-widget {
-    background: rgba(204, 48, 51, 0.08);
+    background: rgba(var(--accent-rgb), 0.08);
     /* Dark mode red brand tint */
-    border: 1px solid rgba(204, 48, 51, 0.22);
+    border: 1px solid rgba(var(--accent-rgb), 0.22);
 }
 
 .cta-widget-glow {
@@ -2647,7 +2709,7 @@ html[data-theme="dark"] .register-cta-widget {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background: rgba(204, 48, 51, 0.05);
+    background: rgba(var(--accent-rgb), 0.05);
     filter: blur(30px);
     pointer-events: none;
     z-index: 0;
@@ -2666,7 +2728,7 @@ html[data-theme="dark"] .register-cta-widget {
     font-weight: 800;
     color: var(--text);
     margin: 0;
-    font-family: "Peyda", sans-serif;
+    font-family: "IRANSansX", sans-serif;
     display: flex;
     align-items: center;
 }
@@ -2697,12 +2759,12 @@ html[data-theme="dark"] .cta-title {
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: none;
-    box-shadow: 0 4px 12px rgba(204, 48, 51, 0.15);
+    box-shadow: 0 4px 12px rgba(var(--accent-rgb), 0.15);
 }
 
 .btn-register-cta:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(204, 48, 51, 0.25);
+    box-shadow: 0 6px 16px rgba(var(--accent-rgb), 0.25);
 }
 
 .btn-register-cta i {
@@ -2930,9 +2992,9 @@ html[data-theme="dark"] .cta-title {
 
 .news-card h3 {
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.55;
     margin: 0;
-    font-family: "Peyda", sans-serif;
+    font-family: "IRANSansX", sans-serif;
     font-weight: 800;
 }
 
@@ -2972,7 +3034,7 @@ html[data-theme="dark"] .cta-title {
     font-size: 16px;
     font-weight: 800;
     color: var(--text);
-    font-family: "Peyda", sans-serif;
+    font-family: "IRANSansX", sans-serif;
 }
 
 .trending-list {
@@ -3005,7 +3067,7 @@ html[data-theme="dark"] .cta-title {
     color: var(--accent);
     background: transparent;
     border: none;
-    font-family: "Peyda", "IRANSansX", sans-serif;
+    font-family: "IRANSansX", sans-serif;
     margin-top: -2px;
 }
 
@@ -3039,119 +3101,6 @@ html[data-theme="dark"] .cta-title {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-}
-
-/* CTA Social Box - Premium Dark Theme */
-.cta-social-box {
-    margin-top: 24px;
-    padding: 20px;
-    background: #111a2e;
-    border-radius: var(--radius-lg);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-}
-
-.cta-social-box h4 {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin: 0 0 16px;
-    font-size: 13.5px;
-    font-weight: 800;
-    color: #edf2f8;
-    position: relative;
-    padding-bottom: 8px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.cta-social-box h4 i {
-    font-size: 16px;
-    color: #edf2f8;
-}
-
-.social-links {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-}
-
-.social-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 10px;
-    border-radius: var(--radius-md);
-    font-size: 12px;
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.9) !important;
-    transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.social-link:hover {
-    transform: translateY(-2px);
-    color: #fff !important;
-    border-color: rgba(255, 255, 255, 0.15);
-}
-
-.social-link--telegram {
-    background: rgba(34, 158, 217, 0.12);
-    color: #229ED9 !important;
-    border: 1px solid rgba(34, 158, 217, 0.3);
-}
-
-.social-link--telegram:hover {
-    background: #229ED9;
-    color: #ffffff !important;
-    border-color: #229ED9;
-    box-shadow: 0 4px 14px rgba(34, 158, 217, 0.35);
-}
-
-.social-link--bale {
-    background: rgba(31, 175, 115, 0.12);
-    color: #1FAF73 !important;
-    border: 1px solid rgba(31, 175, 115, 0.3);
-}
-
-.social-link--bale:hover {
-    background: #1FAF73;
-    color: #ffffff !important;
-    border-color: #1FAF73;
-    box-shadow: 0 4px 14px rgba(31, 175, 115, 0.35);
-}
-
-.social-link--eitaa {
-    background: rgba(229, 91, 19, 0.12);
-    color: #E55B13 !important;
-    border: 1px solid rgba(229, 91, 19, 0.3);
-}
-
-.social-link--eitaa:hover {
-    background: #E55B13;
-    color: #ffffff !important;
-    border-color: #E55B13;
-    box-shadow: 0 4px 14px rgba(229, 91, 19, 0.35);
-}
-
-.social-link--twitter {
-    background: rgba(29, 161, 242, 0.12);
-    color: #1DA1F2 !important;
-    border: 1px solid rgba(29, 161, 242, 0.3);
-}
-
-.social-link--twitter:hover {
-    background: #1DA1F2;
-    color: #ffffff !important;
-    border-color: #1DA1F2;
-    box-shadow: 0 4px 14px rgba(29, 161, 242, 0.35);
-}
-
-.social-link svg {
-    width: 16px;
-    height: 16px;
-    fill: currentColor;
-    flex-shrink: 0;
 }
 
 .tabs {
@@ -3244,7 +3193,7 @@ html[data-theme="dark"] .tab-button.is-active {
     right: 8px;
     bottom: 8px;
     width: 2px;
-    background: linear-gradient(180deg, rgba(197, 22, 46, 0.18), rgba(197, 22, 46, 0.48), rgba(197, 22, 46, 0.18));
+    background: linear-gradient(180deg, rgba(var(--accent-rgb), 0.18), rgba(var(--accent-rgb), 0.48), rgba(var(--accent-rgb), 0.18));
 }
 
 .timeline-item {
@@ -3269,8 +3218,8 @@ html[data-theme="dark"] .tab-button.is-active {
 }
 
 .timeline-item.is-active {
-    background: rgba(197, 22, 46, 0.06);
-    border-color: rgba(197, 22, 46, 0.3);
+    background: rgba(var(--accent-rgb), 0.06);
+    border-color: rgba(var(--accent-rgb), 0.3);
 }
 
 .timeline-item.is-active::before {
@@ -3283,8 +3232,8 @@ html[data-theme="dark"] .tab-button.is-active {
     font-size: 12px;
     font-weight: 800;
     color: var(--accent);
-    background: rgba(197, 22, 46, 0.08);
-    border: 1px solid rgba(197, 22, 46, 0.14);
+    background: rgba(var(--accent-rgb), 0.08);
+    border: 1px solid rgba(var(--accent-rgb), 0.14);
     border-radius: var(--radius-pill);
     padding: 4px 10px;
 }
@@ -3419,10 +3368,10 @@ html[data-theme="dark"] .tab-button.is-active {
 .dossier-content h3 {
     font-size: 30px;
     font-weight: 900;
-    line-height: 1.35;
+    line-height: 1.5;
     color: var(--text);
     margin: 0;
-    font-family: "Peyda", "IRANSansX", sans-serif;
+    font-family: "IRANSansX", sans-serif;
 }
 
 .dossier-excerpt {
@@ -3716,7 +3665,7 @@ html[data-theme="dark"] .tab-button.is-active {
 .hot-trends-card__title-group strong {
     display: block;
     font-size: clamp(1.2rem, 0.6vw + 1rem, 1.5rem);
-    font-family: "Peyda", "IRANSansX", sans-serif;
+    font-family: "IRANSansX", sans-serif;
     color: var(--text);
 }
 
@@ -3850,9 +3799,9 @@ html[data-theme="dark"] .tab-button.is-active {
     margin: 0;
     font-size: 16.5px;
     font-weight: 800;
-    line-height: 1.5;
+    line-height: 1.55;
     color: var(--text);
-    font-family: "Peyda", "IRANSansX", sans-serif;
+    font-family: "IRANSansX", sans-serif;
     transition: color 0.3s ease;
 }
 
@@ -4000,7 +3949,7 @@ html[data-theme="dark"] .tab-button.is-active {
 /* هدر پنل فرماندهی */
 .situation-header-panel {
     background: linear-gradient(135deg, rgba(13, 22, 38, 0.9), rgba(8, 17, 29, 0.95));
-    border: 1px solid rgba(204, 48, 51, 0.15);
+    border: 1px solid rgba(var(--accent-rgb), 0.15);
     border-radius: var(--radius-lg);
     padding: 16px 24px;
     margin-bottom: 24px;
@@ -4032,8 +3981,8 @@ html[data-theme="dark"] .tab-button.is-active {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    background: rgba(204, 48, 51, 0.06);
-    border: 1px solid rgba(204, 48, 51, 0.15);
+    background: rgba(var(--accent-rgb), 0.06);
+    border: 1px solid rgba(var(--accent-rgb), 0.15);
     padding: 4px 10px;
     border-radius: var(--radius-pill);
     margin-bottom: 8px;
@@ -4119,10 +4068,10 @@ html[data-theme="dark"] .tab-button.is-active {
 }
 
 .clearance-badge.lvl-high {
-    background: rgba(204, 48, 51, 0.08);
+    background: rgba(var(--accent-rgb), 0.08);
     color: var(--accent);
-    border: 1px solid rgba(204, 48, 51, 0.2);
-    box-shadow: 0 0 8px rgba(204, 48, 51, 0.08);
+    border: 1px solid rgba(var(--accent-rgb), 0.2);
+    box-shadow: 0 0 8px rgba(var(--accent-rgb), 0.08);
 }
 
 .clearance-bars {
@@ -4177,7 +4126,7 @@ html[data-theme="dark"] .tab-button.is-active {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(rgba(204, 48, 51, 0.03) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(var(--accent-rgb), 0.03) 1px, transparent 1px);
     background-size: 20px 20px;
     pointer-events: none;
 }
@@ -4343,11 +4292,11 @@ html[data-theme="dark"] .tab-button.is-active {
 }
 
 .button--glow {
-    box-shadow: 0 4px 15px rgba(204, 48, 51, 0.25);
+    box-shadow: 0 4px 15px rgba(var(--accent-rgb), 0.25);
 }
 
 .button--glow:hover {
-    box-shadow: 0 4px 20px rgba(204, 48, 51, 0.35);
+    box-shadow: 0 4px 20px rgba(var(--accent-rgb), 0.35);
 }
 
 /* کارت‌های تاکتیکال آیتم اتاق وضعیت فشرده */
@@ -4403,9 +4352,9 @@ html[data-theme="dark"] .tab-button.is-active {
 }
 
 .tag-level-1 {
-    background: rgba(204, 48, 51, 0.1);
+    background: rgba(var(--accent-rgb), 0.1);
     color: var(--accent);
-    border: 1px solid rgba(204, 48, 51, 0.15);
+    border: 1px solid rgba(var(--accent-rgb), 0.15);
 }
 
 .terminal-dots span {
@@ -4512,9 +4461,9 @@ html[data-theme="dark"] .tab-button.is-active {
 }
 
 .file-icon.pdf-type {
-    background: rgba(204, 48, 51, 0.06);
+    background: rgba(var(--accent-rgb), 0.06);
     color: var(--accent);
-    border: 1px solid rgba(204, 48, 51, 0.12);
+    border: 1px solid rgba(var(--accent-rgb), 0.12);
 }
 
 .file-icon.warning-type {
@@ -4557,7 +4506,7 @@ html[data-theme="dark"] .tab-button.is-active {
     background: var(--accent);
     color: var(--white);
     transform: translateY(-1.5px);
-    box-shadow: 0 3px 8px rgba(204, 48, 51, 0.25);
+    box-shadow: 0 3px 8px rgba(var(--accent-rgb), 0.25);
 }
 
 .view-only-badge {
@@ -5014,12 +4963,12 @@ html[data-theme="dark"] .tab-button.is-active {
 }
 
 .footer-brand__name {
-    font-family: "Peyda", "IRANSansX", sans-serif;
+    font-family: "IRANSansX", sans-serif;
     font-size: 18px;
     font-weight: 900;
     color: #fff;
-    letter-spacing: -0.02em;
-    line-height: 1;
+    letter-spacing: 0;
+    line-height: 1.4;
     margin: 0;
 }
 
@@ -5072,7 +5021,7 @@ html[data-theme="dark"] .tab-button.is-active {
 }
 
 .footer-col__title {
-    font-family: "Peyda", sans-serif;
+    font-family: "IRANSansX", sans-serif;
     font-size: 14px;
     font-weight: 800;
     color: #ffffff;
@@ -5081,7 +5030,7 @@ html[data-theme="dark"] .tab-button.is-active {
     margin: 0 0 20px;
     padding-bottom: 12px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    line-height: 1;
+    line-height: 1.4;
 }
 
 .footer-col__nav {
@@ -5169,11 +5118,11 @@ html[data-theme="dark"] .tab-button.is-active {
 }
 
 .footer-credit__name {
-    font-family: "Peyda", sans-serif;
+    font-family: "IRANSansX", sans-serif;
     font-size: 12px;
     font-weight: 800;
     color: #ffffff;
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
     white-space: nowrap;
     position: relative;
     padding-bottom: 1px;
@@ -5408,7 +5357,7 @@ html[data-theme="dark"] .tab-button.is-active {
     }
 
     .mobile-menu__title {
-        font-family: "Peyda", sans-serif;
+        font-family: "IRANSansX", sans-serif;
         font-size: 18px;
         font-weight: 800;
         color: var(--text);
@@ -5842,11 +5791,11 @@ html[data-theme="dark"] .header-actions .icon-button:hover i {
 }
 
 .section-head--etude-a h2 {
-    font-family: "Peyda", "IRANSansX", sans-serif;
+    font-family: "IRANSansX", sans-serif;
     font-size: clamp(1.65rem, 1vw + 1.1rem, 2rem);
     font-weight: 900;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
+    letter-spacing: 0;
+    line-height: 1.55;
     margin: 0;
     color: var(--text);
 }
@@ -5971,11 +5920,11 @@ html[data-theme="dark"] #daily-narrative .etude-b__icon-badge::after {
 }
 
 .section-head--etude-b h2 {
-    font-family: "Peyda", "IRANSansX", sans-serif;
+    font-family: "IRANSansX", sans-serif;
     font-size: clamp(1.25rem, 0.8vw + 0.95rem, 1.5rem);
     font-weight: 700;
-    letter-spacing: -0.02em;
-    line-height: 1;
+    letter-spacing: 0;
+    line-height: 1.5;
     margin: 0;
     color: var(--text);
 }
@@ -6101,8 +6050,8 @@ html[data-theme="dark"] .section-head--etude-b .etude-b__actions .section-link {
     gap: 6px;
     padding: 8px 16px;
     border-radius: 10px;
-    background: rgba(204, 48, 51, 0.1);
-    border: 1px solid rgba(204, 48, 51, 0.25);
+    background: rgba(139, 26, 26, 0.1);
+    border: 1px solid rgba(139, 26, 26, 0.25);
     color: var(--white);
     font-size: 12px;
     font-weight: 800;
@@ -6146,7 +6095,7 @@ html[data-theme="dark"] .section-head--etude-b .etude-b__actions .section-link {
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    font-family: "Peyda", "IRANSansX", sans-serif;
+    font-family: "IRANSansX", sans-serif;
     font-size: clamp(6rem, 12vw, 12rem);
     font-weight: 900;
     color: var(--text);
@@ -6154,7 +6103,7 @@ html[data-theme="dark"] .section-head--etude-b .etude-b__actions .section-link {
     white-space: nowrap;
     pointer-events: none;
     user-select: none;
-    letter-spacing: -0.06em;
+    letter-spacing: 0;
     line-height: 1;
 }
 
@@ -6203,11 +6152,11 @@ html[data-theme="dark"] .etude-c__watermark {
 }
 
 .section-head--etude-c h2 {
-    font-family: "Peyda", "IRANSansX", sans-serif;
+    font-family: "IRANSansX", sans-serif;
     font-size: clamp(2rem, 2.5vw + 0.8rem, 2.75rem);
     font-weight: 900;
-    letter-spacing: -0.03em;
-    line-height: 1.1;
+    letter-spacing: 0;
+    line-height: 1.55;
     margin: 0;
     color: var(--text);
 }
@@ -6600,7 +6549,7 @@ html[data-theme="dark"] .etude-c__archive-link {
     transform: translate(-50%, -50%) scale(1.1);
     background: var(--accent);
     border-color: var(--accent);
-    box-shadow: 0 6px 20px rgba(204, 48, 51, 0.4);
+    box-shadow: 0 6px 20px rgba(var(--accent-rgb), 0.4);
 }
 
 /* بخش اطلاعات پایینی استوری */
@@ -6631,7 +6580,7 @@ html[data-theme="dark"] .etude-c__archive-link {
 }
 
 .story-chip--danger {
-    background: rgba(204, 48, 51, 0.3);
+    background: rgba(var(--accent-rgb), 0.3);
 }
 
 .story-title {
@@ -6787,7 +6736,7 @@ html[data-theme="dark"] .etude-c__archive-link {
 }
 
 .story-modal__close-btn:hover {
-    background: rgba(204, 48, 51, 0.8);
+    background: rgba(var(--accent-rgb), 0.8);
 }
 
 /* Body & Player */
@@ -6827,7 +6776,7 @@ html[data-theme="dark"] .etude-c__archive-link {
     align-items: center;
     justify-content: center;
     font-size: 28px;
-    box-shadow: 0 0 25px rgba(204, 48, 51, 0.6);
+    box-shadow: 0 0 25px rgba(var(--accent-rgb), 0.6);
     transition: transform 0.2s ease;
 }
 
@@ -7117,7 +7066,7 @@ html[data-theme="dark"] .etude-c__archive-link {
 .interactive-thumb-item.is-active {
     border-color: var(--accent);
     transform: scale(1.08);
-    box-shadow: 0 12px 24px rgba(204, 48, 51, 0.2);
+    box-shadow: 0 12px 24px rgba(var(--accent-rgb), 0.2);
     z-index: 2;
 }
 
@@ -7163,7 +7112,7 @@ html[data-theme="dark"] .etude-c__archive-link {
     margin-bottom: 16px;
     display: inline-block;
     padding: 4px 12px;
-    background: rgba(204, 48, 51, 0.05);
+    background: rgba(var(--accent-rgb), 0.05);
     border-radius: 20px;
 }
 
