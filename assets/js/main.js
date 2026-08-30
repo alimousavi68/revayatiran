@@ -591,4 +591,76 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+// ─── NEWS SWIPER INITIALIZATION ────────────────────────────────────────────
+// خارج از DOMContentLoaded چون Swiper باید پس از لود کامل DOM و کتابخانه اجرا شود
+
+(function initNewsSwipers() {
+    if (typeof Swiper === "undefined") return;
+
+    const swiperInstances = new Map();
+
+    const createSwiper = (container) => {
+        if (swiperInstances.has(container)) {
+            swiperInstances.get(container).destroy(true, true);
+        }
+
+        const instance = new Swiper(container, {
+            slidesPerView: 1.15,
+            spaceBetween: 14,
+            centeredSlides: false,
+            grabCursor: true,
+            // RTL — جهت‌دهی صحیح برای فارسی
+            dir: "rtl",
+            navigation: {
+                nextEl: container.querySelector(".news-swiper-next"),
+                prevEl: container.querySelector(".news-swiper-prev"),
+            },
+            pagination: {
+                el: container.querySelector(".news-swiper-pagination"),
+                clickable: true,
+                dynamicBullets: true,
+            },
+            breakpoints: {
+                520:  { slidesPerView: 2, spaceBetween: 14 },
+                768:  { slidesPerView: 2.5, spaceBetween: 16 },
+                1024: { slidesPerView: 3, spaceBetween: 18 },
+                1280: { slidesPerView: 3.5, spaceBetween: 20 },
+            },
+        });
+
+        swiperInstances.set(container, instance);
+        return instance;
+    };
+
+    // تابع مقداردهی اولیه برای پنل فعال
+    const initActivePanel = () => {
+        const activePanel = document.querySelector(".news-panel.is-active");
+        if (!activePanel) return;
+
+        const swiperEl = activePanel.querySelector(".news-swiper");
+        if (swiperEl) createSwiper(swiperEl);
+    };
+
+    // راه‌اندازی اولیه
+    document.addEventListener("DOMContentLoaded", initActivePanel);
+    // اگر DOM قبلاً لود شده
+    if (document.readyState !== "loading") initActivePanel();
+
+    // هنگام تغییر تب، Swiper پنل جدید را راه‌اندازی کن
+    document.addEventListener("click", (e) => {
+        const tab = e.target.closest("[data-news-tab]");
+        if (!tab) return;
+
+        setTimeout(() => {
+            const targetPanel = document.getElementById("news-panel-" + tab.dataset.newsTab)
+                || document.querySelector(`[data-news-panel="${tab.dataset.newsTab}"]`);
+            if (!targetPanel) return;
+
+            const swiperEl = targetPanel.querySelector(".news-swiper");
+            if (swiperEl) createSwiper(swiperEl);
+        }, 50); // تاخیر کوچک برای اطمینان از نمایش پنل
+    });
+})();
+
+
 

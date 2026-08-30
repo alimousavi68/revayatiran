@@ -18,8 +18,11 @@ $user_level = 'guest';
     
     <!-- Phosphor Icons (Local) -->
     <script src="./assets/js/phosphor-icons.js"></script>
-    
-    <link rel="stylesheet" href="./assets/css/style.css?v=2.0">
+
+    <!-- Swiper.js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="./assets/css/style.css?v=4.0">
 </head>
 <body>
     <div class="page-progress" aria-hidden="true">
