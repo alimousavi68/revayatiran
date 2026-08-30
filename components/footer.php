@@ -99,6 +99,99 @@
 
     </footer>
 
+    <!-- Floating Social Channels FAB -->
+    <aside class="social-fab" id="social-fab" aria-label="کانال‌های ارتباطی و شبکه‌های اجتماعی">
+        <div class="social-fab__panel" id="social-fab-panel" role="dialog" aria-hidden="true" aria-label="شبکه‌های اجتماعی روایت ایران">
+            <div class="social-fab__header">
+                <div class="social-fab__title-group">
+                    <span class="social-fab__title">روایت ایران در شبکه‌ها</span>
+                    <span class="social-fab__subtitle">عضویت در کانال‌های رسمی</span>
+                </div>
+                <button type="button" class="social-fab__close" id="social-fab-close" aria-label="بستن پنجره">
+                    <i class="ph ph-x"></i>
+                </button>
+            </div>
+            <ul class="social-fab__list">
+                <li>
+                    <a href="https://t.me/revayatiran" target="_blank" rel="noopener noreferrer" class="social-fab__link social-fab__link--telegram">
+                        <span class="social-fab__icon-box"><i class="ph ph-telegram-logo"></i></span>
+                        <div class="social-fab__info">
+                            <span class="social-fab__name">کانال تلگرام</span>
+                            <span class="social-fab__handle">@revayatiran</span>
+                        </div>
+                        <i class="ph ph-arrow-left social-fab__arrow"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://eitaa.com/revayatiran" target="_blank" rel="noopener noreferrer" class="social-fab__link social-fab__link--eitaa">
+                        <span class="social-fab__icon-box"><i class="ph ph-chats-circle"></i></span>
+                        <div class="social-fab__info">
+                            <span class="social-fab__name">کانال ایتا</span>
+                            <span class="social-fab__handle">eitaa.com/revayatiran</span>
+                        </div>
+                        <i class="ph ph-arrow-left social-fab__arrow"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://ble.ir/revayatiran" target="_blank" rel="noopener noreferrer" class="social-fab__link social-fab__link--bale">
+                        <span class="social-fab__icon-box"><i class="ph ph-chat-centered-dots"></i></span>
+                        <div class="social-fab__info">
+                            <span class="social-fab__name">کانال بله</span>
+                            <span class="social-fab__handle">ble.ir/revayatiran</span>
+                        </div>
+                        <i class="ph ph-arrow-left social-fab__arrow"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com/revayatiran" target="_blank" rel="noopener noreferrer" class="social-fab__link social-fab__link--instagram">
+                        <span class="social-fab__icon-box"><i class="ph ph-instagram-logo"></i></span>
+                        <div class="social-fab__info">
+                            <span class="social-fab__name">اینستاگرام</span>
+                            <span class="social-fab__handle">@revayatiran</span>
+                        </div>
+                        <i class="ph ph-arrow-left social-fab__arrow"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://x.com/revayatiran" target="_blank" rel="noopener noreferrer" class="social-fab__link social-fab__link--x">
+                        <span class="social-fab__icon-box"><i class="ph ph-x-logo"></i></span>
+                        <div class="social-fab__info">
+                            <span class="social-fab__name">ایکس (توییتر)</span>
+                            <span class="social-fab__handle">@revayatiran</span>
+                        </div>
+                        <i class="ph ph-arrow-left social-fab__arrow"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://youtube.com/@revayatiran" target="_blank" rel="noopener noreferrer" class="social-fab__link social-fab__link--youtube">
+                        <span class="social-fab__icon-box"><i class="ph ph-youtube-logo"></i></span>
+                        <div class="social-fab__info">
+                            <span class="social-fab__name">یوتیوب</span>
+                            <span class="social-fab__handle">youtube.com/@revayatiran</span>
+                        </div>
+                        <i class="ph ph-arrow-left social-fab__arrow"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="./rss.xml" class="social-fab__link social-fab__link--rss">
+                        <span class="social-fab__icon-box"><i class="ph ph-rss"></i></span>
+                        <div class="social-fab__info">
+                            <span class="social-fab__name">خبرخوان (RSS)</span>
+                            <span class="social-fab__handle">روایت‌های زنده</span>
+                        </div>
+                        <i class="ph ph-arrow-left social-fab__arrow"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <button type="button" class="social-fab__trigger" id="social-fab-toggle" aria-expanded="false" aria-controls="social-fab-panel" aria-label="مشاهده شبکه‌های اجتماعی" title="شبکه‌های اجتماعی روایت ایران">
+            <span class="social-fab__badge-pulse" aria-hidden="true"></span>
+            <i class="ph ph-share-network social-fab__trigger-icon-open"></i>
+            <i class="ph ph-x social-fab__trigger-icon-close"></i>
+        </button>
+    </aside>
+
     <!-- Back to Top Button -->
     <button id="back-to-top" class="back-to-top" aria-label="بازگشت به بالا" title="بازگشت به بالا">
         <svg class="back-to-top__progress" width="48" height="48" viewBox="0 0 48 48">

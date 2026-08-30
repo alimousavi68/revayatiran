@@ -662,5 +662,64 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 })();
 
+// ─── FLOATING SOCIAL FAB CONTROLLER ─────────────────────────────────────────
+(function initSocialFab() {
+    const fab = document.getElementById("social-fab");
+    if (!fab) return;
 
+    const toggleBtn = document.getElementById("social-fab-toggle");
+    const panel = document.getElementById("social-fab-panel");
+    const closeBtn = document.getElementById("social-fab-close");
 
+    if (!toggleBtn || !panel) return;
+
+    const openFab = () => {
+        fab.classList.add("is-open");
+        toggleBtn.setAttribute("aria-expanded", "true");
+        panel.setAttribute("aria-hidden", "false");
+        try {
+            localStorage.setItem("revayat_social_seen", "true");
+        } catch (e) {}
+    };
+
+    const closeFab = () => {
+        fab.classList.remove("is-open");
+        toggleBtn.setAttribute("aria-expanded", "false");
+        panel.setAttribute("aria-hidden", "true");
+    };
+
+    const toggleFab = () => {
+        if (fab.classList.contains("is-open")) {
+            closeFab();
+        } else {
+            openFab();
+        }
+    };
+
+    toggleBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        toggleFab();
+    });
+
+    if (closeBtn) {
+        closeBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            closeFab();
+        });
+    }
+
+    // Close on click outside
+    document.addEventListener("click", (e) => {
+        if (fab.classList.contains("is-open") && !fab.contains(e.target)) {
+            closeFab();
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && fab.classList.contains("is-open")) {
+            closeFab();
+            toggleBtn.focus();
+        }
+    });
+})();
