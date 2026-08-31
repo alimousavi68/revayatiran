@@ -37,6 +37,176 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // ═══════════════════════════════════════════════════════════
+    // PALETTES & HEADER BACKDROP SYSTEM (Independent Controls)
+    // ═══════════════════════════════════════════════════════════
+    const storedPalette = localStorage.getItem("revayat-palette") || "bbc-red";
+    const storedBackdrop = localStorage.getItem("revayat-header-backdrop") || "gainsboro";
+
+    const applyPalette = (paletteName) => {
+        root.setAttribute("data-palette", paletteName);
+        localStorage.setItem("revayat-palette", paletteName);
+        
+        document.querySelectorAll("[data-palette-btn]").forEach(btn => {
+            const isActive = btn.getAttribute("data-palette-btn") === paletteName;
+            btn.classList.toggle("is-active", isActive);
+            btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+        });
+    };
+
+    const applyHeaderBackdrop = (backdropName) => {
+        root.setAttribute("data-header-backdrop", backdropName);
+        localStorage.setItem("revayat-header-backdrop", backdropName);
+
+        document.querySelectorAll("[data-backdrop-btn]").forEach(btn => {
+            const isActive = btn.getAttribute("data-backdrop-btn") === backdropName;
+            btn.classList.toggle("is-active", isActive);
+            btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+        });
+    };
+
+    window.setSitePalette = applyPalette;
+    window.getSitePalette = () => root.getAttribute("data-palette") || "bbc-red";
+
+    window.setHeaderBackdrop = applyHeaderBackdrop;
+    window.getHeaderBackdrop = () => root.getAttribute("data-header-backdrop") || "gainsboro";
+
+    applyPalette(storedPalette);
+    applyHeaderBackdrop(storedBackdrop);
+
+    // Floating Customization Switcher FAB (Positioned above Social FAB)
+    const initPaletteSwitcher = () => {
+        if (document.getElementById("palette-fab")) return;
+
+        const palettes = [
+            { id: "bbc-red", name: "قرمز بی‌بی‌سی", color: "#B80000" },
+            { id: "navy", name: "لاجوردی", color: "#1e5f74" },
+            { id: "petro", name: "آبی نفتی", color: "#0c4a6e" },
+            { id: "rust", name: "آجری گرم", color: "#c2410c" },
+            { id: "slate", name: "سربی", color: "#334155" },
+        ];
+
+        const backdrops = [
+            { id: "gainsboro", name: "گینزبورو", color: "#dcdcdc" },
+            { id: "transparent", name: "هم‌رنگ بوم", color: "#ffffff", border: true },
+            { id: "slate", name: "نقره‌ای", color: "#e2e8f0" },
+            { id: "sand", name: "ماسه گرم", color: "#eae5dc" },
+            { id: "smoke", name: "دودی", color: "#cfd6df" },
+            { id: "adaptive", name: "هماهنگ پالت", gradient: "linear-gradient(135deg, #dcdcdc 35%, var(--primary) 100%)" },
+        ];
+
+        const container = document.createElement("aside");
+        container.id = "palette-fab";
+        container.className = "palette-fab";
+        container.setAttribute("dir", "rtl");
+        container.innerHTML = `
+            <button type="button" class="palette-fab__trigger" id="palette-fab-trigger" aria-label="تنظیمات پالت و پس‌زمینه" title="شخصی‌سازی رنگ و پس‌زمینه">
+                <i class="ph ph-paint-brush-broad"></i>
+            </button>
+            <div class="palette-fab__panel" id="palette-fab-panel" role="dialog" aria-label="تنظیمات رنگ و پس‌زمینه">
+                <div class="palette-fab__header">
+                    <span class="palette-fab__title">
+                        <i class="ph ph-swatches text-primary text-sm"></i>
+                        شخصی‌سازی رنگ و لایه‌ها
+                    </span>
+                    <button type="button" class="palette-fab__close" id="palette-fab-close" aria-label="بستن">
+                        <i class="ph ph-x"></i>
+                    </button>
+                </div>
+                
+                <!-- Section 1: Main Theme Palette -->
+                <div class="palette-fab__section">
+                    <span class="palette-fab__subtitle">
+                        <i class="ph ph-palette"></i>
+                        رنگ قالب اصلی سایت
+                    </span>
+                    <div class="palette-fab__grid">
+                        ${palettes.map(p => `
+                            <button type="button" 
+                                    data-palette-btn="${p.id}" 
+                                    class="palette-fab__btn ${storedPalette === p.id ? 'is-active' : ''}" 
+                                    title="${p.name}">
+                                <span class="palette-fab__swatch" style="background-color: ${p.color};"></span>
+                                <span class="palette-fab__label">${p.name}</span>
+                            </button>
+                        `).join('')}
+                    </div>
+                </div>
+
+                <div class="palette-fab__divider"></div>
+
+                <!-- Section 2: Header Backdrop Layer -->
+                <div class="palette-fab__section">
+                    <span class="palette-fab__subtitle">
+                        <i class="ph ph-paint-bucket"></i>
+                        پس‌زمینه لایه بالای هدر
+                    </span>
+                    <div class="palette-fab__grid">
+                        ${backdrops.map(b => `
+                            <button type="button" 
+                                    data-backdrop-btn="${b.id}" 
+                                    class="palette-fab__btn ${storedBackdrop === b.id ? 'is-active' : ''}" 
+                                    title="${b.name}">
+                                <span class="palette-fab__swatch ${b.border ? 'palette-fab__swatch--bordered' : ''}" 
+                                      style="${b.gradient ? `background: ${b.gradient};` : `background-color: ${b.color};`}"></span>
+                                <span class="palette-fab__label">${b.name}</span>
+                            </button>
+                        `).join('')}
+                    </div>
+                </div>
+            </div>
+        `;
+
+        document.body.appendChild(container);
+
+        const trigger = container.querySelector("#palette-fab-trigger");
+        const closeBtn = container.querySelector("#palette-fab-close");
+
+        const togglePanel = (open) => {
+            const shouldOpen = open !== undefined ? open : !container.classList.contains("is-open");
+            container.classList.toggle("is-open", shouldOpen);
+        };
+
+        if (trigger) {
+            trigger.addEventListener("click", (e) => {
+                e.stopPropagation();
+                togglePanel();
+            });
+        }
+
+        if (closeBtn) {
+            closeBtn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                togglePanel(false);
+            });
+        }
+
+        container.addEventListener("click", (e) => {
+            const paletteBtn = e.target.closest("[data-palette-btn]");
+            if (paletteBtn) {
+                const targetId = paletteBtn.getAttribute("data-palette-btn");
+                applyPalette(targetId);
+                return;
+            }
+
+            const backdropBtn = e.target.closest("[data-backdrop-btn]");
+            if (backdropBtn) {
+                const targetId = backdropBtn.getAttribute("data-backdrop-btn");
+                applyHeaderBackdrop(targetId);
+                return;
+            }
+        });
+
+        // Close on outside click
+        document.addEventListener("click", (e) => {
+            if (!container.contains(e.target)) {
+                togglePanel(false);
+            }
+        });
+    };
+
+    initPaletteSwitcher();
+
     const toggleHeaderState = () => {
         if (progressBar) {
             const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -494,101 +664,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // ─── DAILY NARRATIVE INTERACTIVE INFO PANEL ────────────
-    const infoPanelInner = document.querySelector(".info-panel__inner");
-    const infoPanelTag = document.getElementById("info-panel-tag");
-    const infoPanelTitle = document.getElementById("info-panel-title");
-    const infoPanelExcerpt = document.getElementById("info-panel-excerpt");
-    const infoPanelAvatar = document.getElementById("info-panel-avatar");
-    const infoPanelAuthor = document.getElementById("info-panel-author");
-    const infoPanelDate = document.getElementById("info-panel-date");
-    const infoPanelLink = document.getElementById("info-panel-link");
-    const dailyMainCard = document.getElementById("daily-main-card");
-    const dailyMainImg = document.getElementById("daily-main-img");
-    const dailyMainTag = document.getElementById("daily-main-tag");
-    const dailyMainTitle = document.getElementById("daily-main-title");
-    const dailyMainExcerpt = document.getElementById("daily-main-excerpt");
-    const dailyMainAvatar = document.getElementById("daily-main-avatar");
-    const dailyMainAuthor = document.getElementById("daily-main-author-name");
-    const dailyMainDate = document.getElementById("daily-main-date");
-    const interactiveThumbItems = document.querySelectorAll(".interactive-thumb-item");
+    // ═══════════════════════════════════════════════════════════
+    // DAILY NARRATIVE INTERACTIVE THUMBNAILS (Removed based on new design)
+    // ═══════════════════════════════════════════════════════════
 
-    if (infoPanelInner && interactiveThumbItems.length) {
-        let currentIndex = 0;
-        let autoplayInterval;
-
-        const updateInfoPanel = (thumb, index) => {
-            if (index !== undefined) {
-                currentIndex = index;
-            } else {
-                // Find index if not provided
-                currentIndex = Array.from(interactiveThumbItems).indexOf(thumb);
-            }
-
-            interactiveThumbItems.forEach(item => item.classList.remove("is-active"));
-            thumb.classList.add("is-active");
-
-            infoPanelInner.classList.add("is-updating");
-            if (dailyMainCard) dailyMainCard.classList.add("is-updating");
-
-            setTimeout(() => {
-                const img = thumb.getAttribute("data-img");
-                const tag = thumb.getAttribute("data-tag");
-                const avatar = thumb.getAttribute("data-avatar");
-                const author = thumb.getAttribute("data-author");
-                const date = thumb.getAttribute("data-date");
-                const title = thumb.getAttribute("data-title");
-                const excerpt = thumb.getAttribute("data-excerpt");
-                const link = thumb.getAttribute("data-link");
-
-                if (infoPanelTag && tag) infoPanelTag.textContent = tag;
-                if (infoPanelAvatar && avatar) infoPanelAvatar.src = avatar;
-                if (infoPanelAuthor && author) infoPanelAuthor.textContent = author;
-                if (infoPanelDate && date) infoPanelDate.textContent = date;
-                if (infoPanelTitle && title) infoPanelTitle.textContent = title;
-                if (infoPanelExcerpt && excerpt) infoPanelExcerpt.textContent = excerpt;
-                if (infoPanelLink && link) infoPanelLink.href = link;
-
-                if (dailyMainImg && img) dailyMainImg.src = img;
-                if (dailyMainTag && tag) dailyMainTag.textContent = tag;
-                if (dailyMainTitle && title) dailyMainTitle.textContent = title;
-                if (dailyMainExcerpt && excerpt) dailyMainExcerpt.textContent = excerpt;
-                if (dailyMainAvatar && avatar) dailyMainAvatar.src = avatar;
-                if (dailyMainAuthor && author) dailyMainAuthor.textContent = author;
-                if (dailyMainDate && date) dailyMainDate.textContent = date;
-
-                infoPanelInner.classList.remove("is-updating");
-                if (dailyMainCard) dailyMainCard.classList.remove("is-updating");
-            }, 180);
-        };
-
-        const startAutoplay = () => {
-            autoplayInterval = setInterval(() => {
-                const nextIndex = (currentIndex + 1) % interactiveThumbItems.length;
-                updateInfoPanel(interactiveThumbItems[nextIndex], nextIndex);
-            }, 4000); // 4 ثانیه تاخیر برای هر اسلاید
-        };
-
-        const stopAutoplay = () => {
-            clearInterval(autoplayInterval);
-        };
-
-        interactiveThumbItems.forEach((thumb, index) => {
-            thumb.addEventListener("mouseenter", () => {
-                updateInfoPanel(thumb, index);
-                stopAutoplay();
-            });
-            thumb.addEventListener("mouseleave", startAutoplay);
-            thumb.addEventListener("click", () => updateInfoPanel(thumb, index));
-        });
-
-        // توقف پخش خودکار هنگام هاور روی پنل اطلاعات
-        infoPanelInner.addEventListener("mouseenter", stopAutoplay);
-        infoPanelInner.addEventListener("mouseleave", startAutoplay);
-
-        // شروع پخش خودکار
-        startAutoplay();
-    }
 });
 
 // ─── NEWS SWIPER INITIALIZATION ────────────────────────────────────────────
@@ -605,10 +684,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         const instance = new Swiper(container, {
-            slidesPerView: 1.15,
+            slidesPerView: 1.2,
             spaceBetween: 14,
             centeredSlides: false,
             grabCursor: true,
+            speed: 600,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
             // RTL — جهت‌دهی صحیح برای فارسی
             dir: "rtl",
             navigation: {
@@ -621,10 +706,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 dynamicBullets: true,
             },
             breakpoints: {
-                520: { slidesPerView: 2, spaceBetween: 14 },
-                768: { slidesPerView: 2.5, spaceBetween: 16 },
-                1024: { slidesPerView: 3, spaceBetween: 18 },
-                1280: { slidesPerView: 3.5, spaceBetween: 20 },
+                480: { slidesPerView: 1.6, spaceBetween: 14 },
+                640: { slidesPerView: 2.3, spaceBetween: 16 },
+                768: { slidesPerView: 3, spaceBetween: 18 },
+                1024: { slidesPerView: 3.8, spaceBetween: 20 },
+                1280: { slidesPerView: 4.2, spaceBetween: 22 },
+                1440: { slidesPerView: 4.5, spaceBetween: 24 },
             },
         });
 

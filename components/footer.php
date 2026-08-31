@@ -1,4 +1,4 @@
-    <footer class="relative overflow-hidden bg-primary text-white/90 dark:bg-[#73101E]" id="site-footer">
+    <footer class="relative overflow-hidden bg-primary text-white/90 dark:bg-primary-dark" id="site-footer">
 
         <!-- ── Top divider ──────────────────────────────── -->
         <div class="h-[1px] bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>

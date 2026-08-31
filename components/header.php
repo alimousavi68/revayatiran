@@ -22,11 +22,11 @@ $user_level = 'guest';
     <!-- Swiper.js -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-    <link rel="stylesheet" href="./assets/css/style.css?v=4.0">
+    <link rel="stylesheet" href="./assets/css/style.css?v=4.1">
 </head>
 <body class="bg-bg text-text min-h-screen font-sans leading-relaxed transition-colors duration-300 antialiased selection:bg-accent selection:text-white">
     <div class="fixed top-0 left-0 right-0 h-[3px] z-[9999] pointer-events-none" aria-hidden="true">
-        <span id="page-progress-bar" class="block h-full w-0 bg-gradient-to-r from-accent via-[#D13247] to-accent-strong shadow-[0_0_12px_rgba(var(--accent-rgb),0.5)] transition-all duration-100 ease-linear"></span>
+        <span id="page-progress-bar" class="block h-full w-0 bg-gradient-to-r from-accent to-accent-strong shadow-[0_0_12px_rgba(var(--accent-rgb),0.5)] transition-all duration-100 ease-linear"></span>
     </div>
 
     <!-- Search Overlay -->
@@ -47,30 +47,33 @@ $user_level = 'guest';
     </div>
 
     <header class="relative z-50 transition-shadow duration-300 [&.is-scrolled]:shadow-none" id="site-header">
+        
+        <!-- Harmonic Palette-Adaptive Background Layer -->
+        <div class="absolute top-0 left-0 w-full h-[82px] bg-[var(--header-backdrop)] -z-10 pointer-events-none transition-colors duration-300" aria-hidden="true"></div>
 
-        <!-- Top Bar (White Clean Design) -->
-        <div class="relative h-[42px] overflow-hidden bg-transparent border-none" id="top-bar">
-            <div class="container flex items-center justify-between h-[42px] px-2">
+        <!-- Top Bar (Full-Width Harmonic Design) -->
+        <div class="top-bar w-full" id="top-bar">
+            <div class="container flex items-center justify-between h-[42px] px-3">
 
-                <!-- Live Pulse + Date -->
-                <div class="flex items-center gap-2 text-[#6b7280] text-xs font-normal whitespace-nowrap shrink-0 dark:text-white/65">
-                    <i class="ph ph-calendar-blank text-[13px] opacity-70"></i>
+                <!-- Meta: Date + Time -->
+                <div class="flex items-center gap-2 text-text-muted text-xs font-normal whitespace-nowrap shrink-0">
+                    <i class="ph ph-calendar-blank text-[13px] opacity-75"></i>
                     <span id="top-bar-date">پنج‌شنبه ۱۲ تیر ۱۴۰۵</span>
-                    <span class="w-[1px] h-[14px] bg-[#e5e7eb] rounded-[1px] mx-1.5 shrink-0 dark:bg-white/15"></span>
-                    <i class="ph ph-clock text-[13px] opacity-70"></i>
+                    <span class="w-[1px] h-[14px] bg-border rounded-[1px] mx-1 shrink-0"></span>
+                    <i class="ph ph-clock text-[13px] opacity-75"></i>
                     <span id="top-bar-time">--:--</span>
                 </div>
 
                 <!-- Top Bar Actions (Search, Theme, Login) -->
                 <div class="flex items-center gap-2 shrink-0">
-                    <button class="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-[#d1d5db] bg-white text-[#4b5563] text-base cursor-pointer transition-all duration-200 hover:text-primary hover:border-primary hover:bg-primary/5 dark:bg-white/5 dark:border-white/15 dark:text-white/85" type="button" aria-label="جستجو" id="search-trigger" title="جستجو">
+                    <button class="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-border bg-bg-elevated text-text-muted text-base cursor-pointer transition-all duration-200 hover:text-primary hover:border-primary hover:bg-primary/5 dark:bg-white/5 dark:border-white/15 dark:text-text-muted dark:hover:text-white" type="button" aria-label="جستجو" id="search-trigger" title="جستجو">
                         <i class="ph ph-magnifying-glass"></i>
                     </button>
-                    <button class="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-[#d1d5db] bg-white text-[#4b5563] text-base cursor-pointer transition-all duration-200 hover:text-primary hover:border-primary hover:bg-primary/5 dark:bg-white/5 dark:border-white/15 dark:text-white/85" id="theme-toggle" type="button" aria-label="تغییر حالت رنگی" title="تغییر پوسته">
+                    <button class="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-border bg-bg-elevated text-text-muted text-base cursor-pointer transition-all duration-200 hover:text-primary hover:border-primary hover:bg-primary/5 dark:bg-white/5 dark:border-white/15 dark:text-text-muted dark:hover:text-white" id="theme-toggle" type="button" aria-label="تغییر حالت رنگی" title="تغییر پوسته">
                         <i class="ph ph-sun dark:hidden"></i>
                         <i class="ph ph-moon hidden dark:block"></i>
                     </button>
-                    <a href="#" class="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-[#d1d5db] bg-white text-[#4b5563] text-base cursor-pointer transition-all duration-200 hover:text-primary hover:border-primary hover:bg-primary/5 dark:bg-white/5 dark:border-white/15 dark:text-white/85" aria-label="ورود" title="ورود">
+                    <a href="#" class="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-border bg-bg-elevated text-text-muted text-base cursor-pointer transition-all duration-200 hover:text-primary hover:border-primary hover:bg-primary/5 dark:bg-white/5 dark:border-white/15 dark:text-text-muted dark:hover:text-white" aria-label="ورود" title="ورود">
                         <i class="ph ph-user-circle-plus"></i>
                     </a>
                 </div>
@@ -78,8 +81,8 @@ $user_level = 'guest';
             </div>
         </div>
 
-        <!-- Main Header Shell (Red Premium Styling) -->
-        <div class="container sticky top-[10px] z-[200] min-h-[76px] flex justify-between items-center gap-5 mx-auto my-[2px] mb-4 py-[3px] px-5 border border-white/20 rounded-lg bg-primary shadow-[0_4px_16px_rgba(var(--accent-rgb),0.18)] transition-all duration-300 dark:bg-[#73101E] dark:border-white/10 dark:shadow-black/40" id="header-shell">
+        <!-- Main Header Shell (Dynamic Premium Styling) -->
+        <div class="container sticky top-[10px] z-[200] min-h-[76px] flex justify-between items-center gap-5 mx-auto my-[2px] mb-4 py-[3px] px-5 border border-white/20 rounded-lg bg-primary shadow-[0_4px_16px_rgba(var(--accent-rgb),0.18)] transition-all duration-300 dark:bg-primary-dark dark:border-white/10 dark:shadow-black/40" id="header-shell">
 
             <!-- Brand Lockup -->
             <div class="shrink-0 flex items-center">

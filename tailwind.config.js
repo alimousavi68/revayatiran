@@ -27,6 +27,17 @@ module.exports = {
         primary: {
           DEFAULT: 'var(--primary)',
           hover: 'var(--accent-strong)',
+          dark: 'var(--primary-dark, var(--accent-strong))',
+        },
+        accent: {
+          DEFAULT: 'var(--accent)',
+          strong: 'var(--accent-strong)',
+          deep: 'var(--accent-deep)',
+        },
+        bg: {
+          DEFAULT: 'var(--bg)',
+          elevated: 'var(--bg-elevated)',
+          soft: 'var(--bg-soft)',
         },
         surface: {
           DEFAULT: 'var(--surface)',

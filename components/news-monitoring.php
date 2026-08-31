@@ -139,8 +139,12 @@
                             </div>
                         </div>
                         <!-- ناوبری Swiper -->
-                        <div class="swiper-button-next news-swiper-next"></div>
-                        <div class="swiper-button-prev news-swiper-prev"></div>
+                        <button type="button" class="swiper-button-prev news-swiper-prev" aria-label="قبلی">
+                            <i class="ph-bold ph-caret-right"></i>
+                        </button>
+                        <button type="button" class="swiper-button-next news-swiper-next" aria-label="بعدی">
+                            <i class="ph-bold ph-caret-left"></i>
+                        </button>
                         <div class="swiper-pagination news-swiper-pagination"></div>
                     </div>
                 </div>
@@ -186,8 +190,12 @@
                                 </article>
                             </div>
                         </div>
-                        <div class="swiper-button-next news-swiper-next"></div>
-                        <div class="swiper-button-prev news-swiper-prev"></div>
+                        <button type="button" class="swiper-button-prev news-swiper-prev" aria-label="قبلی">
+                            <i class="ph-bold ph-caret-right"></i>
+                        </button>
+                        <button type="button" class="swiper-button-next news-swiper-next" aria-label="بعدی">
+                            <i class="ph-bold ph-caret-left"></i>
+                        </button>
                         <div class="swiper-pagination news-swiper-pagination"></div>
                     </div>
                 </div>
@@ -233,8 +241,12 @@
                                 </article>
                             </div>
                         </div>
-                        <div class="swiper-button-next news-swiper-next"></div>
-                        <div class="swiper-button-prev news-swiper-prev"></div>
+                        <button type="button" class="swiper-button-prev news-swiper-prev" aria-label="قبلی">
+                            <i class="ph-bold ph-caret-right"></i>
+                        </button>
+                        <button type="button" class="swiper-button-next news-swiper-next" aria-label="بعدی">
+                            <i class="ph-bold ph-caret-left"></i>
+                        </button>
                         <div class="swiper-pagination news-swiper-pagination"></div>
                     </div>
                 </div>
@@ -280,66 +292,18 @@
                                 </article>
                             </div>
                         </div>
-                        <div class="swiper-button-next news-swiper-next"></div>
-                        <div class="swiper-button-prev news-swiper-prev"></div>
+                        <button type="button" class="swiper-button-prev news-swiper-prev" aria-label="قبلی">
+                            <i class="ph-bold ph-caret-right"></i>
+                        </button>
+                        <button type="button" class="swiper-button-next news-swiper-next" aria-label="بعدی">
+                            <i class="ph-bold ph-caret-left"></i>
+                        </button>
                         <div class="swiper-pagination news-swiper-pagination"></div>
                     </div>
                 </div>
 
             </div>
-
-            <aside class="trending-column panel-card panel-pad" data-reveal="left">
-                <div class="trending-column__head">
-                    <div class="trending-column__head-title">
-                        <i class="ph ph-trend-up"></i>
-                        <h3>پربازدیدهای اخبار رصد شده</h3>
-                    </div>
-                </div>
-                <ol class="trending-list">
-                    <li>
-                        <span>۱</span>
-                        <div class="trending-item__content">
-                            <a href="#" class="trending-item__title">چرا تغییر لحن رسانه‌ای دولت از تغییر سیاست مهم‌تر دیده شد؟</a>
-                            <span class="trending-item__source">خبرگزاری ایرنا</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span>۲</span>
-                        <div class="trending-item__content">
-                            <a href="#" class="trending-item__title">پشت‌صحنه آرامش بازار؛ مهار واقعی یا تاخیر در شوک؟</a>
-                            <span class="trending-item__source">روزنامه دنیای اقتصاد</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span>۳</span>
-                        <div class="trending-item__content">
-                            <a href="#" class="trending-item__title">سه روایت رقیب درباره رخداد مرزی اخیر چگونه ساخته شدند؟</a>
-                            <span class="trending-item__source">خبرگزاری تسنیم</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span>۴</span>
-                        <div class="trending-item__content">
-                            <a href="#" class="trending-item__title">پرونده ویژه جدید چگونه در کمتر از ۲۴ ساعت ترند شد؟</a>
-                            <span class="trending-item__source">روایت ایران</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span>۵</span>
-                        <div class="trending-item__content">
-                            <a href="#" class="trending-item__title">تحلیل آماری از نوسانات اخیر بازار سرمایه و پیش‌بینی روندها</a>
-                            <span class="trending-item__source">خبرگزاری فارس</span>
-                        </div>
-                    </li>
-                    <li>
-                        <span>۶</span>
-                        <div class="trending-item__content">
-                            <a href="#" class="trending-item__title">نقش شبکه‌های اجتماعی در شکل‌گیری روایت‌های اقتصادی نوظهور</a>
-                            <span class="trending-item__source">ایسنا</span>
-                        </div>
-                    </li>
-                </ol>
-            </aside>
         </div>
     </div>
 </section>
+

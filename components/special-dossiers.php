@@ -33,7 +33,6 @@
                 
                 <div class="dossier-hero-content">
                     <div class="dossier-top-meta">
-                        <span class="dossier-category-badge">تحلیل راهبردی و امنیت شناختی</span>
                         <span class="dossier-update-time"><i class="ph ph-clock"></i> آخرین به‌روزرسانی: ۲ ساعت پیش</span>
                     </div>
                     
@@ -45,25 +44,7 @@
                         این پرونده به‌صورت مرحله‌ای ابعاد جنگ شناختی در بستر رسانه‌های اجتماعی را باز می‌کند؛ از هسته‌های تولید پیام و الگوریتم‌های تقویت محتوا تا سازوکار نرمال‌سازی گزاره‌ها در افکار عمومی.
                     </p>
 
-                    <!-- نوار مراحل انتشار پرونده -->
-                    <div class="dossier-phases-bar">
-                        <span class="phases-label">مراحل پرونده:</span>
-                        <div class="phases-track">
-                            <div class="phase-step is-completed" title="تکمیل شده">
-                                <span class="phase-dot"><i class="ph-bold ph-check"></i></span>
-                                <span class="phase-text">۱. گردآوری شواهد</span>
-                            </div>
-                            <div class="phase-step is-active" title="در حال انتشار">
-                                <span class="phase-dot"></span>
-                                <span class="phase-text">۲. تحلیل بازیگران</span>
-                            </div>
-                            <div class="phase-step is-upcoming" title="به‌زودی">
-                                <span class="phase-dot"></span>
-                                <span class="phase-text">۳. برآورد پیامدها</span>
-                            </div>
-                        </div>
-                    </div>
-                    
+
                     <!-- اقلام داده‌ای و ضمایم پرونده -->
                     <div class="dossier-features-row">
                         <div class="dossier-feature-pill">
