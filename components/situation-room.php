@@ -7,7 +7,7 @@
             <aside class="sr-sidebar sr-sidebar--red">
                 <div class="sr-sidebar__top">
                     <div class="sr-sidebar__icon-wrapper">
-                        <i class="ph-fill ph-crosshair"></i>
+                        <i class="ph-fill ph-security-camera"></i>
                     </div>
                 </div>
                 
@@ -105,11 +105,11 @@
                                 <i class="ph-fill ph-lock-key sr-gated-cta__icon"></i>
                                 <p class="sr-gated-cta__text">برای مشاهده محتوای اتاق وضعیت، عضویت و احراز هویت الزامی است.</p>
                                 <div class="sr-gated-cta__actions">
-                                    <a href="#" class="button--compact button--primary button--glow" id="sr-cta-register">
+                                    <a href="auth.php?tab=register" class="button--compact button--primary button--glow" id="sr-cta-register">
                                         <i class="ph-fill ph-user-plus"></i>
                                         <span>ثبت‌نام رایگان</span>
                                     </a>
-                                    <a href="#" class="button--compact button--soft" id="sr-cta-login">
+                                    <a href="auth.php?tab=login" class="button--compact button--soft" id="sr-cta-login">
                                         <i class="ph-fill ph-sign-in"></i>
                                         <span>ورود به حساب</span>
                                     </a>

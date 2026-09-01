@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "dev": "npm run dev:css",
     "dev:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/style.css --watch",
     "build:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/style.css --minify",
     "build": "npm run build:css",

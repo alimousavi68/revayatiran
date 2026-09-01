@@ -9,7 +9,7 @@
                 <p class="section-summary">واکاوی چندبعدی ریشه‌ها و پیامدهای رویدادهای کلان</p>
             </div>
             <div class="etude-b__actions">
-                <a href="#" class="section-link">
+                <a href="archive.php?category=special-dossiers" class="section-link">
                     <span>آرشیو تمام پرونده‌ها</span>
                     <i class="ph ph-arrow-left"></i>
                 </a>
@@ -22,7 +22,7 @@
             <!-- پرونده اصلی و فعال -->
             <article class="dossier-hero-card">
                 <div class="dossier-hero-visual">
-                    <img src="assets/images/posts images/troja.jpeg" alt="پروژه نفوذ شناختی" loading="lazy">
+                    <img src="assets/images/posts images/اقتصاد-ایران-ak3539-1024x683.webp" alt="پروژه نفوذ شناختی" loading="lazy">
                     <div class="dossier-hero-visual__overlay">
                         <div class="live-indicator">
                             <span class="live-indicator__dot"></span>
@@ -71,7 +71,7 @@
                     </div>
 
                     <div class="dossier-footer">
-                        <a href="#" class="btn-dossier-enter">
+                        <a href="single.php" class="btn-dossier-enter">
                             <span>ورود به پرونده جامع</span>
                             <i class="ph-bold ph-arrow-left"></i>
                         </a>
@@ -92,7 +92,7 @@
                 <article class="dossier-mini-card">
                     <div class="dossier-mini-card__tag">پرونده اقتصادی</div>
                     <h5 class="dossier-mini-card__title">
-                        <a href="#">معمای ناترازی انرژی؛ کالبدشکافی سیاست‌های قیمتی و ساختار تولید</a>
+                        <a href="single.php">معمای ناترازی انرژی؛ کالبدشکافی سیاست‌های قیمتی و ساختار تولید</a>
                     </h5>
                     <div class="dossier-mini-card__meta">
                         <span><i class="ph ph-file-text"></i> ۶ بخش</span>
@@ -103,7 +103,7 @@
                 <article class="dossier-mini-card">
                     <div class="dossier-mini-card__tag">پرونده منطقه‌ای</div>
                     <h5 class="dossier-mini-card__title">
-                        <a href="#">کریدورهای رقیب در خاورمیانه؛ جنگ ژئواکونومیک مسیرهای ترانزیتی</a>
+                        <a href="single.php">کریدورهای رقیب در خاورمیانه؛ جنگ ژئواکونومیک مسیرهای ترانزیتی</a>
                     </h5>
                     <div class="dossier-mini-card__meta">
                         <span><i class="ph ph-file-text"></i> ۸ بخش</span>

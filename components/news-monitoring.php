@@ -15,7 +15,7 @@
                     <button class="tab-button" type="button" role="tab" aria-selected="false" data-news-tab="economy">اقتصاد</button>
                     <button class="tab-button" type="button" role="tab" aria-selected="false" data-news-tab="security">امنیت</button>
                 </div>
-                <a href="#" class="section-link">
+                <a href="archive.php?category=news-monitoring" class="section-link">
                     <span>آرشیو</span>
                     <i class="ph ph-arrow-left"></i>
                 </a>
@@ -37,7 +37,7 @@
                                             <span class="chip">سیاست خارجی</span>
                                             <span class="source-badge">خبرگزاری ایرنا</span>
                                         </div>
-                                        <h3>بازگشت بازیگران به میزهای چندمرحله‌ای؛ دیپلماسی زیر فشار زمان</h3>
+                                        <h3><a href="single.php" class="hover:text-primary transition-colors">بازگشت بازیگران به میزهای چندمرحله‌ای؛ دیپلماسی زیر فشار زمان</a></h3>
                                     </div>
                                 </article>
                             </div>
@@ -49,7 +49,7 @@
                                             <span class="chip">اقتصاد سیاسی</span>
                                             <span class="source-badge">دنیای اقتصاد</span>
                                         </div>
-                                        <h3>بازارها در انتظار بسته جدید تصمیم‌سازی مالی</h3>
+                                        <h3><a href="single.php" class="hover:text-primary transition-colors">بازارها در انتظار بسته جدید تصمیم‌سازی مالی</a></h3>
                                     </div>
                                 </article>
                             </div>
@@ -61,7 +61,7 @@
                                             <span class="chip">امنیت</span>
                                             <span class="source-badge">تسنیم</span>
                                         </div>
-                                        <h3>رصد تحرکات مرزی و پیامدهای رسانه‌ای آن در افکار عمومی</h3>
+                                        <h3><a href="single.php" class="hover:text-primary transition-colors">رصد تحرکات مرزی و پیامدهای رسانه‌ای آن در افکار عمومی</a></h3>
                                     </div>
                                 </article>
                             </div>
@@ -73,7 +73,7 @@
                                             <span class="chip">جامعه</span>
                                             <span class="source-badge">ایسنا</span>
                                         </div>
-                                        <h3>تغییر الگوهای مصرف رسانه‌ای در بین نسل جدید</h3>
+                                        <h3><a href="single.php" class="hover:text-primary transition-colors">تغییر الگوهای مصرف رسانه‌ای در بین نسل جدید</a></h3>
                                     </div>
                                 </article>
                             </div>
@@ -85,7 +85,7 @@
                                             <span class="chip">بین‌الملل</span>
                                             <span class="source-badge">فارس</span>
                                         </div>
-                                        <h3>تحولات جدید در شرق اروپا و اثر آن بر امنیت انرژی</h3>
+                                        <h3><a href="single.php" class="hover:text-primary transition-colors">تحولات جدید در شرق اروپا و اثر آن بر امنیت انرژی</a></h3>
                                     </div>
                                 </article>
                             </div>
@@ -97,7 +97,7 @@
                                             <span class="chip">فناوری</span>
                                             <span class="source-badge">مهر</span>
                                         </div>
-                                        <h3>هوش مصنوعی و چالش‌های بازشناسی روایت‌های جعلی</h3>
+                                        <h3><a href="single.php" class="hover:text-primary transition-colors">هوش مصنوعی و چالش‌های بازشناسی روایت‌های جعلی</a></h3>
                                     </div>
                                 </article>
                             </div>
@@ -109,7 +109,7 @@
                                             <span class="chip">سیاست داخلی</span>
                                             <span class="source-badge">اعتماد</span>
                                         </div>
-                                        <h3>آرایش جدید جناح‌های سیاسی در آستانه تصمیمات مهم</h3>
+                                        <h3><a href="single.php" class="hover:text-primary transition-colors">آرایش جدید جناح‌های سیاسی در آستانه تصمیمات مهم</a></h3>
                                     </div>
                                 </article>
                             </div>
@@ -121,7 +121,7 @@
                                             <span class="chip">دیپلماسی</span>
                                             <span class="source-badge">ایرنا</span>
                                         </div>
-                                        <h3>نقش ورزش در بهبود روابط دیپلماتیک منطقه‌ای</h3>
+                                        <h3><a href="single.php" class="hover:text-primary transition-colors">نقش ورزش در بهبود روابط دیپلماتیک منطقه‌ای</a></h3>
                                     </div>
                                 </article>
                             </div>
@@ -133,7 +133,7 @@
                                             <span class="chip">محیط زیست</span>
                                             <span class="source-badge">ایلنا</span>
                                         </div>
-                                        <h3>بحران آب و ضرورت بازنگری در سیاست‌های کلان توسعه</h3>
+                                        <h3><a href="single.php" class="hover:text-primary transition-colors">بحران آب و ضرورت بازنگری در سیاست‌های کلان توسعه</a></h3>
                                     </div>
                                 </article>
                             </div>
@@ -161,7 +161,7 @@
                                             <span class="chip">سیاست داخلی</span>
                                             <span class="source-badge">اعتماد</span>
                                         </div>
-                                        <h3>بازآرایی بلوک‌های سیاسی پیش از فصل تصمیم‌های بزرگ</h3>
+                                        <h3><a href="single.php" class="hover:text-primary transition-colors">بازآرایی بلوک‌های سیاسی پیش از فصل تصمیم‌های بزرگ</a></h3>
                                     </div>
                                 </article>
                             </div>
@@ -173,7 +173,7 @@
                                             <span class="chip">سیاست خارجی</span>
                                             <span class="source-badge">ایرنا</span>
                                         </div>
-                                        <h3>مذاکرات فشرده، واژه‌های محافظه‌کار و پیام‌های چندلایه</h3>
+                                        <h3><a href="single.php" class="hover:text-primary transition-colors">مذاکرات فشرده، واژه‌های محافظه‌کار و پیام‌های چندلایه</a></h3>
                                     </div>
                                 </article>
                             </div>
@@ -185,7 +185,7 @@
                                             <span class="chip">تحلیل سریع</span>
                                             <span class="source-badge">روایت ایران</span>
                                         </div>
-                                        <h3>واکنش افکار عمومی به لحن تازه مقام‌ها در قبال پرونده منطقه</h3>
+                                        <h3><a href="single.php" class="hover:text-primary transition-colors">واکنش افکار عمومی به لحن تازه مقام‌ها در قبال پرونده منطقه</a></h3>
                                     </div>
                                 </article>
                             </div>
@@ -212,7 +212,7 @@
                                             <span class="chip">اقتصاد</span>
                                             <span class="source-badge">دنیای اقتصاد</span>
                                         </div>
-                                        <h3>سناریوهای بازار ارز پس از بسته تازه بانک مرکزی</h3>
+                                        <h3><a href="single.php" class="hover:text-primary transition-colors">سناریوهای بازار ارز پس از بسته تازه بانک مرکزی</a></h3>
                                     </div>
                                 </article>
                             </div>
@@ -224,7 +224,7 @@
                                             <span class="chip">بودجه</span>
                                             <span class="source-badge">فارس</span>
                                         </div>
-                                        <h3>بودجه انقباضی یا بازتوزیع خاموش؟</h3>
+                                        <h3><a href="single.php" class="hover:text-primary transition-colors">بودجه انقباضی یا بازتوزیع خاموش؟</a></h3>
                                     </div>
                                 </article>
                             </div>
@@ -236,7 +236,7 @@
                                             <span class="chip">بازار سرمایه</span>
                                             <span class="source-badge">ایسنا</span>
                                         </div>
-                                        <h3>سرمایه‌گذار خسته؛ چه چیزی هنوز به بازار سیگنال می‌دهد؟</h3>
+                                        <h3><a href="single.php" class="hover:text-primary transition-colors">سرمایه‌گذار خسته؛ چه چیزی هنوز به بازار سیگنال می‌دهد؟</a></h3>
                                     </div>
                                 </article>
                             </div>
@@ -263,7 +263,7 @@
                                             <span class="chip">امنیت</span>
                                             <span class="source-badge">تسنیم</span>
                                         </div>
-                                        <h3>امنیت مرز فقط مسئله میدان نیست، مسئله روایت هم هست</h3>
+                                        <h3><a href="single.php" class="hover:text-primary transition-colors">امنیت مرز فقط مسئله میدان نیست، مسئله روایت هم هست</a></h3>
                                     </div>
                                 </article>
                             </div>
@@ -275,7 +275,7 @@
                                             <span class="chip">دفاعی</span>
                                             <span class="source-badge">مهر</span>
                                         </div>
-                                        <h3>چرا برخی رزمایش‌ها بیشتر از آنکه نظامی باشند رسانه‌ای‌اند؟</h3>
+                                        <h3><a href="single.php" class="hover:text-primary transition-colors">چرا برخی رزمایش‌ها بیشتر از آنکه نظامی باشند رسانه‌ای‌اند؟</a></h3>
                                     </div>
                                 </article>
                             </div>
@@ -287,7 +287,7 @@
                                             <span class="chip">هشدار</span>
                                             <span class="source-badge">ایرنا</span>
                                         </div>
-                                        <h3>ریسک خطای برداشت در روایت‌های سریع درباره تهدید</h3>
+                                        <h3><a href="single.php" class="hover:text-primary transition-colors">ریسک خطای برداشت در روایت‌های سریع درباره تهدید</a></h3>
                                     </div>
                                 </article>
                             </div>

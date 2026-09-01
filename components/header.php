@@ -49,7 +49,7 @@ $user_level = 'guest';
     <header class="relative z-50 transition-shadow duration-300 [&.is-scrolled]:shadow-none" id="site-header">
         
         <!-- Harmonic Palette-Adaptive Background Layer -->
-        <div class="absolute top-0 left-0 w-full h-[82px] bg-[var(--header-backdrop)] -z-10 pointer-events-none transition-colors duration-300" aria-hidden="true"></div>
+        <div class="absolute top-0 left-0 w-full h-[82px] bg-[var(--header-backdrop)] header-backdrop-pattern -z-10 pointer-events-none transition-colors duration-300" aria-hidden="true"></div>
 
         <!-- Top Bar (Full-Width Harmonic Design) -->
         <div class="top-bar w-full" id="top-bar">
@@ -73,7 +73,7 @@ $user_level = 'guest';
                         <i class="ph ph-sun dark:hidden"></i>
                         <i class="ph ph-moon hidden dark:block"></i>
                     </button>
-                    <a href="#" class="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-border bg-bg-elevated text-text-muted text-base cursor-pointer transition-all duration-200 hover:text-primary hover:border-primary hover:bg-primary/5 dark:bg-white/5 dark:border-white/15 dark:text-text-muted dark:hover:text-white" aria-label="ورود" title="ورود">
+                    <a href="auth.php?tab=login" class="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-border bg-bg-elevated text-text-muted text-base cursor-pointer transition-all duration-200 hover:text-primary hover:border-primary hover:bg-primary/5 dark:bg-white/5 dark:border-white/15 dark:text-text-muted dark:hover:text-white" aria-label="ورود" title="ورود">
                         <i class="ph ph-user-circle-plus"></i>
                     </a>
                 </div>
@@ -82,11 +82,11 @@ $user_level = 'guest';
         </div>
 
         <!-- Main Header Shell (Dynamic Premium Styling) -->
-        <div class="container sticky top-[10px] z-[200] min-h-[76px] flex justify-between items-center gap-5 mx-auto my-[2px] mb-4 py-[3px] px-5 border border-white/20 rounded-lg bg-primary shadow-[0_4px_16px_rgba(var(--accent-rgb),0.18)] transition-all duration-300 dark:bg-primary-dark dark:border-white/10 dark:shadow-black/40" id="header-shell">
+        <div class="container sticky top-[10px] z-[200] min-h-[76px] flex justify-between items-center gap-5 mx-auto my-[2px] mb-4 py-[3px] px-5 border border-white/20 rounded-lg bg-primary shadow-[0_12px_36px_rgba(0,0,0,0.18)] transition-all duration-300 dark:bg-primary-dark dark:border-white/10 dark:shadow-black/40" id="header-shell">
 
             <!-- Brand Lockup -->
             <div class="shrink-0 flex items-center">
-                <a href="#" class="flex items-center gap-3.5 no-underline" aria-label="روایت ایران">
+                <a href="index.php" class="flex items-center gap-3.5 no-underline" aria-label="روایت ایران">
                     <img src="./assets/images/logo-revayat.webp" alt="لوگوی روایت ایران" class="h-[64px] w-auto object-contain shrink-0" width="auto" height="64px">
                 </a>
             </div>
@@ -96,14 +96,14 @@ $user_level = 'guest';
 
             <!-- Main Navigation -->
             <nav class="flex-1 hidden xl:flex justify-start items-center gap-1 ms-3 text-sm font-normal font-sans" aria-label="ناوبری اصلی">
-                <a href="#hero" class="relative py-1.5 px-3.5 rounded-lg text-white/90 hover:text-white transition-colors duration-200 before:absolute before:inset-0 before:rounded-lg before:bg-white/10 before:opacity-0 hover:before:opacity-100 [&.is-active]:text-white [&.is-active]:bg-white/20">صفحه اصلی</a>
+                <a href="#hero" class="relative py-1.5 px-2 text-white/90 hover:text-white transition-colors duration-300 before:absolute before:bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[2px] before:bg-white/80 before:transition-all before:duration-300 hover:before:w-[70%] [&.is-active]:before:w-[70%] [&.is-active]:text-white">صفحه اصلی</a>
                 <span class="w-[1px] h-[10px] bg-white/25 mx-0.5 shrink-0" aria-hidden="true"></span>
-                <a href="#daily-narrative" class="relative py-1.5 px-3.5 rounded-lg text-white/90 hover:text-white transition-colors duration-200 before:absolute before:inset-0 before:rounded-lg before:bg-white/10 before:opacity-0 hover:before:opacity-100">روایت روز</a>
+                <a href="archive.php?category=daily-narrative" class="relative py-1.5 px-2 text-white/90 hover:text-white transition-colors duration-300 before:absolute before:bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[2px] before:bg-white/80 before:transition-all before:duration-300 hover:before:w-[70%]">روایت روز</a>
                 <span class="w-[1px] h-[10px] bg-white/25 mx-0.5 shrink-0" aria-hidden="true"></span>
-                <a href="#news-monitoring" class="relative py-1.5 px-3.5 rounded-lg text-white/90 hover:text-white transition-colors duration-200 before:absolute before:inset-0 before:rounded-lg before:bg-white/10 before:opacity-0 hover:before:opacity-100">رصد اخبار</a>
+                <a href="archive.php?category=news-monitoring" class="relative py-1.5 px-2 text-white/90 hover:text-white transition-colors duration-300 before:absolute before:bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[2px] before:bg-white/80 before:transition-all before:duration-300 hover:before:w-[70%]">رصد اخبار</a>
                 <span class="w-[1px] h-[10px] bg-white/25 mx-0.5 shrink-0" aria-hidden="true"></span>
                 <div class="relative inline-flex items-center group">
-                    <a href="#special-dossiers" class="inline-flex items-center gap-1.5 no-underline cursor-pointer relative py-1.5 px-3.5 rounded-lg text-white/90 hover:text-white transition-colors duration-200 before:absolute before:inset-0 before:rounded-lg before:bg-white/10 before:opacity-0 hover:before:opacity-100">
+                    <a href="archive.php?category=special-dossiers" class="inline-flex items-center gap-1.5 no-underline cursor-pointer relative py-1.5 px-2 text-white/90 hover:text-white transition-colors duration-300 before:absolute before:bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[2px] before:bg-white/80 before:transition-all before:duration-300 hover:before:w-[70%]">
                         <span>پرونده ویژه</span>
                         <i class="ph ph-caret-down text-[11px] opacity-75 transition-transform duration-300 group-hover:rotate-180 group-hover:text-white"></i>
                     </a>
@@ -123,13 +123,13 @@ $user_level = 'guest';
                     </div>
                 </div>
                 <span class="w-[1px] h-[10px] bg-white/25 mx-0.5 shrink-0" aria-hidden="true"></span>
-                <a href="#media-observatory" class="relative py-1.5 px-3.5 rounded-lg text-white/90 hover:text-white transition-colors duration-200 before:absolute before:inset-0 before:rounded-lg before:bg-white/10 before:opacity-0 hover:before:opacity-100">دیدبان رسانه</a>
+                <a href="archive.php?category=media-observatory" class="relative py-1.5 px-2 text-white/90 hover:text-white transition-colors duration-300 before:absolute before:bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[2px] before:bg-white/80 before:transition-all before:duration-300 hover:before:w-[70%]">دیدبان رسانه</a>
                 <span class="w-[1px] h-[10px] bg-white/25 mx-0.5 shrink-0" aria-hidden="true"></span>
-                <a href="#situation-room" class="relative py-1.5 px-3.5 rounded-lg text-white/90 hover:text-white transition-colors duration-200 before:absolute before:inset-0 before:rounded-lg before:bg-white/10 before:opacity-0 hover:before:opacity-100">اتاق وضعیت</a>
+                <a href="#situation-room" class="relative py-1.5 px-2 text-white/90 hover:text-white transition-colors duration-300 before:absolute before:bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[2px] before:bg-white/80 before:transition-all before:duration-300 hover:before:w-[70%]">اتاق وضعیت</a>
                 <span class="w-[1px] h-[10px] bg-white/25 mx-0.5 shrink-0" aria-hidden="true"></span>
-                <a href="#analysts-network" class="relative py-1.5 px-3.5 rounded-lg text-white/90 hover:text-white transition-colors duration-200 before:absolute before:inset-0 before:rounded-lg before:bg-white/10 before:opacity-0 hover:before:opacity-100">شبکه تحلیلگران</a>
+                <a href="#analysts-network" class="relative py-1.5 px-2 text-white/90 hover:text-white transition-colors duration-300 before:absolute before:bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[2px] before:bg-white/80 before:transition-all before:duration-300 hover:before:w-[70%]">شبکه تحلیلگران</a>
                 <span class="w-[1px] h-[10px] bg-white/25 mx-0.5 shrink-0" aria-hidden="true"></span>
-                <a href="#editors-pick" class="relative py-1.5 px-3.5 rounded-lg text-white/90 hover:text-white transition-colors duration-200 before:absolute before:inset-0 before:rounded-lg before:bg-white/10 before:opacity-0 hover:before:opacity-100">پیشنهاد سردبیر</a>
+                <a href="archive.php?category=editors-pick" class="relative py-1.5 px-2 text-white/90 hover:text-white transition-colors duration-300 before:absolute before:bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-0 before:h-[2px] before:bg-white/80 before:transition-all before:duration-300 hover:before:w-[70%]">پیشنهاد سردبیر</a>
             </nav>
 
             <!-- Mobile Toggle -->
@@ -157,19 +157,19 @@ $user_level = 'guest';
                         <span class="mobile-nav-item__icon"><i class="ph ph-house"></i></span>
                         <span>صفحه اصلی</span>
                     </a>
-                    <a href="#daily-narrative" class="mobile-nav-item">
+                    <a href="archive.php?category=daily-narrative" class="mobile-nav-item">
                         <span class="mobile-nav-item__icon"><i class="ph ph-newspaper"></i></span>
                         <span>روایت روز</span>
                     </a>
-                    <a href="#news-monitoring" class="mobile-nav-item">
+                    <a href="archive.php?category=news-monitoring" class="mobile-nav-item">
                         <span class="mobile-nav-item__icon"><i class="ph ph-radar"></i></span>
                         <span>رصد اخبار</span>
                     </a>
-                    <a href="#special-dossiers" class="mobile-nav-item">
+                    <a href="archive.php?category=special-dossiers" class="mobile-nav-item">
                         <span class="mobile-nav-item__icon"><i class="ph ph-folder-open"></i></span>
                         <span>پرونده ویژه</span>
                     </a>
-                    <a href="#media-observatory" class="mobile-nav-item">
+                    <a href="archive.php?category=media-observatory" class="mobile-nav-item">
                         <span class="mobile-nav-item__icon"><i class="ph ph-eye"></i></span>
                         <span>دیدبان رسانه</span>
                     </a>
@@ -185,13 +185,13 @@ $user_level = 'guest';
                         <span class="mobile-nav-item__icon"><i class="ph ph-users-three"></i></span>
                         <span>شبکه تحلیلگران</span>
                     </a>
-                    <a href="#editors-pick" class="mobile-nav-item">
+                    <a href="archive.php?category=editors-pick" class="mobile-nav-item">
                         <span class="mobile-nav-item__icon"><i class="ph ph-star"></i></span>
                         <span>پیشنهاد سردبیر</span>
                     </a>
                 </nav>
                 <div class="mobile-menu__footer">
-                    <a href="#" class="mobile-cta">
+                    <a href="auth.php?tab=login" class="mobile-cta">
                         <i class="ph ph-user-circle-plus"></i>
                         ورود / ثبت نام
                     </a>

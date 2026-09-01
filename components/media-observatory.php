@@ -9,7 +9,7 @@
                 <p class="section-summary">تحلیل الگوهای فریم‌بندی، بازخوانی روایت‌ها و خطوط خبری رسانه‌ها</p>
             </div>
             <div class="etude-b__actions">
-                <a href="#" class="section-link">
+                <a href="archive.php?category=media-observatory" class="section-link">
                     <span>آرشیو پایش رسانه‌ها</span>
                     <i class="ph ph-arrow-left"></i>
                 </a>
@@ -46,7 +46,7 @@
                 </p>
 
                 <div class="observatory-card__footer">
-                    <a href="#" class="obs-read-more">
+                    <a href="single.php" class="obs-read-more">
                         <span>واکاوی کامل روایت</span>
                         <i class="ph ph-arrow-left"></i>
                     </a>
@@ -81,7 +81,7 @@
                 </p>
 
                 <div class="observatory-card__footer">
-                    <a href="#" class="obs-read-more">
+                    <a href="single.php" class="obs-read-more">
                         <span>واکاوی کامل روایت</span>
                         <i class="ph ph-arrow-left"></i>
                     </a>
@@ -116,7 +116,7 @@
                 </p>
 
                 <div class="observatory-card__footer">
-                    <a href="#" class="obs-read-more">
+                    <a href="single.php" class="obs-read-more">
                         <span>واکاوی کامل روایت</span>
                         <i class="ph ph-arrow-left"></i>
                     </a>
