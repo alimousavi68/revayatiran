@@ -43,9 +43,12 @@
                 </div>
 
                 <!-- ─ Nav: Services ────────────────────────────── -->
-                <div class="flex flex-col gap-0">
-                    <h3 class="font-sans text-sm font-extrabold text-white uppercase tracking-wider m-0 mb-5 pb-3 border-b border-white/20 leading-snug">سرویس‌ها</h3>
-                    <nav class="flex flex-col gap-0.5">
+                <div class="flex flex-col gap-0 footer-accordion">
+                    <button class="footer-accordion-btn w-full flex justify-between items-center text-right font-sans text-sm font-extrabold text-white uppercase tracking-wider m-0 mb-3 md:mb-5 pb-3 border-b border-white/20 leading-snug md:pointer-events-none cursor-pointer md:cursor-default">
+                        سرویس‌ها
+                        <i class="ph ph-caret-down text-lg md:hidden transition-transform duration-300"></i>
+                    </button>
+                    <nav class="footer-accordion-content hidden md:flex flex-col gap-0.5">
                         <a href="archive.php?category=daily-narrative" class="group inline-flex items-center gap-2.5 py-1.5 px-2.5 rounded-lg text-sm font-semibold text-white/85 no-underline transition-all duration-200 -ms-2.5 hover:text-white hover:bg-white/15 hover:pe-1.5 rtl:hover:pr-1.5 rtl:hover:pl-2.5">
                             <i class="ph ph-newspaper text-base opacity-90 transition-all duration-200 shrink-0 group-hover:opacity-100 group-hover:text-white group-hover:-translate-x-1 rtl:group-hover:translate-x-1"></i>
                             روایت روز
@@ -66,9 +69,12 @@
                 </div>
 
                 <!-- ─ Nav: Access ──────────────────────────────── -->
-                <div class="flex flex-col gap-0">
-                    <h3 class="font-sans text-sm font-extrabold text-white uppercase tracking-wider m-0 mb-5 pb-3 border-b border-white/20 leading-snug">درباره رسانه</h3>
-                    <nav class="flex flex-col gap-0.5">
+                <div class="flex flex-col gap-0 footer-accordion">
+                    <button class="footer-accordion-btn w-full flex justify-between items-center text-right font-sans text-sm font-extrabold text-white uppercase tracking-wider m-0 mb-3 md:mb-5 pb-3 border-b border-white/20 leading-snug md:pointer-events-none cursor-pointer md:cursor-default">
+                        درباره رسانه
+                        <i class="ph ph-caret-down text-lg md:hidden transition-transform duration-300"></i>
+                    </button>
+                    <nav class="footer-accordion-content hidden md:flex flex-col gap-0.5">
                         <a href="#" class="group inline-flex items-center gap-2.5 py-1.5 px-2.5 rounded-lg text-sm font-semibold text-white/85 no-underline transition-all duration-200 -ms-2.5 hover:text-white hover:bg-white/15 hover:pe-1.5 rtl:hover:pr-1.5 rtl:hover:pl-2.5">
                             <i class="ph ph-info text-base opacity-90 transition-all duration-200 shrink-0 group-hover:opacity-100 group-hover:text-white group-hover:-translate-x-1 rtl:group-hover:translate-x-1"></i>
                             درباره ما
@@ -211,5 +217,31 @@
     <!-- Swiper.js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/js/main.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    // Footer Accordion on Mobile
+    const accordionBtns = document.querySelectorAll('.footer-accordion-btn');
+    accordionBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Only execute on screens smaller than md (768px)
+            if (window.innerWidth >= 768) return;
+            
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('i');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                content.classList.add('flex');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                content.classList.remove('flex');
+                icon.classList.remove('rotate-180');
+            }
+        });
+    });
+});
+</script>
 </body>
 </html>

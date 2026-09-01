@@ -26,7 +26,7 @@
             <div class="story-rail" id="story-rail">
                 
                 <!-- استوری ۱: ویدیو -->
-                <article class="story-card" data-story-id="1" 
+                <a href="single-media.php?id=1&type=video" class="story-card block" data-story-id="1" 
                          data-title="مستند تصویری: بندر گوادر؛ گلوگاه ژئوپلیتیک و رقابت قدرت در دریای عمان" 
                          data-author="علی موسوی" 
                          data-img="assets/images/posts images/2279480_168.jpg" 
@@ -52,10 +52,10 @@
                             </div>
                         </div>
                     </div>
-                </article>
+                </a>
 
                 <!-- استوری ۲: پادکست صوتی -->
-                <article class="story-card" data-story-id="2" 
+                <a href="single-media.php?id=2&type=audio" class="story-card block" data-story-id="2" 
                          data-title="پادکست اختصاصی: تحلیل سناریوهای ناترازی انرژی و سوخت در سال ۱۴۰۵" 
                          data-author="دکتر رضا نصری" 
                          data-img="assets/images/posts images/1404041822335791233405404.jpg" 
@@ -80,10 +80,10 @@
                             </div>
                         </div>
                     </div>
-                </article>
+                </a>
 
                 <!-- استوری ۳: گالری تصاویر -->
-                <article class="story-card" data-story-id="3" 
+                <a href="single-media.php?id=3&type=gallery" class="story-card block" data-story-id="3" 
                          data-title="گالری تصویر: دیپلماسی ترانزیت و نقش کریدورهای جدید آسیای مرکزی" 
                          data-author="مریم کاظمی" 
                          data-img="assets/images/posts images/219-os5jc-1-ak32467-800x534.webp" 
@@ -108,10 +108,10 @@
                             </div>
                         </div>
                     </div>
-                </article>
+                </a>
 
                 <!-- استوری ۴: رصد میدانی / ویدیو -->
-                <article class="story-card" data-story-id="4" 
+                <a href="single-media.php?id=4&type=video" class="story-card block" data-story-id="4" 
                          data-title="هوشمندسازی مرزهای شرقی؛ پایش حرارتی و داده‌محور" 
                          data-author="اتاق تحلیل امنیت" 
                          data-img="assets/images/posts images/images (1).jpeg" 
@@ -136,10 +136,10 @@
                             </div>
                         </div>
                     </div>
-                </article>
+                </a>
 
                 <!-- استوری ۵: ویدئوکست -->
-                <article class="story-card" data-story-id="5" 
+                <a href="single-media.php?id=5&type=video" class="story-card block" data-story-id="5" 
                          data-title="واکاوی موتیف‌های تکرارشونده در کمپین‌های رسانه‌ای هفته" 
                          data-author="تیم دیده‌بان رسانه" 
                          data-img="assets/images/posts images/images (2).jpeg" 
@@ -164,10 +164,10 @@
                             </div>
                         </div>
                     </div>
-                </article>
+                </a>
 
                 <!-- استوری ۶: پادکست صوتی -->
-                <article class="story-card" data-story-id="6" 
+                <a href="single-media.php?id=6&type=audio" class="story-card block" data-story-id="6" 
                          data-title="پادکست اقتصادی: بررسی نوسانات ارزی و کریدورهای مالی همسایگان" 
                          data-author="تحلیل اقتصادی" 
                          data-img="assets/images/posts images/1404041822335791233405404.jpg" 
@@ -191,10 +191,10 @@
                             </div>
                         </div>
                     </div>
-                </article>
+                </a>
 
                 <!-- استوری ۷: گالری تصاویر -->
-                <article class="story-card" data-story-id="7" 
+                <a href="single-media.php?id=7&type=gallery" class="story-card block" data-story-id="7" 
                          data-title="گزارش تصویری: رصد هوایی و پایش زیرساخت‌های انرژی در خلیج فارس" 
                          data-author="اتاق پایش انرژی" 
                          data-img="assets/images/posts images/2279480_168.jpg" 
@@ -218,10 +218,10 @@
                             </div>
                         </div>
                     </div>
-                </article>
+                </a>
 
                 <!-- استوری ۸: ویدئوکست -->
-                <article class="story-card" data-story-id="8" 
+                <a href="single-media.php?id=8&type=video" class="story-card block" data-story-id="8" 
                          data-title="تحلیل گفتمان: بررسی بازبازنمایی رویدادهای کلان در رسانه‌های غربی" 
                          data-author="دکتر سمیرا نوری" 
                          data-img="assets/images/posts images/219-os5jc-1-ak32467-800x534.webp" 
@@ -245,62 +245,9 @@
                             </div>
                         </div>
                     </div>
-                </article>
+                </a>
 
             </div>
         </div>
     </div>
 </section>
-
-<!-- مدال تعاملی کامل نمایش استوری (Full Story Viewer Modal) -->
-<div class="story-modal" id="story-modal-viewer" aria-hidden="true">
-    <div class="story-modal__backdrop" id="story-modal-backdrop"></div>
-    
-    <div class="story-modal__container">
-        <!-- نوارهای پیشرفت استوری -->
-        <div class="story-modal__progress-bar" id="story-progress-bar">
-            <!-- به‌صورت دینامیک توسط JS پر می‌شود -->
-        </div>
-
-        <!-- هدر مدال -->
-        <div class="story-modal__header">
-            <div class="story-modal__user">
-                <img src="" alt="" class="story-modal__user-avatar" id="story-modal-avatar">
-                <div class="story-modal__user-info">
-                    <strong id="story-modal-author"></strong>
-                    <span id="story-modal-category"></span>
-                </div>
-            </div>
-            <button class="story-modal__close-btn" id="story-modal-close" aria-label="بستن استوری">
-                <i class="ph ph-x"></i>
-            </button>
-        </div>
-
-        <!-- بدنه محتوای استوری -->
-        <div class="story-modal__body">
-            <img src="" alt="" class="story-modal__img" id="story-modal-img">
-            
-            <div class="story-modal__play-overlay" id="story-modal-play-overlay">
-                <div class="story-modal__play-btn">
-                    <i class="ph-fill ph-play" id="story-modal-play-icon"></i>
-                </div>
-            </div>
-
-            <div class="story-modal__caption">
-                <h3 id="story-modal-title"></h3>
-                <div class="story-modal__meta">
-                    <span id="story-modal-duration"><i class="ph ph-clock"></i> </span>
-                </div>
-            </div>
-        </div>
-
-        <!-- دکمه‌های ناوبری چپ و راست -->
-        <button class="story-modal__nav story-modal__nav--prev" id="story-modal-prev" aria-label="استوری قبلی">
-            <i class="ph ph-caret-right"></i>
-        </button>
-        <button class="story-modal__nav story-modal__nav--next" id="story-modal-next" aria-label="استوری بعدی">
-            <i class="ph ph-caret-left"></i>
-        </button>
-    </div>
-</div>
-

@@ -22,7 +22,7 @@ $user_level = 'guest';
     <!-- Swiper.js -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-    <link rel="stylesheet" href="./assets/css/style.css?v=4.1">
+    <link rel="stylesheet" href="./assets/css/style.css?v=4.5">
 </head>
 <body class="bg-bg text-text min-h-screen font-sans leading-relaxed transition-colors duration-300 antialiased selection:bg-accent selection:text-white">
     <div class="fixed top-0 left-0 right-0 h-[3px] z-[9999] pointer-events-none" aria-hidden="true">
@@ -134,17 +134,17 @@ $user_level = 'guest';
 
             <!-- Mobile Toggle -->
             <div class="flex items-center gap-2 xl:hidden">
-                <button class="menu-toggle group flex flex-col items-center justify-center gap-[5px] w-10 h-10 rounded-lg border border-white/20 text-white cursor-pointer transition-colors duration-200 hover:bg-white/10 hover:border-white/40 [&[aria-expanded='true']_span:nth-child(1)]:translate-y-[6.5px] [&[aria-expanded='true']_span:nth-child(1)]:-rotate-45 [&[aria-expanded='true']_span:nth-child(2)]:opacity-0 [&[aria-expanded='true']_span:nth-child(2)]:w-0 [&[aria-expanded='true']_span:nth-child(3)]:-translate-y-[6.5px] [&[aria-expanded='true']_span:nth-child(3)]:rotate-45" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="منو">
-                    <span class="block w-[18px] h-[1.5px] bg-current rounded-full transition-all duration-300 origin-center"></span>
-                    <span class="block w-[18px] h-[1.5px] bg-current rounded-full transition-all duration-300 origin-center"></span>
-                    <span class="block w-[18px] h-[1.5px] bg-current rounded-full transition-all duration-300 origin-center"></span>
+                <button class="menu-toggle group" style="color: var(--text);" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="منو">
+                    <span class="menu-toggle__line block w-[18px] h-[1.5px] bg-current rounded-full transition-all duration-300 origin-center"></span>
+                    <span class="menu-toggle__line block w-[18px] h-[1.5px] bg-current rounded-full transition-all duration-300 origin-center"></span>
+                    <span class="menu-toggle__line block w-[18px] h-[1.5px] bg-current rounded-full transition-all duration-300 origin-center"></span>
                 </button>
             </div>
 
         </div>
 
         <!-- Mobile Menu (Tailwind rewrite to keep it standard) -->
-        <div class="mobile-menu hidden" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
             <div class="mobile-menu__panel">
                 <div class="mobile-menu__header">
                     <span class="mobile-menu__title">منو</span>
@@ -162,7 +162,7 @@ $user_level = 'guest';
                         <span>روایت روز</span>
                     </a>
                     <a href="archive.php?category=news-monitoring" class="mobile-nav-item">
-                        <span class="mobile-nav-item__icon"><i class="ph ph-radar"></i></span>
+                        <span class="mobile-nav-item__icon"><i class="ph ph-broadcast"></i></span>
                         <span>رصد اخبار</span>
                     </a>
                     <a href="archive.php?category=special-dossiers" class="mobile-nav-item">

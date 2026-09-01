@@ -58,7 +58,7 @@
             </div>
 
             <!-- ستون وسط: لیست عکس‌های تعاملی -->
-            <div class="daily-interactive-thumbs">
+            <div class="daily-interactive-thumbs hidden lg:block">
                 <div class="interactive-thumb-list layout-gap-md" id="interactive-thumb-list">
                     <!-- عکس ۱ -->
                     <div class="interactive-thumb-item is-active" data-index="0"
@@ -104,7 +104,7 @@
             </div>
 
             <!-- ستون چپ: پنل اطلاعات داینامیک -->
-            <div class="daily-interactive-info" id="interactive-info-panel">
+            <div class="daily-interactive-info hidden lg:block" id="interactive-info-panel">
                 <div class="info-panel__inner panel-pad">
                     <span class="info-panel__tag" id="info-panel-tag">سیاست اقتصادی</span>
                     <h3 class="info-panel__title" id="info-panel-title">یارانه پنهان و فرسایش اعتماد عمومی؛ اقتصاد سیاسی یک نابرابری مزمن</h3>
@@ -123,6 +123,39 @@
                         <i class="ph ph-arrow-left"></i>
                     </a>
                 </div>
+            </div>
+
+            <!-- لیست ساده برای موبایل و تبلت (پنهان در دسکتاپ) -->
+            <div class="flex flex-col gap-4 lg:hidden w-full col-span-1 md:col-span-2 mt-4 md:mt-0">
+                <!-- آیتم ۱ -->
+                <a href="single.php?id=1" class="flex gap-4 p-3 bg-white dark:bg-[#1a1c23] border border-[var(--border)] rounded-[20px] shadow-sm hover:border-primary/50 transition-colors">
+                    <img src="assets/images/posts images/1404092612513063035069134.jpg" alt="تحلیل ۱" class="w-24 h-24 md:w-28 md:h-28 rounded-xl object-cover shrink-0">
+                    <div class="flex flex-col justify-center min-w-0">
+                        <span class="text-[10px] font-bold text-primary mb-1">سیاست اقتصادی</span>
+                        <h4 class="text-[13px] md:text-sm font-bold text-gray-900 dark:text-white line-clamp-2 mb-2 leading-[1.6]">یارانه پنهان و فرسایش اعتماد عمومی؛ اقتصاد سیاسی یک نابرابری مزمن</h4>
+                        <span class="text-[11px] text-gray-500 font-medium flex items-center gap-1"><i class="ph-fill ph-user-circle"></i> دکتر پیمان شریفی</span>
+                    </div>
+                </a>
+                
+                <!-- آیتم ۲ -->
+                <a href="single.php?id=2" class="flex gap-4 p-3 bg-white dark:bg-[#1a1c23] border border-[var(--border)] rounded-[20px] shadow-sm hover:border-primary/50 transition-colors">
+                    <img src="assets/images/posts images/شاخص-بورس-ak5259-ak4687-1200x800-1024x683.webp" alt="تحلیل ۲" class="w-24 h-24 md:w-28 md:h-28 rounded-xl object-cover shrink-0">
+                    <div class="flex flex-col justify-center min-w-0">
+                        <span class="text-[10px] font-bold text-primary mb-1">اقتصاد کلان</span>
+                        <h4 class="text-[13px] md:text-sm font-bold text-gray-900 dark:text-white line-clamp-2 mb-2 leading-[1.6]">سایه تصمیمات پولی بر مهار تورم ساختاری و رفتار بازارها</h4>
+                        <span class="text-[11px] text-gray-500 font-medium flex items-center gap-1"><i class="ph-fill ph-user-circle"></i> مهندس سارا راد</span>
+                    </div>
+                </a>
+                
+                <!-- آیتم ۳ -->
+                <a href="single.php?id=3" class="flex gap-4 p-3 bg-white dark:bg-[#1a1c23] border border-[var(--border)] rounded-[20px] shadow-sm hover:border-primary/50 transition-colors">
+                    <img src="assets/images/posts images/219-os5jc-1-ak32467-800x534.webp" alt="تحلیل ۳" class="w-24 h-24 md:w-28 md:h-28 rounded-xl object-cover shrink-0">
+                    <div class="flex flex-col justify-center min-w-0">
+                        <span class="text-[10px] font-bold text-primary mb-1">روابط بین‌الملل</span>
+                        <h4 class="text-[13px] md:text-sm font-bold text-gray-900 dark:text-white line-clamp-2 mb-2 leading-[1.6]">پیامدهای ژئوپلیتیک نوسان انرژی بر توازن قدرت منطقه‌ای</h4>
+                        <span class="text-[11px] text-gray-500 font-medium flex items-center gap-1"><i class="ph-fill ph-user-circle"></i> دکتر علی موسوی</span>
+                    </div>
+                </a>
             </div>
 
         </div>

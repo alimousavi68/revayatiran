@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // PALETTES & HEADER BACKDROP SYSTEM (Independent Controls)
     // ═══════════════════════════════════════════════════════════
     const storedPalette = localStorage.getItem("revayat-palette") || "bbc-red";
-    const storedBackdrop = localStorage.getItem("revayat-header-backdrop") || "gainsboro";
+    const storedBackdrop = localStorage.getItem("revayat-header-backdrop") || "slate";
 
     const applyPalette = (paletteName) => {
         root.setAttribute("data-palette", paletteName);
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.getSitePalette = () => root.getAttribute("data-palette") || "bbc-red";
 
     window.setHeaderBackdrop = applyHeaderBackdrop;
-    window.getHeaderBackdrop = () => root.getAttribute("data-header-backdrop") || "gainsboro";
+    window.getHeaderBackdrop = () => root.getAttribute("data-header-backdrop") || "slate";
 
     applyPalette(storedPalette);
     applyHeaderBackdrop(storedBackdrop);
@@ -339,11 +339,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const tabButtons = document.querySelectorAll("[data-news-tab]");
     const tabPanels = document.querySelectorAll("[data-news-panel]");
+    const tabSelect = document.getElementById("news-tab-select");
 
     if (tabButtons.length && tabPanels.length) {
         tabButtons.forEach((button) => {
             button.addEventListener("click", () => {
                 const target = button.getAttribute("data-news-tab");
+
+                if (tabSelect && tabSelect.value !== target) {
+                    tabSelect.value = target;
+                }
 
                 tabButtons.forEach((item) => {
                     const isActive = item === button;
@@ -363,6 +368,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
             });
         });
+
+        if (tabSelect) {
+            tabSelect.addEventListener("change", (e) => {
+                const targetVal = e.target.value;
+                const btn = document.querySelector(`[data-news-tab="${targetVal}"]`);
+                if (btn) btn.click();
+            });
+        }
     }
 
     if (mediaRail && mediaPrev && mediaNext) {
@@ -468,27 +481,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const storyRailPrev = document.getElementById("story-rail-prev");
     const storyRailNext = document.getElementById("story-rail-next");
     const storyCards = document.querySelectorAll(".story-card");
-    const storyModal = document.getElementById("story-modal-viewer");
-    const storyModalBackdrop = document.getElementById("story-modal-backdrop");
-    const storyModalClose = document.getElementById("story-modal-close");
-    const storyModalAvatar = document.getElementById("story-modal-avatar");
-    const storyModalAuthor = document.getElementById("story-modal-author");
-    const storyModalCategory = document.getElementById("story-modal-category");
-    const storyModalImg = document.getElementById("story-modal-img");
-    const storyModalTitle = document.getElementById("story-modal-title");
-    const storyModalDuration = document.getElementById("story-modal-duration");
-    const storyModalPrev = document.getElementById("story-modal-prev");
-    const storyModalNext = document.getElementById("story-modal-next");
-    const storyProgressBar = document.getElementById("story-progress-bar");
-    const storyPlayOverlay = document.getElementById("story-modal-play-overlay");
-    const storyPlayIcon = document.getElementById("story-modal-play-icon");
-
-    let currentStoryIndex = 0;
-    let storyTimer = null;
-    let storyProgressInterval = null;
-    const STORY_DURATION_MS = 6000; // 6 seconds per story
-    let isStoryPlaying = false;
-
+    // Removed story modal elements
     // Story Rail Scroll buttons & Auto-play Carousel
     let autoPlayInterval = null;
 
@@ -534,135 +527,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Story Modal Logic
-    if (storyCards.length && storyModal) {
-        const buildProgressBars = () => {
-            if (!storyProgressBar) return;
-            storyProgressBar.innerHTML = "";
-            storyCards.forEach((_, idx) => {
-                const step = document.createElement("div");
-                step.className = "story-progress-step";
-                if (idx < currentStoryIndex) {
-                    step.classList.add("is-completed");
-                }
-                const inner = document.createElement("div");
-                inner.className = "story-progress-step-inner";
-                step.appendChild(inner);
-                storyProgressBar.appendChild(step);
-            });
-        };
-
-        const startStoryProgress = () => {
-            clearInterval(storyProgressInterval);
-            if (!storyProgressBar) return;
-            const steps = storyProgressBar.querySelectorAll(".story-progress-step");
-            steps.forEach((step, idx) => {
-                const inner = step.querySelector(".story-progress-step-inner");
-                if (!inner) return;
-                if (idx < currentStoryIndex) {
-                    step.classList.add("is-completed");
-                    inner.style.width = "100%";
-                } else if (idx > currentStoryIndex) {
-                    step.classList.remove("is-completed");
-                    inner.style.width = "0%";
-                } else {
-                    step.classList.remove("is-completed");
-                    inner.style.width = "0%";
-                    let startTime = performance.now();
-                    storyProgressInterval = setInterval(() => {
-                        let elapsed = performance.now() - startTime;
-                        let pct = Math.min((elapsed / STORY_DURATION_MS) * 100, 100);
-                        inner.style.width = `${pct}%`;
-                        if (pct >= 100) {
-                            clearInterval(storyProgressInterval);
-                            step.classList.add("is-completed");
-                            nextStory();
-                        }
-                    }, 50);
-                }
-            });
-        };
-
-        const loadStory = (index) => {
-            if (index < 0 || index >= storyCards.length) return;
-            currentStoryIndex = index;
-            const card = storyCards[index];
-
-            const author = card.getAttribute("data-author") || "";
-            const category = card.getAttribute("data-category") || "";
-            const img = card.getAttribute("data-img") || "";
-            const title = card.getAttribute("data-title") || "";
-            const duration = card.getAttribute("data-duration") || "";
-            const type = card.getAttribute("data-type") || "video";
-
-            if (storyModalAuthor) storyModalAuthor.textContent = author;
-            if (storyModalCategory) storyModalCategory.textContent = category;
-            if (storyModalImg) storyModalImg.src = img;
-            if (storyModalTitle) storyModalTitle.textContent = title;
-            if (storyModalDuration) storyModalDuration.innerHTML = `<i class="ph ph-clock"></i> ${duration}`;
-
-            if (storyPlayIcon) {
-                if (type === "audio") {
-                    storyPlayIcon.className = "ph-fill ph-headphones";
-                } else if (type === "gallery") {
-                    storyPlayIcon.className = "ph-fill ph-images";
-                } else {
-                    storyPlayIcon.className = "ph-fill ph-play";
-                }
-            }
-
-            isStoryPlaying = true;
-            buildProgressBars();
-            startStoryProgress();
-        };
-
-        const openStoryModal = (index) => {
-            storyModal.classList.add("is-active");
-            storyModal.setAttribute("aria-hidden", "false");
-            document.body.style.overflow = "hidden";
-            loadStory(index);
-        };
-
-        const closeStoryModal = () => {
-            storyModal.classList.remove("is-active");
-            storyModal.setAttribute("aria-hidden", "true");
-            document.body.style.overflow = "";
-            clearInterval(storyProgressInterval);
-            isStoryPlaying = false;
-        };
-
-        const nextStory = () => {
-            if (currentStoryIndex < storyCards.length - 1) {
-                loadStory(currentStoryIndex + 1);
-            } else {
-                closeStoryModal();
-            }
-        };
-
-        const prevStory = () => {
-            if (currentStoryIndex > 0) {
-                loadStory(currentStoryIndex - 1);
-            } else {
-                loadStory(0);
-            }
-        };
-
-        storyCards.forEach((card, idx) => {
-            card.addEventListener("click", () => openStoryModal(idx));
-        });
-
-        if (storyModalClose) storyModalClose.addEventListener("click", closeStoryModal);
-        if (storyModalBackdrop) storyModalBackdrop.addEventListener("click", closeStoryModal);
-        if (storyModalNext) storyModalNext.addEventListener("click", nextStory);
-        if (storyModalPrev) storyModalPrev.addEventListener("click", prevStory);
-
-        document.addEventListener("keydown", (e) => {
-            if (!storyModal.classList.contains("is-active")) return;
-            if (e.key === "Escape") closeStoryModal();
-            if (e.key === "ArrowLeft") prevStory(); // RTL reverse
-            if (e.key === "ArrowRight") nextStory();
-        });
-    }
+    // Story Modal Logic removed as per new single-media routing
 
     // ═══════════════════════════════════════════════════════════
     // DAILY NARRATIVE INTERACTIVE THUMBNAILS (Decoupled & Isolated)
@@ -819,7 +684,48 @@ document.addEventListener("DOMContentLoaded", () => {
             const swiperEl = targetPanel.querySelector(".news-swiper");
             if (swiperEl) createSwiper(swiperEl);
         }, 50); // تاخیر کوچک برای اطمینان از نمایش پنل
-    });
+})();
+
+// ─── ANALYSTS TOP SWIPER CAROUSEL (با پخش خودکار و پجینیشن) ─────────────────
+(function initAnalystsTopSwiper() {
+    const init = () => {
+        const swiperEl = document.querySelector(".analysts-top-swiper");
+        if (!swiperEl || swiperEl.classList.contains("swiper-initialized")) return;
+
+        new Swiper(swiperEl, {
+            slidesPerView: 1.1,
+            spaceBetween: 14,
+            grabCursor: true,
+            speed: 600,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            dir: "rtl",
+            navigation: {
+                nextEl: swiperEl.querySelector(".analysts-swiper-next"),
+                prevEl: swiperEl.querySelector(".analysts-swiper-prev"),
+            },
+            pagination: {
+                el: swiperEl.querySelector(".analysts-swiper-pagination"),
+                clickable: true,
+                dynamicBullets: true,
+            },
+            breakpoints: {
+                480: { slidesPerView: 1.5, spaceBetween: 14 },
+                640: { slidesPerView: 2, spaceBetween: 16 },
+                1024: { slidesPerView: 2.2, spaceBetween: 18 },
+                1280: { slidesPerView: 3, spaceBetween: 20 },
+            },
+        });
+    };
+
+    if (document.readyState !== "loading") {
+        init();
+    } else {
+        document.addEventListener("DOMContentLoaded", init);
+    }
 })();
 
 // ─── FLOATING SOCIAL FAB CONTROLLER ─────────────────────────────────────────

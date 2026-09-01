@@ -8,13 +8,26 @@
                 <h2>رصد اخبار</h2>
                 <p class="section-summary">پایش مستمر منابع خبری و کشف روایت‌های نوظهور</p>
             </div>
-            <div class="etude-b__actions">
-                <div class="tabs" role="tablist" aria-label="دسته‌بندی اخبار">
+            <div class="etude-b__actions flex items-center gap-2">
+                <!-- تب‌های دسکتاپ/تبلت -->
+                <div class="tabs hidden sm:flex" role="tablist" aria-label="دسته‌بندی اخبار">
                     <button class="tab-button is-active" type="button" role="tab" aria-selected="true" data-news-tab="all">همه</button>
                     <button class="tab-button" type="button" role="tab" aria-selected="false" data-news-tab="politics">سیاست</button>
                     <button class="tab-button" type="button" role="tab" aria-selected="false" data-news-tab="economy">اقتصاد</button>
                     <button class="tab-button" type="button" role="tab" aria-selected="false" data-news-tab="security">امنیت</button>
                 </div>
+
+                <!-- منوی کشویی دسته‌بندی در موبایل (جلوگیری از به‌هم‌ریختگی) -->
+                <div class="sm:hidden relative inline-block">
+                    <select id="news-tab-select" class="bg-surface border border-border text-text text-xs rounded-full px-3 py-1.5 pe-7 appearance-none font-bold cursor-pointer focus:outline-none focus:border-accent">
+                        <option value="all">همه دسته‌ها</option>
+                        <option value="politics">سیاست</option>
+                        <option value="economy">اقتصاد</option>
+                        <option value="security">امنیت</option>
+                    </select>
+                    <i class="ph ph-caret-down absolute left-2.5 top-1/2 -translate-y-1/2 text-xs text-text-muted pointer-events-none"></i>
+                </div>
+
                 <a href="archive.php?category=news-monitoring" class="section-link">
                     <span>آرشیو</span>
                     <i class="ph ph-arrow-left"></i>

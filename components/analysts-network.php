@@ -65,129 +65,152 @@
                     </div>
                 </div>
 
-                <!-- لیست تحلیل‌های برتر (Grid Overlay - 6 Cards) -->
-                <div class="an-top-analyses--elegant">
-                    <div class="an-sub-header">
-                        <h4><i class="ph ph-trend-up"></i> تحلیل‌های برتر از نگاه مخاطبان</h4>
+                <!-- لیست تحلیل‌های برتر (Swiper Carousel با Autoplay، دستگیره‌ها و پجینیشن) -->
+                <div class="an-top-analyses--elegant relative">
+                    <div class="an-sub-header flex items-center justify-between mb-3">
+                        <h4 class="m-0"><i class="ph ph-trend-up"></i> تحلیل‌های برتر از نگاه مخاطبان</h4>
                         <a href="analyses.php" class="an-sub-header__link">آرشیو تحلیل‌ها <i class="ph ph-caret-left"></i></a>
                     </div>
                     
-                    <div class="an-top-analyses__grid layout-gap-md">
+                    <div class="swiper analysts-top-swiper relative pb-10">
+                        <div class="swiper-wrapper">
 
-                        <!-- تحلیل برتر ۱ -->
-                        <article class="an-text-card">
-                            <div class="an-text-card__body">
-                                <h5 class="an-text-card__title">
-                                    <a href="single.php">چرا افکار عمومی دیگر با تیترهای خطی قانع نمی‌شود؟</a>
-                                </h5>
-                                <div class="an-text-card__meta">
-                                    <span class="an-author">بابک صادقی</span>
-                                    <div class="an-text-card__score">
-                                        <strong>۴.۸</strong>
-                                        <i class="ph ph-check"></i>
+                            <!-- تحلیل برتر ۱ -->
+                            <div class="swiper-slide">
+                                <article class="an-text-card">
+                                    <div class="an-text-card__body">
+                                        <h5 class="an-text-card__title">
+                                            <a href="single.php">چرا افکار عمومی دیگر با تیترهای خطی قانع نمی‌شود؟</a>
+                                        </h5>
+                                        <div class="an-text-card__meta">
+                                            <span class="an-author">بابک صادقی</span>
+                                            <div class="an-text-card__score">
+                                                <strong>۴.۸</strong>
+                                                <i class="ph ph-check"></i>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="an-text-card__avatar-wrap">
-                                <img src="assets/images/user Avatar/a9d7f2cbb32944f1bcd60800dda1d236.png" alt="بابک صادقی">
-                            </div>
-                        </article>
-
-                        <!-- تحلیل برتر ۲ -->
-                        <article class="an-text-card">
-                            <div class="an-text-card__body">
-                                <h5 class="an-text-card__title">
-                                    <a href="single.php">آیا اتحادهای موقت منطقه‌ای به بازدارندگی تبدیل می‌شوند؟</a>
-                                </h5>
-                                <div class="an-text-card__meta">
-                                    <span class="an-author">مریم هوشمندی</span>
-                                    <div class="an-text-card__score">
-                                        <strong>۴.۷</strong>
-                                        <i class="ph ph-check"></i>
+                                    <div class="an-text-card__avatar-wrap">
+                                        <img src="assets/images/user Avatar/a9d7f2cbb32944f1bcd60800dda1d236.png" alt="بابک صادقی">
                                     </div>
-                                </div>
+                                </article>
                             </div>
-                            <div class="an-text-card__avatar-wrap">
-                                <img src="assets/images/user Avatar/0f1b74871a3e46e7ae950c05c65e6d2d.png" alt="مریم هوشمندی">
-                            </div>
-                        </article>
 
-                        <!-- تحلیل برتر ۳ -->
-                        <article class="an-text-card">
-                            <div class="an-text-card__body">
-                                <h5 class="an-text-card__title">
-                                    <a href="single.php">تنش‌های ارزی و سناریوهای بازارهای مالی در فصل جدید</a>
-                                </h5>
-                                <div class="an-text-card__meta">
-                                    <span class="an-author">احسان طاهری</span>
-                                    <div class="an-text-card__score">
-                                        <strong>۴.۶</strong>
-                                        <i class="ph ph-check"></i>
+                            <!-- تحلیل برتر ۲ -->
+                            <div class="swiper-slide">
+                                <article class="an-text-card">
+                                    <div class="an-text-card__body">
+                                        <h5 class="an-text-card__title">
+                                            <a href="single.php">آیا اتحادهای موقت منطقه‌ای به بازدارندگی تبدیل می‌شوند؟</a>
+                                        </h5>
+                                        <div class="an-text-card__meta">
+                                            <span class="an-author">مریم هوشمندی</span>
+                                            <div class="an-text-card__score">
+                                                <strong>۴.۷</strong>
+                                                <i class="ph ph-check"></i>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="an-text-card__avatar-wrap">
-                                <img src="assets/images/user Avatar/56d604c11de44ed4b583e8f8b81626b3.png" alt="احسان طاهری">
-                            </div>
-                        </article>
-
-                        <!-- تحلیل برتر ۴ -->
-                        <article class="an-text-card">
-                            <div class="an-text-card__body">
-                                <h5 class="an-text-card__title">
-                                    <a href="single.php">تحولات بازار بورس و تاثیر سیاست‌های پولی بر شاخص‌ها</a>
-                                </h5>
-                                <div class="an-text-card__meta">
-                                    <span class="an-author">الهام شریفی</span>
-                                    <div class="an-text-card__score">
-                                        <strong>۴.۵</strong>
-                                        <i class="ph ph-check"></i>
+                                    <div class="an-text-card__avatar-wrap">
+                                        <img src="assets/images/user Avatar/0f1b74871a3e46e7ae950c05c65e6d2d.png" alt="مریم هوشمندی">
                                     </div>
-                                </div>
+                                </article>
                             </div>
-                            <div class="an-text-card__avatar-wrap">
-                                <img src="assets/images/user Avatar/634eb20869b740fdbc5b7c8427a8f674.png" alt="الهام شریفی">
-                            </div>
-                        </article>
 
-                        <!-- تحلیل برتر ۵ -->
-                        <article class="an-text-card">
-                            <div class="an-text-card__body">
-                                <h5 class="an-text-card__title">
-                                    <a href="single.php">پیامدهای رزمایش‌های مشترک در تعادل قدرت منطقه‌ای</a>
-                                </h5>
-                                <div class="an-text-card__meta">
-                                    <span class="an-author">نرگس احمدی</span>
-                                    <div class="an-text-card__score">
-                                        <strong>۴.۴</strong>
-                                        <i class="ph ph-check"></i>
+                            <!-- تحلیل برتر ۳ -->
+                            <div class="swiper-slide">
+                                <article class="an-text-card">
+                                    <div class="an-text-card__body">
+                                        <h5 class="an-text-card__title">
+                                            <a href="single.php">تنش‌های ارزی و سناریوهای بازارهای مالی در فصل جدید</a>
+                                        </h5>
+                                        <div class="an-text-card__meta">
+                                            <span class="an-author">احسان طاهری</span>
+                                            <div class="an-text-card__score">
+                                                <strong>۴.۶</strong>
+                                                <i class="ph ph-check"></i>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="an-text-card__avatar-wrap">
-                                <img src="assets/images/user Avatar/14eeb1b8dc3a4bbd905999e407a01725.png" alt="نرگس احمدی">
-                            </div>
-                        </article>
-
-                        <!-- تحلیل برتر ۶ -->
-                        <article class="an-text-card">
-                            <div class="an-text-card__body">
-                                <h5 class="an-text-card__title">
-                                    <a href="single.php">تحلیل الگوهای انتخاباتی و پیش‌بینی روند قانون‌گذاری</a>
-                                </h5>
-                                <div class="an-text-card__meta">
-                                    <span class="an-author">پیمان شریفی</span>
-                                    <div class="an-text-card__score">
-                                        <strong>۴.۳</strong>
-                                        <i class="ph ph-check"></i>
+                                    <div class="an-text-card__avatar-wrap">
+                                        <img src="assets/images/user Avatar/56d604c11de44ed4b583e8f8b81626b3.png" alt="احسان طاهری">
                                     </div>
-                                </div>
+                                </article>
                             </div>
-                            <div class="an-text-card__avatar-wrap">
-                                <img src="assets/images/user Avatar/8fc8b30f66b4489aaeb92b686a386cdc.png" alt="پیمان شریفی">
-                            </div>
-                        </article>
 
+                            <!-- تحلیل برتر ۴ -->
+                            <div class="swiper-slide">
+                                <article class="an-text-card">
+                                    <div class="an-text-card__body">
+                                        <h5 class="an-text-card__title">
+                                            <a href="single.php">تحولات بازار بورس و تاثیر سیاست‌های پولی بر شاخص‌ها</a>
+                                        </h5>
+                                        <div class="an-text-card__meta">
+                                            <span class="an-author">الهام شریفی</span>
+                                            <div class="an-text-card__score">
+                                                <strong>۴.۵</strong>
+                                                <i class="ph ph-check"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="an-text-card__avatar-wrap">
+                                        <img src="assets/images/user Avatar/634eb20869b740fdbc5b7c8427a8f674.png" alt="الهام شریفی">
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- تحلیل برتر ۵ -->
+                            <div class="swiper-slide">
+                                <article class="an-text-card">
+                                    <div class="an-text-card__body">
+                                        <h5 class="an-text-card__title">
+                                            <a href="single.php">پیامدهای رزمایش‌های مشترک در تعادل قدرت منطقه‌ای</a>
+                                        </h5>
+                                        <div class="an-text-card__meta">
+                                            <span class="an-author">نرگس احمدی</span>
+                                            <div class="an-text-card__score">
+                                                <strong>۴.۴</strong>
+                                                <i class="ph ph-check"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="an-text-card__avatar-wrap">
+                                        <img src="assets/images/user Avatar/14eeb1b8dc3a4bbd905999e407a01725.png" alt="نرگس احمدی">
+                                    </div>
+                                </article>
+                            </div>
+
+                            <!-- تحلیل برتر ۶ -->
+                            <div class="swiper-slide">
+                                <article class="an-text-card">
+                                    <div class="an-text-card__body">
+                                        <h5 class="an-text-card__title">
+                                            <a href="single.php">تحلیل الگوهای انتخاباتی و پیش‌بینی روند قانون‌گذاری</a>
+                                        </h5>
+                                        <div class="an-text-card__meta">
+                                            <span class="an-author">پیمان شریفی</span>
+                                            <div class="an-text-card__score">
+                                                <strong>۴.۳</strong>
+                                                <i class="ph ph-check"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="an-text-card__avatar-wrap">
+                                        <img src="assets/images/user Avatar/8fc8b30f66b4489aaeb92b686a386cdc.png" alt="پیمان شریفی">
+                                    </div>
+                                </article>
+                            </div>
+
+                        </div>
+                        
+                        <!-- کنترل‌های کروسل (دستگیره‌ها و پجینیشن) -->
+                        <button type="button" class="swiper-button-prev analysts-swiper-prev" aria-label="قبلی">
+                            <i class="ph-bold ph-caret-right"></i>
+                        </button>
+                        <button type="button" class="swiper-button-next analysts-swiper-next" aria-label="بعدی">
+                            <i class="ph-bold ph-caret-left"></i>
+                        </button>
+                        <div class="swiper-pagination analysts-swiper-pagination"></div>
                     </div>
                 </div>
 
@@ -314,11 +337,11 @@
                 <!-- درخواست عضویت VIP (Premium) -->
                 <div class="an-cta--premium">
                     <div class="an-cta-premium__info">
-                        <div style="display:flex; align-items:center; gap: 8px;">
-                            <i class="ph-fill ph-users-three" style="font-size: 24px; color: rgba(255,255,255,0.9);"></i>
-                            <h4 style="margin:0; font-size: 16px; color: #fff;">عضویت در شبکه تحلیل‌گران</h4>
+                        <div class="an-cta-header flex items-center gap-2">
+                            <i class="ph-fill ph-users-three text-2xl text-white/90"></i>
+                            <h4 class="m-0 text-base text-white font-bold">عضویت در شبکه تحلیل‌گران</h4>
                         </div>
-                        <p style="color: rgba(255,255,255,0.85); font-size: 13px; line-height: 1.6; margin: 0;">با پیوستن به شبکه تحلیلگران اختصاصی روایت ایران، یادداشت‌های راهبردی خود را مستقیماً منتشر کنید و با دیگر پژوهشگران در ارتباط باشید.</p>
+                        <p class="an-cta-desc text-white/85 text-xs sm:text-sm leading-relaxed m-0">با پیوستن به شبکه تحلیلگران اختصاصی روایت ایران، یادداشت‌های راهبردی خود را مستقیماً منتشر کنید و با دیگر پژوهشگران در ارتباط باشید.</p>
                     </div>
                     <div class="an-cta-actions">
                         <a href="auth.php?tab=register" class="an-cta-btn--primary">
