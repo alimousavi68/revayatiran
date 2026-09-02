@@ -52,7 +52,7 @@ $user_level = 'guest';
         <div class="absolute top-0 left-0 w-full h-[82px] bg-[var(--header-backdrop)] header-backdrop-pattern -z-10 pointer-events-none transition-colors duration-300" aria-hidden="true"></div>
 
         <!-- Top Bar (Full-Width Harmonic Design) -->
-        <div class="top-bar w-full" id="top-bar">
+        <div class="top-bar w-full hidden md:block" id="top-bar">
             <div class="container flex items-center justify-between h-[42px] px-3">
 
                 <!-- Meta: Date + Time -->
@@ -69,7 +69,7 @@ $user_level = 'guest';
                     <button class="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-border bg-bg-elevated text-text-muted text-base cursor-pointer transition-all duration-200 hover:text-primary hover:border-primary hover:bg-primary/5 dark:bg-white/5 dark:border-white/15 dark:text-text-muted dark:hover:text-white" type="button" aria-label="جستجو" id="search-trigger" title="جستجو">
                         <i class="ph ph-magnifying-glass"></i>
                     </button>
-                    <button class="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-border bg-bg-elevated text-text-muted text-base cursor-pointer transition-all duration-200 hover:text-primary hover:border-primary hover:bg-primary/5 dark:bg-white/5 dark:border-white/15 dark:text-text-muted dark:hover:text-white" id="theme-toggle" type="button" aria-label="تغییر حالت رنگی" title="تغییر پوسته">
+                    <button class="inline-flex items-center justify-center w-8 h-8 rounded-lg border border-border bg-bg-elevated text-text-muted text-base cursor-pointer transition-all duration-200 hover:text-primary hover:border-primary hover:bg-primary/5 dark:bg-white/5 dark:border-white/15 dark:text-text-muted dark:hover:text-white theme-toggle-btn" id="theme-toggle" type="button" aria-label="تغییر حالت رنگی" title="تغییر پوسته">
                         <i class="ph ph-sun dark:hidden"></i>
                         <i class="ph ph-moon hidden dark:block"></i>
                     </button>
@@ -152,6 +152,21 @@ $user_level = 'guest';
                         <i class="ph ph-x"></i>
                     </button>
                 </div>
+                
+                <!-- دکمه‌های کنترلی سریع در بالای منوی موبایل -->
+                <div class="p-3 border-b border-border flex items-center gap-2 bg-bg-soft/50">
+                    <button type="button" class="search-trigger-btn flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-xl border border-border bg-bg-elevated text-text text-sm font-semibold transition-all hover:border-primary hover:text-primary" id="mobile-search-trigger">
+                        <i class="ph ph-magnifying-glass text-base"></i>
+                        <span>جستجو</span>
+                    </button>
+                    <button type="button" class="theme-toggle-btn flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-xl border border-border bg-bg-elevated text-text text-sm font-semibold transition-all hover:border-primary hover:text-primary" id="mobile-theme-toggle">
+                        <i class="ph ph-sun dark:hidden text-base"></i>
+                        <i class="ph ph-moon hidden dark:block text-base"></i>
+                        <span class="dark:hidden">حالت تیره</span>
+                        <span class="hidden dark:inline">حالت روشن</span>
+                    </button>
+                </div>
+
                 <nav class="mobile-menu__nav">
                     <a href="#hero" class="mobile-nav-item">
                         <span class="mobile-nav-item__icon"><i class="ph ph-house"></i></span>
@@ -193,7 +208,7 @@ $user_level = 'guest';
                 <div class="mobile-menu__footer">
                     <a href="auth.php?tab=login" class="mobile-cta">
                         <i class="ph ph-user-circle-plus"></i>
-                        ورود / ثبت نام
+                        <span>ورود / ثبت نام</span>
                     </a>
                 </div>
             </div>

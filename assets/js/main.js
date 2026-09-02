@@ -13,13 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const topBarTime = document.getElementById("top-bar-time");
 
     const syncThemeToggle = (theme) => {
-        if (!themeToggle) {
-            return;
-        }
-
         const nextTheme = theme === "dark" ? "روشن" : "تیره";
-        themeToggle.setAttribute("aria-label", `تغییر حالت رنگی به ${nextTheme}`);
-        themeToggle.setAttribute("title", `تغییر حالت رنگی به ${nextTheme}`);
+        document.querySelectorAll(".theme-toggle-btn, #theme-toggle").forEach(btn => {
+            btn.setAttribute("aria-label", `تغییر حالت رنگی به ${nextTheme}`);
+            btn.setAttribute("title", `تغییر حالت رنگی به ${nextTheme}`);
+        });
     };
 
     const applyTheme = (theme) => {
@@ -30,12 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     applyTheme(storedTheme || "light");
 
-    if (themeToggle) {
-        themeToggle.addEventListener("click", () => {
+    document.querySelectorAll(".theme-toggle-btn, #theme-toggle").forEach(btn => {
+        btn.addEventListener("click", () => {
             const nextTheme = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
             applyTheme(nextTheme);
         });
-    }
+    });
 
     // ═══════════════════════════════════════════════════════════
     // PALETTES & HEADER BACKDROP SYSTEM (Independent Controls)
@@ -397,13 +395,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Search Overlay Logic
-    const searchTrigger = document.getElementById('search-trigger');
     const searchClose = document.getElementById('search-close');
     const searchOverlay = document.getElementById('search-overlay');
     const searchInput = document.getElementById('search-input');
 
     const openSearch = () => {
         if (!searchOverlay) return;
+        if (mobileMenu && mobileMenu.classList.contains("is-open")) {
+            mobileMenu.classList.remove("is-open");
+            if (menuToggle) menuToggle.setAttribute("aria-expanded", "false");
+            mobileMenu.setAttribute("aria-hidden", "true");
+        }
         searchOverlay.classList.add('is-active');
         document.body.style.overflow = 'hidden';
         if (searchInput) setTimeout(() => searchInput.focus(), 120);
@@ -415,7 +417,9 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.style.overflow = '';
     };
 
-    if (searchTrigger) searchTrigger.addEventListener('click', openSearch);
+    document.querySelectorAll('#search-trigger, #mobile-search-trigger, .search-trigger-btn').forEach(btn => {
+        btn.addEventListener('click', openSearch);
+    });
     if (searchClose) searchClose.addEventListener('click', closeSearch);
 
     if (searchOverlay) {

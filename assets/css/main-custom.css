@@ -5441,12 +5441,13 @@ html[data-theme="dark"] .observatory-card {
 
 @media (max-width: 900px) {
 
+    .top-bar,
     .top-bar__ticker,
     .top-bar__links,
     .main-nav,
     .header-brand-divider,
     .header-cta {
-        display: none;
+        display: none !important;
     }
 
     .menu-toggle {
@@ -5462,7 +5463,7 @@ html[data-theme="dark"] .observatory-card {
     .mobile-menu {
         position: fixed;
         inset: 0;
-        z-index: 190;
+        z-index: 9999;
         visibility: hidden;
         opacity: 0;
         pointer-events: none;
@@ -5638,11 +5639,15 @@ html[data-theme="dark"] .observatory-card {
     }
 
     .hero-stats,
-    .hero-stack,
     .news-bento,
     .news-bento--compact,
     .situation-grid {
         grid-template-columns: 1fr;
+    }
+
+    .hero-stack {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
     }
 
     .daily-side {
@@ -5669,17 +5674,26 @@ html[data-theme="dark"] .observatory-card {
     }
 
     .top-bar {
-        height: 36px;
+        display: none !important;
     }
 
-    .top-bar__inner {
-        height: 36px;
+    .hero-stack {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
     }
 
-    .top-bar__meta #top-bar-time,
-    .top-bar__meta .top-bar__divider:last-of-type,
-    .top-bar__meta #top-bar-date {
-        display: none;
+    .hero-brief-card {
+        min-height: 160px;
+    }
+
+    .hero-brief-card__content {
+        padding: 12px;
+    }
+
+    .hero-brief-card__content h3 {
+        font-size: 12.5px;
+        line-height: 1.45;
+        margin: 6px 0 0;
     }
 
     .header-shell {
