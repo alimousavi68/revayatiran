@@ -610,6 +610,28 @@ document.addEventListener("DOMContentLoaded", () => {
         // شروع پخش خودکار
         startAutoplay();
     }
+
+    // ═══════════════════════════════════════════════════════════
+    // ARCHIVE PAGE MOBILE FILTER ACCORDION (Robust Event Delegation)
+    // ═══════════════════════════════════════════════════════════
+    document.addEventListener("click", (e) => {
+        const toggleBtn = e.target.closest("#archive-filter-toggle");
+        if (!toggleBtn) return;
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        const filterBody = document.getElementById("archive-filter-body");
+        const filterIcon = document.getElementById("archive-filter-icon");
+
+        if (filterBody) {
+            const isOpen = filterBody.classList.toggle("is-open");
+            toggleBtn.setAttribute("aria-expanded", String(isOpen));
+            if (filterIcon) {
+                filterIcon.classList.toggle("rotate-180", isOpen);
+            }
+        }
+    });
 });
 
 // ─── NEWS SWIPER INITIALIZATION ────────────────────────────────────────────
