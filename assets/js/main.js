@@ -684,6 +684,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const swiperEl = targetPanel.querySelector(".news-swiper");
             if (swiperEl) createSwiper(swiperEl);
         }, 50); // تاخیر کوچک برای اطمینان از نمایش پنل
+    });
 })();
 
 // ─── ANALYSTS TOP SWIPER CAROUSEL (با پخش خودکار و پجینیشن) ─────────────────
